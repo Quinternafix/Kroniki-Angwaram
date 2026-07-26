@@ -1,5 +1,6 @@
 import { homeView } from "./views/home.js";
 import { charactersView } from "./views/characters.js";
+import { profileView } from "./views/profile.js";
 import { factionsView } from "./views/factions.js";
 import { placesView } from "./views/places.js";
 import { timelineView } from "./views/timeline.js";
@@ -9,14 +10,14 @@ export async function router() {
 
     const app = document.getElementById("app");
 
-    if(location.hash.startsWith("#/characters/")){
+    if (location.hash.startsWith("#/characters/")) {
 
-    const id = location.hash.split("/")[2];
+        const id = location.hash.split("/")[2];
 
-    app.innerHTML = await profileView(id);
+        app.innerHTML = await profileView(id);
 
-    return;
-
+        return;
+    }
 
     switch (location.hash || "#/") {
 
@@ -44,5 +45,4 @@ export async function router() {
             app.innerHTML = notFoundView();
             break;
     }
-
-    import { profileView } from "./views/profile.js";
+}

@@ -13,15 +13,22 @@ export async function charactersView() {
 
                 <div class="character-card">
 
-                    <img src="${character.image}" alt="${character.name}">
+                    <img
+                        src="${character.image}"
+                        alt="${character.name}"
+                        class="character-image">
 
                     <h2>${character.name}</h2>
 
                     <p>${character.title}</p>
 
-                    <button data-id="${character.id}">
-                        Więcej
-                    </button>
+                    <a
+                        href="#/characters/${character.id}"
+                        class="character-button">
+
+                        Otwórz profil
+
+                    </a>
 
                 </div>
 

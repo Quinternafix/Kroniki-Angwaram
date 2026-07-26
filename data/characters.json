@@ -1,21 +1,39 @@
 [
-    {
-        "id": "morgath",
+  {
+    "id": "morgath",
 
-        "name": "Morgath Stormbringer",
+    "name": "Morgath Stormbringer",
 
-        "title": "Arcymag Selidoru",
+    "title": "Arcymag Selidoru",
 
-        "race": "Półsmok",
+    "race": "Półsmok",
 
-        "nation": "Selidor",
+    "nation": "Selidor",
 
-        "status": "Żyje",
+    "rank": "Arcymag",
 
-        "age": 110,
+    "status": "Żyje",
 
-        "image": "assets/characters/morgath.png",
+    "birth": "742",
 
-        "description": "Najpotężniejszy mag kontynentu."
-    }
+    "image": "assets/characters/morgath.jpg",
+
+    "description": "Jeden z najwybitniejszych magów kontynentu.",
+
+    "faction": "Rada Magów",
+
+    "home": "Selidor",
+
+    "parents": [],
+
+    "siblings": [],
+
+    "friends": [],
+
+    "enemies": [],
+
+    "quotes": [
+        "Magia nie zna granic."
+    ]
+  }
 ]
