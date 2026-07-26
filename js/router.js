@@ -1,38 +1,18 @@
-import { homeView } from "./views/home.js";
-import { charactersView } from "./views/characters.js";
-import { factionsView } from "./views/factions.js";
-import { placesView } from "./views/places.js";
-import { timelineView } from "./views/timeline.js";
-import { notFoundView } from "./views/notfound.js";
-
-export function router() {
+export async function router() {
 
 const app = document.getElementById("app");
 
-switch(location.hash || "#/") {
-
-case "#/":
-app.innerHTML = homeView();
-break;
+switch(location.hash){
 
 case "#/characters":
-app.innerHTML = charactersView();
-break;
 
-case "#/factions":
-app.innerHTML = factionsView();
-break;
+app.innerHTML = await charactersView();
 
-case "#/places":
-app.innerHTML = placesView();
-break;
-
-case "#/timeline":
-app.innerHTML = timelineView();
 break;
 
 default:
-app.innerHTML = notFoundView();
+
+app.innerHTML = homeView();
 
 }
 

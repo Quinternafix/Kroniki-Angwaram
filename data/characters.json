@@ -1,0 +1,21 @@
+[
+    {
+        "id": "morgath",
+
+        "name": "Morgath Stormbringer",
+
+        "title": "Arcymag Selidoru",
+
+        "race": "Półsmok",
+
+        "nation": "Selidor",
+
+        "status": "Żyje",
+
+        "age": 110,
+
+        "image": "assets/characters/morgath.png",
+
+        "description": "Najpotężniejszy mag kontynentu."
+    }
+]
