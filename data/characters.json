@@ -14,7 +14,7 @@
 
     "status": "Żyje",
 
-    "birth": "742",
+    "birth": "8 maja 1653",
 
     "image": "assets/characters/morgath.png",
 
@@ -34,6 +34,43 @@
 
     "quotes": [
         "Magia nie zna granic."
+    ]
+  },
+  {
+    "id": "Rykan",
+
+    "name": "Rykan",
+
+    "title": "Wyjący Wędrownik",
+
+    "race": "półsmok",
+
+    "nation": "Ferrins",
+
+    "rank": "Posłaniec Ferrins",
+
+    "status": "żyje",
+
+    "birth": "3 kwietnia 1687",
+
+    "image": "assets/characters/rykan.png",
+
+    "description": "Rykan podlega Ferrińskiemu kręgowi druidów, działając jako pojedyncza jednostka.",
+
+    "Faction": "Ferriński Krąg Druidów",
+
+    "home": "Ferrins",
+
+    "parents": [],
+
+    "siblings": [],
+
+    "friends": "Neorath Stormbringer",
+
+    "enemies": [],
+    
+    "Quotes": [
+      "Niech prowadzi mnie serce natury."
     ]
   }
 ]

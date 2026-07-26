@@ -10,39 +10,54 @@ export async function router() {
 
     const app = document.getElementById("app");
 
-    if (location.hash.startsWith("#/characters/")) {
+    const hash = location.hash || "#/";
 
-        const id = location.hash.split("/")[2];
+    if (hash.startsWith("#/characters/")) {
+
+        const id = hash.split("/")[2];
 
         app.innerHTML = await profileView(id);
 
         return;
+
     }
 
-    switch (location.hash || "#/") {
+    switch (hash) {
 
         case "#/":
+
             app.innerHTML = homeView();
+
             break;
 
         case "#/characters":
+
             app.innerHTML = await charactersView();
+
             break;
 
         case "#/factions":
+
             app.innerHTML = factionsView();
+
             break;
 
         case "#/places":
+
             app.innerHTML = placesView();
+
             break;
 
         case "#/timeline":
+
             app.innerHTML = timelineView();
+
             break;
 
         default:
+
             app.innerHTML = notFoundView();
-            break;
+
     }
+
 }

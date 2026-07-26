@@ -1,15 +1,20 @@
-export function homeView(){
+export function homeView() {
 
-return `
+    return `
+        <section class="hero">
 
-<h1>Witaj w Kronikach Angwaram</h1>
+            <h1>Kroniki Angwaram</h1>
 
-<p>
+            <p>
+                Witaj w encyklopedii świata Angwaram.
+            </p>
 
-Oficjalna encyklopedia świata.
+            <p>
+                Korzystaj z menu, aby przeglądać postacie, miejsca,
+                frakcje i historię.
+            </p>
 
-</p>
-
-`;
+        </section>
+    `;
 
 }

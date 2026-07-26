@@ -11,7 +11,7 @@ export async function charactersView() {
 
             ${characters.map(character => `
 
-                <div class="character-card">
+                <article class="character-card">
 
                     <img
                         src="${character.image}"
@@ -30,7 +30,7 @@ export async function charactersView() {
 
                     </a>
 
-                </div>
+                </article>
 
             `).join("")}
 

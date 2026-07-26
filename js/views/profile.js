@@ -1,49 +1,112 @@
 import { getData } from "../core/api.js";
 
-export async function profileView(id){
+export async function profileView(id) {
 
     const characters = await getData("characters");
 
     const character = characters.find(c => c.id === id);
 
-    if(!character){
-        return "<h1>Nie znaleziono postaci.</h1>";
+    if (!character) {
+
+        return `
+            <h1>Nie znaleziono postaci.</h1>
+
+            <p>
+                Taka postać nie istnieje.
+            </p>
+        `;
+
     }
 
     return `
-        <div class="profile">
 
-            <div class="profile-header">
+<section class="profile">
 
-                <img src="${character.image}" class="profile-image">
+<div class="profile-header">
 
-                <div>
+<img
+src="${character.image}"
+alt="${character.name}"
+class="profile-image">
 
-                    <h1>${character.name}</h1>
+<div class="profile-text">
 
-                    <h2>${character.title}</h2>
+<h1>${character.name}</h1>
 
-                    <p>${character.description}</p>
+<h2>${character.title}</h2>
 
-                </div>
+<p>${character.description}</p>
 
-            </div>
+</div>
 
-            <hr>
+</div>
 
-            <h3>Informacje</h3>
+<h2>Informacje</h2>
 
-            <table class="infobox">
+<table class="infobox">
 
-                <tr><td>Rasa</td><td>${character.race}</td></tr>
-                <tr><td>Naród</td><td>${character.nation}</td></tr>
-                <tr><td>Frakcja</td><td>${character.faction}</td></tr>
-                <tr><td>Ranga</td><td>${character.rank}</td></tr>
-                <tr><td>Status</td><td>${character.status}</td></tr>
-                <tr><td>Data urodzenia</td><td>${character.birth}</td></tr>
+<tr>
 
-            </table>
+<th>Rasa</th>
 
-        </div>
-    `;
+<td>${character.race}</td>
+
+</tr>
+
+<tr>
+
+<th>Naród</th>
+
+<td>${character.nation}</td>
+
+</tr>
+
+<tr>
+
+<th>Frakcja</th>
+
+<td>${character.faction}</td>
+
+</tr>
+
+<tr>
+
+<th>Ranga</th>
+
+<td>${character.rank}</td>
+
+</tr>
+
+<tr>
+
+<th>Status</th>
+
+<td>${character.status}</td>
+
+</tr>
+
+<tr>
+
+<th>Data urodzenia</th>
+
+<td>${character.birth}</td>
+
+</tr>
+
+</table>
+
+<p>
+
+<a href="#/characters">
+
+← Powrót do listy postaci
+
+</a>
+
+</p>
+
+</section>
+
+`;
+
 }
