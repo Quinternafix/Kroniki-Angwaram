@@ -36,15 +36,33 @@ export async function router() {
 
             break;
 
+        case "#/characters/morgath":
+
+            app.innerHTML = await profileView("morgath");
+
+            break;
+
         case "#/factions":
 
             app.innerHTML = factionsView();
 
             break;
 
+        case "#/factions/zjednoczone królestwo selidoru":
+
+            app.innerHTML = await profileView("zjednoczone królestwo selidoru");
+
+            break;
+
         case "#/places":
 
             app.innerHTML = placesView();
+
+            break;
+
+        case "#places/selidor":
+
+            app.innerHTML = await profileView("selidor");
 
             break;
 

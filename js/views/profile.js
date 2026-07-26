@@ -18,92 +18,36 @@ export async function profileView(id) {
 
     }
 
-    return `
+return `
 
 <section class="profile">
 
-<div class="profile-header">
+    <div class="profile-header">
 
-<img
-src="${character.image}"
-alt="${character.name}"
-class="profile-image">
+        <img src="${character.image}" class="profile-image">
 
-<div class="profile-text">
+        <div>
 
-<h1>${character.name}</h1>
+            <h1>${character.name}</h1>
+            <h2>${character.title}</h2>
 
-<h2>${character.title}</h2>
+            <p>${character.description}</p>
 
-<p>${character.description}</p>
+        </div>
 
-</div>
+    </div>
 
-</div>
+    <section class="info-box">
+        ...
+    </section>
 
-<h2>Informacje</h2>
+    <section class="relations">
+        ...
+    </section>
 
-<table class="infobox">
-
-<tr>
-
-<th>Rasa</th>
-
-<td>${character.race}</td>
-
-</tr>
-
-<tr>
-
-<th>Naród</th>
-
-<td>${character.nation}</td>
-
-</tr>
-
-<tr>
-
-<th>Frakcja</th>
-
-<td>${character.faction}</td>
-
-</tr>
-
-<tr>
-
-<th>Ranga</th>
-
-<td>${character.rank}</td>
-
-</tr>
-
-<tr>
-
-<th>Status</th>
-
-<td>${character.status}</td>
-
-</tr>
-
-<tr>
-
-<th>Data urodzenia</th>
-
-<td>${character.birth}</td>
-
-</tr>
-
-</table>
-
-<p>
-
-<a href="#/characters">
-
-← Powrót do listy postaci
-
-</a>
-
-</p>
+    <section class="related">
+        ...
+    </section>
 
 </section>
 

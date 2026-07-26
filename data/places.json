@@ -1,1 +1,11 @@
-[]
+[
+  {
+    "id": "selidor",
+
+    "name": "Selidor",
+
+    "description": "Miasto magów.",
+
+    "image": "assets/places/selidor.jpg"
+  }
+]
