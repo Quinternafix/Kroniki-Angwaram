@@ -9,6 +9,15 @@ export async function router() {
 
     const app = document.getElementById("app");
 
+    if(location.hash.startsWith("#/characters/")){
+
+    const id = location.hash.split("/")[2];
+
+    app.innerHTML = await profileView(id);
+
+    return;
+
+
     switch (location.hash || "#/") {
 
         case "#/":
@@ -35,4 +44,5 @@ export async function router() {
             app.innerHTML = notFoundView();
             break;
     }
-}
+
+    import { profileView } from "./views/profile.js";
