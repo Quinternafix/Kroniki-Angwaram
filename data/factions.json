@@ -1,15 +1,10 @@
 [
-    {
-        "id": "zjednoczone królestwo selidoru",
-        "name": "Zjednoczone Królestwo Selidoru",
-        "description": "Zjednoczone Królestwo Selidoru to państwo mieszczące się na srebrnym morzu, znane z potężnych arkanów i wybitnych magów. Jego stolica, Selidor, jest miejscem szkoleń dla adeptów magii ale również domem dla zwykłych mieszkańców, którzy żyją w portowym mieście.",
-        "image": "assets/factions/selidor.png",
-        "leader": "Morgath Stormbringer",
-        "members": [
-            "Morgath Stormbringer",
-            "Shy'Ran Starsage",
-            "Aurora Stormbringer",
-            "Araya Stormbringer"
-        ]
-    }
+  {
+    "id": "rada-magow",
+    "name": "Rada Magów",
+    "description": "Najważniejsza organizacja magiczna w Selidorze.",
+    "image": "assets/factions/rada-magow.png",
+    "leaders": ["morgath"],
+    "members": ["morgath"]
+  }
 ]

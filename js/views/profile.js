@@ -91,29 +91,21 @@ export async function profileView(id) {
                 }
             </section>
 
-            <section class="related">
-                <h2>Powiązane artykuły</h2>
-                <ul>
-                    ${
-                        character.home
-                            ? `<li>
-                                <a href="#/places/${slugify(character.home)}">
-                                    ${character.home}
-                                </a>
-                            </li>`
-                            : ""
-                    }
-                    ${
-                        character.faction
-                            ? `<li>
-                                <a href="#/factions/${slugify(character.faction)}">
-                                    ${character.faction}
-                                </a>
-                            </li>`
-                            : ""
-                    }
-                </ul>
-            </section>
+<section class="related">
+    <h2>Powiązane artykuły</h2>
+    <ul>
+        ${
+            character.home
+                ? `<li><a href="#/places/${slugify(character.home)}">${character.home}</a></li>`
+                : ""
+        }
+        ${
+            character.faction
+                ? `<li><a href="#/factions/${slugify(character.faction)}">${character.faction}</a></li>`
+                : ""
+        }
+    </ul>
+</section>  
 
         </section>
     `;

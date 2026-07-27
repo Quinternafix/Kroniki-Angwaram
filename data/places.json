@@ -1,11 +1,10 @@
 [
   {
     "id": "selidor",
-
     "name": "Selidor",
-
-    "description": "Miasto magów.",
-
-    "image": "assets/places/selidor.jpg"
+    "description": "Starożytne miasto magów i centrum wiedzy arcymagów.",
+    "image": "assets/places/selidor.png",
+    "relatedCharacters": ["morgath"],
+    "relatedFactions": ["rada-magow"]
   }
 ]
