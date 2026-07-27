@@ -1,75 +1,43 @@
 [
   {
     "id": "morgath",
-
     "name": "Morgath Stormbringer",
-
     "title": "Arcymag Selidoru",
-
     "race": "Półsmok",
-
     "nation": "Selidor",
-
     "rank": "Arcymag",
-
     "status": "Żyje",
-
     "birth": "8 maja 1653",
-
     "image": "assets/characters/morgath.png",
-
     "description": "Jeden z najwybitniejszych magów kontynentu.",
-
     "faction": "Rada Magów",
-
     "home": "Selidor",
-
     "parents": [],
-
     "siblings": [],
-
     "friends": [],
-
     "enemies": [],
-
     "quotes": [
-        "Magia nie zna granic."
+      "Magia nie zna granic."
     ]
   },
   {
-    "id": "Rykan",
-
+    "id": "rykan",
     "name": "Rykan",
-
     "title": "Wyjący Wędrownik",
-
-    "race": "półsmok",
-
+    "race": "Półsmok",
     "nation": "Ferrins",
-
     "rank": "Posłaniec Ferrins",
-
-    "status": "żyje",
-
+    "status": "Żyje",
     "birth": "3 kwietnia 1687",
-
     "image": "assets/characters/rykan.png",
-
     "description": "Rykan podlega Ferrińskiemu kręgowi druidów, działając jako pojedyncza jednostka.",
-
-    "Faction": "Ferriński Krąg Druidów",
-
+    "faction": "Ferriński Krąg Druidów",
     "home": "Ferrins",
-
     "parents": [],
-
     "siblings": [],
-
-    "friends": "Neorath Stormbringer",
-
+    "friends": ["Neorath Stormbringer"],
     "enemies": [],
-    
-    "Quotes": [
+    "quotes": [
       "Niech prowadzi mnie serce natury."
     ]
   }

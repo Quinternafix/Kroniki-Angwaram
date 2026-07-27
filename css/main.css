@@ -205,3 +205,43 @@ nav a:hover{
     color:gold;
 
 }
+
+.breadcrumbs{
+
+    margin-bottom:30px;
+
+    color:#aaa;
+
+}
+
+.breadcrumbs a{
+
+    color:gold;
+
+    text-decoration:none;
+
+}
+
+#searchInput{
+
+    width:350px;
+
+    padding:12px;
+
+    border-radius:10px;
+
+    border:none;
+
+}
+
+.related{
+
+    margin-top:40px;
+
+}
+
+.related ul{
+
+    padding-left:20px;
+
+}
