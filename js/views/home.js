@@ -1,20 +1,9 @@
+import { t } from "../core/i18n.js";
+
 export function homeView() {
-
-    return `
-        <section class="hero">
-
-            <h1>Kroniki Angwaram</h1>
-
-            <p>
-                Witaj w encyklopedii świata Angwaram.
-            </p>
-
-            <p>
-                Korzystaj z menu, aby przeglądać postacie, miejsca,
-                frakcje i historię.
-            </p>
-
-        </section>
-    `;
-
+  return `<section class="hero">
+    <h1>${t("site.title")}</h1>
+    <p>${t("home.welcome")}</p>
+    <p>${t("home.instructions")}</p>
+  </section>`;
 }

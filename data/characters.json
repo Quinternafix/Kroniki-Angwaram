@@ -1,44 +1,10 @@
 [
   {
-    "id": "morgath",
-    "name": "Morgath Stormbringer",
-    "title": "Arcymag Selidoru",
-    "race": "Półsmok",
-    "nation": "Selidor",
-    "rank": "Arcymag",
-    "status": "Żyje",
-    "birth": "8 maja 1653",
-    "image": "assets/characters/morgath.png",
-    "description": "Jeden z najwybitniejszych magów kontynentu.",
-    "faction": "Rada Magów",
-    "home": "Selidor",
-    "parents": [],
-    "siblings": [],
-    "friends": [],
-    "enemies": [],
-    "quotes": [
-      "Magia nie zna granic."
-    ]
+    "id":"morgath", "name":"Morgath Stormbringer", "title":"Arcymag Selidoru", "race":"Półsmok", "nation":"Selidor", "rank":"Arcymag", "status":"Żyje", "birth":"8 maja 1653", "image":"assets/characters/morgath.png", "description":"Jeden z najwybitniejszych magów kontynentu.", "faction":"Rada Magów", "factionId":"rada-magow", "home":"Selidor", "homeId":"selidor", "parents":[], "siblings":[], "friends":[], "enemies":[], "quotes":["Magia nie zna granic."],
+    "translations": { "en": { "title":"Archmage of Selidor", "race":"Half-dragon", "rank":"Archmage", "status":"Alive", "birth":"May 8, 1653", "description":"One of the continent's most distinguished mages.", "faction":"Council of Mages" }, "es": { "title":"Archimago de Selidor", "race":"Semidragón", "rank":"Archimago", "status":"Vivo", "birth":"8 de mayo de 1653", "description":"Uno de los magos más destacados del continente.", "faction":"Consejo de Magos" } }
   },
   {
-    "id": "rykan",
-    "name": "Rykan",
-    "title": "Wyjący Wędrownik",
-    "race": "Półsmok",
-    "nation": "Ferrins",
-    "rank": "Posłaniec Ferrins",
-    "status": "Żyje",
-    "birth": "3 kwietnia 1687",
-    "image": "assets/characters/rykan.png",
-    "description": "Rykan podlega Ferrińskiemu kręgowi druidów, działając jako pojedyncza jednostka.",
-    "faction": "Ferriński Krąg Druidów",
-    "home": "Ferrins",
-    "parents": [],
-    "siblings": [],
-    "friends": ["Neorath Stormbringer"],
-    "enemies": [],
-    "quotes": [
-      "Niech prowadzi mnie serce natury."
-    ]
+    "id":"rykan", "name":"Rykan", "title":"Wyjący Wędrownik", "race":"Półsmok", "nation":"Ferrins", "rank":"Posłaniec Ferrins", "status":"Żyje", "birth":"3 kwietnia 1687", "image":"assets/characters/rykan.png", "description":"Rykan podlega Ferrińskiemu kręgowi druidów, działając jako pojedyncza jednostka.", "faction":"Ferriński Krąg Druidów", "home":"Ferrins", "parents":[], "siblings":[], "friends":["Neorath Stormbringer"], "enemies":[], "quotes":["Niech prowadzi mnie serce natury."],
+    "translations": { "en": { "title":"The Howling Wanderer", "race":"Half-dragon", "rank":"Messenger of Ferrins", "status":"Alive", "birth":"April 3, 1687", "description":"Rykan answers to the Ferrins circle of druids while operating alone.", "faction":"Ferrins Druid Circle" }, "es": { "title":"El Vagabundo Aullador", "race":"Semidragón", "rank":"Mensajero de Ferrins", "status":"Vivo", "birth":"3 de abril de 1687", "description":"Rykan responde ante el círculo de druidas de Ferrins, aunque actúa en solitario.", "faction":"Círculo de Druidas de Ferrins" } }
   }
 ]
