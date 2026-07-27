@@ -5,9 +5,9 @@
   },
   {
     "id":"rykan", "name":"Rykan", "title":"Wyjący Wędrownik", "race":"Półsmok", "nation":"Ferrins", "rank":"Posłaniec Ferrins", "status":"Żyje", "birth":"3 kwietnia 1687", "image":"assets/characters/rykan.png", "description":"Rykan podlega Ferrińskiemu kręgowi druidów, działając jako pojedyncza jednostka.", "faction":"Ferriński Krąg Druidów", "home":"Ferrins", "parents":[], "siblings":[], "friends":["Neorath Stormbringer"], "enemies":[], "quotes":["Niech prowadzi mnie serce natury."],
-    "translations": { "en": { "title":"The Howling Walker", "race":"Half-dragon", "rank":"Messenger of Ferrins", "status":"Alive", "birth":"April 3, 1687", "description":"Rykan answers to the Ferrins circle of druids while operating alone.", "faction":"Ferrins Druid Circle" }, "es": { "title":"El Vagabundo Aullador", "race":"Semidragón", "rank":"Mensajero de Ferrins", "status":"Vivo", "birth":"3 de abril de 1687", "description":"Rykan responde ante el círculo de druidas de Ferrins, aunque actúa en solitario.", "faction":"Círculo de Druidas de Ferrins" } }
+    "translations": { "en": { "title":"The Howling Wanderer", "race":"Half-dragon", "rank":"Messenger of Ferrins", "status":"Alive", "birth":"April 3, 1687", "description":"Rykan answers to the Ferrins circle of druids while operating alone.", "faction":"Ferrins Druid Circle" }, "es": { "title":"El Vagabundo Aullador", "race":"Semidragón", "rank":"Mensajero de Ferrins", "status":"Vivo", "birth":"3 de abril de 1687", "description":"Rykan responde ante el círculo de druidas de Ferrins, aunque actúa en solitario.", "faction":"Círculo de Druidas de Ferrins" } }
   },
-{
+  {
   "id": "avon",
   "name": "Avon",
   "title": "Włócznia Wyzwolenia",
