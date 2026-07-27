@@ -27,4 +27,4 @@ if (document.readyState === "loading") {
 }
 
 window.addEventListener("hashchange", renderApp);
-window.addEventListener("languagechange", renderApp);
+window.addEventListener("languagechange", renderApp);   
