@@ -43,7 +43,7 @@ ${portraits[0].title?.[state.language] || portraits[0].title?.pl || portraits[0]
 <button
 class="portrait-thumb ${index===0?"active":""}"
 data-image="${portrait.image}"
-data-title="${portrait.title}">
+data-title="${portrait.title?.[state.language] || portrait.title?.pl || portrait.title}"
 
 ${portrait.title?.[state.language] || portrait.title?.pl || portrait.title}
 
