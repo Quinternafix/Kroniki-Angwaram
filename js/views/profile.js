@@ -45,7 +45,7 @@ class="portrait-thumb ${index===0?"active":""}"
 data-image="${portrait.image}"
 data-title="${portrait.title}">
 
-${portrait.title}
+${portrait.title?.[state.language] || portrait.title?.pl || portrait.title}
 
 </button>
 
