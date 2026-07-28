@@ -32,7 +32,7 @@ function renderPortraitGallery(character) {
 
     <div class="portrait-title">
 
-        ${portraits[0].title}
+${portraits[0].title?.[state.language] || portraits[0].title?.pl || portraits[0].title}
 
     </div>
 
