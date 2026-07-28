@@ -48,54 +48,81 @@ function renderPortraitGallery(character) {
 function renderInfoBox(character) {
 
     return `
-        <section class="info-box">
 
-            <h2>${t("profile.information") || "Informacje"}</h2>
+<aside class="wiki-infobox">
 
-            <table class="infobox">
+    <div class="wiki-header">
 
-                <tr>
-                    <th>Rasa</th>
-                    <td>${localize(character,"race")}</td>
-                </tr>
+        <h2>${character.name}</h2>
 
-                <tr>
-                    <th>Naród</th>
-                    <td>${localize(character,"nation")}</td>
-                </tr>
+        <p>${localize(character,"title")}</p>
 
-                <tr>
-                    <th>Frakcja</th>
-                    <td>
+    </div>
 
-                        <a href="#/factions/${character.factionId || slugify(character.faction)}">
+    <img
+        src="${character.image}"
+        alt="${character.name}"
+        class="wiki-image">
 
-                            ${localize(character,"faction")}
+    <table class="wiki-table">
 
-                        </a>
+        <tr>
+            <th>Rasa</th>
+            <td>${localize(character,"race")}</td>
+        </tr>
 
-                    </td>
-                </tr>
+        <tr>
+            <th>Naród</th>
+            <td>${localize(character,"nation")}</td>
+        </tr>
 
-                <tr>
-                    <th>Ranga</th>
-                    <td>${localize(character,"rank")}</td>
-                </tr>
+        <tr>
+            <th>Frakcja</th>
+            <td>
 
-                <tr>
-                    <th>Status</th>
-                    <td>${localize(character,"status")}</td>
-                </tr>
+                <a href="#/factions/${character.factionId || slugify(character.faction)}">
 
-                <tr>
-                    <th>Data urodzenia</th>
-                    <td>${localize(character,"birth")}</td>
-                </tr>
+                    ${localize(character,"faction")}
 
-            </table>
+                </a>
 
-        </section>
-    `;
+            </td>
+        </tr>
+
+        <tr>
+            <th>Ranga</th>
+            <td>${localize(character,"rank")}</td>
+        </tr>
+
+        <tr>
+            <th>Status</th>
+            <td>${localize(character,"status")}</td>
+        </tr>
+
+        <tr>
+            <th>Data urodzenia</th>
+            <td>${localize(character,"birth")}</td>
+        </tr>
+
+        <tr>
+            <th>Dom</th>
+            <td>
+
+                <a href="#/places/${character.homeId || slugify(character.home)}">
+
+                    ${character.home}
+
+                </a>
+
+            </td>
+        </tr>
+
+    </table>
+
+</aside>
+
+`;
+
 }
 
 function renderRelations(title, list) {
