@@ -1,3 +1,19 @@
 [
-  { "id":"rada-magow", "name":"Rada Magów", "description":"Najważniejsza organizacja magiczna w Selidorze.", "image":"assets/factions/rada-magow.png", "leaders":["morgath"], "members":["morgath"], "translations": { "en": { "name":"Council of Mages", "description":"The foremost magical organization in Selidor." }, "es": { "name":"Consejo de Magos", "description":"La organización mágica más importante de Selidor." } } }
+  {
+    "id":"rada-magow",
+
+    "name":"Rada Magów",
+
+    "image":"assets/factions/rada-magow.png",
+
+    "description":"Najpotężniejsza organizacja magiczna Angwaram.",
+
+    "members":[
+      "morgath"
+    ],
+
+    "leaders":[
+      "morgath"
+    ]
+  }
 ]
