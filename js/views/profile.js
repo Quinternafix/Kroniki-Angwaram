@@ -1,6 +1,7 @@
 import { getData } from "../core/api.js";
 import { getFavorites, saveFavorites } from "../core/storage.js";
 import { localize, t } from "../core/i18n.js";
+import { state } from "../state.js";
 
 function slugify(value) {
     return String(value || "")
