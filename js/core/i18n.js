@@ -6,6 +6,7 @@ const translations = {
         "nav.factions": "Frakcje",
         "nav.places": "Miejsca",
         "nav.timeline": "Historia",
+        "nav.searchPlaceholder": "Szukaj...",
         "home.welcome": "Witaj w encyklopedii świata Angwaram.",
         "home.instructions": "Korzystaj z menu, aby przeglądać postacie, miejsca, frakcje i historię.",
         "characters.title": "Postacie",
@@ -41,7 +42,8 @@ const translations = {
         "notFound": "Nie znaleziono strony.",
         "loading": "Ładowanie...",
         "favorite.add": "⭐ Dodaj do ulubionych",
-        "favorite.remove": "★ Usuń z ulubionych"
+        "favorite.remove": "★ Usuń z ulubionych",
+        "error.notFoundFile": "Nie znaleziono"
     },
 
     en: {
@@ -51,6 +53,7 @@ const translations = {
         "nav.factions": "Factions",
         "nav.places": "Places",
         "nav.timeline": "History",
+        "nav.searchPlaceholder": "Search...",
         "home.welcome": "Welcome to the encyclopedia of the world of Angwaram.",
         "home.instructions": "Use the menu to explore characters, places, factions, and history.",
         "characters.title": "Characters",
@@ -86,7 +89,8 @@ const translations = {
         "notFound": "Page not found.",
         "loading": "Loading...",
         "favorite.add": "⭐ Add to favorites",
-        "favorite.remove": "★ Remove from favorites"
+        "favorite.remove": "★ Remove from favorites",
+        "error.notFoundFile": "File not found"
     },
 
     es: {
@@ -96,6 +100,7 @@ const translations = {
         "nav.factions": "Facciones",
         "nav.places": "Lugares",
         "nav.timeline": "Historia",
+        "nav.searchPlaceholder": "Buscar...",
         "home.welcome": "Bienvenido a la enciclopedia del mundo de Angwaram.",
         "home.instructions": "Usa el menú para explorar personajes, lugares, facciones e historia.",
         "characters.title": "Personajes",
@@ -131,7 +136,8 @@ const translations = {
         "notFound": "Página no encontrada.",
         "loading": "Cargando...",
         "favorite.add": "⭐ Añadir a favoritos",
-        "favorite.remove": "★ Quitar de favoritos"
+        "favorite.remove": "★ Quitar de favoritos",
+        "error.notFoundFile": "Archivo no encontrado"
     }
 };
 
