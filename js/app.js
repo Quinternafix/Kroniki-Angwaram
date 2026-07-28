@@ -20,11 +20,13 @@ function startApp() {
     renderApp();
 }
 
+// 🔥 Kluczowe — router musi wystartować dopiero po załadowaniu DOM
 if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", startApp, { once: true });
 } else {
     startApp();
 }
 
+// 🔥 Re-render przy zmianie hash i języka
 window.addEventListener("hashchange", renderApp);
-window.addEventListener("languagechange", renderApp);   
+window.addEventListener("languagechange", renderApp);
