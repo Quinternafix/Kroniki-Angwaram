@@ -1,3 +1,27 @@
 [
-  { "id":"selidor", "name":"Selidor", "description":"Starożytne miasto magów i centrum wiedzy arcymagów.", "image":"assets/places/selidor.png", "relatedCharacters":["morgath"], "relatedFactions":["rada-magow"], "translations": { "en": { "description":"An ancient city of mages and the center of archmages' knowledge." }, "es": { "description":"Una antigua ciudad de magos y centro del conocimiento de los archimagos." } } }
+  {
+    "id":"selidor",
+
+    "name":"Selidor",
+
+    "image":"assets/places/selidor.png",
+
+    "description":"Największe miasto magów.",
+
+    "population":"około 420 000",
+
+    "government":"Rada Magów",
+
+    "characters":[
+
+        "morgath"
+
+    ],
+
+    "factions":[
+
+        "rada-magow"
+
+    ]
+  }
 ]
