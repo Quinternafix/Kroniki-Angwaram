@@ -275,43 +275,49 @@ export async function profileView(id) {
 
 }
 
-export function initProfilePage() {
+export function initProfilePage(){
 
-    const image = document.getElementById("portraitImage");
+    const image=document.getElementById("portraitImage");
+
+    const title=document.querySelector(".portrait-title");
 
     document
-        .querySelectorAll(".portrait-thumb")
-        .forEach(button => {
+    .querySelectorAll(".portrait-thumb")
+    .forEach(button=>{
 
-            button.addEventListener("click", () => {
+        button.onclick=()=>{
 
-                document
-                    .querySelectorAll(".portrait-thumb")
-                    .forEach(b => b.classList.remove("active"));
+            document
+            .querySelectorAll(".portrait-thumb")
+            .forEach(b=>b.classList.remove("active"));
 
-                button.classList.add("active");
+            button.classList.add("active");
 
-                image.src = button.dataset.image;
+            image.src=button.dataset.image;
 
-            });
+            title.textContent=button.dataset.title;
 
-        });
+        };
 
-    const favoriteButton = document.getElementById("favoriteButton");
+    });
 
-    if (!favoriteButton) return;
+    const favoriteButton=document.getElementById("favoriteButton");
 
-    favoriteButton.addEventListener("click", () => {
+    if(!favoriteButton) return;
 
-        let favorites = getFavorites();
+    favoriteButton.onclick=()=>{
 
-        const id = favoriteButton.dataset.id;
+        let favorites=getFavorites();
 
-        if (favorites.includes(id)) {
+        const id=favoriteButton.dataset.id;
 
-            favorites = favorites.filter(f => f !== id);
+        if(favorites.includes(id)){
 
-        } else {
+            favorites=favorites.filter(f=>f!==id);
+
+        }
+
+        else{
 
             favorites.push(id);
 
@@ -319,11 +325,14 @@ export function initProfilePage() {
 
         saveFavorites(favorites);
 
-        favoriteButton.textContent =
-            favorites.includes(id)
-                ? "★ Usuń z ulubionych"
-                : "⭐ Dodaj do ulubionych";
+        favoriteButton.textContent=
 
-    });
+            favorites.includes(id)
+
+            ?"★ Usuń z ulubionych"
+
+            :"⭐ Dodaj do ulubionych";
+
+    };
 
 }
