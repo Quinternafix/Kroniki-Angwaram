@@ -9,20 +9,32 @@
     "status": "Żyje",
     "birth": "11 listopada",
     "image": "assets/characters/avon-present.png",
-    "portraits": [
-      {
-        "title": "Młodość",
-        "image": "assets/characters/avon-young.png"
-      },
-      {
-        "title": "Strażnik Marchii",
-        "image": "assets/characters/avon-guard.png"
-      },
-      {
-        "title": "Obecnie",
-        "image": "assets/characters/avon-present.png"
-      }
-    ],
+"portraits": [
+  {
+    "title": {
+      "pl": "Młodość",
+      "en": "Youth",
+      "es": "Juventud"
+    },
+    "image": "assets/characters/avon-young.png"
+  },
+  {
+    "title": {
+      "pl": "Strażnik Marchii",
+      "en": "March Guard",
+      "es": "Guardia de la Marcha"
+    },
+    "image": "assets/characters/avon-guard.png"
+  },
+  {
+    "title": {
+      "pl": "Obecnie",
+      "en": "Present",
+      "es": "Actualidad"
+    },
+    "image": "assets/characters/avon-present.png"
+  }
+]
     "description": "Avon jest jedynym półsmokiem w państwie rządzonym przez kotowatych.",
     "faction": "Gwardia Popielnej Marchii",
     "factionId": "gwardia-popielnej-marchii",
