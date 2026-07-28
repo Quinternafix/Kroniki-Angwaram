@@ -14,9 +14,9 @@ document.getElementById("navbar").innerHTML = `
 id="search"
 placeholder="Szukaj...">
 
-<button id="pl">🇵🇱</button>
-
-<button id="en">🇬🇧</button>
+<button id="pl" data-language="pl">🇵🇱</button>
+<button id="en" data-language="en">🇬🇧</button>
+<button id="es" data-language="es">🇪🇸</button>
 
 </div>
 
