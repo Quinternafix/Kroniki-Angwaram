@@ -11,6 +11,14 @@
     "image": "assets/characters/avon-present.png",
     "portraits": [
       {
+        "title": "Młodość",
+        "image": "assets/characters/avon-young.png"
+      },
+      {
+        "title": "Strażnik Marchii",
+        "image": "assets/characters/avon-guard.png"
+      },
+      {
         "title": "Obecnie",
         "image": "assets/characters/avon-present.png"
       }
