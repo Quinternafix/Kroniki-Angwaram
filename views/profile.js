@@ -1,49 +1,238 @@
 import { getData } from "../core/api.js";
+import { getFavorites } from "../core/storage.js";
+import { localize, t } from "../core/i18n.js";
+import { state } from "../state.js";
 
-export async function profileView(id){
+function slugify(value) {
+    return String(value || "")
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/^-+|-+$/g, "");
+}
+
+function getPortraitTitle(portrait) {
+
+    if (typeof portrait.title === "string") {
+        return portrait.title;
+    }
+
+    return (
+        portrait.title?.[state.language] ||
+        portrait.title?.pl ||
+        portrait.title?.en ||
+        ""
+    );
+}
+
+function renderPortraitGallery(character) {
+
+    const portraits = character.portraits?.length
+        ? character.portraits
+        : [
+            {
+                title: {
+                    pl: "Obecnie",
+                    en: "Present",
+                    es: "Actualidad"
+                },
+                image: character.image
+            }
+        ];
+
+    return `
+
+<div class="portrait-panel">
+
+    <img
+        id="portraitImage"
+        src="${portraits[0].image}"
+        alt="${character.name}"
+        class="profile-image">
+
+    <div id="portraitTitle" class="portrait-title">
+
+        ${getPortraitTitle(portraits[0])}
+
+    </div>
+
+    <div class="portrait-gallery">
+
+        ${portraits.map((portrait, index) => `
+
+<button
+    class="portrait-thumb ${index === 0 ? "active" : ""}"
+    data-image="${portrait.image}"
+    data-title="${getPortraitTitle(portrait)}">
+
+    ${getPortraitTitle(portrait)}
+
+</button>
+
+        `).join("")}
+
+    </div>
+
+</div>
+
+`;
+
+}
+
+export async function profileView(id) {
 
     const characters = await getData("characters");
 
-    const character = characters.find(c => c.id === id);
+    const character = characters.find(item => item.id === id);
 
-    if(!character){
-        return "<h1>Nie znaleziono postaci.</h1>";
+    if (!character) {
+        return `
+            <h1>${t("profile.notFound")}</h1>
+            <p>${t("profile.notFoundDescription")}</p>
+        `;
     }
 
+    const favorites = getFavorites();
+    const isFavorite = favorites.includes(character.id);
+
+    const friends = Array.isArray(character.friends)
+        ? character.friends
+        : [];
+
+    const enemies = Array.isArray(character.enemies)
+        ? character.enemies
+        : [];
+
+    const home = localize(character, "home");
+    const faction = localize(character, "faction");
+
     return `
-        <div class="profile">
 
-            <div class="profile-header">
+<section class="profile">
 
-                <img src="${character.image}" class="profile-image">
+<nav class="breadcrumbs">
 
-                <div>
+<a href="#/">${t("common.home")}</a>
 
-                    <h1>${character.name}</h1>
+&gt;
 
-                    <h2>${character.title}</h2>
+<a href="#/characters">${t("characters.title")}</a>
 
-                    <p>${character.description}</p>
+&gt;
 
-                </div>
+<span>${character.name}</span>
 
-            </div>
+</nav>
 
-            <hr>
+<div class="profile-header">
 
-            <h3>Informacje</h3>
+${renderPortraitGallery(character)}
 
-            <table class="infobox">
+<div class="profile-text">
 
-                <tr><td>Rasa</td><td>${character.race}</td></tr>
-                <tr><td>Naród</td><td>${character.nation}</td></tr>
-                <tr><td>Frakcja</td><td>${character.faction}</td></tr>
-                <tr><td>Ranga</td><td>${character.rank}</td></tr>
-                <tr><td>Status</td><td>${character.status}</td></tr>
-                <tr><td>Data urodzenia</td><td>${character.birth}</td></tr>
+<h1>${character.name}</h1>
 
-            </table>
+<h2>${localize(character, "title")}</h2>
 
-        </div>
-    `;
+<p>${localize(character, "description")}</p>
+
+<button
+class="favorite-button"
+data-id="${character.id}">
+
+${t(isFavorite ? "favorite.remove" : "favorite.add")}
+
+</button>
+
+</div>
+
+</div>
+
+<section class="info-box">
+
+<h2>${t("profile.info")}</h2>
+
+<table class="infobox">
+
+<tr>
+<th>${t("profile.race")}</th>
+<td>${localize(character, "race")}</td>
+</tr>
+
+<tr>
+<th>${t("profile.nation")}</th>
+<td>${localize(character, "nation")}</td>
+</tr>
+
+<tr>
+<th>${t("profile.faction")}</th>
+<td>${faction}</td>
+</tr>
+
+<tr>
+<th>${t("profile.rank")}</th>
+<td>${localize(character, "rank")}</td>
+</tr>
+
+<tr>
+<th>${t("profile.status")}</th>
+<td>${localize(character, "status")}</td>
+</tr>
+
+<tr>
+<th>${t("profile.birth")}</th>
+<td>${localize(character, "birth")}</td>
+</tr>
+
+</table>
+
+</section>
+
+<section class="relations">
+
+<h2>${t("profile.friends")}</h2>
+
+${friends.length
+? `<ul>${friends.map(friend=>`
+<li>
+<a href="#/characters/${slugify(friend)}">${friend}</a>
+</li>
+`).join("")}</ul>`
+: `<p>${t("common.none")}</p>`}
+
+<h2>${t("profile.enemies")}</h2>
+
+${enemies.length
+? `<ul>${enemies.map(enemy=>`
+<li>
+<a href="#/characters/${slugify(enemy)}">${enemy}</a>
+</li>
+`).join("")}</ul>`
+: `<p>${t("common.none")}</p>`}
+
+</section>
+
+<section class="related">
+
+<h2>${t("profile.related")}</h2>
+
+<ul>
+
+${home
+? `<li><a href="#/places/${character.homeId || slugify(character.home)}">${home}</a></li>`
+: ""}
+
+${faction
+? `<li><a href="#/factions/${character.factionId || slugify(character.faction)}">${faction}</a></li>`
+: ""}
+
+</ul>
+
+</section>
+
+</section>
+
+`;
+
 }
