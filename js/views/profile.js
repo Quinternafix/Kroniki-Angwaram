@@ -73,11 +73,6 @@ function renderInfoBox(character) {
 
     </div>
 
-    <img
-        src="${character.image}"
-        alt="${character.name}"
-        class="wiki-image">
-
     <table class="wiki-table">
 
         <tr>
