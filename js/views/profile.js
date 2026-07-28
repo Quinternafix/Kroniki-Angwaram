@@ -16,10 +16,28 @@ function renderPortraitGallery(character) {
 
     const portraits = character.portraits || [
         {
-            title: "Obecnie",
+            title: {
+                pl: "Obecnie",
+                en: "Present",
+                es: "Actualidad"
+            },
             image: character.image
         }
     ];
+
+    function portraitTitle(portrait) {
+
+        if (typeof portrait.title === "string") {
+            return portrait.title;
+        }
+
+        return (
+            portrait.title?.[state.language] ||
+            portrait.title?.pl ||
+            portrait.title?.en ||
+            ""
+        );
+    }
 
     return `
 
@@ -31,26 +49,26 @@ function renderPortraitGallery(character) {
         alt="${character.name}"
         class="profile-image">
 
-    <div class="portrait-title">
+    <div id="portraitTitle" class="portrait-title">
 
-${portraits[0].title?.[state.language] || portraits[0].title?.pl || portraits[0].title}
+        ${portraitTitle(portraits[0])}
 
     </div>
 
     <div class="portrait-gallery">
 
-        ${portraits.map((portrait,index)=>`
+        ${portraits.map((portrait, index) => `
 
 <button
-class="portrait-thumb ${index===0?"active":""}"
-data-image="${portrait.image}"
-data-title="${portrait.title?.[state.language] || portrait.title?.pl || portrait.title}"
+    class="portrait-thumb ${index === 0 ? "active" : ""}"
+    data-image="${portrait.image}"
+    data-title="${portraitTitle(portrait)}">
 
-${portrait.title?.[state.language] || portrait.title?.pl || portrait.title}
+    ${portraitTitle(portrait)}
 
 </button>
 
-`).join("")}
+        `).join("")}
 
     </div>
 
