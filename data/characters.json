@@ -72,10 +72,20 @@
     "status": "Żyje",
     "birth": "8 maja 1653",
     "image": "assets/characters/morgath.png",
-    "portraits": [
-      {
-        "title": "Obecnie",
-        "image": "assets/characters/morgath.png"
+  "portraits": [
+  {
+    "title": "Dzieciństwo",
+    "image": "assets/characters/morgath-child.png"
+  },
+  {
+    "title": "Akademia",
+    "image": "assets/characters/morgath-academy.png"
+  },
+  {
+    "title": "Arcymag",
+    "image": "assets/characters/morgath.png"
+  }
+],
       }
     ],
     "description": "Jeden z najwybitniejszych magów kontynentu.",
