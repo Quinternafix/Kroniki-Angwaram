@@ -10,7 +10,7 @@ document.getElementById("navbar").innerHTML = `
 
 <div class="toolbar">
 
-<input id="search" placeholder="${t("nav.searchPlaceholder")}">
+<input id="searchInput" placeholder="${t("nav.searchPlaceholder")}">
 
 <button id="pl" data-language="pl">🇵🇱</button>
 <button id="en" data-language="en">🇬🇧</button>
