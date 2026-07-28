@@ -640,3 +640,100 @@ font-size:36px;
 }
 
 }
+/* =======================================
+   WIKI INFOBOX
+======================================= */
+
+.wiki-infobox{
+
+    background:#202020;
+
+    border:1px solid #3b3b3b;
+
+    border-radius:14px;
+
+    overflow:hidden;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.35);
+
+}
+
+.wiki-header{
+
+    background:#2a2a2a;
+
+    text-align:center;
+
+    padding:18px;
+
+}
+
+.wiki-header h2{
+
+    color:white;
+
+    margin-bottom:6px;
+
+}
+
+.wiki-header p{
+
+    color:#d4af37;
+
+    font-style:italic;
+
+}
+
+.wiki-image{
+
+    width:100%;
+
+    display:block;
+
+}
+
+.wiki-table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+.wiki-table th{
+
+    width:35%;
+
+    padding:12px;
+
+    background:#282828;
+
+    color:#d4af37;
+
+    text-align:left;
+
+    border-bottom:1px solid #3d3d3d;
+
+}
+
+.wiki-table td{
+
+    padding:12px;
+
+    border-bottom:1px solid #3d3d3d;
+
+}
+
+.wiki-table a{
+
+    color:#8ec7ff;
+
+    text-decoration:none;
+
+}
+
+.wiki-table a:hover{
+
+    text-decoration:underline;
+
+}
