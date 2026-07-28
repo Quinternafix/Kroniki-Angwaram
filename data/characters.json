@@ -11,28 +11,28 @@
     "image": "assets/characters/avon-present.png",
 "portraits": [
   {
-    "title": {
-      "pl": "Młodość",
-      "en": "Youth",
-      "es": "Juventud"
-    },
-    "image": "assets/characters/avon-young.png"
+    "title": "Młodość",
+    "image": "assets/characters/avon-young.png",
+    "translations": {
+      "en": { "title": "Youth" },
+      "es": { "title": "Juventud" }
+    }
   },
   {
-    "title": {
-      "pl": "Strażnik Marchii",
-      "en": "March Guard",
-      "es": "Guardia de la Marcha"
-    },
-    "image": "assets/characters/avon-guard.png"
+    "title": "Strażnik Marchii",
+    "image": "assets/characters/avon-guard.png",
+    "translations": {
+      "en": { "title": "March Guard" },
+      "es": { "title": "Guardia de la Marca" }
+    }
   },
   {
-    "title": {
-      "pl": "Obecnie",
-      "en": "Present",
-      "es": "Actualidad"
-    },
-    "image": "assets/characters/avon-present.png"
+    "title": "Obecnie",
+    "image": "assets/characters/avon-present.png",
+    "translations": {
+      "en": { "title": "Present" },
+      "es": { "title": "Actual" }
+    }
   }
 ],
     "description": "Avon jest jedynym półsmokiem w państwie rządzonym przez kotowatych.",
@@ -84,11 +84,15 @@
     "status": "Żyje",
     "birth": "8 maja 1653",
     "image": "assets/characters/morgath.png",
-    "portraits": [
-      {
-        "title": "Obecnie",
-        "image": "assets/characters/morgath.png"
-      }
+  "portraits": [
+  {
+    "title": "Obecnie",
+    "image": "assets/characters/morgath.png",
+    "translations": {
+      "en": { "title": "Present" },
+      "es": { "title": "Actual" }
+    }
+  }
     ],
     "description": "Jeden z najwybitniejszych magów kontynentu.",
     "faction": "Rada Magów",
@@ -137,11 +141,15 @@
     "status": "Żyje",
     "birth": "3 kwietnia 1687",
     "image": "assets/characters/rykan.png",
-    "portraits": [
-      {
-        "title": "Obecnie",
-        "image": "assets/characters/rykan.png"
-      }
+   "portraits": [
+  {
+    "title": "Obecnie",
+    "image": "assets/characters/rykan.png",
+    "translations": {
+      "en": { "title": "Present" },
+      "es": { "title": "Actual" }
+    }
+  }
     ],
     "description": "Rykan podlega Ferrińskiemu Kręgowi Druidów, działając jako pojedyncza jednostka.",
     "faction": "Ferriński Krąg Druidów",
