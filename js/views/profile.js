@@ -15,34 +15,48 @@ function renderPortraitGallery(character) {
 
     const portraits = character.portraits || [
         {
-            title: t("profile.current") || "Obecnie",
+            title: "Obecnie",
             image: character.image
         }
     ];
 
     return `
-        <aside class="profile-sidebar">
 
-            <img
-                id="portraitImage"
-                class="profile-image"
-                src="${portraits[0].image}"
-                alt="${character.name}">
+<div class="portrait-panel">
 
-            <div class="portrait-gallery">
+    <img
+        id="portraitImage"
+        src="${portraits[0].image}"
+        alt="${character.name}"
+        class="profile-image">
 
-                ${portraits.map((portrait, index) => `
-                    <button
-                        class="portrait-thumb ${index === 0 ? "active" : ""}"
-                        data-image="${portrait.image}">
-                        ${portrait.title}
-                    </button>
-                `).join("")}
+    <div class="portrait-title">
 
-            </div>
+        ${portraits[0].title}
 
-        </aside>
-    `;
+    </div>
+
+    <div class="portrait-gallery">
+
+        ${portraits.map((portrait,index)=>`
+
+<button
+class="portrait-thumb ${index===0?"active":""}"
+data-image="${portrait.image}"
+data-title="${portrait.title}">
+
+${portrait.title}
+
+</button>
+
+`).join("")}
+
+    </div>
+
+</div>
+
+`;
+
 }
 
 function renderInfoBox(character) {
