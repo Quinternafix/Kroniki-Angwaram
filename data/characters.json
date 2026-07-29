@@ -287,8 +287,10 @@
     "description": "Quint es un dragón negro, el más reconocido entre los supervivientes.",
     "faction": "Dragones Supervivientes",
     "home": "Ninguna",
-    "quotes": [
+      "quotes": [
       "Nuestro orgullo nos llevó a la ruina, y nunca nos perdonamos lo que ocurrió."
     ]
   }
 }
+  }
+]
