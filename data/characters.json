@@ -128,7 +128,7 @@
         "image": "assets/characters/avon.png",
         "translations": {
           "en": { "title": "Dawnwalkers" },
-          "es": { "title": "Actual" }
+          "es": { "title": "Los caminantes del amanecer" }
         }
       },
       {
@@ -1936,10 +1936,18 @@
       "title": {
         "pl": "Wędrowcy Świtu",
         "en": "Dawnwalkers",
-        "es": "Actualidad"
+        "es": "Los caminantes del amanecer"
       },
       "image": "assets/characters/vekhor.png"
-    }
+      }
+      },
+    {
+      "title": "Czarny Vekhor",
+      "image": "assets/characters/czarny-vekhor.png",
+      "translations": {
+        "en": { "title": "Black Vekhor" },
+        "es": { "title": "Vekhor negro" }
+
   ],
   "description": "",
   "faction": "",
