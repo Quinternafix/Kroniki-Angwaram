@@ -8,7 +8,7 @@
     "rank": "Gwardzista Popielnej Marchii",
     "status": "Żyje",
     "birth": "11 listopada",
-    "image": "assets/characters/avon-present.png",
+    "image": "assets/characters/avon.png",
 
     "portraits": [
       {
@@ -29,7 +29,7 @@
       },
       {
         "title": "Obecnie",
-        "image": "assets/characters/avon-present.png",
+        "image": "assets/characters/avon.png",
         "translations": {
           "en": { "title": "Present" },
           "es": { "title": "Actual" }
