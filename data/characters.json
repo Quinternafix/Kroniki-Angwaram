@@ -288,11 +288,17 @@
         "description": "Quint es un dragón negro, el más reconocido entre los supervivientes.",
         "faction": "Dragones Supervivientes",
         "home": "Ninguna",
-        "quotes": [
-              "quotes": [
-          "Nuestro orgullo nos llevó a la ruina, y nunca nos perdonamos lo que ocurrió."
-        ]
-      }
-    }
-  }
-]
+    "es": {
+    "title": "Sol Negro",
+    "race": "Dragón",
+    "nation": "Ninguna",
+    "rank": "Ninguno",
+    "status": "Vivo",
+    "birth": "Año 333",
+    "description": "Quint es un dragón negro, el más reconocido entre los supervivientes.",
+    "faction": "Dragones Supervivientes",
+    "home": "Ninguna",
+    "quotes": [
+        "Nuestro orgullo nos llevó a la ruina, y nunca nos perdonamos lo que ocurrió."
+    ]
+}
