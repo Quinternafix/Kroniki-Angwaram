@@ -231,12 +231,12 @@
     "rank": "Brak",
     "status": "Żyje",
     "birth": "333 rok",
-    "image": "assets/characters/quint.png",
+    "image": "assets/characters/quint-obecnie.png",
 
     "portraits": [
       {
         "title": "Obecnie",
-        "image": "assets/characters/quint.png",
+        "image": "assets/characters/quint-obecnie.png",
         "translations": {
           "en": { "title": "Present" },
           "es": { "title": "Actual" }
