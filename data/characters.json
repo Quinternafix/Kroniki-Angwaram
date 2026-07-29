@@ -12,10 +12,10 @@
 
     "portraits": [
       {
-        "title": "Obecnie",
+        "title": "Wędrowcy Świtu",
         "image": "assets/characters/avon.png",
         "translations": {
-          "en": { "title": "Present" },
+          "en": { "title": "Dawnwalkers" },
           "es": { "title": "Actual" }
         }
       },
@@ -97,7 +97,7 @@
 
     "portraits": [
       {
-        "title": "Obecnie",
+        "title": "Synowie Burzy",
         "image": "assets/characters/morgath.png",
         "translations": {
           "en": { "title": "Present" },
@@ -166,10 +166,10 @@
 
     "portraits": [
       {
-        "title": "Obecnie",
+        "title": "Wędrowcy Świtu",
         "image": "assets/characters/rykan.png",
         "translations": {
-          "en": { "title": "Present" },
+          "en": { "title": "Dawnwalkers" },
           "es": { "title": "Actual" }
         }
       }
@@ -235,13 +235,21 @@
 
     "portraits": [
       {
-        "title": "Obecnie",
+        "title": "Wędrowcy Świtu",
         "image": "assets/characters/quint-obecnie.png",
         "translations": {
-          "en": { "title": "Present" },
+          "en": { "title": "Dawnwalkers" },
           "es": { "title": "Actual" }
         }
-      }
+      },
+    {
+      "title": "Synowie Burzy",
+      "image": "assets/characters/quint-synowie burzy.png",
+      "translations": {
+        "en": { "title": "Sons of the Storm" },
+        "es": { "title:" "Hijos de la Tormenta" }
+       }
+     }
     ],
 
     "description": "Quint jest czarnym smokiem, najbardziej rozpoznawalnym pośród ocalałych.",
