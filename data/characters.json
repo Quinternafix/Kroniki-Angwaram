@@ -1,5 +1,117 @@
 [
   {
+  "id": "araya-stormbringer",
+  "name": "Araya Stormbringer",
+  "title": "",
+  "race": "",
+  "nation": "",
+  "rank": "",
+  "status": "",
+  "birth": "",
+  "image": "assets/characters/araya-stormbringer.png",
+  "portraits": [
+    {
+      "title": {
+        "pl": "Obecnie",
+        "en": "Present",
+        "es": "Actualidad"
+      },
+      "image": "assets/characters/araya-stormbringer.png"
+    }
+  ],
+  "description": "",
+  "faction": "",
+  "factionId": "",
+  "home": "",
+  "homeId": "",
+  "parents": [],
+  "siblings": [],
+  "friends": [],
+  "enemies": [],
+  "quotes": [],
+  "translations": {
+    "en": {
+      "title": "",
+      "race": "",
+      "nation": "",
+      "rank": "",
+      "status": "",
+      "birth": "",
+      "description": "",
+      "faction": "",
+      "home": ""
+    },
+    "es": {
+      "title": "",
+      "race": "",
+      "nation": "",
+      "rank": "",
+      "status": "",
+      "birth": "",
+      "description": "",
+      "faction": "",
+      "home": ""
+    }
+  }
+},
+
+  {
+  "id": "aurora-stormbringer",
+  "name": "Aurora Stormbringer",
+  "title": "",
+  "race": "",
+  "nation": "",
+  "rank": "",
+  "status": "",
+  "birth": "",
+  "image": "assets/characters/aurora-stormbringer.png",
+  "portraits": [
+    {
+      "title": {
+        "pl": "Obecnie",
+        "en": "Present",
+        "es": "Actualidad"
+      },
+      "image": "assets/characters/aurora-stormbringer.png"
+    }
+  ],
+  "description": "",
+  "faction": "",
+  "factionId": "",
+  "home": "",
+  "homeId": "",
+  "parents": [],
+  "siblings": [],
+  "friends": [],
+  "enemies": [],
+  "quotes": [],
+  "translations": {
+    "en": {
+      "title": "",
+      "race": "",
+      "nation": "",
+      "rank": "",
+      "status": "",
+      "birth": "",
+      "description": "",
+      "faction": "",
+      "home": ""
+    },
+    "es": {
+      "title": "",
+      "race": "",
+      "nation": "",
+      "rank": "",
+      "status": "",
+      "birth": "",
+      "description": "",
+      "faction": "",
+      "home": ""
+    }
+  }
+},
+  
+  {  
     "id": "avon",
     "name": "Avon",
     "title": "Włócznia Wyzwolenia",
@@ -85,6 +197,846 @@
   },
 
   {
+  "id": "caelrath-starsage",
+  "name": "Cael'Rath Starsage",
+  "title": "",
+  "race": "",
+  "nation": "",
+  "rank": "",
+  "status": "",
+  "birth": "",
+  "image": "assets/characters/caelrath-starsage.png",
+  "portraits": [
+    {
+      "title": {
+        "pl": "Obecnie",
+        "en": "Present",
+        "es": "Actualidad"
+      },
+      "image": "assets/characters/caelrath-starsage.png"
+    }
+  ],
+  "description": "",
+  "faction": "",
+  "factionId": "",
+  "home": "",
+  "homeId": "",
+  "parents": [],
+  "siblings": [],
+  "friends": [],
+  "enemies": [],
+  "quotes": [],
+  "translations": {
+    "en": {
+      "title": "",
+      "race": "",
+      "nation": "",
+      "rank": "",
+      "status": "",
+      "birth": "",
+      "description": "",
+      "faction": "",
+      "home": ""
+    },
+    "es": {
+      "title": "",
+      "race": "",
+      "nation": "",
+      "rank": "",
+      "status": "",
+      "birth": "",
+      "description": "",
+      "faction": "",
+      "home": ""
+    }
+  }
+},
+
+  {
+  "id": "czerwony-pielgrzym",
+  "name": "Czerwony Pielgrzym",
+  "title": "",
+  "race": "",
+  "nation": "",
+  "rank": "",
+  "status": "",
+  "birth": "",
+  "image": "assets/characters/czerwony-pielgrzym.png",
+  "portraits": [
+    {
+      "title": {
+        "pl": "Obecnie",
+        "en": "Present",
+        "es": "Actualidad"
+      },
+      "image": "assets/characters/czerwony-pielgrzym.png"
+    }
+  ],
+  "description": "",
+  "faction": "",
+  "factionId": "",
+  "home": "",
+  "homeId": "",
+  "parents": [],
+  "siblings": [],
+  "friends": [],
+  "enemies": [],
+  "quotes": [],
+  "translations": {
+    "en": {
+      "title": "",
+      "race": "",
+      "nation": "",
+      "rank": "",
+      "status": "",
+      "birth": "",
+      "description": "",
+      "faction": "",
+      "home": ""
+    },
+    "es": {
+      "title": "",
+      "race": "",
+      "nation": "",
+      "rank": "",
+      "status": "",
+      "birth": "",
+      "description": "",
+      "faction": "",
+      "home": ""
+    }
+  }
+},
+
+  {
+  "id": "elias-hantosh",
+  "name": "Elias Hantosh",
+  "title": "",
+  "race": "",
+  "nation": "",
+  "rank": "",
+  "status": "",
+  "birth": "",
+  "image": "assets/characters/elias-hantosh.png",
+  "portraits": [
+    {
+      "title": {
+        "pl": "Obecnie",
+        "en": "Present",
+        "es": "Actualidad"
+      },
+      "image": "assets/characters/elias-hantosh.png"
+    }
+  ],
+  "description": "",
+  "faction": "",
+  "factionId": "",
+  "home": "",
+  "homeId": "",
+  "parents": [],
+  "siblings": [],
+  "friends": [],
+  "enemies": [],
+  "quotes": [],
+  "translations": {
+    "en": {
+      "title": "",
+      "race": "",
+      "nation": "",
+      "rank": "",
+      "status": "",
+      "birth": "",
+      "description": "",
+      "faction": "",
+      "home": ""
+    },
+    "es": {
+      "title": "",
+      "race": "",
+      "nation": "",
+      "rank": "",
+      "status": "",
+      "birth": "",
+      "description": "",
+      "faction": "",
+      "home": ""
+    }
+  }
+},
+
+  {
+  "id": "ezerath-arcadorius",
+  "name": "Ezerath Arcadorius",
+  "title": "",
+  "race": "",
+  "nation": "",
+  "rank": "",
+  "status": "",
+  "birth": "",
+  "image": "assets/characters/ezerath-arcadorius.png",
+  "portraits": [
+    {
+      "title": {
+        "pl": "Obecnie",
+        "en": "Present",
+        "es": "Actualidad"
+      },
+      "image": "assets/characters/ezerath-arcadorius.png"
+    }
+  ],
+  "description": "",
+  "faction": "",
+  "factionId": "",
+  "home": "",
+  "homeId": "",
+  "parents": [],
+  "siblings": [],
+  "friends": [],
+  "enemies": [],
+  "quotes": [],
+  "translations": {
+    "en": {
+      "title": "",
+      "race": "",
+      "nation": "",
+      "rank": "",
+      "status": "",
+      "birth": "",
+      "description": "",
+      "faction": "",
+      "home": ""
+    },
+    "es": {
+      "title": "",
+      "race": "",
+      "nation": "",
+      "rank": "",
+      "status": "",
+      "birth": "",
+      "description": "",
+      "faction": "",
+      "home": ""
+    }
+  }
+},
+
+  {
+  "id": "faray-witvuur",
+  "name": "Faray Witvuur",
+  "title": "",
+  "race": "",
+  "nation": "",
+  "rank": "",
+  "status": "",
+  "birth": "",
+  "image": "assets/characters/faray-witvuur.png",
+  "portraits": [
+    {
+      "title": {
+        "pl": "Obecnie",
+        "en": "Present",
+        "es": "Actualidad"
+      },
+      "image": "assets/characters/faray-witvuur.png"
+    }
+  ],
+  "description": "",
+  "faction": "",
+  "factionId": "",
+  "home": "",
+  "homeId": "",
+  "parents": [],
+  "siblings": [],
+  "friends": [],
+  "enemies": [],
+  "quotes": [],
+  "translations": {
+    "en": {
+      "title": "",
+      "race": "",
+      "nation": "",
+      "rank": "",
+      "status": "",
+      "birth": "",
+      "description": "",
+      "faction": "",
+      "home": ""
+    },
+    "es": {
+      "title": "",
+      "race": "",
+      "nation": "",
+      "rank": "",
+      "status": "",
+      "birth": "",
+      "description": "",
+      "faction": "",
+      "home": ""
+    }
+  }
+},
+
+  {
+  "id": "fenryr-ravenmerthus",
+  "name": "Fenryr / Ravenmerthus",
+  "title": "",
+  "race": "",
+  "nation": "",
+  "rank": "",
+  "status": "",
+  "birth": "",
+  "image": "assets/characters/fenryr-ravenmerthus.png",
+  "portraits": [
+    {
+      "title": {
+        "pl": "Obecnie",
+        "en": "Present",
+        "es": "Actualidad"
+      },
+      "image": "assets/characters/fenryr-ravenmerthus.png"
+    }
+  ],
+  "description": "",
+  "faction": "",
+  "factionId": "",
+  "home": "",
+  "homeId": "",
+  "parents": [],
+  "siblings": [],
+  "friends": [],
+  "enemies": [],
+  "quotes": [],
+  "translations": {
+    "en": {
+      "title": "",
+      "race": "",
+      "nation": "",
+      "rank": "",
+      "status": "",
+      "birth": "",
+      "description": "",
+      "faction": "",
+      "home": ""
+    },
+    "es": {
+      "title": "",
+      "race": "",
+      "nation": "",
+      "rank": "",
+      "status": "",
+      "birth": "",
+      "description": "",
+      "faction": "",
+      "home": ""
+    }
+  }
+},
+
+  {
+  "id": "galanhar",
+  "name": "Galanhar",
+  "title": "",
+  "race": "",
+  "nation": "",
+  "rank": "",
+  "status": "",
+  "birth": "",
+  "image": "assets/characters/galanhar.png",
+  "portraits": [
+    {
+      "title": {
+        "pl": "Obecnie",
+        "en": "Present",
+        "es": "Actualidad"
+      },
+      "image": "assets/characters/galanhar.png"
+    }
+  ],
+  "description": "",
+  "faction": "",
+  "factionId": "",
+  "home": "",
+  "homeId": "",
+  "parents": [],
+  "siblings": [],
+  "friends": [],
+  "enemies": [],
+  "quotes": [],
+  "translations": {
+    "en": {
+      "title": "",
+      "race": "",
+      "nation": "",
+      "rank": "",
+      "status": "",
+      "birth": "",
+      "description": "",
+      "faction": "",
+      "home": ""
+    },
+    "es": {
+      "title": "",
+      "race": "",
+      "nation": "",
+      "rank": "",
+      "status": "",
+      "birth": "",
+      "description": "",
+      "faction": "",
+      "home": ""
+    }
+  }
+},
+
+  {
+  "id": "hao",
+  "name": "Hao",
+  "title": "",
+  "race": "",
+  "nation": "",
+  "rank": "",
+  "status": "",
+  "birth": "",
+  "image": "assets/characters/hao.png",
+  "portraits": [
+    {
+      "title": {
+        "pl": "Obecnie",
+        "en": "Present",
+        "es": "Actualidad"
+      },
+      "image": "assets/characters/hao.png"
+    }
+  ],
+  "description": "",
+  "faction": "",
+  "factionId": "",
+  "home": "",
+  "homeId": "",
+  "parents": [],
+  "siblings": [],
+  "friends": [],
+  "enemies": [],
+  "quotes": [],
+  "translations": {
+    "en": {
+      "title": "",
+      "race": "",
+      "nation": "",
+      "rank": "",
+      "status": "",
+      "birth": "",
+      "description": "",
+      "faction": "",
+      "home": ""
+    },
+    "es": {
+      "title": "",
+      "race": "",
+      "nation": "",
+      "rank": "",
+      "status": "",
+      "birth": "",
+      "description": "",
+      "faction": "",
+      "home": ""
+    }
+  }
+},
+
+  {
+  "id": "illdrex",
+  "name": "Illdrex",
+  "title": "",
+  "race": "",
+  "nation": "",
+  "rank": "",
+  "status": "",
+  "birth": "",
+  "image": "assets/characters/illdrex.png",
+  "portraits": [
+    {
+      "title": {
+        "pl": "Obecnie",
+        "en": "Present",
+        "es": "Actualidad"
+      },
+      "image": "assets/characters/illdrex.png"
+    }
+  ],
+  "description": "",
+  "faction": "",
+  "factionId": "",
+  "home": "",
+  "homeId": "",
+  "parents": [],
+  "siblings": [],
+  "friends": [],
+  "enemies": [],
+  "quotes": [],
+  "translations": {
+    "en": {
+      "title": "",
+      "race": "",
+      "nation": "",
+      "rank": "",
+      "status": "",
+      "birth": "",
+      "description": "",
+      "faction": "",
+      "home": ""
+    },
+    "es": {
+      "title": "",
+      "race": "",
+      "nation": "",
+      "rank": "",
+      "status": "",
+      "birth": "",
+      "description": "",
+      "faction": "",
+      "home": ""
+    }
+  }
+},
+
+  {
+  "id": "kharot",
+  "name": "Kharot",
+  "title": "",
+  "race": "",
+  "nation": "",
+  "rank": "",
+  "status": "",
+  "birth": "",
+  "image": "assets/characters/kharot.png",
+  "portraits": [
+    {
+      "title": {
+        "pl": "Obecnie",
+        "en": "Present",
+        "es": "Actualidad"
+      },
+      "image": "assets/characters/kharot.png"
+    }
+  ],
+  "description": "",
+  "faction": "",
+  "factionId": "",
+  "home": "",
+  "homeId": "",
+  "parents": [],
+  "siblings": [],
+  "friends": [],
+  "enemies": [],
+  "quotes": [],
+  "translations": {
+    "en": {
+      "title": "",
+      "race": "",
+      "nation": "",
+      "rank": "",
+      "status": "",
+      "birth": "",
+      "description": "",
+      "faction": "",
+      "home": ""
+    },
+    "es": {
+      "title": "",
+      "race": "",
+      "nation": "",
+      "rank": "",
+      "status": "",
+      "birth": "",
+      "description": "",
+      "faction": "",
+      "home": ""
+    }
+  }
+},
+
+  {
+  "id": "kioth",
+  "name": "Kioth",
+  "title": "",
+  "race": "",
+  "nation": "",
+  "rank": "",
+  "status": "",
+  "birth": "",
+  "image": "assets/characters/kioth.png",
+  "portraits": [
+    {
+      "title": {
+        "pl": "Obecnie",
+        "en": "Present",
+        "es": "Actualidad"
+      },
+      "image": "assets/characters/kioth.png"
+    }
+  ],
+  "description": "",
+  "faction": "",
+  "factionId": "",
+  "home": "",
+  "homeId": "",
+  "parents": [],
+  "siblings": [],
+  "friends": [],
+  "enemies": [],
+  "quotes": [],
+  "translations": {
+    "en": {
+      "title": "",
+      "race": "",
+      "nation": "",
+      "rank": "",
+      "status": "",
+      "birth": "",
+      "description": "",
+      "faction": "",
+      "home": ""
+    },
+    "es": {
+      "title": "",
+      "race": "",
+      "nation": "",
+      "rank": "",
+      "status": "",
+      "birth": "",
+      "description": "",
+      "faction": "",
+      "home": ""
+    }
+  }
+},
+  
+  {
+  "id": "kyorim-witvuur",
+  "name": "Kyorim Witvuur",
+  "title": "",
+  "race": "",
+  "nation": "",
+  "rank": "",
+  "status": "",
+  "birth": "",
+  "image": "assets/characters/kyorim-witvuur.png",
+  "portraits": [
+    {
+      "title": {
+        "pl": "Obecnie",
+        "en": "Present",
+        "es": "Actualidad"
+      },
+      "image": "assets/characters/kyorim-witvuur.png"
+    }
+  ],
+  "description": "",
+  "faction": "",
+  "factionId": "",
+  "home": "",
+  "homeId": "",
+  "parents": [],
+  "siblings": [],
+  "friends": [],
+  "enemies": [],
+  "quotes": [],
+  "translations": {
+    "en": {
+      "title": "",
+      "race": "",
+      "nation": "",
+      "rank": "",
+      "status": "",
+      "birth": "",
+      "description": "",
+      "faction": "",
+      "home": ""
+    },
+    "es": {
+      "title": "",
+      "race": "",
+      "nation": "",
+      "rank": "",
+      "status": "",
+      "birth": "",
+      "description": "",
+      "faction": "",
+      "home": ""
+    }
+  }
+},
+
+  {
+  "id": "lazarius-stormbringer",
+  "name": "Lazarius Stormbringer",
+  "title": "",
+  "race": "",
+  "nation": "",
+  "rank": "",
+  "status": "",
+  "birth": "",
+  "image": "assets/characters/lazarius-stormbringer.png",
+  "portraits": [
+    {
+      "title": {
+        "pl": "Obecnie",
+        "en": "Present",
+        "es": "Actualidad"
+      },
+      "image": "assets/characters/lazarius-stormbringer.png"
+    }
+  ],
+  "description": "",
+  "faction": "",
+  "factionId": "",
+  "home": "",
+  "homeId": "",
+  "parents": [],
+  "siblings": [],
+  "friends": [],
+  "enemies": [],
+  "quotes": [],
+  "translations": {
+    "en": {
+      "title": "",
+      "race": "",
+      "nation": "",
+      "rank": "",
+      "status": "",
+      "birth": "",
+      "description": "",
+      "faction": "",
+      "home": ""
+    },
+    "es": {
+      "title": "",
+      "race": "",
+      "nation": "",
+      "rank": "",
+      "status": "",
+      "birth": "",
+      "description": "",
+      "faction": "",
+      "home": ""
+    }
+  }
+},
+
+  {
+  "id": "leon-haramir",
+  "name": "Leon Haramir",
+  "title": "",
+  "race": "",
+  "nation": "",
+  "rank": "",
+  "status": "",
+  "birth": "",
+  "image": "assets/characters/leon-haramir.png",
+  "portraits": [
+    {
+      "title": {
+        "pl": "Obecnie",
+        "en": "Present",
+        "es": "Actualidad"
+      },
+      "image": "assets/characters/leon-haramir.png"
+    }
+  ],
+  "description": "",
+  "faction": "",
+  "factionId": "",
+  "home": "",
+  "homeId": "",
+  "parents": [],
+  "siblings": [],
+  "friends": [],
+  "enemies": [],
+  "quotes": [],
+  "translations": {
+    "en": {
+      "title": "",
+      "race": "",
+      "nation": "",
+      "rank": "",
+      "status": "",
+      "birth": "",
+      "description": "",
+      "faction": "",
+      "home": ""
+    },
+    "es": {
+      "title": "",
+      "race": "",
+      "nation": "",
+      "rank": "",
+      "status": "",
+      "birth": "",
+      "description": "",
+      "faction": "",
+      "home": ""
+    }
+  }
+},
+
+  {
+  "id": "liliana",
+  "name": "Liliana",
+  "title": "",
+  "race": "",
+  "nation": "",
+  "rank": "",
+  "status": "",
+  "birth": "",
+  "image": "assets/characters/liliana.png",
+  "portraits": [
+    {
+      "title": {
+        "pl": "Obecnie",
+        "en": "Present",
+        "es": "Actualidad"
+      },
+      "image": "assets/characters/liliana.png"
+    }
+  ],
+  "description": "",
+  "faction": "",
+  "factionId": "",
+  "home": "",
+  "homeId": "",
+  "parents": [],
+  "siblings": [],
+  "friends": [],
+  "enemies": [],
+  "quotes": [],
+  "translations": {
+    "en": {
+      "title": "",
+      "race": "",
+      "nation": "",
+      "rank": "",
+      "status": "",
+      "birth": "",
+      "description": "",
+      "faction": "",
+      "home": ""
+    },
+    "es": {
+      "title": "",
+      "race": "",
+      "nation": "",
+      "rank": "",
+      "status": "",
+      "birth": "",
+      "description": "",
+      "faction": "",
+      "home": ""
+    }
+  }
+},
+
+  {
     "id": "morgath",
     "name": "Morgath Stormbringer",
     "title": "Nawałnica Selidoru",
@@ -154,75 +1106,398 @@
   },
 
   {
-    "id": "rykan",
-    "name": "Rykan",
-    "title": "Wyjący Wędrownik",
-    "race": "Półsmok",
-    "nation": "Ferrins",
-    "rank": "Posłaniec Ferrins",
-    "status": "Żyje",
-    "birth": "3 kwietnia 1687",
-    "image": "assets/characters/rykan.png",
-
-    "portraits": [
-      {
-        "title": "Wędrowcy Świtu",
-        "image": "assets/characters/rykan.png",
-        "translations": {
-          "en": { "title": "Dawnwalkers" },
-          "es": { "title": "Actual" }
-        }
-      }
-    ],
-
-    "description": "Rykan podlega Ferrińskiemu Kręgowi Druidów, działając jako pojedyncza jednostka.",
-    "faction": "Ferriński Krąg Druidów",
-    "factionId": "ferrinski-krag-druidow",
-    "home": "Ferrins",
-    "homeId": "ferrins",
-
-    "parents": [],
-    "siblings": [],
-    "friends": ["Neorath Stormbringer"],
-    "enemies": [],
-
-    "quotes": [
-      "Niech prowadzi mnie serce natury."
-    ],
-
-    "translations": {
-      "en": {
-        "title": "The Howling Walker",
-        "race": "Half-dragon",
-        "nation": "Ferrins",
-        "rank": "Messenger of Ferrins",
-        "status": "Alive",
-        "birth": "April 3, 1687",
-        "description": "Rykan serves the Ferrins Druid Circle while operating as an independent envoy.",
-        "faction": "Ferrins Druid Circle",
-        "home": "Ferrins",
-        "quotes": [
-          "May the heart of nature guide me."
-        ]
+  "id": "morkval",
+  "name": "Morkval",
+  "title": "",
+  "race": "",
+  "nation": "",
+  "rank": "",
+  "status": "",
+  "birth": "",
+  "image": "assets/characters/morkval.png",
+  "portraits": [
+    {
+      "title": {
+        "pl": "Obecnie",
+        "en": "Present",
+        "es": "Actualidad"
       },
-      "es": {
-        "title": "El Caminante Aullador",
-        "race": "Semidragón",
-        "nation": "Ferrins",
-        "rank": "Mensajero de Ferrins",
-        "status": "Vivo",
-        "birth": "3 de abril de 1687",
-        "description": "Rykan sirve al Círculo de Druidas de Ferrins mientras actúa como emisario independiente.",
-        "faction": "Círculo de Druidas de Ferrins",
-        "home": "Ferrins",
-        "quotes": [
-          "Que el corazón de la naturaleza me guíe."
-        ]
-      }
+      "image": "assets/characters/morkval.png"
     }
-  },
+  ],
+  "description": "",
+  "faction": "",
+  "factionId": "",
+  "home": "",
+  "homeId": "",
+  "parents": [],
+  "siblings": [],
+  "friends": [],
+  "enemies": [],
+  "quotes": [],
+  "translations": {
+    "en": {
+      "title": "",
+      "race": "",
+      "nation": "",
+      "rank": "",
+      "status": "",
+      "birth": "",
+      "description": "",
+      "faction": "",
+      "home": ""
+    },
+    "es": {
+      "title": "",
+      "race": "",
+      "nation": "",
+      "rank": "",
+      "status": "",
+      "birth": "",
+      "description": "",
+      "faction": "",
+      "home": ""
+    }
+  }
+},
 
   {
+  "id": "nathalie-skyraven",
+  "name": "Nathalie Skyraven",
+  "title": "",
+  "race": "",
+  "nation": "",
+  "rank": "",
+  "status": "",
+  "birth": "",
+  "image": "assets/characters/nathalie-skyraven.png",
+  "portraits": [
+    {
+      "title": {
+        "pl": "Obecnie",
+        "en": "Present",
+        "es": "Actualidad"
+      },
+      "image": "assets/characters/nathalie-skyraven.png"
+    }
+  ],
+  "description": "",
+  "faction": "",
+  "factionId": "",
+  "home": "",
+  "homeId": "",
+  "parents": [],
+  "siblings": [],
+  "friends": [],
+  "enemies": [],
+  "quotes": [],
+  "translations": {
+    "en": {
+      "title": "",
+      "race": "",
+      "nation": "",
+      "rank": "",
+      "status": "",
+      "birth": "",
+      "description": "",
+      "faction": "",
+      "home": ""
+    },
+    "es": {
+      "title": "",
+      "race": "",
+      "nation": "",
+      "rank": "",
+      "status": "",
+      "birth": "",
+      "description": "",
+      "faction": "",
+      "home": ""
+    }
+  }
+},
+
+  {
+  "id": "neorath-stormbringer",
+  "name": "Neorath Stormbringer",
+  "title": "",
+  "race": "",
+  "nation": "",
+  "rank": "",
+  "status": "",
+  "birth": "",
+  "image": "assets/characters/neorath-stormbringer.png",
+  "portraits": [
+    {
+      "title": {
+        "pl": "Obecnie",
+        "en": "Present",
+        "es": "Actualidad"
+      },
+      "image": "assets/characters/neorath-stormbringer.png"
+    }
+  ],
+  "description": "",
+  "faction": "",
+  "factionId": "",
+  "home": "",
+  "homeId": "",
+  "parents": [],
+  "siblings": [],
+  "friends": [],
+  "enemies": [],
+  "quotes": [],
+  "translations": {
+    "en": {
+      "title": "",
+      "race": "",
+      "nation": "",
+      "rank": "",
+      "status": "",
+      "birth": "",
+      "description": "",
+      "faction": "",
+      "home": ""
+    },
+    "es": {
+      "title": "",
+      "race": "",
+      "nation": "",
+      "rank": "",
+      "status": "",
+      "birth": "",
+      "description": "",
+      "faction": "",
+      "home": ""
+    }
+  }
+},
+
+  {
+  "id": "neth",
+  "name": "Neth",
+  "title": "",
+  "race": "",
+  "nation": "",
+  "rank": "",
+  "status": "",
+  "birth": "",
+  "image": "assets/characters/neth.png",
+  "portraits": [
+    {
+      "title": {
+        "pl": "Obecnie",
+        "en": "Present",
+        "es": "Actualidad"
+      },
+      "image": "assets/characters/neth.png"
+    }
+  ],
+  "description": "",
+  "faction": "",
+  "factionId": "",
+  "home": "",
+  "homeId": "",
+  "parents": [],
+  "siblings": [],
+  "friends": [],
+  "enemies": [],
+  "quotes": [],
+  "translations": {
+    "en": {
+      "title": "",
+      "race": "",
+      "nation": "",
+      "rank": "",
+      "status": "",
+      "birth": "",
+      "description": "",
+      "faction": "",
+      "home": ""
+    },
+    "es": {
+      "title": "",
+      "race": "",
+      "nation": "",
+      "rank": "",
+      "status": "",
+      "birth": "",
+      "description": "",
+      "faction": "",
+      "home": ""
+    }
+  }
+},
+
+  {
+  "id": "niebieski-pielgrzym",
+  "name": "Niebieski Pielgrzym",
+  "title": "",
+  "race": "",
+  "nation": "",
+  "rank": "",
+  "status": "",
+  "birth": "",
+  "image": "assets/characters/niebieski-pielgrzym.png",
+  "portraits": [
+    {
+      "title": {
+        "pl": "Obecnie",
+        "en": "Present",
+        "es": "Actualidad"
+      },
+      "image": "assets/characters/niebieski-pielgrzym.png"
+    }
+  ],
+  "description": "",
+  "faction": "",
+  "factionId": "",
+  "home": "",
+  "homeId": "",
+  "parents": [],
+  "siblings": [],
+  "friends": [],
+  "enemies": [],
+  "quotes": [],
+  "translations": {
+    "en": {
+      "title": "",
+      "race": "",
+      "nation": "",
+      "rank": "",
+      "status": "",
+      "birth": "",
+      "description": "",
+      "faction": "",
+      "home": ""
+    },
+    "es": {
+      "title": "",
+      "race": "",
+      "nation": "",
+      "rank": "",
+      "status": "",
+      "birth": "",
+      "description": "",
+      "faction": "",
+      "home": ""
+    }
+  }
+},
+
+  {
+  "id": "okami",
+  "name": "Okami",
+  "title": "",
+  "race": "",
+  "nation": "",
+  "rank": "",
+  "status": "",
+  "birth": "",
+  "image": "assets/characters/okami.png",
+  "portraits": [
+    {
+      "title": {
+        "pl": "Obecnie",
+        "en": "Present",
+        "es": "Actualidad"
+      },
+      "image": "assets/characters/okami.png"
+    }
+  ],
+  "description": "",
+  "faction": "",
+  "factionId": "",
+  "home": "",
+  "homeId": "",
+  "parents": [],
+  "siblings": [],
+  "friends": [],
+  "enemies": [],
+  "quotes": [],
+  "translations": {
+    "en": {
+      "title": "",
+      "race": "",
+      "nation": "",
+      "rank": "",
+      "status": "",
+      "birth": "",
+      "description": "",
+      "faction": "",
+      "home": ""
+    },
+    "es": {
+      "title": "",
+      "race": "",
+      "nation": "",
+      "rank": "",
+      "status": "",
+      "birth": "",
+      "description": "",
+      "faction": "",
+      "home": ""
+    }
+  }
+},
+
+  {
+  "id": "panarfix",
+  "name": "Panarfix",
+  "title": "",
+  "race": "",
+  "nation": "",
+  "rank": "",
+  "status": "",
+  "birth": "",
+  "image": "assets/characters/panarfix.png",
+  "portraits": [
+    {
+      "title": {
+        "pl": "Obecnie",
+        "en": "Present",
+        "es": "Actualidad"
+      },
+      "image": "assets/characters/panarfix.png"
+    }
+  ],
+  "description": "",
+  "faction": "",
+  "factionId": "",
+  "home": "",
+  "homeId": "",
+  "parents": [],
+  "siblings": [],
+  "friends": [],
+  "enemies": [],
+  "quotes": [],
+  "translations": {
+    "en": {
+      "title": "",
+      "race": "",
+      "nation": "",
+      "rank": "",
+      "status": "",
+      "birth": "",
+      "description": "",
+      "faction": "",
+      "home": ""
+    },
+    "es": {
+      "title": "",
+      "race": "",
+      "nation": "",
+      "rank": "",
+      "status": "",
+      "birth": "",
+      "description": "",
+      "faction": "",
+      "home": ""
+    }
+  }
+},
+
+    {
     "id": "quint",
     "name": "Quint",
     "title": "Czarne Słońce",
@@ -297,8 +1572,570 @@
     "home": "Ninguna",
       "quotes": [
       "Nuestro orgullo nos llevó a la ruina, y nunca nos perdonamos lo que ocurrió."
-    ]
+        }
+      },
+  {
+    "id": "rykan",
+    "name": "Rykan",
+    "title": "Wyjący Wędrownik",
+    "race": "Półsmok",
+    "nation": "Ferrins",
+    "rank": "Posłaniec Ferrins",
+    "status": "Żyje",
+    "birth": "3 kwietnia 1687",
+    "image": "assets/characters/rykan.png",
+
+    "portraits": [
+      {
+        "title": "Wędrowcy Świtu",
+        "image": "assets/characters/rykan.png",
+        "translations": {
+          "en": { "title": "Dawnwalkers" },
+          "es": { "title": "Actual" }
+        }
+      }
+    ],
+
+    "description": "Rykan podlega Ferrińskiemu Kręgowi Druidów, działając jako pojedyncza jednostka.",
+    "faction": "Ferriński Krąg Druidów",
+    "factionId": "ferrinski-krag-druidow",
+    "home": "Ferrins",
+    "homeId": "ferrins",
+
+    "parents": [],
+    "siblings": [],
+    "friends": ["Neorath Stormbringer"],
+    "enemies": [],
+
+    "quotes": [
+      "Niech prowadzi mnie serce natury."
+    ],
+
+    "translations": {
+      "en": {
+        "title": "The Howling Walker",
+        "race": "Half-dragon",
+        "nation": "Ferrins",
+        "rank": "Messenger of Ferrins",
+        "status": "Alive",
+        "birth": "April 3, 1687",
+        "description": "Rykan serves the Ferrins Druid Circle while operating as an independent envoy.",
+        "faction": "Ferrins Druid Circle",
+        "home": "Ferrins",
+        "quotes": [
+          "May the heart of nature guide me."
+        ]
+      },
+      "es": {
+        "title": "El Caminante Aullador",
+        "race": "Semidragón",
+        "nation": "Ferrins",
+        "rank": "Mensajero de Ferrins",
+        "status": "Vivo",
+        "birth": "3 de abril de 1687",
+        "description": "Rykan sirve al Círculo de Druidas de Ferrins mientras actúa como emisario independiente.",
+        "faction": "Círculo de Druidas de Ferrins",
+        "home": "Ferrins",
+        "quotes": [
+          "Que el corazón de la naturaleza me guíe."
+        ]
+      }
+    }
+  },
+
+  {
+  "id": "ralakosh-witvuur",
+  "name": "Ralakosh Witvuur",
+  "title": "",
+  "race": "",
+  "nation": "",
+  "rank": "",
+  "status": "",
+  "birth": "",
+  "image": "assets/characters/ralakosh-witvuur.png",
+  "portraits": [
+    {
+      "title": {
+        "pl": "Obecnie",
+        "en": "Present",
+        "es": "Actualidad"
+      },
+      "image": "assets/characters/ralakosh-witvuur.png"
+    }
+  ],
+  "description": "",
+  "faction": "",
+  "factionId": "",
+  "home": "",
+  "homeId": "",
+  "parents": [],
+  "siblings": [],
+  "friends": [],
+  "enemies": [],
+  "quotes": [],
+  "translations": {
+    "en": {
+      "title": "",
+      "race": "",
+      "nation": "",
+      "rank": "",
+      "status": "",
+      "birth": "",
+      "description": "",
+      "faction": "",
+      "home": ""
+    },
+    "es": {
+      "title": "",
+      "race": "",
+      "nation": "",
+      "rank": "",
+      "status": "",
+      "birth": "",
+      "description": "",
+      "faction": "",
+      "home": ""
+    }
+  }
+},
+
+  {
+  "id": "rashkhul",
+  "name": "Rashkhul",
+  "title": "",
+  "race": "",
+  "nation": "",
+  "rank": "",
+  "status": "",
+  "birth": "",
+  "image": "assets/characters/rashkhul.png",
+  "portraits": [
+    {
+      "title": {
+        "pl": "Obecnie",
+        "en": "Present",
+        "es": "Actualidad"
+      },
+      "image": "assets/characters/rashkhul.png"
+    }
+  ],
+  "description": "",
+  "faction": "",
+  "factionId": "",
+  "home": "",
+  "homeId": "",
+  "parents": [],
+  "siblings": [],
+  "friends": [],
+  "enemies": [],
+  "quotes": [],
+  "translations": {
+    "en": {
+      "title": "",
+      "race": "",
+      "nation": "",
+      "rank": "",
+      "status": "",
+      "birth": "",
+      "description": "",
+      "faction": "",
+      "home": ""
+    },
+    "es": {
+      "title": "",
+      "race": "",
+      "nation": "",
+      "rank": "",
+      "status": "",
+      "birth": "",
+      "description": "",
+      "faction": "",
+      "home": ""
+    }
+  }
+},
+  {
+  "id": "reksaval-witvuur",
+  "name": "Rek'Saval Witvuur",
+  "title": "",
+  "race": "",
+  "nation": "",
+  "rank": "",
+  "status": "",
+  "birth": "",
+  "image": "assets/characters/reksaval-witvuur.png",
+  "portraits": [
+    {
+      "title": {
+        "pl": "Obecnie",
+        "en": "Present",
+        "es": "Actualidad"
+      },
+      "image": "assets/characters/reksaval-witvuur.png"
+    }
+  ],
+  "description": "",
+  "faction": "",
+  "factionId": "",
+  "home": "",
+  "homeId": "",
+  "parents": [],
+  "siblings": [],
+  "friends": [],
+  "enemies": [],
+  "quotes": [],
+  "translations": {
+    "en": {
+      "title": "",
+      "race": "",
+      "nation": "",
+      "rank": "",
+      "status": "",
+      "birth": "",
+      "description": "",
+      "faction": "",
+      "home": ""
+    },
+    "es": {
+      "title": "",
+      "race": "",
+      "nation": "",
+      "rank": "",
+      "status": "",
+      "birth": "",
+      "description": "",
+      "faction": "",
+      "home": ""
+    }
+  }
+},
+  {
+  "id": "shyran-starsage",
+  "name": "Shy'Ran Starsage",
+  "title": "",
+  "race": "",
+  "nation": "",
+  "rank": "",
+  "status": "",
+  "birth": "",
+  "image": "assets/characters/shyran-starsage.png",
+  "portraits": [
+    {
+      "title": {
+        "pl": "Obecnie",
+        "en": "Present",
+        "es": "Actualidad"
+      },
+      "image": "assets/characters/shyran-starsage.png"
+    }
+  ],
+  "description": "",
+  "faction": "",
+  "factionId": "",
+  "home": "",
+  "homeId": "",
+  "parents": [],
+  "siblings": [],
+  "friends": [],
+  "enemies": [],
+  "quotes": [],
+  "translations": {
+    "en": {
+      "title": "",
+      "race": "",
+      "nation": "",
+      "rank": "",
+      "status": "",
+      "birth": "",
+      "description": "",
+      "faction": "",
+      "home": ""
+    },
+    "es": {
+      "title": "",
+      "race": "",
+      "nation": "",
+      "rank": "",
+      "status": "",
+      "birth": "",
+      "description": "",
+      "faction": "",
+      "home": ""
+    }
+  }
+},
+  {
+  "id": "thyrvon",
+  "name": "Thyrvon",
+  "title": "",
+  "race": "",
+  "nation": "",
+  "rank": "",
+  "status": "",
+  "birth": "",
+  "image": "assets/characters/thyrvon.png",
+  "portraits": [
+    {
+      "title": {
+        "pl": "Obecnie",
+        "en": "Present",
+        "es": "Actualidad"
+      },
+      "image": "assets/characters/thyrvon.png"
+    }
+  ],
+  "description": "",
+  "faction": "",
+  "factionId": "",
+  "home": "",
+  "homeId": "",
+  "parents": [],
+  "siblings": [],
+  "friends": [],
+  "enemies": [],
+  "quotes": [],
+  "translations": {
+    "en": {
+      "title": "",
+      "race": "",
+      "nation": "",
+      "rank": "",
+      "status": "",
+      "birth": "",
+      "description": "",
+      "faction": "",
+      "home": ""
+    },
+    "es": {
+      "title": "",
+      "race": "",
+      "nation": "",
+      "rank": "",
+      "status": "",
+      "birth": "",
+      "description": "",
+      "faction": "",
+      "home": ""
+    }
+  }
+},
+  {
+  "id": "vekhor",
+  "name": "Vekhor",
+  "title": "",
+  "race": "",
+  "nation": "",
+  "rank": "",
+  "status": "",
+  "birth": "",
+  "image": "assets/characters/vekhor.png",
+  "portraits": [
+    {
+      "title": {
+        "pl": "Obecnie",
+        "en": "Present",
+        "es": "Actualidad"
+      },
+      "image": "assets/characters/vekhor.png"
+    }
+  ],
+  "description": "",
+  "faction": "",
+  "factionId": "",
+  "home": "",
+  "homeId": "",
+  "parents": [],
+  "siblings": [],
+  "friends": [],
+  "enemies": [],
+  "quotes": [],
+  "translations": {
+    "en": {
+      "title": "",
+      "race": "",
+      "nation": "",
+      "rank": "",
+      "status": "",
+      "birth": "",
+      "description": "",
+      "faction": "",
+      "home": ""
+    },
+    "es": {
+      "title": "",
+      "race": "",
+      "nation": "",
+      "rank": "",
+      "status": "",
+      "birth": "",
+      "description": "",
+      "faction": "",
+      "home": ""
+    }
+  }
+},
+  {
+  "id": "vesz-goldcrown",
+  "name": "Vesz Goldcrown",
+  "title": "",
+  "race": "",
+  "nation": "",
+  "rank": "",
+  "status": "",
+  "birth": "",
+  "image": "assets/characters/vesz-goldcrown.png",
+  "portraits": [
+    {
+      "title": {
+        "pl": "Obecnie",
+        "en": "Present",
+        "es": "Actualidad"
+      },
+      "image": "assets/characters/vesz-goldcrown.png"
+    }
+  ],
+  "description": "",
+  "faction": "",
+  "factionId": "",
+  "home": "",
+  "homeId": "",
+  "parents": [],
+  "siblings": [],
+  "friends": [],
+  "enemies": [],
+  "quotes": [],
+  "translations": {
+    "en": {
+      "title": "",
+      "race": "",
+      "nation": "",
+      "rank": "",
+      "status": "",
+      "birth": "",
+      "description": "",
+      "faction": "",
+      "home": ""
+    },
+    "es": {
+      "title": "",
+      "race": "",
+      "nation": "",
+      "rank": "",
+      "status": "",
+      "birth": "",
+      "description": "",
+      "faction": "",
+      "home": ""
+    }
+  }
+},
+  {
+  "id": "wulddai-stormbringer",
+  "name": "Wüld'Dai Stormbringer",
+  "title": "",
+  "race": "",
+  "nation": "",
+  "rank": "",
+  "status": "",
+  "birth": "",
+  "image": "assets/characters/wulddai-stormbringer.png",
+  "portraits": [
+    {
+      "title": {
+        "pl": "Obecnie",
+        "en": "Present",
+        "es": "Actualidad"
+      },
+      "image": "assets/characters/wulddai-stormbringer.png"
+    }
+  ],
+  "description": "",
+  "faction": "",
+  "factionId": "",
+  "home": "",
+  "homeId": "",
+  "parents": [],
+  "siblings": [],
+  "friends": [],
+  "enemies": [],
+  "quotes": [],
+  "translations": {
+    "en": {
+      "title": "",
+      "race": "",
+      "nation": "",
+      "rank": "",
+      "status": "",
+      "birth": "",
+      "description": "",
+      "faction": "",
+      "home": ""
+    },
+    "es": {
+      "title": "",
+      "race": "",
+      "nation": "",
+      "rank": "",
+      "status": "",
+      "birth": "",
+      "description": "",
+      "faction": "",
+      "home": ""
+    }
+  }
+},
+  {
+  "id": "yarhan-witvuur",
+  "name": "Yarhan Witvuur",
+  "title": "",
+  "race": "",
+  "nation": "",
+  "rank": "",
+  "status": "",
+  "birth": "",
+  "image": "assets/characters/yarhan-witvuur.png",
+  "portraits": [
+    {
+      "title": {
+        "pl": "Obecnie",
+        "en": "Present",
+        "es": "Actualidad"
+      },
+      "image": "assets/characters/yarhan-witvuur.png"
+    }
+  ],
+  "description": "",
+  "faction": "",
+  "factionId": "",
+  "home": "",
+  "homeId": "",
+  "parents": [],
+  "siblings": [],
+  "friends": [],
+  "enemies": [],
+  "quotes": [],
+  "translations": {
+    "en": {
+      "title": "",
+      "race": "",
+      "nation": "",
+      "rank": "",
+      "status": "",
+      "birth": "",
+      "description": "",
+      "faction": "",
+      "home": ""
+    },
+    "es": {
+      "title": "",
+      "race": "",
+      "nation": "",
+      "rank": "",
+      "status": "",
+      "birth": "",
+      "description": "",
+      "faction": "",
+      "home": ""
+    }
   }
 }
-  }
-]
