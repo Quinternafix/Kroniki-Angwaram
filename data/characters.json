@@ -224,7 +224,7 @@
   ],
 
   "siblings": [
-    "Fenryr",
+    "Fenryr"
   ],
 
   "friends": [
@@ -233,7 +233,9 @@
 
   "enemies": [
     "Ravenmerthus",
-    "Vesz",
+    "Vesz"
+  ],
+
   "quotes": [
     "Nasza duma popchnęła nas ku zagładzie i nigdy sobie nie wybaczyliśmy tego co się stało."
   ],
@@ -248,7 +250,10 @@
       "birth": "Year 333",
       "description": "Quint is a black dragon, the most recognizable among the survivors.",
       "faction": "Surviving Dragons",
-      "home": "None"
+      "home": "None",
+      "quotes": [
+        "Our pride drove us toward ruin, and we never forgave ourselves for what happened."
+      ]
     },
     "es": {
       "title": "Sol Negro",
@@ -259,7 +264,10 @@
       "birth": "Año 333",
       "description": "Quint es un dragón negro, el más reconocido entre los supervivientes.",
       "faction": "Dragones Supervivientes",
-      "home": "Ninguna"
+      "home": "Ninguna",
+      "quotes": [
+        "Nuestro orgullo nos llevó a la ruina, y nunca nos perdonamos lo que ocurrió."
+      ]
     }
   }
 }
