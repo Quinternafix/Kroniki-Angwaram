@@ -1931,24 +1931,24 @@
   "status": "Żyje",
   "birth": "Początek 15 wieku",
   "image": "assets/characters/vekhor.png",
-  "portraits": [
-    {
-      "title": {
-        "pl": "Wędrowcy Świtu",
-        "en": "Dawnwalkers",
-        "es": "Los caminantes del amanecer"
-      },
-      "image": "assets/characters/vekhor.png"
-      }
-    },
+ "portraits": [
   {
-      "title": "Czarny Vekhor",
-      "image": "assets/characters/czarny-vekhor.png",
-      "translations": {
-        "en": { "title": "Black Vekhor" },
-        "es": { "title": "Vekhor negro" }
-
-  ],
+    "title": {
+      "pl": "Wędrowcy Świtu",
+      "en": "Dawnwalkers",
+      "es": "Los caminantes del amanecer"
+    },
+    "image": "assets/characters/vekhor.png"
+  },
+  {
+    "title": "Czarny Vekhor",
+    "image": "assets/characters/czarny-vekhor.png",
+    "translations": {
+      "en": { "title": "Black Vekhor" },
+      "es": { "title": "Vekhor negro" }
+    }
+  },
+   {
   "description": "",
   "faction": "",
   "factionId": "",
