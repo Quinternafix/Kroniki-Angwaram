@@ -12,11 +12,11 @@
 
     "portraits": [
       {
-        "title": "Młodość",
-        "image": "assets/characters/avon-young.png",
+        "title": "Obecnie",
+        "image": "assets/characters/avon.png",
         "translations": {
-          "en": { "title": "Youth" },
-          "es": { "title": "Juventud" }
+          "en": { "title": "Present" },
+          "es": { "title": "Actual" }
         }
       },
       {
@@ -27,12 +27,12 @@
           "es": { "title": "Guardia de la Marca" }
         }
       },
-      {
-        "title": "Obecnie",
-        "image": "assets/characters/avon.png",
+        {
+        "title": "Młodość",
+        "image": "assets/characters/avon-young.png",
         "translations": {
-          "en": { "title": "Present" },
-          "es": { "title": "Actual" }
+          "en": { "title": "Youth" },
+          "es": { "title": "Juventud" }
         }
       }
     ],
