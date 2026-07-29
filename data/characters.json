@@ -46,8 +46,23 @@
       "Neorath Stormbringer"
     ],
     "enemies": [],
+   "quotes": [
+  "Wolność jest warta poświęceń."
+],
+"translations": {
+  "en": {
+    ...
     "quotes": [
-      "Wolność jest warta poświęceń."
+      "Freedom is worth the sacrifice."
+    ]
+  },
+  "es": {
+    ...
+    "quotes": [
+      "La libertad vale el sacrificio."
+    ]
+  }
+}
     ],
     "translations": {
       "en": {
@@ -103,8 +118,23 @@
     "siblings": [],
     "friends": [],
     "enemies": [],
+"quotes": [
+  "Magia nie zna granic."
+],
+"translations": {
+  "en": {
+    ...
     "quotes": [
-      "Magia nie zna granic."
+      "Magic knows no boundaries."
+    ]
+  },
+  "es": {
+    ...
+    "quotes": [
+      "La magia no conoce límites."
+    ]
+  }
+}
     ],
     "translations": {
       "en": {
@@ -162,8 +192,23 @@
       "Neorath Stormbringer"
     ],
     "enemies": [],
+"quotes": [
+  "Niech prowadzi mnie serce natury."
+],
+"translations": {
+  "en": {
+    ...
     "quotes": [
-      "Niech prowadzi mnie serce natury."
+      "May the heart of nature guide me."
+    ]
+  },
+  "es": {
+    ...
+    "quotes": [
+      "Que el corazón de la naturaleza me guíe."
+    ]
+  }
+}
     ],
     "translations": {
       "en": {
