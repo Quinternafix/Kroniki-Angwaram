@@ -189,5 +189,38 @@
         "home": "Ferrins"
       }
     }
+  },
+  {
+   "id": "quint",
+    "name": "Quint",
+    "title": "Czarne Słońce",
+    "race": "Smok",
+    "nation": "Brak",
+    "rank": "Brak",
+    "status": "Żyje",
+    "birth": "333 rok",
+    "image": "assets/characters/quint.png",
+"portraits": [
+  {
+    "title": "Obecnie"
+    "image": "assets/characters/quint.png",
+    "translations": {
+      "en": { "title": "Present" },
+      "es": { "title": "Actual" }
+    }
   }
-]
+    ],
+    "description": "Quint jest czarnym smokiem, najbardziej rozpoznawalnym pośród ocalałych.",
+    "faction": "Ocalałe Smoki",
+    "factionId": "ocalałe smoki",
+    "home": "brak",
+    "homeId": "brak",
+    "parents": "Thyrvon (ojciec)", "Nieznana Matka", 
+    "siblings": "Fenryr/Ravenmerthus",
+    "friends": [
+      "Kharot"
+      "
+    ],
+    "enemies": "Ravenmerthus", "Vesz",
+    "quotes": [
+      "Nie macie pojęcia, ile wycierpiała moja rasa z powodu naszej dumy."
