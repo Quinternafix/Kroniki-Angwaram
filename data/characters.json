@@ -1924,18 +1924,18 @@
   {
   "id": "vekhor",
   "name": "Vekhor",
-  "title": "",
-  "race": "",
-  "nation": "",
-  "rank": "",
-  "status": "",
-  "birth": "",
+  "title": "Ronin Dwóch Cieni",
+  "race": "Półsmok",
+  "nation": "Isinglano",
+  "rank": "Król Isinglano",
+  "status": "Żyje",
+  "birth": "Początek 15 wieku",
   "image": "assets/characters/vekhor.png",
   "portraits": [
     {
       "title": {
-        "pl": "Obecnie",
-        "en": "Present",
+        "pl": "Wędrowcy Świtu",
+        "en": "Dawnwalkers",
         "es": "Actualidad"
       },
       "image": "assets/characters/vekhor.png"
@@ -1953,23 +1953,23 @@
   "quotes": [],
   "translations": {
     "en": {
-      "title": "",
-      "race": "",
-      "nation": "",
-      "rank": "",
-      "status": "",
-      "birth": "",
+      "title": "Ronin of the Two Shadows",
+      "race": "Half-dragon",
+      "nation": "Isinglano",
+      "rank": "King of Isinglano",
+      "status": "Alive",
+      "birth": "Early 15th Century",
       "description": "",
       "faction": "",
       "home": ""
     },
     "es": {
-      "title": "",
-      "race": "",
-      "nation": "",
-      "rank": "",
-      "status": "",
-      "birth": "",
+      "title": "Ronin de las Dos Sombras",
+      "race": "Semidragón",
+      "nation": "Isinglano",
+      "rank": "Rey de Isinglano",
+      "status": "Vivo",
+      "birth": "Principios del siglo XV",
       "description": "",
       "faction": "",
       "home": ""
