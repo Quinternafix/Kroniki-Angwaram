@@ -1572,8 +1572,10 @@
     "home": "Ninguna",
       "quotes": [
       "Nuestro orgullo nos llevó a la ruina, y nunca nos perdonamos lo que ocurrió."
-        }
-      },
+      ]
+  }
+}
+    },
   {
     "id": "rykan",
     "name": "Rykan",
