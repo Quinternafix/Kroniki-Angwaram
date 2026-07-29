@@ -190,37 +190,76 @@
       }
     }
   },
-  {
-   "id": "quint",
-    "name": "Quint",
-    "title": "Czarne Słońce",
-    "race": "Smok",
-    "nation": "Brak",
-    "rank": "Brak",
-    "status": "Żyje",
-    "birth": "333 rok",
-    "image": "assets/characters/quint.png",
-"portraits": [
-  {
-    "title": "Obecnie"
-    "image": "assets/characters/quint.png",
-    "translations": {
-      "en": { "title": "Present" },
-      "es": { "title": "Actual" }
+{
+  "id": "quint",
+  "name": "Quint",
+  "title": "Czarne Słońce",
+  "race": "Smok",
+  "nation": "Brak",
+  "rank": "Brak",
+  "status": "Żyje",
+  "birth": "333 rok",
+  "image": "assets/characters/quint.png",
+
+  "portraits": [
+    {
+      "title": "Obecnie",
+      "image": "assets/characters/quint.png",
+      "translations": {
+        "en": { "title": "Present" },
+        "es": { "title": "Actual" }
+      }
+    }
+  ],
+
+  "description": "Quint jest czarnym smokiem, najbardziej rozpoznawalnym pośród ocalałych.",
+  "faction": "Ocalałe Smoki",
+  "factionId": "ocalale-smoki",
+  "home": "Brak",
+  "homeId": "brak",
+
+  "parents": [
+    "Thyrvon (ojciec)",
+    "Nieznana Matka"
+  ],
+
+  "siblings": [
+    "Fenryr",
+  ],
+
+  "friends": [
+    "Kharot"
+  ],
+
+  "enemies": [
+    "Ravenmerthus",
+    "Vesz",
+  "quotes": [
+    "Nasza duma popchnęła nas ku zagładzie i nigdy sobie nie wybaczyliśmy tego co się stało."
+  ],
+
+  "translations": {
+    "en": {
+      "title": "Black Sun",
+      "race": "Dragon",
+      "nation": "None",
+      "rank": "None",
+      "status": "Alive",
+      "birth": "Year 333",
+      "description": "Quint is a black dragon, the most recognizable among the survivors.",
+      "faction": "Surviving Dragons",
+      "home": "None"
+    },
+    "es": {
+      "title": "Sol Negro",
+      "race": "Dragón",
+      "nation": "Ninguna",
+      "rank": "Ninguno",
+      "status": "Vivo",
+      "birth": "Año 333",
+      "description": "Quint es un dragón negro, el más reconocido entre los supervivientes.",
+      "faction": "Dragones Supervivientes",
+      "home": "Ninguna"
     }
   }
-    ],
-    "description": "Quint jest czarnym smokiem, najbardziej rozpoznawalnym pośród ocalałych.",
-    "faction": "Ocalałe Smoki",
-    "factionId": "ocalałe smoki",
-    "home": "brak",
-    "homeId": "brak",
-    "parents": "Thyrvon (ojciec)", "Nieznana Matka", 
-    "siblings": "Fenryr/Ravenmerthus",
-    "friends": [
-      "Kharot"
-      "
-    ],
-    "enemies": "Ravenmerthus", "Vesz",
-    "quotes": [
-      "Nie macie pojęcia, ile wycierpiała moja rasa z powodu naszej dumy."
+}
