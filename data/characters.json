@@ -1930,7 +1930,7 @@
   "rank": "Król Isinglano",
   "status": "Żyje",
   "birth": "Początek 15 wieku",
-  "image": "assets/characters/vekhor.png",
+  "image": "assets/characters/Vekhor.png",
  "portraits": [
   {
     "title": {
@@ -1938,7 +1938,7 @@
       "en": "Dawnwalkers",
       "es": "Los caminantes del amanecer"
     },
-    "image": "assets/characters/vekhor.png"
+    "image": "assets/characters/Vekhor.png"
   },
   {
     "title": "Czarny Vekhor",
