@@ -87,7 +87,7 @@
   {
     "id": "morgath",
     "name": "Morgath Stormbringer",
-    "title": "Arcymag Selidoru",
+    "title": "Nawałnica Selidoru",
     "race": "Półsmok",
     "nation": "Selidor",
     "rank": "Arcymag",
@@ -123,7 +123,7 @@
 
     "translations": {
       "en": {
-        "title": "Archmage of Selidor",
+        "title": "Storm of Selidor",
         "race": "Half-dragon",
         "nation": "Selidor",
         "rank": "Archmage",
@@ -137,7 +137,7 @@
         ]
       },
       "es": {
-        "title": "Archimago de Selidor",
+        "title": "La tormenta de Selidor",
         "race": "Semidragón",
         "nation": "Selidor",
         "rank": "Archimago",
