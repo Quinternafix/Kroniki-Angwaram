@@ -18,6 +18,11 @@ export async function router() {
 
     const app = document.getElementById("app");
 
+    if (!app) {
+        console.error("Nie znaleziono elementu #app.");
+        return;
+    }
+
     const hash = location.hash || "#/";
 
     try {
@@ -35,7 +40,6 @@ export async function router() {
             initProfilePage();
 
             return;
-
         }
 
         /* ===========================
@@ -49,7 +53,6 @@ export async function router() {
             app.innerHTML = await factionView(id);
 
             return;
-
         }
 
         /* ===========================
@@ -63,7 +66,6 @@ export async function router() {
             app.innerHTML = await placeView(id);
 
             return;
-
         }
 
         /* ===========================
@@ -98,7 +100,7 @@ export async function router() {
 
             case "#/timeline":
 
-                app.innerHTML = timelineView();
+                app.innerHTML = await timelineView();
 
                 break;
 
@@ -107,14 +109,11 @@ export async function router() {
                 app.innerHTML = notFoundView();
 
                 break;
-
         }
 
-    }
+    } catch (error) {
 
-    catch (error) {
-
-        console.error(error);
+        console.error("Błąd routera:", error);
 
         app.innerHTML = `
 
@@ -123,21 +122,13 @@ export async function router() {
                 <h1>⚠ Wystąpił błąd</h1>
 
                 <p>
-
                     Nie udało się wyświetlić tej strony.
-
                 </p>
 
-                <pre>
-
-${error.message}
-
-                </pre>
+                <pre>${error.message}</pre>
 
             </section>
 
         `;
-
     }
-
 }
