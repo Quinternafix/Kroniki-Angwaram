@@ -1,7 +1,11 @@
 import { getData } from "../core/api.js";
 import { getFavorites, saveFavorites } from "../core/storage.js";
-import { localize, t } from "../core/i18n.js";
-import { state } from "../state.js";
+import {
+    getLanguage,
+    localize,
+    localizeValue,
+    t
+} from "../core/i18n.js";
 
 function slugify(value) {
     return String(value || "")
@@ -12,273 +16,550 @@ function slugify(value) {
         .replace(/^-+|-+$/g, "");
 }
 
-function renderPortraitGallery(character) {
+function escapeHtml(value) {
+    return String(value ?? "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+}
 
-    const portraits = character.portraits || [
-        {
-            title: {
-                pl: "Obecnie",
-                en: "Present",
-                es: "Actualidad"
-            },
-            image: character.image
-        }
-    ];
-
-    function portraitTitle(portrait) {
-
-        if (typeof portrait.title === "string") {
-            return portrait.title;
-        }
-
-        return (
-            portrait.title?.[state.language] ||
-            portrait.title?.pl ||
-            portrait.title?.en ||
-            ""
-        );
+function getPortraitTitle(portrait) {
+    if (!portrait || typeof portrait !== "object") {
+        return "";
     }
 
-    return `
+    /*
+     * Obsługuje:
+     *
+     * title: {
+     *   pl: "...",
+     *   en: "...",
+     *   es: "..."
+     * }
+     *
+     * oraz:
+     *
+     * title: "..."
+     *
+     * oraz starszy format:
+     *
+     * title: "..."
+     * translations: {
+     *   en: { title: "..." },
+     *   es: { title: "..." }
+     * }
+     */
 
+    const translatedTitle =
+        portrait.translations?.[getLanguage()]?.title;
+
+    if (
+        translatedTitle !== undefined &&
+        translatedTitle !== null &&
+        translatedTitle !== ""
+    ) {
+        return String(translatedTitle);
+    }
+
+    const localizedTitle =
+        localizeValue(portrait.title);
+
+    if (localizedTitle) {
+        return localizedTitle;
+    }
+
+    const fallbackTitle =
+        portrait.translations?.pl?.title;
+
+    if (
+        fallbackTitle !== undefined &&
+        fallbackTitle !== null &&
+        fallbackTitle !== ""
+    ) {
+        return String(fallbackTitle);
+    }
+
+    return "";
+}
+
+function renderPortraitGallery(character) {
+    const portraits =
+        Array.isArray(character.portraits) &&
+        character.portraits.length
+            ? character.portraits
+            : [
+                {
+                    title: {
+                        pl: "Obecnie",
+                        en: "Present",
+                        es: "Actualidad"
+                    },
+                    image: character.image
+                }
+            ];
+
+    const firstPortrait = portraits[0];
+    const firstTitle =
+        getPortraitTitle(firstPortrait);
+
+    return `
 <div class="portrait-panel">
 
     <img
         id="portraitImage"
-        src="${portraits[0].image}"
-        alt="${character.name}"
+        src="${escapeHtml(
+            firstPortrait?.image ||
+            character.image ||
+            ""
+        )}"
+        alt="${escapeHtml(character.name)}"
         class="profile-image">
 
     <div id="portraitTitle" class="portrait-title">
-
-        ${portraitTitle(portraits[0])}
-
+        ${escapeHtml(firstTitle)}
     </div>
 
     <div class="portrait-gallery">
 
-        ${portraits.map((portrait, index) => `
+        ${portraits.map((portrait, index) => {
+            const portraitTitle =
+                getPortraitTitle(portrait);
 
+            return `
 <button
-    class="portrait-thumb ${index === 0 ? "active" : ""}"
-    data-image="${portrait.image}"
-    data-title="${portraitTitle(portrait)}">
+    type="button"
+    class="portrait-thumb ${
+        index === 0 ? "active" : ""
+    }"
+    data-image="${escapeHtml(
+        portrait?.image || ""
+    )}"
+    data-title="${escapeHtml(
+        portraitTitle
+    )}">
 
-    ${portraitTitle(portrait)}
+    ${escapeHtml(portraitTitle)}
 
 </button>
-
-        `).join("")}
+`;
+        }).join("")}
 
     </div>
 
 </div>
-
 `;
-
 }
 
 function renderInfoBox(character) {
+    const homeName =
+        localize(character, "home");
+
+    const homeId =
+        character.homeId ||
+        slugify(character.home);
 
     return `
-
 <aside class="wiki-infobox">
 
     <div class="wiki-header">
 
-        <h2>${character.name}</h2>
+        <h2>
+            ${escapeHtml(character.name)}
+        </h2>
 
-        <p>${localize(character,"title")}</p>
+        <p>
+            ${escapeHtml(
+                localize(character, "title")
+            )}
+        </p>
 
     </div>
 
     <table class="wiki-table">
 
         <tr>
-            <th>Rasa</th>
-            <td>${localize(character,"race")}</td>
-        </tr>
-
-        <tr>
-            <th>Naród</th>
-            <td>${localize(character,"nation")}</td>
-        </tr>
-
-        <tr>
-            <th>Frakcja</th>
+            <th>
+                ${escapeHtml(
+                    t("profile.race")
+                )}
+            </th>
             <td>
-
-                <a href="#/factions/${character.factionId || slugify(character.faction)}">
-
-                    ${localize(character,"faction")}
-
-                </a>
-
+                ${escapeHtml(
+                    localize(character, "race")
+                )}
             </td>
         </tr>
 
         <tr>
-            <th>Ranga</th>
-            <td>${localize(character,"rank")}</td>
-        </tr>
-
-        <tr>
-            <th>Status</th>
-            <td>${localize(character,"status")}</td>
-        </tr>
-
-        <tr>
-            <th>Data urodzenia</th>
-            <td>${localize(character,"birth")}</td>
-        </tr>
-
-        <tr>
-            <th>Dom</th>
+            <th>
+                ${escapeHtml(
+                    t("profile.nation")
+                )}
+            </th>
             <td>
+                ${escapeHtml(
+                    localize(character, "nation")
+                )}
+            </td>
+        </tr>
 
-                <a href="#/places/${character.homeId || slugify(character.home)}">
+        <tr>
+            <th>
+                ${escapeHtml(
+                    t("profile.faction")
+                )}
+            </th>
 
-                    ${character.home}
+            <td>
+                ${
+                    character.factionId ||
+                    character.faction
+                        ? `
+                            <a href="#/factions/${
+                                escapeHtml(
+                                    character.factionId ||
+                                    slugify(
+                                        character.faction
+                                    )
+                                )
+                            }">
+                                ${escapeHtml(
+                                    localize(
+                                        character,
+                                        "faction"
+                                    )
+                                )}
+                            </a>
+                        `
+                        : escapeHtml(
+                            t("common.noData")
+                        )
+                }
+            </td>
+        </tr>
 
-                </a>
+        <tr>
+            <th>
+                ${escapeHtml(
+                    t("profile.rank")
+                )}
+            </th>
 
+            <td>
+                ${escapeHtml(
+                    localize(
+                        character,
+                        "rank"
+                    )
+                )}
+            </td>
+        </tr>
+
+        <tr>
+            <th>
+                ${escapeHtml(
+                    t("profile.status")
+                )}
+            </th>
+
+            <td>
+                ${escapeHtml(
+                    localize(
+                        character,
+                        "status"
+                    )
+                )}
+            </td>
+        </tr>
+
+        <tr>
+            <th>
+                ${escapeHtml(
+                    t("profile.birth")
+                )}
+            </th>
+
+            <td>
+                ${escapeHtml(
+                    localize(
+                        character,
+                        "birth"
+                    )
+                )}
+            </td>
+        </tr>
+
+        <tr>
+            <th>
+                ${escapeHtml(
+                    t("profile.home")
+                )}
+            </th>
+
+            <td>
+                ${
+                    homeName
+                        ? `
+                            <a href="#/places/${escapeHtml(
+                                homeId
+                            )}">
+                                ${escapeHtml(
+                                    homeName
+                                )}
+                            </a>
+                        `
+                        : escapeHtml(
+                            t("common.noData")
+                        )
+                }
             </td>
         </tr>
 
     </table>
 
 </aside>
-
 `;
-
 }
 
-function renderRelations(title, list) {
+function renderRelations(titleKey, list) {
+    const title = t(titleKey);
 
     return `
-        <section class="relations">
+<section class="relations">
 
-            <h2>${title}</h2>
+    <h2>
+        ${escapeHtml(title)}
+    </h2>
 
-            ${
-                list.length
-                ? `
-                    <ul>
+    ${
+        Array.isArray(list) &&
+        list.length
+            ? `
+                <ul>
 
-                        ${list.map(item => `
-                            <li>
-                                <a href="#/characters/${slugify(item)}">
-                                    ${item}
-                                </a>
-                            </li>
-                        `).join("")}
+                    ${list.map(item => `
+                        <li>
+                            <a
+                                href="#/characters/${escapeHtml(
+                                    slugify(item)
+                                )}">
+                                ${escapeHtml(item)}
+                            </a>
+                        </li>
+                    `).join("")}
 
-                    </ul>
-                `
-                : `<p>Brak danych.</p>`
-            }
-
-        </section>
-    `;
-}
-export async function profileView(id) {
-
-    const characters = await getData("characters");
-    const character = characters.find(c => c.id === id);
-
-    if (!character) {
-
-        return `
-            <h1>Nie znaleziono postaci.</h1>
-            <p>Taka postać nie istnieje.</p>
-        `;
-
+                </ul>
+            `
+            : `
+                <p>
+                    ${escapeHtml(
+                        t("common.noData")
+                    )}
+                </p>
+            `
     }
 
-    const favorites = getFavorites();
-    const isFavorite = favorites.includes(character.id);
+</section>
+`;
+}
+
+export async function profileView(id) {
+    const characters =
+        await getData("characters");
+
+    const character =
+        characters.find(
+            character => character.id === id
+        );
+
+    if (!character) {
+        return `
+            <h1>
+                ${escapeHtml(
+                    t("profile.notFound")
+                )}
+            </h1>
+
+            <p>
+                ${escapeHtml(
+                    t(
+                        "profile.notFoundDescription"
+                    )
+                )}
+            </p>
+        `;
+    }
+
+    const favorites =
+        getFavorites();
+
+    const isFavorite =
+        favorites.includes(
+            character.id
+        );
+
+    const homeName =
+        localize(character, "home");
+
+    const homeId =
+        character.homeId ||
+        slugify(character.home);
+
+    const factionName =
+        localize(
+            character,
+            "faction"
+        );
+
+    const factionId =
+        character.factionId ||
+        slugify(character.faction);
 
     return `
-
 <section class="profile">
 
     <nav class="breadcrumbs">
 
-        <a href="#/">Start</a>
+        <a href="#/">
+            ${escapeHtml(
+                t("common.home")
+            )}
+        </a>
 
-        >
+        <span>&gt;</span>
 
-        <a href="#/characters">${t("characters.title")}</a>
+        <a href="#/characters">
+            ${escapeHtml(
+                t("characters.title")
+            )}
+        </a>
 
-        >
+        <span>&gt;</span>
 
-        <span>${character.name}</span>
+        <span>
+            ${escapeHtml(
+                character.name
+            )}
+        </span>
 
     </nav>
 
     <div class="profile-layout">
 
-        ${renderPortraitGallery(character)}
+        ${renderPortraitGallery(
+            character
+        )}
 
         <main class="profile-main">
 
             <header>
 
-                <h1>${character.name}</h1>
+                <h1>
+                    ${escapeHtml(
+                        character.name
+                    )}
+                </h1>
 
-                <h2>${localize(character,"title")}</h2>
+                <h2>
+                    ${escapeHtml(
+                        localize(
+                            character,
+                            "title"
+                        )
+                    )}
+                </h2>
 
-                <p>${localize(character,"description")}</p>
+                <p>
+                    ${escapeHtml(
+                        localize(
+                            character,
+                            "description"
+                        )
+                    )}
+                </p>
 
                 <button
+                    type="button"
                     id="favoriteButton"
-                    data-id="${character.id}">
+                    data-id="${escapeHtml(
+                        character.id
+                    )}">
 
-                    ${isFavorite
-                        ? "★ Usuń z ulubionych"
-                        : "⭐ Dodaj do ulubionych"}
+                    ${
+                        isFavorite
+                            ? escapeHtml(
+                                t(
+                                    "favorite.remove"
+                                )
+                            )
+                            : escapeHtml(
+                                t(
+                                    "favorite.add"
+                                )
+                            )
+                    }
 
                 </button>
 
             </header>
 
-            ${renderInfoBox(character)}
+            ${renderInfoBox(
+                character
+            )}
 
             ${renderRelations(
-                "Przyjaciele",
+                "profile.friends",
                 character.friends || []
             )}
 
             ${renderRelations(
-                "Wrogowie",
+                "profile.enemies",
                 character.enemies || []
             )}
 
             <section class="related">
 
-                <h2>Powiązane artykuły</h2>
+                <h2>
+                    ${escapeHtml(
+                        t("profile.related")
+                    )}
+                </h2>
 
                 <ul>
 
-                    <li>
+                    ${
+                        homeName
+                            ? `
+                                <li>
+                                    <a href="#/places/${escapeHtml(
+                                        homeId
+                                    )}">
+                                        ${escapeHtml(
+                                            homeName
+                                        )}
+                                    </a>
+                                </li>
+                            `
+                            : ""
+                    }
 
-                        <a href="#/places/${character.homeId || slugify(character.home)}">
-
-                            ${character.home}
-
-                        </a>
-
-                    </li>
-
-                    <li>
-
-                        <a href="#/factions/${character.factionId || slugify(character.faction)}">
-
-                            ${localize(character,"faction")}
-
-                        </a>
-
-                    </li>
+                    ${
+                        factionName
+                            ? `
+                                <li>
+                                    <a href="#/factions/${escapeHtml(
+                                        factionId
+                                    )}">
+                                        ${escapeHtml(
+                                            factionName
+                                        )}
+                                    </a>
+                                </li>
+                            `
+                            : ""
+                    }
 
                 </ul>
 
@@ -289,69 +570,104 @@ export async function profileView(id) {
     </div>
 
 </section>
-
 `;
-
 }
 
-export function initProfilePage(){
+export function initProfilePage() {
+    const image =
+        document.getElementById(
+            "portraitImage"
+        );
 
-    const image=document.getElementById("portraitImage");
-
-    const title=document.querySelector(".portrait-title");
+    const title =
+        document.getElementById(
+            "portraitTitle"
+        );
 
     document
-    .querySelectorAll(".portrait-thumb")
-    .forEach(button=>{
+        .querySelectorAll(
+            ".portrait-thumb"
+        )
+        .forEach(button => {
 
-        button.onclick=()=>{
+            button.onclick = () => {
 
-            document
-            .querySelectorAll(".portrait-thumb")
-            .forEach(b=>b.classList.remove("active"));
+                if (image) {
+                    image.src =
+                        button.dataset.image ||
+                        "";
+                }
 
-            button.classList.add("active");
+                if (title) {
+                    title.textContent =
+                        button.dataset.title ||
+                        "";
+                }
 
-            image.src=button.dataset.image;
+                document
+                    .querySelectorAll(
+                        ".portrait-thumb"
+                    )
+                    .forEach(
+                        thumbnail => {
+                            thumbnail.classList
+                                .remove(
+                                    "active"
+                                );
+                        }
+                    );
 
-            title.textContent=button.dataset.title;
+                button.classList.add(
+                    "active"
+                );
+            };
 
-        };
+        });
 
-    });
+    const favoriteButton =
+        document.getElementById(
+            "favoriteButton"
+        );
 
-    const favoriteButton=document.getElementById("favoriteButton");
+    if (!favoriteButton) {
+        return;
+    }
 
-    if(!favoriteButton) return;
+    favoriteButton.onclick = () => {
 
-    favoriteButton.onclick=()=>{
+        let favorites =
+            getFavorites();
 
-        let favorites=getFavorites();
+        const id =
+            favoriteButton.dataset.id;
 
-        const id=favoriteButton.dataset.id;
-
-        if(favorites.includes(id)){
-
-            favorites=favorites.filter(f=>f!==id);
-
+        if (!id) {
+            return;
         }
 
-        else{
-
-            favorites.push(id);
-
-        }
-
-        saveFavorites(favorites);
-
-        favoriteButton.textContent=
-
+        if (
             favorites.includes(id)
+        ) {
+            favorites =
+                favorites.filter(
+                    favoriteId =>
+                        favoriteId !== id
+                );
+        } else {
+            favorites.push(id);
+        }
 
-            ?"★ Usuń z ulubionych"
+        saveFavorites(
+            favorites
+        );
 
-            :"⭐ Dodaj do ulubionych";
-
+        favoriteButton.textContent =
+            favorites.includes(id)
+                ? t(
+                    "favorite.remove"
+                )
+                : t(
+                    "favorite.add"
+                );
     };
-
 }
