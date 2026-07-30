@@ -191,6 +191,113 @@
     }
   },
   {
+    "id": "balgrad-miedziobrody",
+    "name": "Balgrad Miedziobrody",
+    "title": "",
+    "race": "Krasnolud",
+    "nation": "",
+    "rank": "kapitan",
+    "ztatus": "żyje",
+    "birth": "",
+    "image": "assets/characters/balgrad-miedziobrody.png",
+    "portaits":
+     {
+       "title": {
+         "pl": "Obecnie",
+         "en": "Present",
+         "es": "Actualidad"
+       },
+       "image": "assets/characters/balgrad-miedziobrody.png"
+     }
+    ],
+  "description": "",
+    "faction": "",
+    "factionId": "",
+    "home": "",
+    "homeId": "",
+    "parents": [],
+    "siblings": [],
+    "friends": [],
+    "enemies": [],
+    "quotes": [],
+    "translations": {
+      "en": {
+        "title": "",
+        "race": "",
+        "nation": "",
+        "rank": "",
+        "status": "",
+        "birth": "",
+        "description": "",
+        "faction": "",
+        "home": ""
+      },
+      "es": {
+        "title": "",
+        "race": "",
+        "nation": "",
+        "rank": "",
+        "status": "",
+        "birth": "",
+        "description": "",
+        "faction": "",
+        "home": ""
+      }
+    }
+  },
+  {
+    "id": "barangar",
+    "name": "Barangar",
+    "title": "Rycerz Głębin",
+    "race": "Naga",
+    "nation": "",
+    "rank": "",
+    "status": "Żyje",
+    "birth": "",
+    "image": "assets/characters/Barangar.png",
+    "portraits": [
+      {
+        "title": {
+          "pl": "Obecnie",
+          "en": "Present",
+          "es": "Actualidad"
+        },
+        "image": "assets/characters/Barangar.png"
+      }
+    ],
+    "description": "",
+    "faction": "",
+    "factionId": "",
+    "home": "",
+    "homeId": "",
+    "parents": [],
+    "siblings": [],
+    "friends": [],
+    "enemies": [],
+    "quotes": [],
+    "translations": {
+      "en": {
+        "title": "",
+        "race": "",
+        "nation": "",
+        "rank": "",
+        "status": "",
+        "birth": "",
+        "description": "",
+        "faction": "",
+        "home": ""
+      },
+      "es": {
+        "title": "",
+        "race": "",
+        "nation": "",
+        "rank": "",
+        "status": "",
+        "birth": "",
+        "description": "",
+        "faction": "",
+        "home": ""
+  {
     "id": "caelrath-starsage",
     "name": "Cael'Rath Starsage",
     "title": "",
