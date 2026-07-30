@@ -197,27 +197,27 @@
     "race": "Krasnolud",
     "nation": "",
     "rank": "kapitan",
-    "ztatus": "żyje",
+    "status": "żyje",
     "birth": "",
     "image": "assets/characters/balgrad-miedziobrody.png",
-    "portaits":
-     {
-       "title": {
-         "pl": "Obecnie",
-         "en": "Present",
-         "es": "Actualidad"
-       },
-       "image": "assets/characters/balgrad-miedziobrody.png"
-    }
-  ],
-  "description": "",
-    "faction": "",
-    "factionId": "",
-    "home": "",
-    "homeId": "",
-    "parents": [],
-    "siblings": [],
-    "friends": [],
+"portraits": [
+  {
+    "title": {
+      "pl": "Obecnie",
+      "en": "Present",
+      "es": "Actualidad"
+    },
+    "image": "assets/characters/balgrad-miedziobrody.png"
+  }
+],
+"description": "",
+"faction": "",
+"factionId": "",
+"home": "",
+"homeId": "",
+"parents": [],
+"siblings": [],
+"friends": [],
     "enemies": [],
     "quotes": [],
     "translations": {
