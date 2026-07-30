@@ -1,8 +1,32 @@
 import { getData } from "../core/api.js";
-import { localizeTimeline, t } from "../core/i18n.js";
+import { getLanguage, t } from "../core/i18n.js";
+
+function localizeTimeline(item, field) {
+
+    if (!item || !item[field]) {
+        return "";
+    }
+
+    const value = item[field];
+
+    if (typeof value === "string") {
+        return value;
+    }
+
+    const language = getLanguage();
+
+    return (
+        value[language] ||
+        value.pl ||
+        value.en ||
+        ""
+    );
+}
 
 function getYearValue(year) {
+
     const value = Number.parseInt(String(year), 10);
+
     return Number.isNaN(value) ? 0 : value;
 }
 
@@ -47,9 +71,21 @@ export async function timelineView() {
         return `
             <section class="timeline-page">
 
-                <h1>${t("timeline.title")}</h1>
+                <header class="timeline-header">
 
-                <p>${t("common.noData")}</p>
+                    <h1>
+                        ${t("timeline.title")}
+                    </h1>
+
+                    <p>
+                        ${t("timeline.description")}
+                    </p>
+
+                </header>
+
+                <p>
+                    ${t("common.noData")}
+                </p>
 
             </section>
         `;
@@ -64,9 +100,21 @@ export async function timelineView() {
         return `
             <section class="timeline-page">
 
-                <h1>${t("timeline.title")}</h1>
+                <header class="timeline-header">
 
-                <p>${t("timeline.empty")}</p>
+                    <h1>
+                        ${t("timeline.title")}
+                    </h1>
+
+                    <p>
+                        ${t("timeline.description")}
+                    </p>
+
+                </header>
+
+                <p>
+                    ${t("timeline.empty")}
+                </p>
 
             </section>
         `;
