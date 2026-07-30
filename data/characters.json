@@ -853,21 +853,29 @@
   {
     "id": "kioth",
     "name": "Kioth",
-    "title": "",
-    "race": "",
-    "nation": "",
+    "title": "Runiczny Smok",
+    "race": "Smok",
+    "nation": "Brak",
     "rank": "",
-    "status": "",
+    "status": "Żyje",
     "birth": "",
     "image": "assets/characters/kioth.png",
     "portraits": [
       {
         "title": {
-          "pl": "Obecnie",
-          "en": "Present",
+          "pl": "Wędrowcy Świtu",
+          "en": "Dawnwalkers",
           "es": "Actualidad"
         },
         "image": "assets/characters/kioth.png"
+      },
+      {
+        "title": {
+          "pl": "Dotknięty Pustką",
+          "en": "Touched by void",
+          "es": "Afectado por el vacío"
+        },
+          "image": "assets/characters/kioth-pustka.png"
       }
     ],
     "description": "",
