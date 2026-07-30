@@ -75,4 +75,3 @@ export function localizeTimeline(item, field) {
         ""
     );
 }
-}
