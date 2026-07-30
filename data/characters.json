@@ -121,40 +121,28 @@
     "image": "assets/characters/avon.png",
     "portraits": [
       {
-        "title": "Wędrowcy Świtu",
-        "image": "assets/characters/avon.png",
-        "translations": {
-          "en": {
-            "title": "Dawnwalkers"
-          },
-          "es": {
-            "title": "Los caminantes del amanecer"
-          }
-        }
+        "title": {
+          "pl": "Wędrowcy Świtu",
+          "en": "Dawnwalkers",
+          "es": "Los caminantes del amanecer"
+        },
+        "image": "assets/characters/avon.png"
       },
       {
-        "title": "Strażnik Marchii",
-        "image": "assets/characters/avon-guard.png",
-        "translations": {
-          "en": {
-            "title": "March Guard"
-          },
-          "es": {
-            "title": "Guardia de la Marca"
-          }
-        }
+        "title": {
+          "pl": "Strażnik Marchii",
+          "en": "March Guard",
+          "es": "Guardia de la Marca"
+        },
+        "image": "assets/characters/avon-guard.png"
       },
       {
-        "title": "Młodość",
-        "image": "assets/characters/avon-young.png",
-        "translations": {
-          "en": {
-            "title": "Youth"
-          },
-          "es": {
-            "title": "Juventud"
-          }
-        }
+        "title": {
+          "pl": "Młodość",
+          "en": "Youth",
+          "es": "Juventud"
+        },
+        "image": "assets/characters/avon-young.png"
       }
     ],
     "description": "Avon jest jedynym półsmokiem w państwie rządzonym przez kotowatych.",
@@ -1039,16 +1027,12 @@
     "image": "assets/characters/morgath.png",
     "portraits": [
       {
-        "title": "Synowie Burzy",
-        "image": "assets/characters/morgath.png",
-        "translations": {
-          "en": {
-            "title": "Present"
-          },
-          "es": {
-            "title": "Actual"
-          }
-        }
+        "title": {
+          "pl": "Synowie Burzy",
+          "en": "Sons of the Storm",
+          "es": "Hijos de la Tormenta"
+        },
+        "image": "assets/characters/morgath.png"
       }
     ],
     "description": "Jeden z najwybitniejszych magów kontynentu.",
@@ -1491,28 +1475,20 @@
     "image": "assets/characters/quint-obecnie.png",
     "portraits": [
       {
-        "title": "Wędrowcy Świtu",
-        "image": "assets/characters/quint-obecnie.png",
-        "translations": {
-          "en": {
-            "title": "Dawnwalkers"
-          },
-          "es": {
-            "title": "Actual"
-          }
-        }
+        "title": {
+          "pl": "Wędrowcy Świtu",
+          "en": "Dawnwalkers",
+          "es": "Los caminantes del amanecer"
+        },
+        "image": "assets/characters/quint-obecnie.png"
       },
       {
-        "title": "Synowie Burzy",
-        "image": "assets/characters/quint_synowie-burzy.png",
-        "translations": {
-          "en": {
-            "title": "Sons of the Storm"
-          },
-          "es": {
-            "title": "Hijos de la Tormenta"
-          }
-        }
+        "title": {
+          "pl": "Synowie Burzy",
+          "en": "Sons of the Storm",
+          "es": "Hijos de la Tormenta"
+        },
+        "image": "assets/characters/quint_synowie-burzy.png"
       }
     ],
     "description": "Quint jest czarnym smokiem, najbardziej rozpoznawalnym pośród ocalałych.",
@@ -1745,16 +1721,12 @@
     "image": "assets/characters/rykan.png",
     "portraits": [
       {
-        "title": "Wędrowcy Świtu",
-        "image": "assets/characters/rykan.png",
-        "translations": {
-          "en": {
-            "title": "Dawnwalkers"
-          },
-          "es": {
-            "title": "Actual"
-          }
-        }
+        "title": {
+          "pl": "Wędrowcy Świtu",
+          "en": "Dawnwalkers",
+          "es": "Los caminantes del amanecer"
+        },
+        "image": "assets/characters/rykan.png"
       }
     ],
     "description": "Rykan podlega Ferrińskiemu Kręgowi Druidów, działając jako pojedyncza jednostka.",
@@ -1932,16 +1904,12 @@
         "image": "assets/characters/Vekhor.png"
       },
       {
-        "title": "Czarny Vekhor",
-        "image": "assets/characters/czarny-vekhor.png",
-        "translations": {
-          "en": {
-            "title": "Black Vekhor"
-          },
-          "es": {
-            "title": "Vekhor negro"
-          }
-        }
+        "title": {
+          "pl": "Czarny Vekhor",
+          "en": "Black Vekhor",
+          "es": "Vekhor negro"
+        },
+        "image": "assets/characters/czarny-vekhor.png"
       }
     ],
     "description": "",
