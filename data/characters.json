@@ -200,24 +200,24 @@
     "status": "żyje",
     "birth": "",
     "image": "assets/characters/balgrad-miedziobrody.png",
-"portraits": [
-  {
-    "title": {
-      "pl": "Obecnie",
-      "en": "Present",
-      "es": "Actualidad"
-    },
-    "image": "assets/characters/balgrad-miedziobrody.png"
-  }
-],
-"description": "",
-"faction": "",
-"factionId": "",
-"home": "",
-"homeId": "",
-"parents": [],
-"siblings": [],
-"friends": [],
+    "portraits": [
+      {
+        "title": {
+          "pl": "Obecnie",
+          "en": "Present",
+          "es": "Actualidad"
+        },
+        "image": "assets/characters/balgrad-miedziobrody.png"
+      }
+    ],
+    "description": "",
+    "faction": "",
+    "factionId": "",
+    "home": "",
+    "homeId": "",
+    "parents": [],
+    "siblings": [],
+    "friends": [],
     "enemies": [],
     "quotes": [],
     "translations": {
@@ -297,6 +297,9 @@
         "description": "",
         "faction": "",
         "home": ""
+      }
+    }
+  },
   {
     "id": "caelrath-starsage",
     "name": "Cael'Rath Starsage",
