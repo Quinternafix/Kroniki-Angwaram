@@ -16,7 +16,8 @@ const translations = {
         "factions.title": "Frakcje",
         "places.title": "Miejsca",
         "timeline.title": "Historia",
-        "timeline.empty": "Ta sekcja jest w przygotowaniu.",
+        "timeline.description": "Chronologia najważniejszych wydarzeń w historii Angwaram.",
+        "timeline.empty": "Brak wydarzeń do wyświetlenia.",
 
         "common.open": "Otwórz profil",
         "common.home": "Start",
@@ -73,7 +74,8 @@ const translations = {
         "factions.title": "Factions",
         "places.title": "Places",
         "timeline.title": "History",
-        "timeline.empty": "This section is under construction.",
+        "timeline.description": "A chronology of the most important events in the history of Angwaram.",
+        "timeline.empty": "There are no events to display.",
 
         "common.open": "Open profile",
         "common.home": "Home",
@@ -130,7 +132,8 @@ const translations = {
         "factions.title": "Facciones",
         "places.title": "Lugares",
         "timeline.title": "Historia",
-        "timeline.empty": "Esta sección está en preparación.",
+        "timeline.description": "Una cronología de los acontecimientos más importantes de la historia de Angwaram.",
+        "timeline.empty": "No hay eventos para mostrar.",
 
         "common.open": "Abrir perfil",
         "common.home": "Inicio",
