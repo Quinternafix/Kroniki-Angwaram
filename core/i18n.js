@@ -282,3 +282,5 @@ export function initI18n() {
 
     applyTranslations();
 }
+console.log("i18n.js ZAŁADOWANY");
+console.log("localizeTimeline:", typeof localizeTimeline);
