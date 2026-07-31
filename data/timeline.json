@@ -1,1 +1,56 @@
-[]
+[
+  {
+    "type": "event",
+    "id": "bitwa-pod-ferrins",
+    "year": 1687,
+    "date": "3 kwietnia 1687",
+    "title": {
+      "pl": "Bitwa pod Ferrins",
+      "en": "Battle of Ferrins",
+      "es": "Batalla de Ferrins"
+    },
+    "description": {
+      "pl": "Opis wydarzenia.",
+      "en": "Event description.",
+      "es": "Descripción del evento."
+    },
+    "characters": [
+      "Rykan",
+      "Neorath Stormbringer"
+    ],
+    "locations": [
+      "Ferrins"
+    ]
+  },
+  {
+    "type": "story",
+    "id": "podczas-burzy",
+    "year": 1687,
+    "date": "3 kwietnia 1687",
+    "title": {
+      "pl": "Podczas burzy",
+      "en": "During the Storm",
+      "es": "Durante la tormenta"
+    },
+    "author": "Bartłomiej Wojciechowski",
+    "cover": "assets/stories/podczas-burzy.png",
+    "summary": {
+      "pl": "Krótki opis opowiadania.",
+      "en": "A short story summary.",
+      "es": "Un breve resumen del relato."
+    },
+    "content": {
+      "pl": "Pierwszy akapit opowiadania...\n\nDrugi akapit opowiadania...",
+      "en": "The first paragraph of the story...\n\nThe second paragraph of the story...",
+      "es": "El primer párrafo del relato...\n\nEl segundo párrafo del relato..."
+    },
+    "characters": [
+      "Rykan",
+      "Neorath Stormbringer"
+    ],
+    "locations": [
+      "Ferrins"
+    ],
+    "factions": []
+  }
+]
