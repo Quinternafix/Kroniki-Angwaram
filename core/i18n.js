@@ -1,3 +1,4 @@
+```javascript
 const translations = {
     pl: {
         "site.title": "Kroniki Angwaram",
@@ -19,6 +20,13 @@ const translations = {
         "timeline.title": "Historia",
         "timeline.description": "Chronologia najważniejszych wydarzeń w historii Angwaram.",
         "timeline.empty": "Brak wydarzeń do wyświetlenia.",
+
+        "timeline.event": "Wydarzenie",
+        "timeline.story": "Opowiadanie",
+        "timeline.readStory": "Czytaj opowiadanie",
+        "timeline.characters": "Postacie",
+        "timeline.locations": "Miejsca",
+        "timeline.factions": "Frakcje",
 
         "common.open": "Otwórz profil",
         "common.home": "Start",
@@ -77,6 +85,13 @@ const translations = {
         "timeline.description": "A chronology of the most important events in the history of Angwaram.",
         "timeline.empty": "There are no events to display.",
 
+        "timeline.event": "Event",
+        "timeline.story": "Story",
+        "timeline.readStory": "Read story",
+        "timeline.characters": "Characters",
+        "timeline.locations": "Locations",
+        "timeline.factions": "Factions",
+
         "common.open": "Open profile",
         "common.home": "Home",
         "common.none": "None",
@@ -134,6 +149,13 @@ const translations = {
         "timeline.description": "Una cronología de los acontecimientos más importantes de la historia de Angwaram.",
         "timeline.empty": "No hay eventos para mostrar.",
 
+        "timeline.event": "Evento",
+        "timeline.story": "Relato",
+        "timeline.readStory": "Leer relato",
+        "timeline.characters": "Personajes",
+        "timeline.locations": "Lugares",
+        "timeline.factions": "Facciones",
+
         "common.open": "Abrir perfil",
         "common.home": "Inicio",
         "common.none": "Ninguno",
@@ -171,7 +193,8 @@ const translations = {
     }
 };
 
-let currentLanguage = localStorage.getItem("language") || "pl";
+let currentLanguage =
+    localStorage.getItem("language") || "pl";
 
 export function getLanguage() {
     return currentLanguage;
@@ -220,33 +243,48 @@ export function localizeTimeline(item, field) {
 
 export function applyTranslations() {
 
-    document.documentElement.lang = currentLanguage;
+    document.documentElement.lang =
+        currentLanguage;
 
-    document.title = t("site.title");
+    document.title =
+        t("site.title");
 
-    document.querySelectorAll("[data-i18n]").forEach(element => {
+    document
+        .querySelectorAll("[data-i18n]")
+        .forEach(element => {
 
-        element.textContent = t(element.dataset.i18n);
+            element.textContent =
+                t(element.dataset.i18n);
 
-    });
+        });
 
-    document.querySelectorAll("[data-i18n-placeholder]").forEach(element => {
+    document
+        .querySelectorAll("[data-i18n-placeholder]")
+        .forEach(element => {
 
-        element.setAttribute(
-            "placeholder",
-            t(element.dataset.i18nPlaceholder)
-        );
+            element.setAttribute(
+                "placeholder",
+                t(
+                    element.dataset
+                        .i18nPlaceholder
+                )
+            );
 
-    });
+        });
 
-    document.querySelectorAll("[data-language]").forEach(button => {
+    document
+        .querySelectorAll("[data-language]")
+        .forEach(button => {
 
-        button.setAttribute(
-            "aria-pressed",
-            String(button.dataset.language === currentLanguage)
-        );
+            button.setAttribute(
+                "aria-pressed",
+                String(
+                    button.dataset.language ===
+                    currentLanguage
+                )
+            );
 
-    });
+        });
 }
 
 export function setLanguage(language) {
@@ -257,7 +295,10 @@ export function setLanguage(language) {
 
     currentLanguage = language;
 
-    localStorage.setItem("language", language);
+    localStorage.setItem(
+        "language",
+        language
+    );
 
     applyTranslations();
 
@@ -268,19 +309,31 @@ export function setLanguage(language) {
 
 export function initI18n() {
 
-    document.addEventListener("click", event => {
+    document.addEventListener(
+        "click",
+        event => {
 
-        const button = event.target.closest("[data-language]");
+            const button =
+                event.target.closest(
+                    "[data-language]"
+                );
 
-        if (!button) {
-            return;
+            if (!button) {
+                return;
+            }
+
+            setLanguage(
+                button.dataset.language
+            );
         }
-
-        setLanguage(button.dataset.language);
-
-    });
+    );
 
     applyTranslations();
 }
+
 console.log("i18n.js ZAŁADOWANY");
-console.log("localizeTimeline:", typeof localizeTimeline);
+console.log(
+    "localizeTimeline:",
+    typeof localizeTimeline
+);
+```
