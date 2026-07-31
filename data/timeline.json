@@ -24,16 +24,16 @@
   },
   {
     "type": "story",
-    "id": "podczas-burzy",
+    "id": "synowie-burzy",
     "year": 1687,
-    "date": "3 kwietnia 1687",
+    "date": "1721",
     "title": {
-      "pl": "Podczas burzy",
-      "en": "During the Storm",
-      "es": "Durante la tormenta"
+      "pl": "Synowie burzy",
+      "en": "Sons of the Storm",
+      "es": "Hijos de la Tormenta"
     },
-    "author": "Bartłomiej Wojciechowski",
-    "cover": "assets/stories/podczas-burzy.png",
+    "author": "Quint Blackwood",
+    "cover": "assets/stories/synowie-burzy.png",
     "summary": {
       "pl": "Krótki opis opowiadania.",
       "en": "A short story summary.",
@@ -45,11 +45,17 @@
       "es": "El primer párrafo del relato...\n\nEl segundo párrafo del relato..."
     },
     "characters": [
-      "Rykan",
-      "Neorath Stormbringer"
+      "Morgath Stormbringer",
+      "Aurora Stormbringer",
+      "Wuld'Dai Stormbringer",
+      "Kharot",
+      "Quint",
+      "Kioth",
+      "Vesz Goldcrown",
     ],
     "locations": [
-      "Ferrins"
+      "Selidor",
+      "Isinglano",
     ],
     "factions": []
   }
