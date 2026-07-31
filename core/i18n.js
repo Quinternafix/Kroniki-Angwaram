@@ -331,6 +331,31 @@ export function initI18n() {
     applyTranslations();
 }
 
+console.log(
+    "TEST timeline.story:",
+    t("timeline.story")
+);
+
+console.log(
+    "TEST timeline.readStory:",
+    t("timeline.readStory")
+);
+
+console.log(
+    "TEST timeline.characters:",
+    t("timeline.characters")
+);
+
+console.log(
+    "TEST timeline.locations:",
+    t("timeline.locations")
+);
+
+console.log(
+    "TEST timeline.factions:",
+    t("timeline.factions")
+);
+
 console.log("i18n.js ZAŁADOWANY");
 console.log(
     "localizeTimeline:",
