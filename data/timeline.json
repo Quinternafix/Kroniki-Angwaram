@@ -23,6 +23,33 @@
     ]
   },
   {
+    "type": "event",
+    "id": "śmierć-czarnego-słońca",
+    "year": 812,
+    "date": "połowa roku 812",
+    "title": {
+      "pl": "Śmierć Czarnego Słońca",
+      "en": "The death of the Black Sun",
+      "es": "La muerte del Sol Negro"
+    },
+    "description": {
+      "pl": "Bratobójcza walka smoków, kończy się okrutnym remisem. Quint ponosi w batalii śmierć, zaś jego brat zostaje wysłany do innego wymiaru.",
+      "en": "The fratricidal battle between the dragons ends in a brutal stalemate. Quint is killed in the battle, while his brother is banished to another dimension.",
+      "es": "La batalla fratricida entre los dragones termina en un brutal empate. Quint muere en la batalla, mientras que su hermano es desterrado a otra dimensión."
+    },
+    "characters": [
+      "Quint",
+      "Fenryr/Ravenmerthus",
+      "Kioth",
+      "Liliana",
+      "Illdrex",
+      "Kharot"
+    ],
+    "locations": [
+      "Nieznany"
+    ],
+    "factions": []
+  {
     "type": "story",
     "id": "synowie-burzy",
     "year": 1721,
