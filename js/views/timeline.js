@@ -37,6 +37,32 @@ function escapeHtml(value) {
         .replace(/'/g, "&#039;");
 }
 
+/*
+ * Bezpieczne tłumaczenia dla tekstów generowanych
+ * przez timeline.js.
+ *
+ * Jeżeli i18n.js nie znajdzie klucza, używany jest
+ * odpowiedni tekst zastępczy dla aktualnego języka.
+ */
+function timelineText(key, fallback) {
+    const translated = t(key);
+
+    if (
+        translated &&
+        translated !== key
+    ) {
+        return translated;
+    }
+
+    const language = getLanguage();
+
+    return (
+        fallback[language] ||
+        fallback.pl ||
+        ""
+    );
+}
+
 function renderRelations(story) {
     let html = "";
 
@@ -46,20 +72,31 @@ function renderRelations(story) {
     ) {
         html += `
             <div class="timeline-story-relations">
+
                 <strong>
                     ${escapeHtml(
-                        t("timeline.characters")
+                        timelineText(
+                            "timeline.characters",
+                            {
+                                pl: "Postacie",
+                                en: "Characters",
+                                es: "Personajes"
+                            }
+                        )
                     )}
                 </strong>
 
                 <div class="timeline-story-tags">
+
                     ${story.characters
                         .map(
                             character =>
                                 `<span>${escapeHtml(character)}</span>`
                         )
                         .join("")}
+
                 </div>
+
             </div>
         `;
     }
@@ -70,20 +107,31 @@ function renderRelations(story) {
     ) {
         html += `
             <div class="timeline-story-relations">
+
                 <strong>
                     ${escapeHtml(
-                        t("timeline.locations")
+                        timelineText(
+                            "timeline.locations",
+                            {
+                                pl: "Miejsca",
+                                en: "Locations",
+                                es: "Lugares"
+                            }
+                        )
                     )}
                 </strong>
 
                 <div class="timeline-story-tags">
+
                     ${story.locations
                         .map(
                             location =>
                                 `<span>${escapeHtml(location)}</span>`
                         )
                         .join("")}
+
                 </div>
+
             </div>
         `;
     }
@@ -94,20 +142,31 @@ function renderRelations(story) {
     ) {
         html += `
             <div class="timeline-story-relations">
+
                 <strong>
                     ${escapeHtml(
-                        t("timeline.factions")
+                        timelineText(
+                            "timeline.factions",
+                            {
+                                pl: "Frakcje",
+                                en: "Factions",
+                                es: "Facciones"
+                            }
+                        )
                     )}
                 </strong>
 
                 <div class="timeline-story-tags">
+
                     ${story.factions
                         .map(
                             faction =>
                                 `<span>${escapeHtml(faction)}</span>`
                         )
                         .join("")}
+
                 </div>
+
             </div>
         `;
     }
@@ -153,11 +212,13 @@ function renderStoryContent(story) {
     if (story.cover) {
         html += `
                 <div class="timeline-story-cover">
+
                     <img
                         src="${escapeHtml(story.cover)}"
                         alt="${escapeHtml(title)}"
                         loading="lazy"
                     >
+
                 </div>
         `;
     }
@@ -167,7 +228,14 @@ function renderStoryContent(story) {
 
                     <div class="timeline-story-label">
                         ${escapeHtml(
-                            t("timeline.story")
+                            timelineText(
+                                "timeline.story",
+                                {
+                                    pl: "Opowiadanie",
+                                    en: "Story",
+                                    es: "Relato"
+                                }
+                            )
                         )}
                     </div>
 
@@ -203,7 +271,14 @@ function renderStoryContent(story) {
     html += `
                     <span class="timeline-story-read">
                         ${escapeHtml(
-                            t("timeline.readStory")
+                            timelineText(
+                                "timeline.readStory",
+                                {
+                                    pl: "Czytaj opowiadanie",
+                                    en: "Read story",
+                                    es: "Leer relato"
+                                }
+                            )
                         )}
                     </span>
 
@@ -230,7 +305,14 @@ function renderStoryContent(story) {
 
                     <div class="timeline-story-type">
                         ${escapeHtml(
-                            t("timeline.story")
+                            timelineText(
+                                "timeline.story",
+                                {
+                                    pl: "Opowiadanie",
+                                    en: "Story",
+                                    es: "Relato"
+                                }
+                            )
                         )}
                     </div>
 
@@ -239,7 +321,10 @@ function renderStoryContent(story) {
                     </h2>
     `;
 
-    if (story.date || story.author) {
+    if (
+        story.date ||
+        story.author
+    ) {
         html += `
                     <div class="timeline-story-meta">
         `;
@@ -318,7 +403,14 @@ function renderTimelineEvent(event) {
 
                 <div class="timeline-entry-type">
                     ${escapeHtml(
-                        t("timeline.event")
+                        timelineText(
+                            "timeline.event",
+                            {
+                                pl: "Wydarzenie",
+                                en: "Event",
+                                es: "Evento"
+                            }
+                        )
                     )}
                 </div>
 
