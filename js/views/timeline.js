@@ -47,10 +47,7 @@ function renderRelations(story) {
         groups.push(
             '<div class="timeline-story-relations">' +
                 "<strong>" +
-                    escapeHtml(
-                        t("timeline.characters") ||
-                        "Postacie"
-                    ) +
+               Postacie
                 "</strong>" +
                 '<div class="timeline-story-tags">' +
                     story.characters
@@ -71,10 +68,7 @@ function renderRelations(story) {
         groups.push(
             '<div class="timeline-story-relations">' +
                 "<strong>" +
-                    escapeHtml(
-                        t("timeline.locations") ||
-                        "Miejsca"
-                    ) +
+                  Miejsca
                 "</strong>" +
                 '<div class="timeline-story-tags">' +
                     story.locations
@@ -165,9 +159,7 @@ function renderStoryContent(story) {
                 <div class="timeline-story-summary-content">
 
                     <div class="timeline-story-label">
-                        ${escapeHtml(
-                            t("timeline.story") ||
-                            "Opowiadanie"
+                   Opowiadanie    
                         )}
                     </div>
 
@@ -202,10 +194,7 @@ function renderStoryContent(story) {
 
     html += `
                     <span class="timeline-story-read">
-                        ${escapeHtml(
-                            t("timeline.readStory") ||
-                            "Czytaj opowiadanie"
-                        )}
+                      Czytaj opowiadanie
                     </span>
 
                 </div>
