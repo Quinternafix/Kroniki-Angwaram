@@ -1,25 +1,25 @@
 [
   {
     "type": "event",
-    "id": "bitwa-pod-ferrins",
-    "year": 1687,
-    "date": "3 kwietnia 1687",
+    "id": "czarne-słońce",
+    "year": 333,
+    "date": "Trzeci kwartał 333",
     "title": {
-      "pl": "Bitwa pod Ferrins",
-      "en": "Battle of Ferrins",
-      "es": "Batalla de Ferrins"
+      "pl": "Narodziny Czarnego Słońca",
+      "en": "The Birth of the Black Sun",
+      "es": "El nacimiento del Sol Negro"
     },
     "description": {
-      "pl": "Opis wydarzenia.",
-      "en": "Event description.",
-      "es": "Descripción del evento."
+      "pl": "Narodziny osławionego czarnego smoka, to z punktu historii dość ważne wydarzenie. Jego przyjście na świat przyczyni się do ukształtowania przyszłości wielu osób.",
+      "en": "The birth of the infamous black dragon is a rather significant event from a historical perspective. Its arrival will help shape the future of many people.",
+      "es": "El nacimiento del infame dragón negro es un acontecimiento bastante significativo desde una perspectiva histórica. Su llegada contribuirá a determinar el futuro de muchas personas."
     },
     "characters": [
-      "Rykan",
-      "Neorath Stormbringer"
+      "Quint"
+
     ],
     "locations": [
-      "Ferrins"
+      "Nieznana"
     ]
   },
   {
