@@ -38,89 +38,98 @@ function escapeHtml(value) {
 }
 
 function renderRelations(story) {
-    const groups = [];
+    let html = "";
 
     if (
         Array.isArray(story.characters) &&
         story.characters.length
     ) {
-        groups.push(
-            '<div class="timeline-story-relations">' +
-                "<strong>" +
-               Postacie
-                "</strong>" +
-                '<div class="timeline-story-tags">' +
-                    story.characters
+        html += `
+            <div class="timeline-story-relations">
+                <strong>
+                    ${escapeHtml(
+                        t("timeline.characters")
+                    )}
+                </strong>
+
+                <div class="timeline-story-tags">
+                    ${story.characters
                         .map(
                             character =>
                                 `<span>${escapeHtml(character)}</span>`
                         )
-                        .join("") +
-                "</div>" +
-            "</div>"
-        );
+                        .join("")}
+                </div>
+            </div>
+        `;
     }
 
     if (
         Array.isArray(story.locations) &&
         story.locations.length
     ) {
-        groups.push(
-            '<div class="timeline-story-relations">' +
-                "<strong>" +
-                  Miejsca
-                "</strong>" +
-                '<div class="timeline-story-tags">' +
-                    story.locations
+        html += `
+            <div class="timeline-story-relations">
+                <strong>
+                    ${escapeHtml(
+                        t("timeline.locations")
+                    )}
+                </strong>
+
+                <div class="timeline-story-tags">
+                    ${story.locations
                         .map(
                             location =>
                                 `<span>${escapeHtml(location)}</span>`
                         )
-                        .join("") +
-                "</div>" +
-            "</div>"
-        );
+                        .join("")}
+                </div>
+            </div>
+        `;
     }
 
     if (
         Array.isArray(story.factions) &&
         story.factions.length
     ) {
-        groups.push(
-            '<div class="timeline-story-relations">' +
-                "<strong>" +
-                    escapeHtml(
-                        t("timeline.factions") ||
-                        "Frakcje"
-                    ) +
-                "</strong>" +
-                '<div class="timeline-story-tags">' +
-                    story.factions
+        html += `
+            <div class="timeline-story-relations">
+                <strong>
+                    ${escapeHtml(
+                        t("timeline.factions")
+                    )}
+                </strong>
+
+                <div class="timeline-story-tags">
+                    ${story.factions
                         .map(
                             faction =>
                                 `<span>${escapeHtml(faction)}</span>`
                         )
-                        .join("") +
-                "</div>" +
-            "</div>"
-        );
+                        .join("")}
+                </div>
+            </div>
+        `;
     }
 
-    return groups.join("");
+    return html;
 }
 
 function renderStoryContent(story) {
-    const title = localizeTimeline(story, "title");
-    const summary = localizeTimeline(story, "summary");
-    const content = localizeTimeline(story, "content");
+    const title = localizeTimeline(
+        story,
+        "title"
+    );
 
-    const author = story.author
-        ? escapeHtml(story.author)
-        : "";
+    const summary = localizeTimeline(
+        story,
+        "summary"
+    );
 
-    const cover = story.cover
-        ? escapeHtml(story.cover)
-        : "";
+    const content = localizeTimeline(
+        story,
+        "content"
+    );
 
     const paragraphs = String(content || "")
         .split(/\n\s*\n/)
@@ -141,17 +150,15 @@ function renderStoryContent(story) {
             <summary class="timeline-story-summary">
     `;
 
-    if (cover) {
+    if (story.cover) {
         html += `
-            <div class="timeline-story-cover">
-
-                <img
-                    src="${cover}"
-                    alt="${escapeHtml(title)}"
-                    loading="lazy"
-                >
-
-            </div>
+                <div class="timeline-story-cover">
+                    <img
+                        src="${escapeHtml(story.cover)}"
+                        alt="${escapeHtml(title)}"
+                        loading="lazy"
+                    >
+                </div>
         `;
     }
 
@@ -159,7 +166,8 @@ function renderStoryContent(story) {
                 <div class="timeline-story-summary-content">
 
                     <div class="timeline-story-label">
-                   Opowiadanie    
+                        ${escapeHtml(
+                            t("timeline.story")
                         )}
                     </div>
 
@@ -176,10 +184,10 @@ function renderStoryContent(story) {
         `;
     }
 
-    if (author) {
+    if (story.author) {
         html += `
                     <div class="timeline-story-author">
-                        ${author}
+                        ${escapeHtml(story.author)}
                     </div>
         `;
     }
@@ -194,7 +202,9 @@ function renderStoryContent(story) {
 
     html += `
                     <span class="timeline-story-read">
-                      Czytaj opowiadanie
+                        ${escapeHtml(
+                            t("timeline.readStory")
+                        )}
                     </span>
 
                 </div>
@@ -204,11 +214,11 @@ function renderStoryContent(story) {
             <div class="timeline-story-content">
     `;
 
-    if (cover) {
+    if (story.cover) {
         html += `
                 <img
                     class="timeline-story-open-cover"
-                    src="${cover}"
+                    src="${escapeHtml(story.cover)}"
                     alt="${escapeHtml(title)}"
                     loading="lazy"
                 >
@@ -220,8 +230,7 @@ function renderStoryContent(story) {
 
                     <div class="timeline-story-type">
                         ${escapeHtml(
-                            t("timeline.story") ||
-                            "Opowiadanie"
+                            t("timeline.story")
                         )}
                     </div>
 
@@ -284,7 +293,11 @@ function renderStoryContent(story) {
 }
 
 function renderTimelineEvent(event) {
-    const title = localizeTimeline(event, "title");
+    const title = localizeTimeline(
+        event,
+        "title"
+    );
+
     const description = localizeTimeline(
         event,
         "description"
@@ -298,13 +311,14 @@ function renderTimelineEvent(event) {
             <div class="timeline-content">
 
                 <div class="timeline-year">
-                    ${escapeHtml(event.year ?? "—")}
+                    ${escapeHtml(
+                        event.year ?? "—"
+                    )}
                 </div>
 
                 <div class="timeline-entry-type">
                     ${escapeHtml(
-                        t("timeline.event") ||
-                        "Wydarzenie"
+                        t("timeline.event")
                     )}
                 </div>
 
@@ -314,7 +328,9 @@ function renderTimelineEvent(event) {
 
                 ${
                     description
-                        ? `<p>${escapeHtml(description)}</p>`
+                        ? `<p>${escapeHtml(
+                            description
+                        )}</p>`
                         : ""
                 }
 
