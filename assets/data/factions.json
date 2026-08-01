@@ -1,0 +1,19 @@
+[
+  {
+    "id":"rada-magow",
+
+    "name":"Rada Magów",
+
+    "image":"assets/factions/rada-magow.png",
+
+    "description":"Najpotężniejsza organizacja magiczna Angwaram.",
+
+    "members":[
+      "morgath"
+    ],
+
+    "leaders":[
+      "morgath"
+    ]
+  }
+]
