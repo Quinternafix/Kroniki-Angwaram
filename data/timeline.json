@@ -86,28 +86,31 @@
     ],
     "factions": []
   },
-  {
-    "type": "story",
-    "id": "wędrowcy-świtu-biała-dusza",
-    "year": 1753,
-    "date": "zima 1753",
-    "title": {
-      "pl" "Wędrowcy Świtu: Biała Dusza",
-      "en": "Dawnwalkers: White Soul",
-      "es": "Dawnwalkers: Alma Blanca"
-    },
-    "author": "Quint Blackwood",
-    "cover": "assets/stories/Wędrowcy-Świtu.png",
-    "summary": {
-      "pl": "Krótki opis opowiadania.",
-      "en": "A short story summary.",
-      "es": "Un breve resumen del relato."
-    },
-    "content": {
-      "pl": "Pierwszy akapit opowiadania...\n\nDrugi akapit opowiadania...",
-      "en": "The first paragraph of the story...\n\nThe second paragraph of the story...",
-      "es": "El primer párrafo del relato...\n\nEl segundo párrafo del relato..."
-    },
-    "characters": [
-      "Morgath Stormbringer"
-]
+{
+  "type": "story",
+  "id": "wędrowcy-świtu-biała-dusza",
+  "year": 1753,
+  "date": "Zima 1753",
+  "title": {
+    "pl": "Wędrowcy Świtu: Biała Dusza",
+    "en": "Dawnwalkers: White Soul",
+    "es": "Dawnwalkers: Alma Blanca"
+  },
+  "author": "Quint Blackwood",
+  "cover": "assets/stories/Wędrowcy-Świtu.png",
+  "summary": {
+    "pl": "Krótki opis opowiadania.",
+    "en": "A short story summary.",
+    "es": "Un breve resumen del relato."
+  },
+  "content": {
+    "pl": "Pierwszy akapit opowiadania...\n\nDrugi akapit opowiadania...",
+    "en": "The first paragraph of the story...\n\nThe second paragraph of the story...",
+    "es": "El primer párrafo del relato...\n\nEl segundo párrafo del relato..."
+  },
+  "characters": [
+    "Morgath Stormbringer"
+  ],
+  "locations": [],
+  "factions": []
+}
