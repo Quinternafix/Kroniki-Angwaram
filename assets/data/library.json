@@ -1,18 +1,68 @@
-[
-  {
-    "id": "angwaramskie-dzieje",
-    "type": "series"
+{
+  "title": {
+    "pl": "Biblioteka",
+    "en": "Library",
+    "es": "Biblioteca"
   },
-  {
-    "id": "wedrowcy-switu",
-    "type": "series"
+
+  "description": {
+    "pl": "Oficjalna biblioteka uniwersum Angwaram.",
+    "en": "The official library of the Angwaram universe.",
+    "es": "La biblioteca oficial del universo de Angwaram."
   },
-  {
-    "id": "synowie-burzy",
-    "type": "series"
-  },
-  {
-    "id": "srebrna-melancholia",
-    "type": "series"
-  }
-]
+
+  "series": [
+    {
+      "id": "angwaramskie-dzieje",
+      "type": "series",
+      "title": {
+        "pl": "Cykl Angwaramskich Dziejów",
+        "en": "The Angwaram Chronicles",
+        "es": "Crónicas de Angwaram"
+      },
+      "cover": "assets/books/covers/angwaramskie-dzieje.jpg",
+      "status": "writing",
+      "books": 3,
+      "file": "series/angwaramskie-dzieje.json"
+    },
+    {
+      "id": "wedrowcy-switu",
+      "type": "series",
+      "title": {
+        "pl": "Cykl Wędrowców Świtu",
+        "en": "Dawnwalkers",
+        "es": "Caminantes del Alba"
+      },
+      "cover": "assets/books/covers/wedrowcy-switu.jpg",
+      "status": "writing",
+      "books": 3,
+      "file": "series/wedrowcy-switu.json"
+    },
+    {
+      "id": "synowie-burzy",
+      "type": "series",
+      "title": {
+        "pl": "Synowie Burzy",
+        "en": "Sons of the Storm",
+        "es": "Hijos de la Tormenta"
+      },
+      "cover": "assets/books/covers/synowie-burzy.jpg",
+      "status": "writing",
+      "books": 1,
+      "file": "series/synowie-burzy.json"
+    },
+    {
+      "id": "srebrna-melancholia",
+      "type": "series",
+      "title": {
+        "pl": "Srebrna Melancholia",
+        "en": "Silver Melancholy",
+        "es": "Melancolía Plateada"
+      },
+      "cover": "assets/books/covers/srebrna-melancholia.jpg",
+      "status": "planned",
+      "books": 1,
+      "file": "series/srebrna-melancholia.json"
+    }
+  ]
+}
