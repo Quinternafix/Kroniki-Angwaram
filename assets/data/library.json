@@ -4,13 +4,11 @@
     "en": "Library",
     "es": "Biblioteca"
   },
-
   "description": {
     "pl": "Oficjalna biblioteka uniwersum Angwaram.",
     "en": "The official library of the Angwaram universe.",
     "es": "La biblioteca oficial del universo de Angwaram."
   },
-
   "series": [
     {
       "id": "angwaramskie-dzieje",
@@ -20,9 +18,14 @@
         "en": "The Angwaram Chronicles",
         "es": "Crónicas de Angwaram"
       },
+      "description": {
+        "pl": "Cykl przedstawiający najważniejsze wydarzenia historii Angwaramu.",
+        "en": "A series depicting the most important events in the history of Angwaram.",
+        "es": "Una serie que presenta los acontecimientos más importantes de la historia de Angwaram."
+      },
       "cover": "assets/books/covers/angwaramskie-dzieje.jpg",
       "status": "writing",
-      "books": 3,
+      "bookCount": 3,
       "file": "series/angwaramskie-dzieje.json"
     },
     {
@@ -33,9 +36,14 @@
         "en": "Dawnwalkers",
         "es": "Caminantes del Alba"
       },
+      "description": {
+        "pl": "Trylogia dark fantasy opowiadająca historię Wędrowców Świtu.",
+        "en": "A dark fantasy trilogy telling the story of the Dawnwalkers.",
+        "es": "Una trilogía de fantasía oscura que narra la historia de los Caminantes del Alba."
+      },
       "cover": "assets/books/covers/wedrowcy-switu.jpg",
       "status": "writing",
-      "books": 3,
+      "bookCount": 3,
       "file": "series/wedrowcy-switu.json"
     },
     {
@@ -46,9 +54,14 @@
         "en": "Sons of the Storm",
         "es": "Hijos de la Tormenta"
       },
+      "description": {
+        "pl": "Samodzielna powieść fantasy.",
+        "en": "A standalone fantasy novel.",
+        "es": "Una novela de fantasía independiente."
+      },
       "cover": "assets/books/covers/synowie-burzy.jpg",
       "status": "writing",
-      "books": 1,
+      "bookCount": 1,
       "file": "series/synowie-burzy.json"
     },
     {
@@ -59,9 +72,14 @@
         "en": "Silver Melancholy",
         "es": "Melancolía Plateada"
       },
+      "description": {
+        "pl": "Samodzielna powieść dark fantasy.",
+        "en": "A standalone dark fantasy novel.",
+        "es": "Una novela independiente de fantasía oscura."
+      },
       "cover": "assets/books/covers/srebrna-melancholia.jpg",
       "status": "planned",
-      "books": 1,
+      "bookCount": 1,
       "file": "series/srebrna-melancholia.json"
     }
   ]
