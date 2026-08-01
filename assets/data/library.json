@@ -1,1 +1,18 @@
-
+[
+  {
+    "id": "angwaramskie-dzieje",
+    "type": "series"
+  },
+  {
+    "id": "wedrowcy-switu",
+    "type": "series"
+  },
+  {
+    "id": "synowie-burzy",
+    "type": "series"
+  },
+  {
+    "id": "srebrna-melancholia",
+    "type": "series"
+  }
+]
