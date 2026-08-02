@@ -1,4 +1,5 @@
 import { homeView } from "./views/home.js";
+
 import { charactersView } from "./views/characters.js";
 import {
     profileView,
@@ -12,6 +13,16 @@ import { placesView } from "./views/places.js";
 import { placeView } from "./views/place.js";
 
 import { timelineView } from "./views/timeline.js";
+
+/* ===========================
+   BIBLIOTEKA
+=========================== */
+
+import { libraryView } from "./views/library.js";
+import { seriesView } from "./views/series.js";
+import { bookView } from "./views/book.js";
+import { readerView } from "./views/reader.js";
+
 import { notFoundView } from "./views/notfound.js";
 
 export async function router() {
@@ -69,6 +80,51 @@ export async function router() {
         }
 
         /* ===========================
+           SERIA
+        =========================== */
+
+        if (hash.startsWith("#/series/")) {
+
+            const id = hash.split("/")[2];
+
+            app.innerHTML = await seriesView(id);
+
+            return;
+        }
+
+        /* ===========================
+           KSIĄŻKA
+        =========================== */
+
+        if (hash.startsWith("#/books/")) {
+
+            const id = hash.split("/")[2];
+
+            app.innerHTML = await bookView(id);
+
+            return;
+        }
+
+        /* ===========================
+           CZYTNIK
+        =========================== */
+
+        if (hash.startsWith("#/reader/")) {
+
+            const parts = hash.split("/");
+
+            const book = parts[2];
+            const chapter = parts[3];
+
+            app.innerHTML = await readerView(
+                book,
+                chapter
+            );
+
+            return;
+        }
+
+        /* ===========================
            GŁÓWNE STRONY
         =========================== */
 
@@ -101,6 +157,12 @@ export async function router() {
             case "#/timeline":
 
                 app.innerHTML = await timelineView();
+
+                break;
+
+            case "#/library":
+
+                app.innerHTML = await libraryView();
 
                 break;
 
