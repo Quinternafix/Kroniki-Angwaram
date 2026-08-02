@@ -1,1 +1,35 @@
+{
+  "id": "wedrowcy-switu",
 
+  "title": {
+    "pl": "Cykl Wędrowców Świtu",
+    "en": "Dawnwalkers",
+    "es": "Caminantes del Alba"
+  },
+
+  "subtitle": {
+    "pl": "Trylogia dark fantasy",
+    "en": "A Dark Fantasy Trilogy",
+    "es": "Una trilogía de fantasía oscura"
+  },
+
+  "description": {
+    "pl": "Historia grupy bohaterów, których los splata się z odradzającym się złem i tajemnicami Angwaramu.",
+    "en": "The story of a group of heroes whose fate becomes entwined with a reborn evil and the mysteries of Angwaram.",
+    "es": "La historia de un grupo de héroes cuyo destino se entrelaza con un mal renacido y los misterios de Angwaram."
+  },
+
+  "author": "Quint Blackwood",
+
+  "cover": "assets/books/covers/wedrowcy-switu.jpg",
+
+  "status": "writing",
+
+  "bookCount": 3,
+
+  "books": [
+    "biala-dusza",
+    "niebieskie-sny",
+    "jadeitowy-swiat"
+  ]
+}
