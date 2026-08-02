@@ -7,41 +7,66 @@
     "es": "Caminantes del Alba"
   },
 
-  "subtitle": {
-    "pl": "Trylogia dark fantasy",
-    "en": "A Dark Fantasy Trilogy",
-    "es": "Una trilogía de fantasía oscura"
-  },
-
   "description": {
-    "pl": "Historia grupy bohaterów, których los splata się z odradzającym się złem i tajemnicami Angwaramu.",
-    "en": "The story of a group of heroes whose fate becomes entwined with a reborn evil and the mysteries of Angwaram.",
-    "es": "La historia de un grupo de héroes cuyo destino se entrelaza con un mal renacido y los misterios de Angwaram."
+    "pl": "Trylogia dark fantasy.",
+    "en": "Dark fantasy trilogy.",
+    "es": "Trilogía de fantasía oscura."
   },
-
-  "author": "Quint Blackwood",
 
   "cover": "assets/books/covers/wedrowcy-switu.jpg",
 
   "status": "writing",
 
-  "order": 2,
-  "featured": true,
-  "progress": 18,
-
-  "started": "2026-08-02",
-  "updated": "2026-08-02",
-
-  "genres": [
-    "dark-fantasy",
-    "epic-fantasy"
-  ],
-
-  "bookCount": 3,
-
   "books": [
-    "biala-dusza",
-    "niebieskie-sny",
-    "jadeitowy-swiat"
+
+    {
+      "id": "biala-dusza",
+      "order": 1,
+
+      "title": {
+        "pl": "Biała Dusza",
+        "en": "White Soul",
+        "es": "Alma Blanca"
+      },
+
+      "cover": "assets/books/covers/biala-dusza.jpg",
+
+      "status": "writing",
+
+      "chapters": 18,
+
+      "year": 1753
+    },
+
+    {
+      "id": "niebieskie-sny",
+      "order": 2,
+
+      "title": {
+        "pl": "Niebieskie Sny",
+        "en": "Blue Dreams",
+        "es": "Sueños Azules"
+      },
+
+      "status": "planned",
+
+      "chapters": 0
+    },
+
+    {
+      "id": "jadeitowy-swiat",
+      "order": 3,
+
+      "title": {
+        "pl": "Jadeitowy Świat",
+        "en": "Jade World",
+        "es": "Mundo de Jade"
+      },
+
+      "status": "planned",
+
+      "chapters": 0
+    }
+
   ]
 }
