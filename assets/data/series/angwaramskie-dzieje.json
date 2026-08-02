@@ -25,6 +25,18 @@
 
   "status": "writing",
 
+   "order": 1,
+  "featured": true,
+  "progress": 18,
+
+  "started": "2026-08-02",
+  "updated": "2026-08-02",
+
+  "genres": [
+    "dark-fantasy",
+    "epic-fantasy"
+  ],
+
   "bookCount": 3,
 
   "books": [
