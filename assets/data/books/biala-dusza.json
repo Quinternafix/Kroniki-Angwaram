@@ -1,1 +1,60 @@
+{
+  "id": "biala-dusza",
 
+  "series": "wedrowcy-switu",
+
+  "volume": 1,
+
+  "title": {
+    "pl": "Biała Dusza",
+    "en": "White Soul",
+    "es": "Alma Blanca"
+  },
+
+  "subtitle": {
+    "pl": "Tom I",
+    "en": "Volume I",
+    "es": "Volumen I"
+  },
+
+  "description": {
+    "pl": "Opis książki.",
+    "en": "Book description.",
+    "es": "Descripción del libro."
+  },
+
+  "author": "Quint Blackwood",
+
+  "cover": "assets/books/covers/biala-dusza.jpg",
+
+  "status": "writing",
+
+  "progress": 5,
+
+  "started": "2026-08-02",
+
+  "updated": "2026-08-02",
+
+  "genres": [
+    "dark-fantasy",
+    "epic-fantasy"
+  ],
+
+  "language": "pl",
+
+  "wordCount": 0,
+
+  "chapterCount": 0,
+
+  "readingTime": 0,
+
+  "characters": [],
+
+  "locations": [],
+
+  "factions": [],
+
+  "timeline": [],
+
+  "chapters": []
+}
