@@ -3,7 +3,7 @@
 
   "series": "wedrowcy-switu",
 
-  "volume": 1,
+  "order": 1,
 
   "title": {
     "pl": "Biała Dusza",
@@ -14,47 +14,42 @@
   "subtitle": {
     "pl": "Tom I",
     "en": "Volume I",
-    "es": "Volumen I"
-  },
-
-  "description": {
-    "pl": "Opis książki.",
-    "en": "Book description.",
-    "es": "Descripción del libro."
+    "es": "Tomo I"
   },
 
   "author": "Quint Blackwood",
 
-  "cover": "assets/books/covers/biala-dusza.jpg",
+  "genre": "Dark Fantasy",
 
   "status": "writing",
 
-  "progress": 5,
+  "cover": "assets/books/covers/biala-dusza.jpg",
 
-  "started": "2026-08-02",
+  "summary": {
+    "pl": "...",
+    "en": "...",
+    "es": "..."
+  },
 
-  "updated": "2026-08-02",
+  "chapters": [
+    {
+      "id": "prolog",
+      "order": 0,
+      "title": {
+        "pl": "Prolog",
+        "en": "Prologue",
+        "es": "Prólogo"
+      }
+    },
 
-  "genres": [
-    "dark-fantasy",
-    "epic-fantasy"
-  ],
-
-  "language": "pl",
-
-  "wordCount": 0,
-
-  "chapterCount": 0,
-
-  "readingTime": 0,
-
-  "characters": [],
-
-  "locations": [],
-
-  "factions": [],
-
-  "timeline": [],
-
-  "chapters": []
+    {
+      "id": "popiol",
+      "order": 1,
+      "title": {
+        "pl": "Popiół",
+        "en": "Ash",
+        "es": "Ceniza"
+      }
+    }
+  ]
 }
