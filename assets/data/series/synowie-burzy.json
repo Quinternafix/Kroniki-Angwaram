@@ -1,1 +1,33 @@
+{
+  "id": "synowie-burzy",
 
+  "title": {
+    "pl": "Synowie Burzy",
+    "en": "Sons of the Storm",
+    "es": "Hijos de la Tormenta"
+  },
+
+  "subtitle": {
+    "pl": "Powieść dark fantasy",
+    "en": "Dark Fantasy Novel",
+    "es": "Novela de fantasía oscura"
+  },
+
+  "description": {
+    "pl": "Samodzielna powieść osadzona w uniwersum Angwaram.",
+    "en": "A standalone novel set in the Angwaram universe.",
+    "es": "Una novela independiente ambientada en el universo de Angwaram."
+  },
+
+  "author": "Quint Blackwood",
+
+  "cover": "assets/books/covers/synowie-burzy.jpg",
+
+  "status": "writing",
+
+  "bookCount": 1,
+
+  "books": [
+    "synowie-burzy"
+  ]
+}
