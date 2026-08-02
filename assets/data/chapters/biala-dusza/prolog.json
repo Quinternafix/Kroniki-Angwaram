@@ -3,48 +3,23 @@
 
   "book": "biala-dusza",
 
-  "number": 0,
+  "order": 0,
 
   "title": {
     "pl": "Prolog",
     "en": "Prologue",
     "es": "Prólogo"
   },
-  
-  "summary": {
-    "pl": "Krótkie streszczenie rozdziału.",
-    "en": "Short chapter summary.",
-    "es": "Breve resumen del capítulo."
-  },
 
   "content": {
     "pl": [
-      "Pierwszy akapit...",
-
-      "Drugi akapit...",
-
-      "Trzeci akapit..."
+      "Pierwszy akapit.",
+      "Drugi akapit.",
+      "Trzeci akapit."
     ],
 
     "en": [],
 
     "es": []
-  },
-
-  "characters": [
-    "Morgath Stormbringer",
-    "Aurora Stormbringer"
-  ],
-
-  "locations": [
-    "Selidor"
-  ],
-
-  "factions": [
-
-  ],
-
-  "timeline": [
-
-  ]
+  }
 }
