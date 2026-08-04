@@ -1,55 +1,45 @@
 {
-  "id": "biala-dusza",
-
-  "series": "wedrowcy-switu",
-
-  "order": 1,
+  "id": "prolog",
 
   "title": {
-    "pl": "Biała Dusza",
-    "en": "White Soul",
-    "es": "Alma Blanca"
+    "pl": "Prolog",
+    "en": "Prologue",
+    "es": "Prólogo"
   },
 
-  "subtitle": {
-    "pl": "Tom I",
-    "en": "Volume I",
-    "es": "Tomo I"
+  "image": "assets/books/illustrations/biala-dusza/prolog.jpg",
+
+  "content": {
+    "pl": "Tutaj znajduje się cały tekst rozdziału...",
+
+    "en": "Chapter text...",
+
+    "es": "Texto del capítulo..."
   },
 
-  "author": "Quint Blackwood",
-
-  "genre": "Dark Fantasy",
-
-  "status": "writing",
-
-  "cover": "assets/books/covers/biala-dusza.jpg",
-
-  "summary": {
-    "pl": "...",
-    "en": "...",
-    "es": "..."
-  },
-
-  "chapters": [
-    {
-      "id": "prolog",
-      "order": 0,
-      "title": {
-        "pl": "Prolog",
-        "en": "Prologue",
-        "es": "Prólogo"
-      }
-    },
+  "quotes": [
 
     {
-      "id": "popiol",
-      "order": 1,
-      "title": {
-        "pl": "Popiół",
-        "en": "Ash",
-        "es": "Ceniza"
+      "text": {
+        "pl": "Cytat...",
+        "en": "Quote...",
+        "es": "Cita..."
+      },
+
+      "author": "Araya Stormbringer"
+    }
+
+  ],
+
+  "notes": [
+
+    {
+      "text": {
+        "pl": "Przypis...",
+        "en": "Note...",
+        "es": "Nota..."
       }
     }
+
   ]
 }
