@@ -108,6 +108,8 @@ function sortSeries(series) {
 
     });
 
+}
+
 function renderSeries(series) {
 
     const title = localizeLibrary(
@@ -120,9 +122,15 @@ function renderSeries(series) {
         "description"
     );
 
-    const featured = Boolean(
-        series.featured
-    );
+    const featured =
+        Boolean(series.featured);
+
+    const cover =
+        series.cover ||
+        "assets/books/covers/default.jpg";
+
+    const bookCount =
+        Number(series.bookCount ?? 0);
 
     return `
 
@@ -131,7 +139,7 @@ function renderSeries(series) {
             <div class="library-cover">
 
                 <img
-                    src="${escapeHtml(series.cover)}"
+                    src="${escapeHtml(cover)}"
                     alt="${escapeHtml(title)}"
                     loading="lazy"
                 >
@@ -169,7 +177,7 @@ function renderSeries(series) {
                     <span>
 
                         📚
-                        ${Number(series.bookCount ?? 0)}
+                        ${bookCount}
 
                     </span>
 
@@ -219,15 +227,20 @@ function renderLibrary(series) {
 
     `;
 
+}
+
 export async function libraryView() {
 
     try {
 
-        const library = await getData("library");
+        const library =
+            await getData("library");
 
         if (
             !library ||
-            !Array.isArray(library.series)
+            !Array.isArray(
+                library.series
+            )
         ) {
 
             return `
