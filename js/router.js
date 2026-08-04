@@ -14,10 +14,6 @@ import { placeView } from "./views/place.js";
 
 import { timelineView } from "./views/timeline.js";
 
-/* ===========================
-   BIBLIOTEKA
-=========================== */
-
 import { libraryView } from "./views/library.js";
 import { seriesView } from "./views/series.js";
 import { bookView } from "./views/book.js";
@@ -80,7 +76,7 @@ export async function router() {
         }
 
         /* ===========================
-           SERIA
+           PROFIL SERII
         =========================== */
 
         if (hash.startsWith("#/series/")) {
@@ -93,7 +89,7 @@ export async function router() {
         }
 
         /* ===========================
-           KSIĄŻKA
+           PROFIL KSIĄŻKI
         =========================== */
 
         if (hash.startsWith("#/books/")) {
@@ -115,6 +111,13 @@ export async function router() {
 
             const book = parts[2];
             const chapter = parts[3];
+
+            if (!book || !chapter) {
+
+                app.innerHTML = notFoundView();
+
+                return;
+            }
 
             app.innerHTML = await readerView(
                 book,
@@ -175,7 +178,10 @@ export async function router() {
 
     } catch (error) {
 
-        console.error("Błąd routera:", error);
+        console.error(
+            "Błąd routera:",
+            error
+        );
 
         app.innerHTML = `
 
