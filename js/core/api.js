@@ -13,9 +13,11 @@ export async function getData(file) {
     );
 
     if (!response.ok) {
+
         throw new Error(
             `${t("error.notFoundFile")} assets/data/${file}.json`
         );
+
     }
 
     const data = await response.json();
@@ -23,4 +25,19 @@ export async function getData(file) {
     cache[file] = data;
 
     return data;
+}
+
+export function clearCache(file = null) {
+
+    if (file) {
+
+        delete cache[file];
+        return;
+
+    }
+
+    Object.keys(cache).forEach(key => {
+        delete cache[key];
+    });
+
 }
