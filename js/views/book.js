@@ -434,3 +434,4 @@ export async function bookView(id) {
     }
 
 }
+console.log("book.js loaded");
