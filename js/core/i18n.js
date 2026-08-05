@@ -7,6 +7,7 @@ const translations = {
         "nav.factions": "Frakcje",
         "nav.places": "Miejsca",
         "nav.timeline": "Historia",
+        "nav.library": "Biblioteka",
         "nav.searchPlaceholder": "Szukaj...",
 
         "home.welcome": "Witaj w encyklopedii świata Angwaram.",
@@ -65,6 +66,7 @@ const translations = {
         "nav.factions": "Factions",
         "nav.places": "Places",
         "nav.timeline": "History",
+        "nav.library": "Library",
         "nav.searchPlaceholder": "Search...",
 
         "home.welcome": "Welcome to the encyclopedia of the world of Angwaram.",
@@ -123,6 +125,7 @@ const translations = {
         "nav.factions": "Facciones",
         "nav.places": "Lugares",
         "nav.timeline": "Historia",
+        "nav.library": "Biblioteca",
         "nav.searchPlaceholder": "Buscar...",
 
         "home.welcome": "Bienvenido a la enciclopedia del mundo de Angwaram.",
