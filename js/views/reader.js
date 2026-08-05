@@ -35,6 +35,20 @@ function localizeBook(item, field) {
 
 }
 
+function sortChapters(chapters) {
+
+    if (!Array.isArray(chapters)) {
+        return [];
+    }
+
+    return [...chapters].sort(
+        (a, b) =>
+            Number(a.order ?? 0) -
+            Number(b.order ?? 0)
+    );
+
+}
+
 function getChapter(book, chapterId) {
 
     if (!Array.isArray(book.chapters)) {
@@ -580,6 +594,9 @@ export async function readerView(
             `;
 
         }
+
+        book.chapters =
+    sortChapters(book.chapters);
 
         if (!chapterId) {
 
