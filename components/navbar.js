@@ -15,7 +15,7 @@ export function renderNavbar() {
             <div class="navbar-logo">
 
                 <a href="#/">
-                    🐉 <span data-i18n="site.title">${t("site.title")}</span>
+                    🔥 <span data-i18n="site.title">${t("site.title")}</span>
                 </a>
 
             </div>
