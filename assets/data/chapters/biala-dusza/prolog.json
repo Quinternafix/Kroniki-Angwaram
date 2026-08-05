@@ -1,8 +1,6 @@
 {
   "id": "prolog",
-
   "book": "biala-dusza",
-
   "order": 0,
 
   "title": {
@@ -12,14 +10,29 @@
   },
 
   "content": {
-    "pl": [
-      "Pierwszy akapit.",
-      "Drugi akapit.",
-      "Trzeci akapit."
-    ],
+    "pl": "Treść rozdziału...\n\nNowy akapit...",
+    "en": "",
+    "es": ""
+  },
 
-    "en": [],
+  "quotes": [
+    {
+      "text": {
+        "pl": "Przykładowy cytat.",
+        "en": "",
+        "es": ""
+      },
+      "author": "Narrator"
+    }
+  ],
 
-    "es": []
-  }
+  "notes": [
+    {
+      "text": {
+        "pl": "Przykładowy przypis.",
+        "en": "",
+        "es": ""
+      }
+    }
+  ]
 }
