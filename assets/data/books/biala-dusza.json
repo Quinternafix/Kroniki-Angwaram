@@ -1,5 +1,6 @@
 {
   "id": "biala-dusza",
+  "series": "wedrowcy-switu",
   "order": 1,
 
   "title": {
@@ -17,6 +18,8 @@
   "author": "Quint Blackwood",
   "genre": "Dark Fantasy",
 
+  "status": "writing",
+
   "cover": "assets/books/covers/biala-dusza.jpg",
 
   "summary": {
@@ -25,7 +28,28 @@
     "es": "La primera novela de Caminantes del Alba."
   },
 
-  "status": "writing",
-  "chapters": 18,
-  "year": 1753
+  "year": 1753,
+
+  "chapters": [
+    {
+      "id": "prolog",
+      "order": 0,
+      "title": {
+        "pl": "Prolog",
+        "en": "Prologue",
+        "es": "Prólogo"
+      },
+      "file": "chapters/biala-dusza/prolog"
+    },
+    {
+      "id": "popiol",
+      "order": 1,
+      "title": {
+        "pl": "Popiół",
+        "en": "Ash",
+        "es": "Ceniza"
+      },
+      "file": "chapters/biala-dusza/popiol"
+    }
+  ]
 }
