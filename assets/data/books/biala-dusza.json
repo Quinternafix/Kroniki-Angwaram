@@ -1,45 +1,31 @@
 {
-  "id": "prolog",
+  "id": "biala-dusza",
+  "order": 1,
 
   "title": {
-    "pl": "Prolog",
-    "en": "Prologue",
-    "es": "Prólogo"
+    "pl": "Biała Dusza",
+    "en": "White Soul",
+    "es": "Alma Blanca"
   },
 
-  "image": "assets/books/illustrations/biala-dusza/prolog.jpg",
-
-  "content": {
-    "pl": "Tutaj znajduje się cały tekst rozdziału...",
-
-    "en": "Chapter text...",
-
-    "es": "Texto del capítulo..."
+  "subtitle": {
+    "pl": "Tom I",
+    "en": "Volume I",
+    "es": "Tomo I"
   },
 
-  "quotes": [
+  "author": "Quint Blackwood",
+  "genre": "Dark Fantasy",
 
-    {
-      "text": {
-        "pl": "Cytat...",
-        "en": "Quote...",
-        "es": "Cita..."
-      },
+  "cover": "assets/books/covers/biala-dusza.jpg",
 
-      "author": "Araya Stormbringer"
-    }
+  "summary": {
+    "pl": "Pierwszy tom Wędrowców Świtu.",
+    "en": "The first Dawnwalkers novel.",
+    "es": "La primera novela de Caminantes del Alba."
+  },
 
-  ],
-
-  "notes": [
-
-    {
-      "text": {
-        "pl": "Przypis...",
-        "en": "Note...",
-        "es": "Nota..."
-      }
-    }
-
-  ]
+  "status": "writing",
+  "chapters": 18,
+  "year": 1753
 }
