@@ -1,14 +1,11 @@
-console.log("1 - app.js załadowany");
-
 import { renderNavbar } from "./components/navbar.js";
 import { renderSidebar } from "./components/sidebar.js";
 import { renderFooter } from "./components/footer.js";
 
-import { router } from "./router.js";
-import { initSearch } from "./core/search.js";
 import { initI18n } from "./core/i18n.js";
+import { initSearch } from "./core/search.js";
 
-console.log("2 - importy OK");
+import { router } from "./router.js";
 
 async function renderApp() {
 
@@ -22,12 +19,29 @@ async function renderApp() {
 
     } catch (error) {
 
-        console.error(error);
+        console.error("Błąd aplikacji:", error);
 
-        document.getElementById("app").innerHTML = `
-            <p>Nie udało się uruchomić strony.</p>
-            <pre>${error.stack}</pre>
-        `;
+        const app = document.getElementById("app");
+
+        if (app) {
+
+            app.innerHTML = `
+
+                <section class="error-page">
+
+                    <h1>⚠ Wystąpił błąd</h1>
+
+                    <p>
+                        Nie udało się uruchomić aplikacji.
+                    </p>
+
+                    <pre>${error.message}</pre>
+
+                </section>
+
+            `;
+
+        }
 
     }
 
@@ -35,25 +49,16 @@ async function renderApp() {
 
 function startApp() {
 
-    console.log("3 - startApp");
-
     initI18n();
-    console.log("4 - initI18n");
 
     renderNavbar();
-    console.log("5 - navbar");
-
     renderSidebar();
-    console.log("6 - sidebar");
-
     renderFooter();
-    console.log("7 - footer");
 
     initSearch();
-    console.log("8 - search");
 
     renderApp();
-    console.log("9 - router");
+
 }
 
 if (document.readyState === "loading") {
