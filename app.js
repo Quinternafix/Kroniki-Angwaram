@@ -1,3 +1,4 @@
+console.log("app.js działa");
 import { renderNavbar } from "./components/navbar.js";
 import { renderSidebar } from "./components/sidebar.js";
 import { renderFooter } from "./components/footer.js";
