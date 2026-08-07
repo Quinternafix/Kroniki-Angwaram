@@ -21,6 +21,10 @@ import { readerView } from "./views/reader.js";
 
 import { notFoundView } from "./views/notfound.js";
 
+import {
+    highlightCurrentPage
+} from "./components/navbar.js";
+
 export async function router() {
 
     const app = document.getElementById("app");
@@ -40,11 +44,20 @@ export async function router() {
 
         if (hash.startsWith("#/characters/")) {
 
-            const id = hash.split("/")[2];
+            const id = decodeURIComponent(
+                hash.split("/")[2]
+            );
 
             app.innerHTML = await profileView(id);
 
             initProfilePage();
+
+            highlightCurrentPage();
+
+            window.scrollTo({
+                top: 0,
+                behavior: "instant"
+            });
 
             return;
         }
@@ -55,9 +68,18 @@ export async function router() {
 
         if (hash.startsWith("#/factions/")) {
 
-            const id = hash.split("/")[2];
+            const id = decodeURIComponent(
+                hash.split("/")[2]
+            );
 
             app.innerHTML = await factionView(id);
+
+            highlightCurrentPage();
+
+            window.scrollTo({
+                top: 0,
+                behavior: "instant"
+            });
 
             return;
         }
@@ -68,9 +90,18 @@ export async function router() {
 
         if (hash.startsWith("#/places/")) {
 
-            const id = hash.split("/")[2];
+            const id = decodeURIComponent(
+                hash.split("/")[2]
+            );
 
             app.innerHTML = await placeView(id);
+
+            highlightCurrentPage();
+
+            window.scrollTo({
+                top: 0,
+                behavior: "instant"
+            });
 
             return;
         }
@@ -81,9 +112,18 @@ export async function router() {
 
         if (hash.startsWith("#/series/")) {
 
-            const id = hash.split("/")[2];
+            const id = decodeURIComponent(
+                hash.split("/")[2]
+            );
 
             app.innerHTML = await seriesView(id);
+
+            highlightCurrentPage();
+
+            window.scrollTo({
+                top: 0,
+                behavior: "instant"
+            });
 
             return;
         }
@@ -94,9 +134,18 @@ export async function router() {
 
         if (hash.startsWith("#/books/")) {
 
-            const id = hash.split("/")[2];
+            const id = decodeURIComponent(
+                hash.split("/")[2]
+            );
 
             app.innerHTML = await bookView(id);
+
+            highlightCurrentPage();
+
+            window.scrollTo({
+                top: 0,
+                behavior: "instant"
+            });
 
             return;
         }
@@ -109,20 +158,30 @@ export async function router() {
 
             const parts = hash.split("/");
 
-            const book = parts[2];
-            const chapter = parts[3];
+            const book = decodeURIComponent(parts[2]);
+            const chapter = decodeURIComponent(parts[3]);
 
             if (!book || !chapter) {
 
                 app.innerHTML = notFoundView();
 
+                highlightCurrentPage();
+
                 return;
+
             }
 
             app.innerHTML = await readerView(
                 book,
                 chapter
             );
+
+            highlightCurrentPage();
+
+            window.scrollTo({
+                top: 0,
+                behavior: "instant"
+            });
 
             return;
         }
@@ -141,40 +200,54 @@ export async function router() {
 
             case "#/characters":
 
-                app.innerHTML = await charactersView();
+                app.innerHTML =
+                    await charactersView();
 
                 break;
 
             case "#/factions":
 
-                app.innerHTML = await factionsView();
+                app.innerHTML =
+                    await factionsView();
 
                 break;
 
             case "#/places":
 
-                app.innerHTML = await placesView();
+                app.innerHTML =
+                    await placesView();
 
                 break;
 
             case "#/timeline":
 
-                app.innerHTML = await timelineView();
+                app.innerHTML =
+                    await timelineView();
 
                 break;
 
             case "#/library":
 
-                app.innerHTML = await libraryView();
+                app.innerHTML =
+                    await libraryView();
 
                 break;
 
             default:
 
-                app.innerHTML = notFoundView();
+                app.innerHTML =
+                    notFoundView();
 
                 break;
+
         }
+
+        highlightCurrentPage();
+
+        window.scrollTo({
+            top: 0,
+            behavior: "instant"
+        });
 
     } catch (error) {
 
@@ -198,5 +271,7 @@ export async function router() {
             </section>
 
         `;
+
     }
+
 }
