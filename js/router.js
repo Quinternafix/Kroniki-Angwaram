@@ -68,8 +68,6 @@ export async function router() {
 
             app.innerHTML = await factionView(id);
 
-            highlightCurrentPage();
-
             window.scrollTo({
                 top: 0,
                 behavior: "instant"
@@ -89,8 +87,6 @@ export async function router() {
             );
 
             app.innerHTML = await placeView(id);
-
-            highlightCurrentPage();
 
             window.scrollTo({
                 top: 0,
@@ -112,8 +108,6 @@ export async function router() {
 
             app.innerHTML = await seriesView(id);
 
-            highlightCurrentPage();
-
             window.scrollTo({
                 top: 0,
                 behavior: "instant"
@@ -133,8 +127,6 @@ export async function router() {
             );
 
             app.innerHTML = await bookView(id);
-
-            highlightCurrentPage();
 
             window.scrollTo({
                 top: 0,
@@ -159,8 +151,6 @@ export async function router() {
 
                 app.innerHTML = notFoundView();
 
-                highlightCurrentPage();
-
                 return;
 
             }
@@ -169,8 +159,6 @@ export async function router() {
                 book,
                 chapter
             );
-
-            highlightCurrentPage();
 
             window.scrollTo({
                 top: 0,
