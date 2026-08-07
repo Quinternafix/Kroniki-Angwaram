@@ -1,10 +1,3 @@
-export function renderNavbar() {
-
-    console.log("renderNavbar");
-
-    const navbar = document.getElementById("navbar");
-    ...
-}
 import { t } from "../core/i18n.js";
 
 export function renderNavbar() {
