@@ -21,10 +21,6 @@ import { readerView } from "./views/reader.js";
 
 import { notFoundView } from "./views/notfound.js";
 
-import {
-    highlightCurrentPage
-} from "./components/navbar.js";
-
 export async function router() {
 
     const app = document.getElementById("app");
