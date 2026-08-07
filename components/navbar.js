@@ -1,13 +1,18 @@
 import { t } from "../core/i18n.js";
 
+console.log("navbar.js załadowany");
+
 export function renderNavbar() {
+
+    console.log("renderNavbar wywołany");
 
     const navbar = document.getElementById("navbar");
 
     if (!navbar) {
+        console.log("#navbar nie znaleziony");
         return;
     }
-
+}
     navbar.innerHTML = `
 
         <nav class="navbar">
