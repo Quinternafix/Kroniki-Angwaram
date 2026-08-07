@@ -458,3 +458,323 @@ const translations = {
         "loading": "Cargando..."
 
     }
+
+    let currentLanguage =
+    localStorage.getItem("language") || "pl";
+
+/**
+ * Zwraca aktualny język.
+ */
+export function getLanguage() {
+
+    return currentLanguage;
+
+}
+
+/**
+ * Tłumaczy klucz interfejsu.
+ */
+export function t(key) {
+
+    return (
+
+        translations[currentLanguage]?.[key] ??
+
+        translations.pl?.[key] ??
+
+        key
+
+    );
+
+}
+
+/**
+ * Lokalizuje pole obiektu.
+ *
+ * Obsługuje:
+ *
+ * title: {
+ *   pl: "...",
+ *   en: "...",
+ *   es: "..."
+ * }
+ *
+ * oraz
+ *
+ * translations: {
+ *   pl: {
+ *      title: "..."
+ *   }
+ * }
+ */
+export function localize(item, field) {
+
+    if (
+        !item ||
+        typeof item !== "object"
+    ) {
+        return "";
+    }
+
+    const language = currentLanguage;
+
+    /*
+     * translations.pl.title
+     */
+
+    if (
+
+        item.translations?.[language]?.[field]
+
+    ) {
+
+        return item.translations[language][field];
+
+    }
+
+    /*
+     * fallback PL
+     */
+
+    if (
+
+        item.translations?.pl?.[field]
+
+    ) {
+
+        return item.translations.pl[field];
+
+    }
+
+    /*
+     * title.pl
+     */
+
+    const value = item[field];
+
+    if (
+
+        value &&
+        typeof value === "object" &&
+        !Array.isArray(value)
+
+    ) {
+
+        return (
+
+            value[language] ??
+
+            value.pl ??
+
+            value.en ??
+
+            value.es ??
+
+            Object.values(value)[0] ??
+
+            ""
+
+        );
+
+    }
+
+    /*
+     * zwykły tekst
+     */
+
+    if (
+
+        value !== undefined &&
+        value !== null
+
+    ) {
+
+        return String(value);
+
+    }
+
+    return "";
+
+}
+
+/**
+ * Lokalizuje dowolną wartość.
+ */
+export function localizeValue(value) {
+
+    if (
+        value === undefined ||
+        value === null
+    ) {
+        return "";
+    }
+
+    if (
+
+        typeof value === "object" &&
+        !Array.isArray(value)
+
+    ) {
+
+        return (
+
+            value[currentLanguage] ??
+
+            value.pl ??
+
+            value.en ??
+
+            value.es ??
+
+            Object.values(value)[0] ??
+
+            ""
+
+        );
+
+    }
+
+    return String(value);
+
+}
+
+/**
+ * Zmienia język.
+ */
+export function setLanguage(language) {
+
+    if (!translations[language]) {
+        return;
+    }
+
+    currentLanguage = language;
+
+    localStorage.setItem(
+        "language",
+        language
+    );
+
+    applyTranslations();
+
+    window.dispatchEvent(
+        new Event("languagechange")
+    );
+
+}
+
+/**
+ * Nakłada tłumaczenia na interfejs.
+ */
+export function applyTranslations() {
+
+    document.documentElement.lang = currentLanguage;
+
+    document.title = t("site.title");
+
+    /*
+     * data-i18n
+     */
+    document
+        .querySelectorAll("[data-i18n]")
+        .forEach(element => {
+
+            element.textContent = t(
+                element.dataset.i18n
+            );
+
+        });
+
+    /*
+     * data-i18n-placeholder
+     */
+    document
+        .querySelectorAll("[data-i18n-placeholder]")
+        .forEach(element => {
+
+            element.placeholder = t(
+                element.dataset.i18nPlaceholder
+            );
+
+        });
+
+    /*
+     * data-i18n-title
+     */
+    document
+        .querySelectorAll("[data-i18n-title]")
+        .forEach(element => {
+
+            element.title = t(
+                element.dataset.i18nTitle
+            );
+
+        });
+
+    /*
+     * data-i18n-aria-label
+     */
+    document
+        .querySelectorAll("[data-i18n-aria-label]")
+        .forEach(element => {
+
+            element.setAttribute(
+                "aria-label",
+                t(element.dataset.i18nAriaLabel)
+            );
+
+        });
+
+    /*
+     * Podświetlenie aktywnego języka
+     */
+    document
+        .querySelectorAll("[data-language]")
+        .forEach(button => {
+
+            button.setAttribute(
+                "aria-pressed",
+                String(
+                    button.dataset.language === currentLanguage
+                )
+            );
+
+        });
+
+}
+
+/**
+ * Inicjalizacja systemu tłumaczeń.
+ */
+export function initI18n() {
+
+    document.addEventListener(
+        "click",
+        event => {
+
+            const button =
+                event.target.closest(
+                    "[data-language]"
+                );
+
+            if (!button) {
+                return;
+            }
+
+            setLanguage(
+                button.dataset.language
+            );
+
+        }
+    );
+
+    applyTranslations();
+
+}
+
+/**
+ * Odśwież tłumaczenia po zmianie strony.
+ */
+window.addEventListener(
+    "hashchange",
+    applyTranslations
+);
