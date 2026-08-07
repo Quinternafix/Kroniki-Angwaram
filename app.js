@@ -4,8 +4,9 @@ import { renderFooter } from "./components/footer.js";
 
 import { initI18n } from "./core/i18n.js";
 import { initSearch } from "./core/search.js";
-
 import { router } from "./router.js";
+
+console.log("app.js uruchomiony");
 
 async function renderApp() {
 
