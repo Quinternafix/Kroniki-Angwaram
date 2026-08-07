@@ -70,7 +70,7 @@ export function renderNavbar() {
             <div class="navbar-tools">
 
                 <input
-                    id="search"
+                    id="searchInput"
                     type="search"
                     data-i18n-placeholder="nav.searchPlaceholder"
                     placeholder="${t("nav.searchPlaceholder")}"
