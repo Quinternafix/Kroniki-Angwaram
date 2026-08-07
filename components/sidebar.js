@@ -1,5 +1,12 @@
 export function renderSidebar() {
 
+    console.log("renderSidebar");
+
+    const sidebar = document.getElementById("sidebar");
+    ...
+}
+export function renderSidebar() {
+
 document.getElementById("sidebar").innerHTML = `
 
 <a href="#/">🏠 ${t("nav.home")}</a>
