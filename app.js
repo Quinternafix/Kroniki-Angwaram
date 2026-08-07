@@ -1,16 +1,63 @@
-console.log("app.js działa");
 import { renderNavbar } from "./components/navbar.js";
 import { renderSidebar } from "./components/sidebar.js";
 import { renderFooter } from "./components/footer.js";
-import { initI18n } from "./core/i18n.js";
+
 import { router } from "./router.js";
+import { initSearch } from "./core/search.js";
+import { initI18n } from "./core/i18n.js";
 
-renderNavbar();
-renderSidebar();
-renderFooter();
+async function renderApp() {
 
-initI18n();
+    try {
 
-window.addEventListener("hashchange", router);
+        renderNavbar();
+        renderSidebar();
+        renderFooter();
 
-router();
+        await router();
+
+    } catch (error) {
+
+        console.error(error);
+
+        document.getElementById("app").innerHTML = `
+            <p>Nie udało się uruchomić strony.</p>
+            <pre>${error.stack}</pre>
+        `;
+
+    }
+
+}
+
+function startApp() {
+
+    initI18n();
+    initSearch();
+
+    renderApp();
+
+}
+
+if (document.readyState === "loading") {
+
+    document.addEventListener(
+        "DOMContentLoaded",
+        startApp,
+        { once: true }
+    );
+
+} else {
+
+    startApp();
+
+}
+
+window.addEventListener(
+    "hashchange",
+    renderApp
+);
+
+window.addEventListener(
+    "languagechange",
+    renderApp
+);
