@@ -1,10 +1,16 @@
 const translations = {
+
+    /* ======================================================
+       POLSKI
+    ====================================================== */
+
     pl: {
+
+        /* ---------- Strona ---------- */
+
         "site.title": "Kroniki Angwaram",
 
-        /* ==========================
-           MENU
-        ========================== */
+        /* ---------- Nawigacja ---------- */
 
         "nav.home": "Start",
         "nav.characters": "Postacie",
@@ -12,75 +18,53 @@ const translations = {
         "nav.places": "Miejsca",
         "nav.timeline": "Historia",
         "nav.library": "Biblioteka",
-
         "nav.searchPlaceholder": "Szukaj...",
 
-        /* ==========================
-           STRONA GŁÓWNA
-        ========================== */
+        /* ---------- Home ---------- */
 
-        "home.welcome": "Witaj w encyklopedii świata Angwaram.",
-        "home.instructions": "Korzystaj z menu, aby przeglądać postacie, miejsca, frakcje, historię oraz bibliotekę.",
+        "home.welcome":
+            "Witaj w encyklopedii świata Angwaram.",
 
-        /* ==========================
-           WIDOKI
-        ========================== */
+        "home.instructions":
+            "Korzystaj z menu, aby przeglądać postacie, miejsca, frakcje i historię.",
+
+        /* ---------- Characters ---------- */
 
         "characters.title": "Postacie",
+
+        /* ---------- Factions ---------- */
+
         "factions.title": "Frakcje",
+        "faction.members": "Członkowie",
+
+        /* ---------- Places ---------- */
+
         "places.title": "Miejsca",
 
-        /* ==========================
-           BIBLIOTEKA
-        ========================== */
+        "place.characters":
+            "Powiązane postacie",
 
-        "library.title": "Biblioteka",
-        "library.description": "Przeglądaj serie, książki i opowiadania ze świata Angwaram.",
+        "place.factions":
+            "Powiązane frakcje",
 
-        "library.featured": "Polecana seria",
-        "library.openSeries": "Otwórz serię",
-
-        "library.book": "książka",
-        "library.books": "książki",
-
-        "library.status": "Status",
-
-        "library.status.planned": "Planowana",
-        "library.status.writing": "W trakcie pisania",
-        "library.status.editing": "Redakcja",
-        "library.status.completed": "Ukończona",
-        "library.status.published": "Wydana",
-
-        /* ==========================
-           HISTORIA
-        ========================== */
+        /* ---------- Timeline ---------- */
 
         "timeline.title": "Historia",
-        "timeline.description": "Chronologia najważniejszych wydarzeń w historii Angwaram.",
-        "timeline.empty": "Brak wydarzeń do wyświetlenia.",
 
-        "timeline.event": "Wydarzenie",
-        "timeline.story": "Opowiadanie",
-        "timeline.readStory": "Czytaj opowiadanie",
-        "timeline.characters": "Postacie",
-        "timeline.locations": "Miejsca",
-        "timeline.factions": "Frakcje",
+        "timeline.description":
+            "Chronologia najważniejszych wydarzeń w historii Angwaram.",
 
-        /* ==========================
-           WSPÓLNE
-        ========================== */
+        "timeline.empty":
+            "Brak wydarzeń do wyświetlenia.",
 
-        "common.open": "Otwórz profil",
-        "common.home": "Start",
-        "common.none": "Brak",
-        "common.noData": "Brak danych",
+        /* ---------- Profile ---------- */
 
-        /* ==========================
-           PROFILE
-        ========================== */
+        "profile.notFound":
+            "Nie znaleziono postaci.",
 
-        "profile.notFound": "Nie znaleziono postaci.",
-        "profile.notFoundDescription": "Taka postać nie istnieje.",
+        "profile.notFoundDescription":
+            "Taka postać nie istnieje.",
+
         "profile.info": "Informacje",
         "profile.race": "Rasa",
         "profile.nation": "Naród",
@@ -88,45 +72,141 @@ const translations = {
         "profile.rank": "Ranga",
         "profile.status": "Status",
         "profile.birth": "Data urodzenia",
-        "profile.home": "Dom",
-        "profile.friends": "Przyjaciele",
-        "profile.enemies": "Wrogowie",
-        "profile.related": "Powiązane artykuły",
-        "profile.gallery": "Galeria",
-        "profile.lifeStages": "Etapy życia",
-        "profile.quotes": "Cytaty",
         "profile.parents": "Rodzice",
         "profile.siblings": "Rodzeństwo",
+        "profile.home": "Miejsce zamieszkania",
+        "profile.friends": "Przyjaciele",
+        "profile.enemies": "Wrogowie",
+        "profile.gallery": "Galeria",
+        "profile.lifeStages": "Etapy życia",
+        "profile.related": "Powiązane artykuły",
+        "profile.quotes": "Cytaty",
 
-        /* ==========================
-           ULUBIONE
-        ========================== */
+        /* ---------- Biblioteka ---------- */
 
-        "favorite.add": "⭐ Dodaj do ulubionych",
-        "favorite.remove": "★ Usuń z ulubionych",
+        "library.title": "Biblioteka",
 
-        /* ==========================
-           FRAKCJE / MIEJSCA
-        ========================== */
+        "library.description":
+            "Oficjalna biblioteka uniwersum Angwaram.",
 
-        "faction.members": "Członkowie",
+        "library.openSeries":
+            "Otwórz serię",
 
-        "place.characters": "Powiązane postacie",
-        "place.factions": "Powiązane frakcje",
+        "library.featured":
+            "Polecana seria",
 
-        /* ==========================
-           BŁĘDY
-        ========================== */
+        /* ---------- Serie ---------- */
 
-        "notFound": "Nie znaleziono strony.",
-        "loading": "Ładowanie..."
+        "series.books":
+            "Książki",
+
+        "series.status":
+            "Status",
+
+        "series.bookCount":
+            "Liczba książek",
+
+        "series.openBook":
+            "Otwórz książkę",
+
+        /* ---------- Książka ---------- */
+
+        "book.author":
+            "Autor",
+
+        "book.genre":
+            "Gatunek",
+
+        "book.year":
+            "Rok",
+
+        "book.status":
+            "Status",
+
+        "book.summary":
+            "Opis",
+
+        "book.chapters":
+            "Rozdziały",
+
+        "book.startReading":
+            "Czytaj",
+
+        /* ---------- Czytnik ---------- */
+
+        "reader.contents":
+            "Spis treści",
+
+        "reader.backToBook":
+            "Powrót do książki",
+
+        "reader.bookNotFound":
+            "Nie znaleziono książki.",
+
+        "reader.chapterNotFound":
+            "Nie znaleziono rozdziału.",
+
+        "reader.previous":
+            "Poprzedni",
+
+        "reader.next":
+            "Następny",
+
+        "reader.quotes":
+            "Cytaty",
+
+        "reader.notes":
+            "Przypisy",
+
+        /* ---------- Wspólne ---------- */
+
+        "common.open":
+            "Otwórz",
+
+        "common.home":
+            "Start",
+
+        "common.none":
+            "Brak",
+
+        "common.noData":
+            "Brak danych",
+
+        "common.loading":
+            "Ładowanie...",
+
+        /* ---------- Ulubione ---------- */
+
+        "favorite.add":
+            "⭐ Dodaj do ulubionych",
+
+        "favorite.remove":
+            "★ Usuń z ulubionych",
+
+        /* ---------- Błędy ---------- */
+
+        "error.notFoundFile":
+            "Nie znaleziono pliku",
+
+        "notFound":
+            "Nie znaleziono strony.",
+
+        "loading":
+            "Ładowanie..."
+
     },
-        en: {
+
+    /* ======================================================
+       ENGLISH
+    ====================================================== */
+
+    en: {
+
+        /* ---------- Site ---------- */
+
         "site.title": "Chronicles of Angwaram",
 
-        /* ==========================
-           MENU
-        ========================== */
+        /* ---------- Navigation ---------- */
 
         "nav.home": "Home",
         "nav.characters": "Characters",
@@ -134,75 +214,45 @@ const translations = {
         "nav.places": "Places",
         "nav.timeline": "History",
         "nav.library": "Library",
-
         "nav.searchPlaceholder": "Search...",
 
-        /* ==========================
-           HOME
-        ========================== */
+        /* ---------- Home ---------- */
 
-        "home.welcome": "Welcome to the encyclopedia of the world of Angwaram.",
-        "home.instructions": "Use the menu to explore characters, places, factions, history and the library.",
+        "home.welcome":
+            "Welcome to the encyclopedia of the world of Angwaram.",
 
-        /* ==========================
-           VIEWS
-        ========================== */
+        "home.instructions":
+            "Use the menu to explore characters, places, factions and history.",
+
+        /* ---------- Characters ---------- */
 
         "characters.title": "Characters",
+
+        /* ---------- Factions ---------- */
+
         "factions.title": "Factions",
+        "faction.members": "Members",
+
+        /* ---------- Places ---------- */
+
         "places.title": "Places",
+        "place.characters": "Related characters",
+        "place.factions": "Related factions",
 
-        /* ==========================
-           LIBRARY
-        ========================== */
-
-        "library.title": "Library",
-        "library.description": "Browse series, novels and stories from the world of Angwaram.",
-
-        "library.featured": "Featured series",
-        "library.openSeries": "Open series",
-
-        "library.book": "book",
-        "library.books": "books",
-
-        "library.status": "Status",
-
-        "library.status.planned": "Planned",
-        "library.status.writing": "Writing",
-        "library.status.editing": "Editing",
-        "library.status.completed": "Completed",
-        "library.status.published": "Published",
-
-        /* ==========================
-           TIMELINE
-        ========================== */
+        /* ---------- Timeline ---------- */
 
         "timeline.title": "History",
-        "timeline.description": "A chronology of the most important events in the history of Angwaram.",
-        "timeline.empty": "There are no events to display.",
+        "timeline.description":
+            "A chronology of the most important events in the history of Angwaram.",
+        "timeline.empty":
+            "There are no events to display.",
 
-        "timeline.event": "Event",
-        "timeline.story": "Story",
-        "timeline.readStory": "Read story",
-        "timeline.characters": "Characters",
-        "timeline.locations": "Locations",
-        "timeline.factions": "Factions",
-
-        /* ==========================
-           COMMON
-        ========================== */
-
-        "common.open": "Open profile",
-        "common.home": "Home",
-        "common.none": "None",
-        "common.noData": "No data",
-
-        /* ==========================
-           PROFILE
-        ========================== */
+        /* ---------- Profile ---------- */
 
         "profile.notFound": "Character not found.",
-        "profile.notFoundDescription": "This character does not exist.",
+        "profile.notFoundDescription":
+            "This character does not exist.",
+
         "profile.info": "Information",
         "profile.race": "Race",
         "profile.nation": "Nation",
@@ -210,45 +260,84 @@ const translations = {
         "profile.rank": "Rank",
         "profile.status": "Status",
         "profile.birth": "Date of birth",
-        "profile.home": "Home",
-        "profile.friends": "Friends",
-        "profile.enemies": "Enemies",
-        "profile.related": "Related articles",
-        "profile.gallery": "Gallery",
-        "profile.lifeStages": "Life stages",
-        "profile.quotes": "Quotes",
         "profile.parents": "Parents",
         "profile.siblings": "Siblings",
+        "profile.home": "Residence",
+        "profile.friends": "Friends",
+        "profile.enemies": "Enemies",
+        "profile.gallery": "Gallery",
+        "profile.lifeStages": "Life stages",
+        "profile.related": "Related articles",
+        "profile.quotes": "Quotes",
 
-        /* ==========================
-           FAVORITES
-        ========================== */
+        /* ---------- Library ---------- */
+
+        "library.title": "Library",
+        "library.description":
+            "The official library of the Angwaram universe.",
+        "library.openSeries": "Open series",
+        "library.featured": "Featured series",
+
+        /* ---------- Series ---------- */
+
+        "series.books": "Books",
+        "series.status": "Status",
+        "series.bookCount": "Books",
+        "series.openBook": "Open book",
+
+        /* ---------- Book ---------- */
+
+        "book.author": "Author",
+        "book.genre": "Genre",
+        "book.year": "Year",
+        "book.status": "Status",
+        "book.summary": "Summary",
+        "book.chapters": "Chapters",
+        "book.startReading": "Read",
+
+        /* ---------- Reader ---------- */
+
+        "reader.contents": "Contents",
+        "reader.backToBook": "Back to book",
+        "reader.bookNotFound": "Book not found.",
+        "reader.chapterNotFound": "Chapter not found.",
+        "reader.previous": "Previous",
+        "reader.next": "Next",
+        "reader.quotes": "Quotes",
+        "reader.notes": "Notes",
+
+        /* ---------- Common ---------- */
+
+        "common.open": "Open",
+        "common.home": "Home",
+        "common.none": "None",
+        "common.noData": "No data",
+        "common.loading": "Loading...",
+
+        /* ---------- Favorites ---------- */
 
         "favorite.add": "⭐ Add to favorites",
         "favorite.remove": "★ Remove from favorites",
 
-        /* ==========================
-           FACTIONS / PLACES
-        ========================== */
+        /* ---------- Errors ---------- */
 
-        "faction.members": "Members",
-
-        "place.characters": "Related characters",
-        "place.factions": "Related factions",
-
-        /* ==========================
-           ERRORS
-        ========================== */
-
+        "error.notFoundFile": "File not found",
         "notFound": "Page not found.",
         "loading": "Loading..."
+
     },
-        es: {
+
+    /* ======================================================
+       ESPAÑOL
+    ====================================================== */
+
+    es: {
+
+        /* ---------- Sitio ---------- */
+
         "site.title": "Crónicas de Angwaram",
 
-        /* ==========================
-           MENÚ
-        ========================== */
+        /* ---------- Navegación ---------- */
 
         "nav.home": "Inicio",
         "nav.characters": "Personajes",
@@ -256,75 +345,46 @@ const translations = {
         "nav.places": "Lugares",
         "nav.timeline": "Historia",
         "nav.library": "Biblioteca",
-
         "nav.searchPlaceholder": "Buscar...",
 
-        /* ==========================
-           INICIO
-        ========================== */
+        /* ---------- Inicio ---------- */
 
-        "home.welcome": "Bienvenido a la enciclopedia del mundo de Angwaram.",
-        "home.instructions": "Usa el menú para explorar personajes, lugares, facciones, historia y la biblioteca.",
+        "home.welcome":
+            "Bienvenido a la enciclopedia del mundo de Angwaram.",
 
-        /* ==========================
-           VISTAS
-        ========================== */
+        "home.instructions":
+            "Utiliza el menú para explorar personajes, lugares, facciones e historia.",
+
+        /* ---------- Personajes ---------- */
 
         "characters.title": "Personajes",
+
+        /* ---------- Facciones ---------- */
+
         "factions.title": "Facciones",
+        "faction.members": "Miembros",
+
+        /* ---------- Lugares ---------- */
+
         "places.title": "Lugares",
+        "place.characters": "Personajes relacionados",
+        "place.factions": "Facciones relacionadas",
 
-        /* ==========================
-           BIBLIOTECA
-        ========================== */
-
-        "library.title": "Biblioteca",
-        "library.description": "Explora las series, novelas y relatos del universo de Angwaram.",
-
-        "library.featured": "Serie destacada",
-        "library.openSeries": "Abrir serie",
-
-        "library.book": "libro",
-        "library.books": "libros",
-
-        "library.status": "Estado",
-
-        "library.status.planned": "Planificada",
-        "library.status.writing": "En escritura",
-        "library.status.editing": "Edición",
-        "library.status.completed": "Completada",
-        "library.status.published": "Publicada",
-
-        /* ==========================
-           HISTORIA
-        ========================== */
+        /* ---------- Historia ---------- */
 
         "timeline.title": "Historia",
-        "timeline.description": "Una cronología de los acontecimientos más importantes de la historia de Angwaram.",
-        "timeline.empty": "No hay eventos para mostrar.",
+        "timeline.description":
+            "Cronología de los acontecimientos más importantes de la historia de Angwaram.",
+        "timeline.empty":
+            "No hay eventos para mostrar.",
 
-        "timeline.event": "Evento",
-        "timeline.story": "Relato",
-        "timeline.readStory": "Leer relato",
-        "timeline.characters": "Personajes",
-        "timeline.locations": "Lugares",
-        "timeline.factions": "Facciones",
+        /* ---------- Perfil ---------- */
 
-        /* ==========================
-           COMÚN
-        ========================== */
+        "profile.notFound":
+            "Personaje no encontrado.",
+        "profile.notFoundDescription":
+            "Este personaje no existe.",
 
-        "common.open": "Abrir perfil",
-        "common.home": "Inicio",
-        "common.none": "Ninguno",
-        "common.noData": "Sin datos",
-
-        /* ==========================
-           PERFIL
-        ========================== */
-
-        "profile.notFound": "Personaje no encontrado.",
-        "profile.notFoundDescription": "Este personaje no existe.",
         "profile.info": "Información",
         "profile.race": "Raza",
         "profile.nation": "Nación",
@@ -332,228 +392,69 @@ const translations = {
         "profile.rank": "Rango",
         "profile.status": "Estado",
         "profile.birth": "Fecha de nacimiento",
-        "profile.home": "Hogar",
-        "profile.friends": "Amigos",
-        "profile.enemies": "Enemigos",
-        "profile.related": "Artículos relacionados",
-        "profile.gallery": "Galería",
-        "profile.lifeStages": "Etapas de la vida",
-        "profile.quotes": "Citas",
         "profile.parents": "Padres",
         "profile.siblings": "Hermanos",
+        "profile.home": "Residencia",
+        "profile.friends": "Amigos",
+        "profile.enemies": "Enemigos",
+        "profile.gallery": "Galería",
+        "profile.lifeStages": "Etapas de la vida",
+        "profile.related": "Artículos relacionados",
+        "profile.quotes": "Citas",
 
-        /* ==========================
-           FAVORITOS
-        ========================== */
+        /* ---------- Biblioteca ---------- */
+
+        "library.title": "Biblioteca",
+        "library.description":
+            "La biblioteca oficial del universo de Angwaram.",
+        "library.openSeries": "Abrir serie",
+        "library.featured": "Serie destacada",
+
+        /* ---------- Serie ---------- */
+
+        "series.books": "Libros",
+        "series.status": "Estado",
+        "series.bookCount": "Libros",
+        "series.openBook": "Abrir libro",
+
+        /* ---------- Libro ---------- */
+
+        "book.author": "Autor",
+        "book.genre": "Género",
+        "book.year": "Año",
+        "book.status": "Estado",
+        "book.summary": "Resumen",
+        "book.chapters": "Capítulos",
+        "book.startReading": "Leer",
+
+        /* ---------- Lector ---------- */
+
+        "reader.contents": "Índice",
+        "reader.backToBook": "Volver al libro",
+        "reader.bookNotFound": "Libro no encontrado.",
+        "reader.chapterNotFound": "Capítulo no encontrado.",
+        "reader.previous": "Anterior",
+        "reader.next": "Siguiente",
+        "reader.quotes": "Citas",
+        "reader.notes": "Notas",
+
+        /* ---------- Común ---------- */
+
+        "common.open": "Abrir",
+        "common.home": "Inicio",
+        "common.none": "Ninguno",
+        "common.noData": "Sin datos",
+        "common.loading": "Cargando...",
+
+        /* ---------- Favoritos ---------- */
 
         "favorite.add": "⭐ Añadir a favoritos",
         "favorite.remove": "★ Quitar de favoritos",
 
-        /* ==========================
-           FACCIONES / LUGARES
-        ========================== */
+        /* ---------- Errores ---------- */
 
-        "faction.members": "Miembros",
-
-        "place.characters": "Personajes relacionados",
-        "place.factions": "Facciones relacionadas",
-
-        /* ==========================
-           ERRORES
-        ========================== */
-
+        "error.notFoundFile": "Archivo no encontrado",
         "notFound": "Página no encontrada.",
         "loading": "Cargando..."
+
     }
-
-};
-let currentLanguage =
-    localStorage.getItem("language") || "pl";
-
-export function getLanguage() {
-    return currentLanguage;
-}
-
-export function t(key) {
-    return (
-        translations[currentLanguage]?.[key] ??
-        translations.pl?.[key] ??
-        key
-    );
-}
-
-export function localize(item, field) {
-
-    if (!item) {
-        return "";
-    }
-
-    return (
-        item.translations?.[currentLanguage]?.[field] ??
-        item[field] ??
-        ""
-    );
-
-}
-
-export function localizeTimeline(item, field) {
-
-    if (!item || !item[field]) {
-        return "";
-    }
-
-    const value = item[field];
-
-    if (typeof value === "string") {
-        return value;
-    }
-
-    return (
-        value[currentLanguage] ||
-        value.pl ||
-        value.en ||
-        ""
-    );
-
-}
-
-export function applyTranslations() {
-
-    document.documentElement.lang =
-        currentLanguage;
-
-    document.title =
-        t("site.title");
-
-    document
-        .querySelectorAll("[data-i18n]")
-        .forEach(element => {
-
-            element.textContent =
-                t(element.dataset.i18n);
-
-        });
-
-    document
-        .querySelectorAll("[data-i18n-placeholder]")
-        .forEach(element => {
-
-            element.setAttribute(
-                "placeholder",
-                t(
-                    element.dataset
-                        .i18nPlaceholder
-                )
-            );
-
-        });
-
-    document
-        .querySelectorAll("[data-language]")
-        .forEach(button => {
-
-            button.setAttribute(
-                "aria-pressed",
-                String(
-                    button.dataset.language ===
-                    currentLanguage
-                )
-            );
-
-        });
-}
-
-export function setLanguage(language) {
-
-    if (!translations[language]) {
-        return;
-    }
-
-    currentLanguage = language;
-
-    localStorage.setItem(
-        "language",
-        language
-    );
-
-    applyTranslations();
-
-    window.dispatchEvent(
-        new Event("languagechange")
-    );
-}
-
-export function initI18n() {
-
-    document.addEventListener(
-        "click",
-        event => {
-
-            const button =
-                event.target.closest(
-                    "[data-language]"
-                );
-
-            if (!button) {
-                return;
-            }
-
-            setLanguage(
-                button.dataset.language
-            );
-        }
-    );
-
-    applyTranslations();
-}
-
-/* ==========================
-   DEBUG
-========================== */
-
-console.log(
-    "TEST timeline.story:",
-    t("timeline.story")
-);
-
-console.log(
-    "TEST timeline.readStory:",
-    t("timeline.readStory")
-);
-
-console.log(
-    "TEST timeline.characters:",
-    t("timeline.characters")
-);
-
-console.log(
-    "TEST timeline.locations:",
-    t("timeline.locations")
-);
-
-console.log(
-    "TEST timeline.factions:",
-    t("timeline.factions")
-);
-
-console.log(
-    "TEST library.title:",
-    t("library.title")
-);
-
-console.log(
-    "TEST library.openSeries:",
-    t("library.openSeries")
-);
-
-console.log(
-    "TEST library.featured:",
-    t("library.featured")
-);
-
-console.log("i18n.js ZAŁADOWANY");
-
-console.log(
-    "localizeTimeline:",
-    typeof localizeTimeline
-);
