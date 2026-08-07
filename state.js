@@ -1,9 +1,24 @@
 export const state = {
 
-    search: "",
-
+    // Aktualny język
     language: localStorage.getItem("language") || "pl",
 
-    favorites: []
+    // Tekst wyszukiwarki
+    search: "",
+
+    // Ulubione elementy
+    favorites: [],
+
+    // Aktualnie otwarta strona
+    page: "",
+
+    // Aktualne ID
+    id: null,
+
+    // Załadowane dane (cache w pamięci)
+    data: {},
+
+    // Informacja o ładowaniu
+    loading: false
 
 };
