@@ -1,19 +1,54 @@
 import { state } from "../state.js";
 
-export function initSearch() {
-    window.addEventListener("languagechange", attachSearch);
-    window.addEventListener("hashchange", attachSearch);
-    window.addEventListener("DOMContentLoaded", attachSearch);
+let attachedInput = null;
 
-    attachSearch(); // próba natychmiastowa
+export function initSearch() {
+
+    window.addEventListener(
+        "languagechange",
+        attachSearch
+    );
+
+    window.addEventListener(
+        "hashchange",
+        attachSearch
+    );
+
+    window.addEventListener(
+        "DOMContentLoaded",
+        attachSearch
+    );
+
+    attachSearch();
+
 }
 
 function attachSearch() {
-    const input = document.getElementById("searchInput");
-    if (!input) return; // navbar jeszcze się nie wyrenderował
+
+    const input =
+        document.getElementById("searchInput");
+
+    if (!input) {
+        return;
+    }
+
+    if (attachedInput === input) {
+        return;
+    }
+
+    attachedInput = input;
 
     input.addEventListener("input", () => {
-        state.search = input.value.toLowerCase();
-        window.dispatchEvent(new Event("hashchange"));
+
+        state.search =
+            input.value
+                .trim()
+                .toLowerCase();
+
+        window.dispatchEvent(
+            new Event("hashchange")
+        );
+
     });
+
 }
