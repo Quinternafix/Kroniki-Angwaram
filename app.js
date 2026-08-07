@@ -35,11 +35,25 @@ async function renderApp() {
 
 function startApp() {
 
+    console.log("3 - startApp");
+
     initI18n();
+    console.log("4 - initI18n");
+
+    renderNavbar();
+    console.log("5 - navbar");
+
+    renderSidebar();
+    console.log("6 - sidebar");
+
+    renderFooter();
+    console.log("7 - footer");
+
     initSearch();
+    console.log("8 - search");
 
     renderApp();
-
+    console.log("9 - router");
 }
 
 if (document.readyState === "loading") {
