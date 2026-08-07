@@ -238,8 +238,6 @@ export async function router() {
 
         }
 
-        highlightCurrentPage();
-
         window.scrollTo({
             top: 0,
             behavior: "instant"
