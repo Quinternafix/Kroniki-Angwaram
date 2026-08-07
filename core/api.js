@@ -1,17 +1,13 @@
-const cache = {};
+const cache = new Map();
 
 /**
  * Pobiera plik JSON z assets/data.
- * Obsługuje również podfoldery, np.:
+ *
+ * Przykłady:
  *
  * getData("library")
- * → assets/data/library.json
- *
  * getData("series/wedrowcy-switu")
- * → assets/data/series/wedrowcy-switu.json
- *
  * getData("books/biala-dusza")
- * → assets/data/books/biala-dusza.json
  */
 export async function getData(file) {
 
@@ -19,45 +15,76 @@ export async function getData(file) {
         throw new Error("Nie podano nazwy pliku.");
     }
 
-    if (cache[file]) {
-        return cache[file];
+    if (cache.has(file)) {
+        return cache.get(file);
     }
 
     const path = `assets/data/${file}.json`;
 
-    const response = await fetch(path);
+    let response;
+
+    try {
+
+        response = await fetch(path, {
+            cache: "no-cache"
+        });
+
+    } catch {
+
+        throw new Error(
+            `Nie można połączyć się z ${path}`
+        );
+
+    }
 
     if (!response.ok) {
+
         throw new Error(
             `Nie znaleziono pliku: ${path}`
         );
+
     }
 
     const data = await response.json();
 
-    cache[file] = data;
+    cache.set(file, data);
 
     return data;
+
 }
 
 /**
- * Czyści cache.
- * Można użyć podczas odświeżania danych
- * bez przeładowania strony.
+ * Czyści cały cache.
  */
 export function clearCache() {
 
-    Object.keys(cache).forEach(key => {
-        delete cache[key];
-    });
+    cache.clear();
 
 }
 
 /**
- * Usuwa z cache tylko jeden plik.
+ * Usuwa pojedynczy wpis z cache.
  */
 export function clearCacheItem(file) {
 
-    delete cache[file];
+    cache.delete(file);
+
+}
+
+/**
+ * Sprawdza, czy plik jest już w cache.
+ */
+export function hasCache(file) {
+
+    return cache.has(file);
+
+}
+
+/**
+ * Zwraca dane z cache bez pobierania.
+ */
+export function getCache(file) {
+
+    return cache.get(file) ?? null;
 
 }
