@@ -2,11 +2,9 @@ import { renderNavbar } from "./components/navbar.js";
 import { renderSidebar } from "./components/sidebar.js";
 import { renderFooter } from "./components/footer.js";
 
-import { initI18n } from "./core/i18n.js";
-import { initSearch } from "./core/search.js";
 import { router } from "./router.js";
-
-console.log("app.js uruchomiony");
+import { initSearch } from "./core/search.js";
+import { initI18n } from "./core/i18n.js";
 
 async function renderApp() {
 
@@ -20,29 +18,19 @@ async function renderApp() {
 
     } catch (error) {
 
-        console.error("Błąd aplikacji:", error);
+        console.error(error);
 
-        const app = document.getElementById("app");
+        document.getElementById("app").innerHTML = `
 
-        if (app) {
+            <section class="error-page">
 
-            app.innerHTML = `
+                <h1>⚠ Wystąpił błąd</h1>
 
-                <section class="error-page">
+                <pre>${error.stack}</pre>
 
-                    <h1>⚠ Wystąpił błąd</h1>
+            </section>
 
-                    <p>
-                        Nie udało się uruchomić aplikacji.
-                    </p>
-
-                    <pre>${error.message}</pre>
-
-                </section>
-
-            `;
-
-        }
+        `;
 
     }
 
