@@ -1,3 +1,5 @@
+console.log("1 - app.js załadowany");
+
 import { renderNavbar } from "./components/navbar.js";
 import { renderSidebar } from "./components/sidebar.js";
 import { renderFooter } from "./components/footer.js";
@@ -5,6 +7,8 @@ import { renderFooter } from "./components/footer.js";
 import { router } from "./router.js";
 import { initSearch } from "./core/search.js";
 import { initI18n } from "./core/i18n.js";
+
+console.log("2 - importy OK");
 
 async function renderApp() {
 
