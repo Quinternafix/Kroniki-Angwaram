@@ -1,15 +1,20 @@
-export function homeView(){
+import { t } from "../core/i18n.js";
 
-return `
+export function homeView() {
 
-<h1>Witaj w Kronikach Angwaram</h1>
+    return `
 
-<p>
+        <section class="home-page">
 
-Oficjalna encyklopedia świata.
+            <h1 data-i18n="home.welcome">
+                ${t("home.welcome")}
+            </h1>
 
-</p>
+            <p data-i18n="home.instructions">
+                ${t("home.instructions")}
+            </p>
 
-`;
+        </section>
 
+    `;
 }
