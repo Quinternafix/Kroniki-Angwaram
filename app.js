@@ -6,35 +6,39 @@ import { router } from "./router.js";
 import { initSearch } from "./core/search.js";
 import { initI18n } from "./core/i18n.js";
 
+
 async function renderApp() {
 
     try {
-
-        renderNavbar();
-        renderSidebar();
-        renderFooter();
 
         await router();
 
     } catch (error) {
 
-        console.error(error);
+        console.error("Błąd aplikacji:", error);
 
-        document.getElementById("app").innerHTML = `
+        const app = document.getElementById("app");
 
-            <section class="error-page">
+        if (app) {
 
-                <h1>⚠ Wystąpił błąd</h1>
+            app.innerHTML = `
 
-                <pre>${error.stack}</pre>
+                <section class="error-page">
 
-            </section>
+                    <h1>⚠ Wystąpił błąd</h1>
 
-        `;
+                    <pre>${error.stack}</pre>
+
+                </section>
+
+            `;
+
+        }
 
     }
 
 }
+
 
 function startApp() {
 
@@ -50,6 +54,7 @@ function startApp() {
 
 }
 
+
 if (document.readyState === "loading") {
 
     document.addEventListener(
@@ -64,10 +69,12 @@ if (document.readyState === "loading") {
 
 }
 
+
 window.addEventListener(
     "hashchange",
     renderApp
 );
+
 
 window.addEventListener(
     "languagechange",
