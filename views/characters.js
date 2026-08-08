@@ -1,39 +1,56 @@
 import { getData } from "../core/api.js";
+import { t, localize } from "../core/i18n.js";
 
 export async function charactersView() {
 
     const characters = await getData("characters");
 
     return `
-        <h1>Postacie</h1>
 
-        <div class="character-list">
+        <section class="characters-page">
 
-            ${characters.map(character => `
+            <h1 data-i18n="characters.title">
+                ${t("characters.title")}
+            </h1>
 
-                <div class="character-card">
+            <div class="character-list">
 
-                    <img
-                        src="${character.image}"
-                        alt="${character.name}"
-                        class="character-image">
+                ${characters.map(character => {
 
-                    <h2>${character.name}</h2>
+                    const name = localize(character, "name");
+                    const title = localize(character, "title");
 
-                    <p>${character.title}</p>
+                    return `
 
-                    <a
-                        href="#/characters/${character.id}"
-                        class="character-button">
+                        <article class="character-card">
 
-                        Otwórz profil
+                            <img
+                                src="${character.image || ""}"
+                                alt="${name}"
+                                class="character-image"
+                            >
 
-                    </a>
+                            <h2>${name}</h2>
 
-                </div>
+                            <p>${title}</p>
 
-            `).join("")}
+                            <a
+                                href="#/characters/${encodeURIComponent(character.id)}"
+                                class="character-button"
+                                data-i18n="common.open"
+                            >
+                                ${t("common.open")}
+                            </a>
 
-        </div>
+                        </article>
+
+                    `;
+
+                }).join("")}
+
+            </div>
+
+        </section>
+
     `;
 }
