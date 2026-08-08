@@ -11,13 +11,21 @@ async function renderApp() {
 
     try {
 
+        renderNavbar();
+        renderSidebar();
+        renderFooter();
+
         await router();
 
     } catch (error) {
 
-        console.error("Błąd aplikacji:", error);
+        console.error(
+            "Błąd aplikacji:",
+            error
+        );
 
-        const app = document.getElementById("app");
+        const app =
+            document.getElementById("app");
 
         if (app) {
 
@@ -25,9 +33,13 @@ async function renderApp() {
 
                 <section class="error-page">
 
-                    <h1>⚠ Wystąpił błąd</h1>
+                    <h1>
+                        ⚠ Wystąpił błąd
+                    </h1>
 
-                    <pre>${error.stack}</pre>
+                    <pre>
+${error.stack}
+                    </pre>
 
                 </section>
 
@@ -43,10 +55,6 @@ async function renderApp() {
 function startApp() {
 
     initI18n();
-
-    renderNavbar();
-    renderSidebar();
-    renderFooter();
 
     initSearch();
 
@@ -74,7 +82,6 @@ window.addEventListener(
     "hashchange",
     renderApp
 );
-
 
 window.addEventListener(
     "languagechange",
