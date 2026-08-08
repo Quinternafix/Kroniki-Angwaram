@@ -1,7 +1,9 @@
 import { getData } from "../core/api.js";
 import { getLanguage, t } from "../core/i18n.js";
 
+
 function localizeTimeline(item, field) {
+
     if (!item || !item[field]) {
         return "";
     }
@@ -18,17 +20,27 @@ function localizeTimeline(item, field) {
         value[language] ||
         value.pl ||
         value.en ||
+        value.es ||
         ""
     );
 }
 
-function getYearValue(year) {
-    const value = Number.parseInt(String(year), 10);
 
-    return Number.isNaN(value) ? 0 : value;
+function getYearValue(year) {
+
+    const value = Number.parseInt(
+        String(year),
+        10
+    );
+
+    return Number.isNaN(value)
+        ? 0
+        : value;
 }
 
+
 function escapeHtml(value) {
+
     return String(value ?? "")
         .replace(/&/g, "&amp;")
         .replace(/</g, "&lt;")
@@ -37,14 +49,9 @@ function escapeHtml(value) {
         .replace(/'/g, "&#039;");
 }
 
-/*
- * Bezpieczne tłumaczenia dla tekstów generowanych
- * przez timeline.js.
- *
- * Jeżeli i18n.js nie znajdzie klucza, używany jest
- * odpowiedni tekst zastępczy dla aktualnego języka.
- */
+
 function timelineText(key, fallback) {
+
     const translated = t(key);
 
     if (
@@ -63,14 +70,19 @@ function timelineText(key, fallback) {
     );
 }
 
+
 function renderRelations(story) {
+
     let html = "";
+
 
     if (
         Array.isArray(story.characters) &&
         story.characters.length
     ) {
+
         html += `
+
             <div class="timeline-story-relations">
 
                 <strong>
@@ -98,14 +110,18 @@ function renderRelations(story) {
                 </div>
 
             </div>
+
         `;
     }
+
 
     if (
         Array.isArray(story.locations) &&
         story.locations.length
     ) {
+
         html += `
+
             <div class="timeline-story-relations">
 
                 <strong>
@@ -133,14 +149,18 @@ function renderRelations(story) {
                 </div>
 
             </div>
+
         `;
     }
+
 
     if (
         Array.isArray(story.factions) &&
         story.factions.length
     ) {
+
         html += `
+
             <div class="timeline-story-relations">
 
                 <strong>
@@ -168,49 +188,68 @@ function renderRelations(story) {
                 </div>
 
             </div>
+
         `;
     }
+
 
     return html;
 }
 
+
 function renderStoryContent(story) {
-    const title = localizeTimeline(
-        story,
-        "title"
-    );
 
-    const summary = localizeTimeline(
-        story,
-        "summary"
-    );
+    const title =
+        localizeTimeline(
+            story,
+            "title"
+        );
 
-    const content = localizeTimeline(
-        story,
-        "content"
-    );
+    const summary =
+        localizeTimeline(
+            story,
+            "summary"
+        );
 
-    const paragraphs = String(content || "")
-        .split(/\n\s*\n/)
-        .map(paragraph => paragraph.trim())
-        .filter(Boolean)
-        .map(
-            paragraph =>
-                `<p>${escapeHtml(paragraph).replace(
-                    /\n/g,
-                    "<br>"
-                )}</p>`
-        )
-        .join("");
+    const content =
+        localizeTimeline(
+            story,
+            "content"
+        );
+
+
+    const paragraphs =
+        String(content || "")
+            .split(/\n\s*\n/)
+            .map(
+                paragraph =>
+                    paragraph.trim()
+            )
+            .filter(Boolean)
+            .map(
+                paragraph =>
+                    `<p>${escapeHtml(
+                        paragraph
+                    ).replace(
+                        /\n/g,
+                        "<br>"
+                    )}</p>`
+            )
+            .join("");
+
 
     let html = `
+
         <details class="timeline-story">
 
             <summary class="timeline-story-summary">
     `;
 
+
     if (story.cover) {
+
         html += `
+
                 <div class="timeline-story-cover">
 
                     <img
@@ -220,13 +259,17 @@ function renderStoryContent(story) {
                     >
 
                 </div>
+
         `;
     }
 
+
     html += `
+
                 <div class="timeline-story-summary-content">
 
                     <div class="timeline-story-label">
+
                         ${escapeHtml(
                             timelineText(
                                 "timeline.story",
@@ -237,39 +280,56 @@ function renderStoryContent(story) {
                                 }
                             )
                         )}
+
                     </div>
 
                     <h2>
                         ${escapeHtml(title)}
                     </h2>
+
     `;
 
+
     if (story.date) {
+
         html += `
+
                     <div class="timeline-story-date">
                         ${escapeHtml(story.date)}
                     </div>
+
         `;
     }
 
+
     if (story.author) {
+
         html += `
+
                     <div class="timeline-story-author">
                         ${escapeHtml(story.author)}
                     </div>
+
         `;
     }
 
+
     if (summary) {
+
         html += `
+
                     <p class="timeline-story-summary-text">
                         ${escapeHtml(summary)}
                     </p>
+
         `;
     }
 
+
     html += `
+
                     <span class="timeline-story-read">
+
                         ${escapeHtml(
                             timelineText(
                                 "timeline.readStory",
@@ -280,6 +340,7 @@ function renderStoryContent(story) {
                                 }
                             )
                         )}
+
                     </span>
 
                 </div>
@@ -287,23 +348,31 @@ function renderStoryContent(story) {
             </summary>
 
             <div class="timeline-story-content">
+
     `;
 
+
     if (story.cover) {
+
         html += `
+
                 <img
                     class="timeline-story-open-cover"
                     src="${escapeHtml(story.cover)}"
                     alt="${escapeHtml(title)}"
                     loading="lazy"
                 >
+
         `;
     }
 
+
     html += `
+
                 <header class="timeline-story-header">
 
                     <div class="timeline-story-type">
+
                         ${escapeHtml(
                             timelineText(
                                 "timeline.story",
@@ -314,57 +383,85 @@ function renderStoryContent(story) {
                                 }
                             )
                         )}
+
                     </div>
 
                     <h2>
                         ${escapeHtml(title)}
                     </h2>
+
     `;
+
 
     if (
         story.date ||
         story.author
     ) {
+
         html += `
+
                     <div class="timeline-story-meta">
+
         `;
 
+
         if (story.date) {
+
             html += `
+
                         <span>
                             ${escapeHtml(story.date)}
                         </span>
+
             `;
         }
 
+
         if (story.author) {
+
             html += `
+
                         <span>
                             ${escapeHtml(story.author)}
                         </span>
+
             `;
         }
 
+
         html += `
+
                     </div>
+
         `;
     }
 
+
     html += `
+
                 </header>
+
     `;
 
+
     if (summary) {
+
         html += `
+
                 <div class="timeline-story-intro">
                     ${escapeHtml(summary)}
                 </div>
+
         `;
     }
 
+
     html += `
+
                 <div class="timeline-story-text">
+
                     ${paragraphs}
+
                 </div>
 
                 ${renderRelations(story)}
@@ -372,23 +469,31 @@ function renderStoryContent(story) {
             </div>
 
         </details>
+
     `;
+
 
     return html;
 }
 
-function renderTimelineEvent(event) {
-    const title = localizeTimeline(
-        event,
-        "title"
-    );
 
-    const description = localizeTimeline(
-        event,
-        "description"
-    );
+function renderTimelineEvent(event) {
+
+    const title =
+        localizeTimeline(
+            event,
+            "title"
+        );
+
+    const description =
+        localizeTimeline(
+            event,
+            "description"
+        );
+
 
     return `
+
         <article class="timeline-event">
 
             <div class="timeline-marker"></div>
@@ -402,6 +507,7 @@ function renderTimelineEvent(event) {
                 </div>
 
                 <div class="timeline-entry-type">
+
                     ${escapeHtml(
                         timelineText(
                             "timeline.event",
@@ -412,6 +518,7 @@ function renderTimelineEvent(event) {
                             }
                         )
                     )}
+
                 </div>
 
                 <h2>
@@ -420,25 +527,34 @@ function renderTimelineEvent(event) {
 
                 ${
                     description
-                        ? `<p>${escapeHtml(
-                            description
-                        )}</p>`
+                        ? `
+                            <p>
+                                ${escapeHtml(
+                                    description
+                                )}
+                            </p>
+                        `
                         : ""
                 }
 
             </div>
 
         </article>
+
     `;
 }
 
+
 function renderTimelineEntry(entry) {
+
     if (
         entry &&
         entry.type === "story"
     ) {
+
         return `
-            <article class="timeline-event timeline-story-event">
+
+            <article class="timeline-event">
 
                 <div class="timeline-marker"></div>
 
@@ -455,18 +571,27 @@ function renderTimelineEntry(entry) {
                 </div>
 
             </article>
+
         `;
     }
+
 
     return renderTimelineEvent(entry);
 }
 
+
 export async function timelineView() {
+
     try {
-        const events = await getData("timeline");
+
+        const events =
+            await getData("timeline");
+
 
         if (!Array.isArray(events)) {
+
             return `
+
                 <section class="timeline-page">
 
                     <header class="timeline-header">
@@ -492,17 +617,23 @@ export async function timelineView() {
                     </p>
 
                 </section>
+
             `;
         }
 
-        const sortedEvents = [...events].sort(
-            (a, b) =>
-                getYearValue(a.year) -
-                getYearValue(b.year)
-        );
+
+        const sortedEvents =
+            [...events].sort(
+                (a, b) =>
+                    getYearValue(a.year) -
+                    getYearValue(b.year)
+            );
+
 
         if (!sortedEvents.length) {
+
             return `
+
                 <section class="timeline-page">
 
                     <header class="timeline-header">
@@ -528,10 +659,13 @@ export async function timelineView() {
                     </p>
 
                 </section>
+
             `;
         }
 
+
         return `
+
             <section class="timeline-page">
 
                 <header class="timeline-header">
@@ -559,14 +693,19 @@ export async function timelineView() {
                 </div>
 
             </section>
+
         `;
+
     } catch (error) {
+
         console.error(
             "Błąd ładowania historii:",
             error
         );
 
+
         return `
+
             <section class="timeline-page">
 
                 <header class="timeline-header">
@@ -592,6 +731,7 @@ export async function timelineView() {
                 </p>
 
             </section>
+
         `;
     }
 }
