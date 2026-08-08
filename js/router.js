@@ -21,16 +21,23 @@ import { readerView } from "./views/reader.js";
 
 import { notFoundView } from "./views/notfound.js";
 
+
 export async function router() {
 
-    const app = document.getElementById("app");
+    const app =
+        document.getElementById("app");
 
     if (!app) {
-        console.error("Nie znaleziono elementu #app.");
+
+        console.error(
+            "Nie znaleziono elementu #app."
+        );
+
         return;
     }
 
-    const hash = location.hash || "#/";
+    const hash =
+        location.hash || "#/";
 
     try {
 
@@ -41,10 +48,11 @@ export async function router() {
         if (hash.startsWith("#/characters/")) {
 
             const id = decodeURIComponent(
-                hash.split("/")[2]
+                hash.split("/")[2] || ""
             );
 
-            app.innerHTML = await profileView(id);
+            app.innerHTML =
+                await profileView(id);
 
             initProfilePage();
 
@@ -56,6 +64,7 @@ export async function router() {
             return;
         }
 
+
         /* ===========================
            PROFIL FRAKCJI
         =========================== */
@@ -63,10 +72,11 @@ export async function router() {
         if (hash.startsWith("#/factions/")) {
 
             const id = decodeURIComponent(
-                hash.split("/")[2]
+                hash.split("/")[2] || ""
             );
 
-            app.innerHTML = await factionView(id);
+            app.innerHTML =
+                await factionView(id);
 
             window.scrollTo({
                 top: 0,
@@ -75,6 +85,7 @@ export async function router() {
 
             return;
         }
+
 
         /* ===========================
            PROFIL MIEJSCA
@@ -83,10 +94,11 @@ export async function router() {
         if (hash.startsWith("#/places/")) {
 
             const id = decodeURIComponent(
-                hash.split("/")[2]
+                hash.split("/")[2] || ""
             );
 
-            app.innerHTML = await placeView(id);
+            app.innerHTML =
+                await placeView(id);
 
             window.scrollTo({
                 top: 0,
@@ -95,6 +107,7 @@ export async function router() {
 
             return;
         }
+
 
         /* ===========================
            PROFIL SERII
@@ -103,10 +116,11 @@ export async function router() {
         if (hash.startsWith("#/series/")) {
 
             const id = decodeURIComponent(
-                hash.split("/")[2]
+                hash.split("/")[2] || ""
             );
 
-            app.innerHTML = await seriesView(id);
+            app.innerHTML =
+                await seriesView(id);
 
             window.scrollTo({
                 top: 0,
@@ -115,6 +129,7 @@ export async function router() {
 
             return;
         }
+
 
         /* ===========================
            PROFIL KSIĄŻKI
@@ -123,10 +138,11 @@ export async function router() {
         if (hash.startsWith("#/books/")) {
 
             const id = decodeURIComponent(
-                hash.split("/")[2]
+                hash.split("/")[2] || ""
             );
 
-            app.innerHTML = await bookView(id);
+            app.innerHTML =
+                await bookView(id);
 
             window.scrollTo({
                 top: 0,
@@ -135,6 +151,7 @@ export async function router() {
 
             return;
         }
+
 
         /* ===========================
            CZYTNIK
@@ -142,23 +159,32 @@ export async function router() {
 
         if (hash.startsWith("#/reader/")) {
 
-            const parts = hash.split("/");
+            const parts =
+                hash.split("/");
 
-            const book = decodeURIComponent(parts[2]);
-            const chapter = decodeURIComponent(parts[3]);
+            const book =
+                parts[2]
+                    ? decodeURIComponent(parts[2])
+                    : "";
+
+            const chapter =
+                parts[3]
+                    ? decodeURIComponent(parts[3])
+                    : "";
 
             if (!book || !chapter) {
 
-                app.innerHTML = notFoundView();
+                app.innerHTML =
+                    notFoundView();
 
                 return;
-
             }
 
-            app.innerHTML = await readerView(
-                book,
-                chapter
-            );
+            app.innerHTML =
+                await readerView(
+                    book,
+                    chapter
+                );
 
             window.scrollTo({
                 top: 0,
@@ -167,6 +193,7 @@ export async function router() {
 
             return;
         }
+
 
         /* ===========================
            GŁÓWNE STRONY
@@ -176,9 +203,11 @@ export async function router() {
 
             case "#/":
 
-                app.innerHTML = homeView();
+                app.innerHTML =
+                    homeView();
 
                 break;
+
 
             case "#/characters":
 
@@ -187,12 +216,14 @@ export async function router() {
 
                 break;
 
+
             case "#/factions":
 
                 app.innerHTML =
                     await factionsView();
 
                 break;
+
 
             case "#/places":
 
@@ -201,12 +232,14 @@ export async function router() {
 
                 break;
 
+
             case "#/timeline":
 
                 app.innerHTML =
                     await timelineView();
 
                 break;
+
 
             case "#/library":
 
@@ -215,14 +248,15 @@ export async function router() {
 
                 break;
 
+
             default:
 
                 app.innerHTML =
                     notFoundView();
 
                 break;
-
         }
+
 
         window.scrollTo({
             top: 0,
@@ -240,18 +274,20 @@ export async function router() {
 
             <section class="error-page">
 
-                <h1>⚠ Wystąpił błąd</h1>
+                <h1>
+                    ⚠ Wystąpił błąd
+                </h1>
 
                 <p>
                     Nie udało się wyświetlić tej strony.
                 </p>
 
-                <pre>${error.message}</pre>
+                <pre>
+${error.message}
+                </pre>
 
             </section>
 
         `;
-
     }
-
 }
