@@ -1,5 +1,9 @@
 import { getData } from "../core/api.js";
-import { getFavorites, saveFavorites } from "../core/storage.js";
+import {
+    getFavorites,
+    saveFavorites
+} from "../core/storage.js";
+
 import {
     getLanguage,
     localize,
@@ -7,7 +11,9 @@ import {
     t
 } from "../core/i18n.js";
 
+
 function slugify(value) {
+
     return String(value || "")
         .toLowerCase()
         .normalize("NFD")
@@ -16,7 +22,9 @@ function slugify(value) {
         .replace(/^-+|-+$/g, "");
 }
 
+
 function escapeHtml(value) {
+
     return String(value ?? "")
         .replace(/&/g, "&amp;")
         .replace(/</g, "&lt;")
@@ -25,35 +33,20 @@ function escapeHtml(value) {
         .replace(/'/g, "&#039;");
 }
 
+
 function getPortraitTitle(portrait) {
-    if (!portrait || typeof portrait !== "object") {
+
+    if (
+        !portrait ||
+        typeof portrait !== "object"
+    ) {
         return "";
     }
 
-    /*
-     * Obsługuje:
-     *
-     * title: {
-     *   pl: "...",
-     *   en: "...",
-     *   es: "..."
-     * }
-     *
-     * oraz:
-     *
-     * title: "..."
-     *
-     * oraz starszy format:
-     *
-     * title: "..."
-     * translations: {
-     *   en: { title: "..." },
-     *   es: { title: "..." }
-     * }
-     */
-
     const translatedTitle =
-        portrait.translations?.[getLanguage()]?.title;
+        portrait.translations?.[
+            getLanguage()
+        ]?.title;
 
     if (
         translatedTitle !== undefined &&
@@ -84,7 +77,9 @@ function getPortraitTitle(portrait) {
     return "";
 }
 
+
 function renderPortraitGallery(character) {
+
     const portraits =
         Array.isArray(character.portraits) &&
         character.portraits.length
@@ -100,297 +95,383 @@ function renderPortraitGallery(character) {
                 }
             ];
 
-    const firstPortrait = portraits[0];
+    const firstPortrait =
+        portraits[0];
+
     const firstTitle =
-        getPortraitTitle(firstPortrait);
+        getPortraitTitle(
+            firstPortrait
+        );
 
     return `
-<div class="portrait-panel">
 
-    <img
-        id="portraitImage"
-        src="${escapeHtml(
-            firstPortrait?.image ||
-            character.image ||
-            ""
-        )}"
-        alt="${escapeHtml(character.name)}"
-        class="profile-image">
+        <div class="portrait-gallery-wrapper">
 
-    <div id="portraitTitle" class="portrait-title">
-        ${escapeHtml(firstTitle)}
-    </div>
+            <img
+                id="portraitImage"
+                src="${escapeHtml(
+                    firstPortrait?.image ||
+                    character.image ||
+                    ""
+                )}"
+                alt="${escapeHtml(
+                    character.name
+                )}"
+                class="profile-image"
+            >
 
-    <div class="portrait-gallery">
+            <div
+                id="portraitTitle"
+                class="portrait-title"
+            >
+                ${escapeHtml(firstTitle)}
+            </div>
 
-        ${portraits.map((portrait, index) => {
-            const portraitTitle =
-                getPortraitTitle(portrait);
+            <div class="portrait-gallery">
 
-            return `
-<button
-    type="button"
-    class="portrait-thumb ${
-        index === 0 ? "active" : ""
-    }"
-    data-image="${escapeHtml(
-        portrait?.image || ""
-    )}"
-    data-title="${escapeHtml(
-        portraitTitle
-    )}">
+                ${portraits.map(
+                    (portrait, index) => {
 
-    ${escapeHtml(portraitTitle)}
+                        const portraitTitle =
+                            getPortraitTitle(
+                                portrait
+                            );
 
-</button>
-`;
-        }).join("")}
+                        return `
 
-    </div>
+                            <button
+                                type="button"
+                                class="portrait-thumb ${
+                                    index === 0
+                                        ? "active"
+                                        : ""
+                                }"
+                                data-image="${escapeHtml(
+                                    portrait?.image ||
+                                    ""
+                                )}"
+                                data-title="${escapeHtml(
+                                    portraitTitle
+                                )}"
+                            >
+                                ${escapeHtml(
+                                    portraitTitle
+                                )}
+                            </button>
 
-</div>
-`;
+                        `;
+                    }
+                ).join("")}
+
+            </div>
+
+        </div>
+
+    `;
 }
 
+
 function renderInfoBox(character) {
+
     const homeName =
-        localize(character, "home");
+        localize(
+            character,
+            "home"
+        );
 
     const homeId =
         character.homeId ||
         slugify(character.home);
 
     return `
-<aside class="wiki-infobox">
 
-    <div class="wiki-header">
+        <section class="info-box">
 
-        <h2>
-            ${escapeHtml(character.name)}
-        </h2>
+            <div class="wiki-header">
 
-        <p>
-            ${escapeHtml(
-                localize(character, "title")
-            )}
-        </p>
+                <h2>
+                    ${escapeHtml(
+                        character.name
+                    )}
+                </h2>
 
-    </div>
-
-    <table class="wiki-table">
-
-        <tr>
-            <th>
-                ${escapeHtml(
-                    t("profile.race")
-                )}
-            </th>
-            <td>
-                ${escapeHtml(
-                    localize(character, "race")
-                )}
-            </td>
-        </tr>
-
-        <tr>
-            <th>
-                ${escapeHtml(
-                    t("profile.nation")
-                )}
-            </th>
-            <td>
-                ${escapeHtml(
-                    localize(character, "nation")
-                )}
-            </td>
-        </tr>
-
-        <tr>
-            <th>
-                ${escapeHtml(
-                    t("profile.faction")
-                )}
-            </th>
-
-            <td>
-                ${
-                    character.factionId ||
-                    character.faction
-                        ? `
-                            <a href="#/factions/${
-                                escapeHtml(
-                                    character.factionId ||
-                                    slugify(
-                                        character.faction
-                                    )
-                                )
-                            }">
-                                ${escapeHtml(
-                                    localize(
-                                        character,
-                                        "faction"
-                                    )
-                                )}
-                            </a>
-                        `
-                        : escapeHtml(
-                            t("common.noData")
-                        )
-                }
-            </td>
-        </tr>
-
-        <tr>
-            <th>
-                ${escapeHtml(
-                    t("profile.rank")
-                )}
-            </th>
-
-            <td>
-                ${escapeHtml(
-                    localize(
-                        character,
-                        "rank"
-                    )
-                )}
-            </td>
-        </tr>
-
-        <tr>
-            <th>
-                ${escapeHtml(
-                    t("profile.status")
-                )}
-            </th>
-
-            <td>
-                ${escapeHtml(
-                    localize(
-                        character,
-                        "status"
-                    )
-                )}
-            </td>
-        </tr>
-
-        <tr>
-            <th>
-                ${escapeHtml(
-                    t("profile.birth")
-                )}
-            </th>
-
-            <td>
-                ${escapeHtml(
-                    localize(
-                        character,
-                        "birth"
-                    )
-                )}
-            </td>
-        </tr>
-
-        <tr>
-            <th>
-                ${escapeHtml(
-                    t("profile.home")
-                )}
-            </th>
-
-            <td>
-                ${
-                    homeName
-                        ? `
-                            <a href="#/places/${escapeHtml(
-                                homeId
-                            )}">
-                                ${escapeHtml(
-                                    homeName
-                                )}
-                            </a>
-                        `
-                        : escapeHtml(
-                            t("common.noData")
-                        )
-                }
-            </td>
-        </tr>
-
-    </table>
-
-</aside>
-`;
-}
-
-function renderRelations(titleKey, list) {
-    const title = t(titleKey);
-
-    return `
-<section class="relations">
-
-    <h2>
-        ${escapeHtml(title)}
-    </h2>
-
-    ${
-        Array.isArray(list) &&
-        list.length
-            ? `
-                <ul>
-
-                    ${list.map(item => `
-                        <li>
-                            <a
-                                href="#/characters/${escapeHtml(
-                                    slugify(item)
-                                )}">
-                                ${escapeHtml(item)}
-                            </a>
-                        </li>
-                    `).join("")}
-
-                </ul>
-            `
-            : `
                 <p>
                     ${escapeHtml(
-                        t("common.noData")
+                        localize(
+                            character,
+                            "title"
+                        )
                     )}
                 </p>
-            `
-    }
 
-</section>
-`;
+            </div>
+
+            <table class="wiki-table">
+
+                <tr>
+
+                    <th>
+                        ${escapeHtml(
+                            t("profile.race")
+                        )}
+                    </th>
+
+                    <td>
+                        ${escapeHtml(
+                            localize(
+                                character,
+                                "race"
+                            )
+                        )}
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <th>
+                        ${escapeHtml(
+                            t("profile.nation")
+                        )}
+                    </th>
+
+                    <td>
+                        ${escapeHtml(
+                            localize(
+                                character,
+                                "nation"
+                            )
+                        )}
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <th>
+                        ${escapeHtml(
+                            t("profile.faction")
+                        )}
+                    </th>
+
+                    <td>
+
+                        ${
+                            character.factionId ||
+                            character.faction
+                                ? `
+                                    <a href="#/factions/${escapeHtml(
+                                        character.factionId ||
+                                        slugify(
+                                            character.faction
+                                        )
+                                    )}">
+                                        ${escapeHtml(
+                                            localize(
+                                                character,
+                                                "faction"
+                                            )
+                                        )}
+                                    </a>
+                                `
+                                : escapeHtml(
+                                    t("common.noData")
+                                )
+                        }
+
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <th>
+                        ${escapeHtml(
+                            t("profile.rank")
+                        )}
+                    </th>
+
+                    <td>
+                        ${escapeHtml(
+                            localize(
+                                character,
+                                "rank"
+                            )
+                        )}
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <th>
+                        ${escapeHtml(
+                            t("profile.status")
+                        )}
+                    </th>
+
+                    <td>
+                        ${escapeHtml(
+                            localize(
+                                character,
+                                "status"
+                            )
+                        )}
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <th>
+                        ${escapeHtml(
+                            t("profile.birth")
+                        )}
+                    </th>
+
+                    <td>
+                        ${escapeHtml(
+                            localize(
+                                character,
+                                "birth"
+                            )
+                        )}
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <th>
+                        ${escapeHtml(
+                            t("profile.home")
+                        )}
+                    </th>
+
+                    <td>
+
+                        ${
+                            homeName
+                                ? `
+                                    <a href="#/places/${escapeHtml(
+                                        homeId
+                                    )}">
+                                        ${escapeHtml(
+                                            homeName
+                                        )}
+                                    </a>
+                                `
+                                : escapeHtml(
+                                    t("common.noData")
+                                )
+                        }
+
+                    </td>
+
+                </tr>
+
+            </table>
+
+        </section>
+
+    `;
 }
 
+
+function renderRelations(
+    titleKey,
+    list
+) {
+
+    const title =
+        t(titleKey);
+
+    return `
+
+        <section class="related">
+
+            <h2>
+                ${escapeHtml(title)}
+            </h2>
+
+            ${
+                Array.isArray(list) &&
+                list.length
+                    ? `
+                        <ul>
+
+                            ${list.map(
+                                item => `
+
+                                    <li>
+
+                                        <a
+                                            href="#/characters/${escapeHtml(
+                                                slugify(item)
+                                            )}"
+                                        >
+                                            ${escapeHtml(item)}
+                                        </a>
+
+                                    </li>
+
+                                `
+                            ).join("")}
+
+                        </ul>
+                    `
+                    : `
+                        <p>
+                            ${escapeHtml(
+                                t("common.noData")
+                            )}
+                        </p>
+                    `
+            }
+
+        </section>
+
+    `;
+}
+
+
 export async function profileView(id) {
+
     const characters =
         await getData("characters");
 
     const character =
         characters.find(
-            character => character.id === id
+            character =>
+                character.id === id
         );
 
-    if (!character) {
-        return `
-            <h1>
-                ${escapeHtml(
-                    t("profile.notFound")
-                )}
-            </h1>
 
-            <p>
-                ${escapeHtml(
-                    t(
-                        "profile.notFoundDescription"
-                    )
-                )}
-            </p>
+    if (!character) {
+
+        return `
+
+            <section class="profile-not-found">
+
+                <h1>
+                    ${escapeHtml(
+                        t("profile.notFound")
+                    )}
+                </h1>
+
+                <p>
+                    ${escapeHtml(
+                        t(
+                            "profile.notFoundDescription"
+                        )
+                    )}
+                </p>
+
+            </section>
+
         `;
     }
+
 
     const favorites =
         getFavorites();
@@ -400,12 +481,17 @@ export async function profileView(id) {
             character.id
         );
 
+
     const homeName =
-        localize(character, "home");
+        localize(
+            character,
+            "home"
+        );
 
     const homeId =
         character.homeId ||
         slugify(character.home);
+
 
     const factionName =
         localize(
@@ -417,163 +503,183 @@ export async function profileView(id) {
         character.factionId ||
         slugify(character.faction);
 
+
     return `
-<section class="profile">
 
-    <nav class="breadcrumbs">
+        <section class="profile">
 
-        <a href="#/">
-            ${escapeHtml(
-                t("common.home")
-            )}
-        </a>
+            <nav class="breadcrumbs">
 
-        <span>&gt;</span>
+                <a href="#/">
+                    ${escapeHtml(
+                        t("common.home")
+                    )}
+                </a>
 
-        <a href="#/characters">
-            ${escapeHtml(
-                t("characters.title")
-            )}
-        </a>
+                <span>&gt;</span>
 
-        <span>&gt;</span>
+                <a href="#/characters">
+                    ${escapeHtml(
+                        t("characters.title")
+                    )}
+                </a>
 
-        <span>
-            ${escapeHtml(
-                character.name
-            )}
-        </span>
+                <span>&gt;</span>
 
-    </nav>
-
-    <div class="profile-layout">
-
-        ${renderPortraitGallery(
-            character
-        )}
-
-        <main class="profile-main">
-
-            <header>
-
-                <h1>
+                <span>
                     ${escapeHtml(
                         character.name
                     )}
-                </h1>
+                </span>
 
-                <h2>
-                    ${escapeHtml(
-                        localize(
-                            character,
-                            "title"
-                        )
-                    )}
-                </h2>
+            </nav>
 
-                <p>
-                    ${escapeHtml(
-                        localize(
-                            character,
-                            "description"
-                        )
-                    )}
-                </p>
 
-                <button
-                    type="button"
-                    id="favoriteButton"
-                    data-id="${escapeHtml(
-                        character.id
-                    )}">
+            <div class="profile-layout">
 
-                    ${
-                        isFavorite
-                            ? escapeHtml(
-                                t(
-                                    "favorite.remove"
+                ${renderPortraitGallery(
+                    character
+                )}
+
+
+                <main class="profile-main">
+
+                    <header>
+
+                        <h1>
+                            ${escapeHtml(
+                                character.name
+                            )}
+                        </h1>
+
+                        <h2>
+                            ${escapeHtml(
+                                localize(
+                                    character,
+                                    "title"
                                 )
-                            )
-                            : escapeHtml(
-                                t(
-                                    "favorite.add"
+                            )}
+                        </h2>
+
+                        <p>
+                            ${escapeHtml(
+                                localize(
+                                    character,
+                                    "description"
                                 )
-                            )
-                    }
+                            )}
+                        </p>
 
-                </button>
 
-            </header>
+                        <button
+                            type="button"
+                            id="favoriteButton"
+                            data-id="${escapeHtml(
+                                character.id
+                            )}"
+                        >
 
-            ${renderInfoBox(
-                character
-            )}
+                            ${
+                                isFavorite
+                                    ? escapeHtml(
+                                        t(
+                                            "favorite.remove"
+                                        )
+                                    )
+                                    : escapeHtml(
+                                        t(
+                                            "favorite.add"
+                                        )
+                                    )
+                            }
 
-            ${renderRelations(
-                "profile.friends",
-                character.friends || []
-            )}
+                        </button>
 
-            ${renderRelations(
-                "profile.enemies",
-                character.enemies || []
-            )}
+                    </header>
 
-            <section class="related">
 
-                <h2>
-                    ${escapeHtml(
-                        t("profile.related")
+                    ${renderInfoBox(
+                        character
                     )}
-                </h2>
 
-                <ul>
 
-                    ${
-                        homeName
-                            ? `
-                                <li>
-                                    <a href="#/places/${escapeHtml(
-                                        homeId
-                                    )}">
-                                        ${escapeHtml(
-                                            homeName
-                                        )}
-                                    </a>
-                                </li>
-                            `
-                            : ""
-                    }
+                    ${renderRelations(
+                        "profile.friends",
+                        character.friends || []
+                    )}
 
-                    ${
-                        factionName
-                            ? `
-                                <li>
-                                    <a href="#/factions/${escapeHtml(
-                                        factionId
-                                    )}">
-                                        ${escapeHtml(
-                                            factionName
-                                        )}
-                                    </a>
-                                </li>
-                            `
-                            : ""
-                    }
 
-                </ul>
+                    ${renderRelations(
+                        "profile.enemies",
+                        character.enemies || []
+                    )}
 
-            </section>
 
-        </main>
+                    <section class="related">
 
-    </div>
+                        <h2>
+                            ${escapeHtml(
+                                t(
+                                    "profile.related"
+                                )
+                            )}
+                        </h2>
 
-</section>
-`;
+                        <ul>
+
+                            ${
+                                homeName
+                                    ? `
+                                        <li>
+
+                                            <a href="#/places/${escapeHtml(
+                                                homeId
+                                            )}">
+                                                ${escapeHtml(
+                                                    homeName
+                                                )}
+                                            </a>
+
+                                        </li>
+                                    `
+                                    : ""
+                            }
+
+
+                            ${
+                                factionName
+                                    ? `
+                                        <li>
+
+                                            <a href="#/factions/${escapeHtml(
+                                                factionId
+                                            )}">
+                                                ${escapeHtml(
+                                                    factionName
+                                                )}
+                                            </a>
+
+                                        </li>
+                                    `
+                                    : ""
+                            }
+
+                        </ul>
+
+                    </section>
+
+                </main>
+
+            </div>
+
+        </section>
+
+    `;
 }
 
+
 export function initProfilePage() {
+
     const image =
         document.getElementById(
             "portraitImage"
@@ -584,6 +690,7 @@ export function initProfilePage() {
             "portraitTitle"
         );
 
+
     document
         .querySelectorAll(
             ".portrait-thumb"
@@ -593,16 +700,22 @@ export function initProfilePage() {
             button.onclick = () => {
 
                 if (image) {
+
                     image.src =
                         button.dataset.image ||
                         "";
+
                 }
 
+
                 if (title) {
+
                     title.textContent =
                         button.dataset.title ||
                         "";
+
                 }
+
 
                 document
                     .querySelectorAll(
@@ -610,28 +723,35 @@ export function initProfilePage() {
                     )
                     .forEach(
                         thumbnail => {
+
                             thumbnail.classList
                                 .remove(
                                     "active"
                                 );
+
                         }
                     );
+
 
                 button.classList.add(
                     "active"
                 );
+
             };
 
         });
+
 
     const favoriteButton =
         document.getElementById(
             "favoriteButton"
         );
 
+
     if (!favoriteButton) {
         return;
     }
+
 
     favoriteButton.onclick = () => {
 
@@ -641,25 +761,33 @@ export function initProfilePage() {
         const id =
             favoriteButton.dataset.id;
 
+
         if (!id) {
             return;
         }
 
+
         if (
             favorites.includes(id)
         ) {
+
             favorites =
                 favorites.filter(
                     favoriteId =>
                         favoriteId !== id
                 );
+
         } else {
+
             favorites.push(id);
+
         }
+
 
         saveFavorites(
             favorites
         );
+
 
         favoriteButton.textContent =
             favorites.includes(id)
@@ -669,5 +797,7 @@ export function initProfilePage() {
                 : t(
                     "favorite.add"
                 );
+
     };
+
 }
