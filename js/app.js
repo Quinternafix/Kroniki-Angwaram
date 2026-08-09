@@ -9,11 +9,10 @@ import { initI18n } from "./core/i18n.js";
 async function renderApp() {
 try {
 await router();
+} catch (error) {
+console.error("Błąd aplikacji:", error);
 
 ```
-} catch (error) {
-    console.error("Błąd aplikacji:", error);
-
     const app = document.getElementById("app");
 
     if (app) {
@@ -21,7 +20,7 @@ await router();
             <section class="error-page">
                 <h1>⚠ Wystąpił błąd</h1>
                 <p>Nie udało się uruchomić strony.</p>
-                <pre>${error.stack || error.message}</pre>
+                <pre>${error?.stack || error?.message || error}</pre>
             </section>
         `;
     }
@@ -66,10 +65,6 @@ window.addEventListener(
 renderNavbar();
 renderSidebar();
 renderFooter();
-
-```
-    renderApp();
+renderApp();
 }
-```
-
 );
