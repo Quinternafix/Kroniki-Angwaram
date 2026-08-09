@@ -6,65 +6,107 @@ import { router } from "./router.js";
 import { initSearch } from "./core/search.js";
 import { initI18n } from "./core/i18n.js";
 
+
 async function renderApp() {
-try {
-await router();
-} catch (error) {
-console.error("Błąd aplikacji:", error);
 
-```
-    const app = document.getElementById("app");
+    try {
 
-    if (app) {
-        app.innerHTML = `
-            <section class="error-page">
-                <h1>⚠ Wystąpił błąd</h1>
-                <p>Nie udało się uruchomić strony.</p>
-                <pre>${error?.stack || error?.message || error}</pre>
-            </section>
-        `;
+        await router();
+
+    } catch (error) {
+
+        console.error(
+            "Błąd aplikacji:",
+            error
+        );
+
+        const app =
+            document.getElementById("app");
+
+        if (app) {
+
+            app.innerHTML = `
+
+                <section class="error-page">
+
+                    <h1>
+                        ⚠ Wystąpił błąd
+                    </h1>
+
+                    <p>
+                        Nie udało się wyświetlić strony.
+                    </p>
+
+                    <pre>
+${error.stack || error.message}
+                    </pre>
+
+                </section>
+
+            `;
+
+        }
+
     }
-}
-```
 
 }
+
+
+function renderLayout() {
+
+    renderNavbar();
+    renderSidebar();
+    renderFooter();
+
+}
+
 
 function startApp() {
-initI18n();
 
-```
-renderNavbar();
-renderSidebar();
-renderFooter();
+    initI18n();
 
-initSearch();
+    // Najpierw tworzymy menu i pozostałe elementy layoutu
+    renderLayout();
 
-renderApp();
-```
+    // Dopiero teraz search znajdzie #searchInput
+    initSearch();
+
+    // Następnie uruchamiamy router
+    renderApp();
 
 }
+
 
 if (document.readyState === "loading") {
-document.addEventListener(
-"DOMContentLoaded",
-startApp,
-{ once: true }
-);
+
+    document.addEventListener(
+        "DOMContentLoaded",
+        startApp,
+        { once: true }
+    );
+
 } else {
-startApp();
+
+    startApp();
+
 }
 
+
+// Zmiana strony
 window.addEventListener(
-"hashchange",
-renderApp
+    "hashchange",
+    renderApp
 );
 
+
+// Zmiana języka
 window.addEventListener(
-"languagechange",
-() => {
-renderNavbar();
-renderSidebar();
-renderFooter();
-renderApp();
-}
+    "languagechange",
+    () => {
+
+        renderLayout();
+
+        renderApp();
+
+    }
 );
