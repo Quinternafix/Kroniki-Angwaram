@@ -1,31 +1,39 @@
 [
   {
-    "id":"selidor",
+    "id": "selidor",
 
-    "name":"Selidor",
+    "name": {
+      "pl": "Selidor",
+      "en": "Selidor",
+      "es": "Selidor"
+    },
 
-    "image":"assets/places/selidor.png",
+    "image": "assets/places/selidor.png",
 
-    "description": { 
+    "description": {
       "pl": "Nazwa stosowana wobec wyspy, twierdzy i miasta portowego",
       "en": "The name used for the island, the fortress, and the port city",
-      "es": "El nombre con el que se conoce a la isla, la fortaleza y la ciudad portuaria" 
-    }
+      "es": "El nombre con el que se conoce a la isla, la fortaleza y la ciudad portuaria"
+    },
 
-    "population":"około 420 000",
+    "population": {
+      "pl": "około 420 000",
+      "en": "approximately 420,000",
+      "es": "aproximadamente 420.000"
+    },
 
-    "government":"Rada Magów",
+    "government": {
+      "pl": "Rada Magów",
+      "en": "Council of Mages",
+      "es": "Consejo de Magos"
+    },
 
-    "characters":[
-
-        "morgath"
-
+    "relatedCharacters": [
+      "morgath"
     ],
 
-    "factions":[
-
-        "rada-magow"
-
+    "relatedFactions": [
+      "rada-magow"
     ]
   }
 ]
