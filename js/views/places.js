@@ -2,64 +2,38 @@ import { getData } from "../core/api.js";
 import { localize, t } from "../core/i18n.js";
 
 export async function placesView() {
-
-    const places = await getData("places");
+    const places = await getData("locations");
 
     return `
+        <h1>${t("places.title")}</h1>
 
-        <section class="places-page">
+        <div class="cards-grid">
+            ${places.map(place => `
+                <article class="card">
 
-            <h1>
-                ${t("places.title")}
-            </h1>
+                    <img
+                        src="${place.image}"
+                        alt="${localize(place, "name")}"
+                        class="card-image"
+                    >
 
-            <div class="cards-grid">
+                    <h2>
+                        ${localize(place, "name")}
+                    </h2>
 
-                ${places.map(place => {
+                    <p>
+                        ${localize(place, "description")}
+                    </p>
 
-                    const name = localize(place, "name");
-                    const description = localize(place, "description");
+                    <a
+                        href="#/places/${encodeURIComponent(place.id)}"
+                        class="card-button"
+                    >
+                        ${t("common.open")}
+                    </a>
 
-                    return `
-
-                        <article class="card">
-
-                            <img
-                                src="${place.image || ""}"
-                                alt="${name}"
-                                class="card-image"
-                            >
-
-                            <div class="card-content">
-
-                                <h2>
-                                    ${name}
-                                </h2>
-
-                                ${
-                                    description
-                                        ? `<p>${description}</p>`
-                                        : ""
-                                }
-
-                                <a
-                                    href="#/places/${encodeURIComponent(place.id)}"
-                                    class="card-button"
-                                >
-                                    ${t("common.open")}
-                                </a>
-
-                            </div>
-
-                        </article>
-
-                    `;
-
-                }).join("")}
-
-            </div>
-
-        </section>
-
+                </article>
+            `).join("")}
+        </div>
     `;
 }
