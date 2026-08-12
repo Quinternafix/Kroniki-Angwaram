@@ -3,7 +3,7 @@ import { localize, t } from "../core/i18n.js";
 
 export async function placeView(id) {
 
-    const places = await getData("places");
+    const places = await getData("locations");
 
     const place = places.find(
         item => item.id === id
