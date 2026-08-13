@@ -1,12 +1,12 @@
 [
   {
-    "id":"rada-magow",
+    "id":"konsylium-selidoru",
 
-    "name":"Rada Magów",
+    "name":"Konsylium Selidoru",
 
-    "image":"assets/factions/rada-magow.png",
+    "image":"assets/factions/konsylium.png",
 
-    "description":"Najpotężniejsza organizacja magiczna Angwaram.",
+    "description":"Siatka arcymagów działająca na całym świecie Angwaramu.",
 
     "members":[
       "morgath"
