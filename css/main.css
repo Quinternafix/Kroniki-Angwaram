@@ -164,7 +164,9 @@ a:hover {
 }
 
 
-/* Logo */
+/* ---------------------------------------------------------
+   LOGO
+   --------------------------------------------------------- */
 
 .navbar-logo {
     flex-shrink: 0;
@@ -178,6 +180,7 @@ a:hover {
 .navbar-logo a {
     display: flex;
     align-items: center;
+
     gap: 9px;
 
     color: var(--gold-light);
@@ -188,7 +191,9 @@ a:hover {
 }
 
 
-/* Menu */
+/* ---------------------------------------------------------
+   MENU
+   --------------------------------------------------------- */
 
 .navbar-menu {
     display: flex;
@@ -219,7 +224,9 @@ a:hover {
 
 .navbar-menu a:hover {
     color: var(--text);
-    background: rgba(141, 90, 168, 0.12);
+
+    background:
+        rgba(141, 90, 168, 0.12);
 }
 
 .navbar-menu a.active {
@@ -237,7 +244,9 @@ a:hover {
 }
 
 
-/* Narzędzia */
+/* ---------------------------------------------------------
+   NARZĘDZIA
+   --------------------------------------------------------- */
 
 .navbar-tools {
     margin-left: auto;
@@ -249,7 +258,9 @@ a:hover {
 }
 
 
-/* Search */
+/* ---------------------------------------------------------
+   SEARCH
+   --------------------------------------------------------- */
 
 #searchInput {
     width: 220px;
@@ -286,7 +297,9 @@ a:hover {
 }
 
 
-/* Języki */
+/* ---------------------------------------------------------
+   JĘZYKI
+   --------------------------------------------------------- */
 
 .language-switcher {
     display: flex;
@@ -320,6 +333,7 @@ a:hover {
 
 .language-switcher button:hover {
     color: var(--text);
+
     border-color: var(--purple);
 }
 
@@ -396,11 +410,11 @@ a:hover {
 
 
 /*
- * Każda pozycja sidebaru ma identyczną konstrukcję:
+ * Każda pozycja sidebaru:
  *
  * [ ikona ] [ tekst ]
  *
- * Dzięki temu szerokość emoji nie przesuwa tekstu.
+ * Dzięki temu wszystkie pozycje są równo wyrównane.
  */
 
 .sidebar-nav a {
@@ -427,7 +441,9 @@ a:hover {
 }
 
 
-/* Wspólne pole na ikonę */
+/* ---------------------------------------------------------
+   WSPÓLNE POLE NA IKONĘ
+   --------------------------------------------------------- */
 
 .sidebar-icon {
     width: 28px;
@@ -447,14 +463,18 @@ a:hover {
 }
 
 
-/* Tekst */
+/* ---------------------------------------------------------
+   TEKST
+   --------------------------------------------------------- */
 
 .sidebar-nav a > span:not(.sidebar-icon) {
     white-space: nowrap;
 }
 
 
-/* Hover */
+/* ---------------------------------------------------------
+   HOVER
+   --------------------------------------------------------- */
 
 .sidebar-nav a:hover {
     padding-left: 16px;
@@ -466,7 +486,9 @@ a:hover {
 }
 
 
-/* Aktywna pozycja */
+/* ---------------------------------------------------------
+   AKTYWNA POZYCJA
+   --------------------------------------------------------- */
 
 .sidebar-nav a.active {
     color: var(--gold-light);
@@ -596,7 +618,9 @@ section {
 }
 
 
-/* Opcjonalne logo na stronie głównej */
+/* ---------------------------------------------------------
+   LOGO NA STRONIE GŁÓWNEJ
+   --------------------------------------------------------- */
 
 .home-logo {
     width: min(
@@ -618,34 +642,51 @@ section {
 
 
 /* =========================================================
-   KARTY POSTACI / FRAKCJI / MIEJSC
-   Przywrócenie ramek i spójnego wyglądu
+   9. KARTY POSTACI / FRAKCJI / MIEJSC
+   Przywrócone ramki i spójny wygląd
    ========================================================= */
 
 .cards-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+
+    grid-template-columns:
+        repeat(
+            auto-fill,
+            minmax(240px, 1fr)
+        );
+
     gap: 24px;
+
     margin-top: 24px;
 }
 
+
 /* Główna karta */
+
 .cards-grid > * {
     box-sizing: border-box;
 }
 
-/* Karty generowane przez widoki */
+
+/* ---------------------------------------------------------
+   KARTY
+   --------------------------------------------------------- */
+
 .card,
 .character-card,
 .faction-card,
 .place-card {
-    background: linear-gradient(
-        145deg,
-        rgba(24, 18, 30, 0.96),
-        rgba(14, 12, 20, 0.96)
-    );
+    background:
+        linear-gradient(
+            145deg,
+            rgba(24, 18, 30, 0.96),
+            rgba(14, 12, 20, 0.96)
+        );
 
-    border: 1px solid rgba(166, 116, 196, 0.45);
+    border:
+        1px solid
+        rgba(166, 116, 196, 0.45);
+
     border-radius: 14px;
 
     padding: 18px;
@@ -666,7 +707,8 @@ section {
 .place-card:hover {
     transform: translateY(-4px);
 
-    border-color: rgba(201, 150, 230, 0.8);
+    border-color:
+        rgba(201, 150, 230, 0.8);
 
     box-shadow:
         0 12px 30px rgba(0, 0, 0, 0.45),
@@ -688,11 +730,14 @@ section {
 
     border-radius: 10px;
 
-    border: 1px solid rgba(166, 116, 196, 0.35);
+    border:
+        1px solid
+        rgba(166, 116, 196, 0.35);
 
     margin-bottom: 14px;
 
-    background: rgba(0, 0, 0, 0.2);
+    background:
+        rgba(0, 0, 0, 0.2);
 }
 
 
@@ -708,18 +753,25 @@ section {
 .faction-card h3,
 .place-card h2,
 .place-card h3 {
-    margin: 0 0 8px;
+    margin:
+        0 0
+        8px;
 
     color: #e8c98a;
 
-    font-family: Georgia, "Times New Roman", serif;
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 }
 
 .card p,
 .character-card p,
 .faction-card p,
 .place-card p {
-    margin: 0 0 14px;
+    margin:
+        0 0
+        14px;
 
     color: #c9bfd0;
 
@@ -738,11 +790,13 @@ section {
     display: inline-block;
 
     color: #d8b4e8;
+
     text-decoration: none;
 
     font-weight: 600;
 
-    transition: color 0.2s ease;
+    transition:
+        color 0.2s ease;
 }
 
 .card a:hover,
@@ -754,42 +808,13 @@ section {
 
 
 /* =========================================================
-   JEŚLI KARTA JEST GENEROWANA BEZ .card
-   przez .cards-grid
+   KARTY GENEROWANE BEZ .card
    ========================================================= */
-
-/*
-   Jeżeli characters.js / factions.js / places.js
-   tworzy bezpośrednio elementy kart wewnątrz .cards-grid,
-   poniższe reguły zachowają ramki również wtedy.
-*/
 
 .cards-grid .card-image {
-    border: 1px solid rgba(166, 116, 196, 0.35);
-}
-
-
-/* =========================================================
-   RESPONSIVE
-   ========================================================= */
-
-@media (max-width: 700px) {
-
-    .cards-grid {
-        grid-template-columns: 1fr;
-        gap: 18px;
-    }
-
-    .card,
-    .character-card,
-    .faction-card,
-    .place-card {
-        padding: 15px;
-    }
-
-    .card-image {
-        height: 200px;
-    }
+    border:
+        1px solid
+        rgba(166, 116, 196, 0.35);
 }
 
 
@@ -841,7 +866,10 @@ section {
 
     object-fit: cover;
 
-    border: 1px solid var(--border);
+    border:
+        1px solid
+        var(--border);
+
     border-radius: var(--radius);
 
     background: #0a080d;
@@ -878,7 +906,8 @@ section {
 
 .portrait-title {
     margin:
-        10px 0 15px;
+        10px 0
+        15px;
 
     color: var(--gold-light);
 
@@ -908,9 +937,13 @@ section {
 
     color: var(--text-muted);
 
-    background: var(--bg-panel);
+    background:
+        var(--bg-panel);
 
-    border: 1px solid var(--border);
+    border:
+        1px solid
+        var(--border);
+
     border-radius: 6px;
 
     font-size: 0.78rem;
@@ -950,7 +983,8 @@ section {
         );
 
     border:
-        1px solid var(--border);
+        1px solid
+        var(--border);
 
     border-radius: var(--radius);
 
@@ -969,7 +1003,8 @@ section {
         );
 
     border-bottom:
-        1px solid var(--border);
+        1px solid
+        var(--border);
 }
 
 .wiki-header h2 {
@@ -1034,7 +1069,8 @@ section {
         rgba(18, 13, 22, 0.8);
 
     border:
-        1px solid var(--border);
+        1px solid
+        var(--border);
 
     border-radius: var(--radius);
 }
@@ -1051,6 +1087,7 @@ section {
 .related ul,
 .info-box ul {
     margin: 0;
+
     padding-left: 20px;
 }
 
@@ -1095,7 +1132,8 @@ section {
     background:
         rgba(201, 149, 69, 0.16);
 
-    border-color: var(--gold);
+    border-color:
+        var(--gold);
 
     transform: translateY(-1px);
 }
@@ -1123,7 +1161,8 @@ section {
         );
 
     border:
-        1px solid var(--border);
+        1px solid
+        var(--border);
 
     border-radius: var(--radius);
 }
@@ -1207,7 +1246,8 @@ section {
         );
 
     border:
-        1px solid var(--border);
+        1px solid
+        var(--border);
 
     border-radius: var(--radius);
 
@@ -1256,9 +1296,11 @@ section {
     overflow: hidden;
 
     border:
-        1px solid var(--border);
+        1px solid
+        var(--border);
 
-    border-radius: var(--radius-small);
+    border-radius:
+        var(--radius-small);
 
     background:
         rgba(9, 8, 13, 0.55);
@@ -1346,7 +1388,8 @@ section {
         25px;
 
     border-top:
-        1px solid var(--border);
+        1px solid
+        var(--border);
 }
 
 .timeline-story-open-cover {
@@ -1355,10 +1398,12 @@ section {
     margin:
         0 auto 25px;
 
-    border-radius: var(--radius-small);
+    border-radius:
+        var(--radius-small);
 
     border:
-        1px solid var(--border);
+        1px solid
+        var(--border);
 }
 
 .timeline-story-header {
@@ -1367,7 +1412,8 @@ section {
 
 .timeline-story-header h2 {
     margin:
-        5px 0 10px;
+        5px 0
+        10px;
 }
 
 .timeline-story-meta {
@@ -1407,7 +1453,9 @@ section {
 }
 
 
-/* Relacje historii */
+/* ---------------------------------------------------------
+   RELACJE HISTORII
+   --------------------------------------------------------- */
 
 .timeline-story-relations {
     margin-top: 20px;
@@ -1439,7 +1487,8 @@ section {
         rgba(141, 90, 168, 0.12);
 
     border:
-        1px solid var(--border);
+        1px solid
+        var(--border);
 
     border-radius: 20px;
 
@@ -1469,14 +1518,21 @@ section {
         );
 
     border:
-        1px solid var(--border);
+        1px solid
+        var(--border);
 
-    border-radius: var(--radius);
+    border-radius:
+        var(--radius);
 }
 
 .library-header p {
     margin-bottom: 0;
 }
+
+
+/* ---------------------------------------------------------
+   SIATKA BIBLIOTEKI
+   --------------------------------------------------------- */
 
 .library-grid {
     display: grid;
@@ -1484,18 +1540,27 @@ section {
     grid-template-columns:
         repeat(
             auto-fit,
-            minmax(300px, 1fr)
+            minmax(360px, 1fr)
         );
 
     gap: 25px;
+
+    width: 100%;
 }
+
+
+/* ---------------------------------------------------------
+   KARTA SERII
+   --------------------------------------------------------- */
 
 .library-card {
     display: grid;
 
     grid-template-columns:
-        150px
+        145px
         minmax(0, 1fr);
+
+    min-width: 0;
 
     overflow: hidden;
 
@@ -1507,71 +1572,172 @@ section {
         );
 
     border:
-        1px solid var(--border);
+        1px solid
+        var(--border);
 
-    border-radius: var(--radius);
+    border-radius:
+        var(--radius);
 
-    box-shadow: var(--shadow-soft);
+    box-shadow:
+        var(--shadow-soft);
 
     transition:
         transform var(--transition),
-        border-color var(--transition);
+        border-color var(--transition),
+        box-shadow var(--transition);
 }
 
 .library-card:hover {
     transform: translateY(-4px);
 
-    border-color: var(--purple);
+    border-color:
+        var(--purple);
+
+    box-shadow:
+        0 14px 35px rgba(0, 0, 0, 0.45);
 }
+
+
+/* ---------------------------------------------------------
+   KARTA WYRÓŻNIONA
+   --------------------------------------------------------- */
 
 .library-card.featured {
     border-color:
-        rgba(201, 149, 69, 0.55);
+        rgba(201, 149, 69, 0.65);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.4),
+        0 0 20px rgba(201, 149, 69, 0.06);
 }
 
-.library-cover {
-    min-height: 220px;
+.library-card.featured:hover {
+    border-color:
+        var(--gold);
 
-    background: #08070b;
+    box-shadow:
+        0 14px 35px rgba(0, 0, 0, 0.45),
+        0 0 25px rgba(201, 149, 69, 0.1);
+}
+
+
+/* ---------------------------------------------------------
+   OKŁADKA
+   --------------------------------------------------------- */
+
+.library-cover {
+    min-width: 0;
+    min-height: 240px;
+
+    overflow: hidden;
+
+    background:
+        #08070b;
 }
 
 .library-cover img {
     width: 100%;
     height: 100%;
 
+    display: block;
+
     object-fit: cover;
 }
 
+
+/* ---------------------------------------------------------
+   TREŚĆ KARTY
+   --------------------------------------------------------- */
+
 .library-content {
+    min-width: 0;
+
     display: flex;
     flex-direction: column;
 
     padding: 20px;
 }
 
+
+/* ---------------------------------------------------------
+   WYRÓŻNIENIE
+   --------------------------------------------------------- */
+
 .library-featured {
+    display: block;
+
+    margin-bottom: 5px;
+
     color: var(--gold-light);
 
     font-size: 0.8rem;
+
+    line-height: 1.4;
 }
 
+
+/* ---------------------------------------------------------
+   NAZWA SERII
+   --------------------------------------------------------- */
+
 .library-content h2 {
+    min-width: 0;
+
     margin:
-        6px 0
-        10px;
+        4px 0
+        14px;
+
+    color: #f0e8f4;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(
+        1.35rem,
+        2vw,
+        1.7rem
+    );
+
+    line-height: 1.25;
+
+    overflow-wrap: anywhere;
+
+    word-break: normal;
 }
+
+
+/* ---------------------------------------------------------
+   OPIS
+   --------------------------------------------------------- */
 
 .library-description {
     flex: 1;
 
-    font-size: 0.9rem;
+    min-width: 0;
+
+    margin-bottom: 15px;
+
+    color: var(--text-muted);
+
+    font-size: 0.95rem;
+
+    line-height: 1.65;
+
+    overflow-wrap: anywhere;
 }
+
+
+/* ---------------------------------------------------------
+   INFORMACJE
+   --------------------------------------------------------- */
 
 .library-meta {
     display: flex;
     flex-wrap: wrap;
 
-    gap: 12px;
+    gap: 8px 14px;
 
     margin:
         10px 0
@@ -1582,12 +1748,27 @@ section {
     font-size: 0.82rem;
 }
 
+.library-meta span {
+    display: inline-flex;
+
+    align-items: center;
+
+    min-width: 0;
+}
+
+
+/* ---------------------------------------------------------
+   PRZYCISK
+   --------------------------------------------------------- */
+
 .library-button {
     align-self: flex-start;
 
+    max-width: 100%;
+
     padding:
-        8px
-        13px;
+        9px
+        14px;
 
     color: var(--gold-light);
 
@@ -1595,9 +1776,22 @@ section {
         rgba(141, 90, 168, 0.12);
 
     border:
-        1px solid var(--border);
+        1px solid
+        var(--border);
 
-    border-radius: 6px;
+    border-radius: 7px;
+
+    white-space: normal;
+
+    text-align: center;
+
+    line-height: 1.35;
+
+    transition:
+        color var(--transition),
+        background var(--transition),
+        border-color var(--transition),
+        transform var(--transition);
 }
 
 .library-button:hover {
@@ -1606,7 +1800,10 @@ section {
     background:
         rgba(141, 90, 168, 0.22);
 
-    border-color: var(--purple);
+    border-color:
+        var(--purple);
+
+    transform: translateY(-1px);
 }
 
 
@@ -1630,7 +1827,8 @@ section {
     padding-bottom: 20px;
 
     border-bottom:
-        1px solid var(--border);
+        1px solid
+        var(--border);
 }
 
 .reader-header h1 {
@@ -1682,16 +1880,20 @@ section {
     margin:
         30px auto;
 
-    border-radius: var(--radius);
+    border-radius:
+        var(--radius);
 
     border:
-        1px solid var(--border);
+        1px solid
+        var(--border);
 
-    box-shadow: var(--shadow);
+    box-shadow:
+        var(--shadow);
 }
 
 .reader-navigation {
     display: flex;
+
     justify-content: space-between;
 
     gap: 15px;
@@ -1701,7 +1903,8 @@ section {
     padding-top: 25px;
 
     border-top:
-        1px solid var(--border);
+        1px solid
+        var(--border);
 }
 
 
@@ -1724,6 +1927,7 @@ button,
     min-height: 400px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
@@ -1734,7 +1938,7 @@ button,
 
 
 /* =========================================================
-   21. 404
+   21. 404 / ERROR
    ========================================================= */
 
 .error-page,
@@ -1752,9 +1956,11 @@ button,
         1px solid
         rgba(157, 70, 77, 0.5);
 
-    border-radius: var(--radius);
+    border-radius:
+        var(--radius);
 
-    box-shadow: var(--shadow);
+    box-shadow:
+        var(--shadow);
 }
 
 .error-page h1,
@@ -1798,7 +2004,8 @@ button,
     text-align: center;
 
     border-top:
-        1px solid var(--border);
+        1px solid
+        var(--border);
 
     background:
         #08070b;
@@ -1844,6 +2051,24 @@ button,
         grid-template-columns:
             250px
             minmax(0, 1fr);
+    }
+
+    .library-grid {
+        grid-template-columns:
+            repeat(
+                auto-fit,
+                minmax(320px, 1fr)
+            );
+    }
+
+    .library-card {
+        grid-template-columns:
+            135px
+            minmax(0, 1fr);
+    }
+
+    .library-cover {
+        min-height: 220px;
     }
 }
 
@@ -1947,6 +2172,10 @@ button,
         left: -32px;
     }
 
+    .library-grid {
+        grid-template-columns: 1fr;
+    }
+
     .library-card {
         grid-template-columns:
             120px
@@ -1955,6 +2184,14 @@ button,
 
     .library-cover {
         min-height: 180px;
+    }
+
+    .library-content {
+        padding: 17px;
+    }
+
+    .library-content h2 {
+        font-size: 1.35rem;
     }
 }
 
@@ -1969,7 +2206,10 @@ button,
         display: grid;
 
         grid-template-columns:
-            repeat(2, 1fr);
+            repeat(
+                2,
+                1fr
+            );
 
         width: 100%;
     }
@@ -1989,7 +2229,9 @@ button,
     .hero {
         min-height: 500px;
 
-        padding: 25px 15px;
+        padding:
+            25px
+            15px;
     }
 
     .hero h1 {
@@ -2007,7 +2249,22 @@ button,
 
     .library-cover {
         height: 260px;
+
         min-height: 0;
+    }
+
+    .library-content {
+        padding: 20px;
+    }
+
+    .library-content h2 {
+        font-size: 1.5rem;
+
+        overflow-wrap: anywhere;
+    }
+
+    .library-description {
+        font-size: 0.95rem;
     }
 
     .timeline {
