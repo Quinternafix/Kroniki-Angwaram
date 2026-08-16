@@ -1,1 +1,23 @@
-Balls
+{
+    "id": "prolog",
+    "order": 1,
+
+    "title": {
+        "pl": "Prolog",
+        "en": "Prologue",
+        "es": "Prólogo"
+    },
+
+    "content": "Treść rozdziału...\n\nNowy akapit...\nJeszcze jeden akapit...",
+
+    "quotes": [
+        {
+            "text": "Przykładowy cytat.",
+            "author": "Narrator"
+        }
+    ],
+
+    "notes": [
+        "Przykładowy przypis."
+    ]
+}
