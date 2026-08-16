@@ -204,17 +204,31 @@ const translations = {
 
         /* ---------- Site ---------- */
 
-        "site.title": "Chronicles of Angwaram",
+        "site.title":
+            "Chronicles of Angwaram",
 
         /* ---------- Navigation ---------- */
 
-        "nav.home": "Home",
-        "nav.characters": "Characters",
-        "nav.factions": "Factions",
-        "nav.places": "Places",
-        "nav.timeline": "History",
-        "nav.library": "Library",
-        "nav.searchPlaceholder": "Search...",
+        "nav.home":
+            "Home",
+
+        "nav.characters":
+            "Characters",
+
+        "nav.factions":
+            "Factions",
+
+        "nav.places":
+            "Places",
+
+        "nav.timeline":
+            "History",
+
+        "nav.library":
+            "Library",
+
+        "nav.searchPlaceholder":
+            "Search...",
 
         /* ---------- Home ---------- */
 
@@ -226,104 +240,207 @@ const translations = {
 
         /* ---------- Characters ---------- */
 
-        "characters.title": "Characters",
+        "characters.title":
+            "Characters",
 
         /* ---------- Factions ---------- */
 
-        "factions.title": "Factions",
-        "faction.members": "Members",
+        "factions.title":
+            "Factions",
+
+        "faction.members":
+            "Members",
 
         /* ---------- Places ---------- */
 
-        "places.title": "Places",
-        "place.characters": "Related characters",
-        "place.factions": "Related factions",
+        "places.title":
+            "Places",
+
+        "place.characters":
+            "Related characters",
+
+        "place.factions":
+            "Related factions",
 
         /* ---------- Timeline ---------- */
 
-        "timeline.title": "History",
+        "timeline.title":
+            "History",
+
         "timeline.description":
             "A chronology of the most important events in the history of Angwaram.",
+
         "timeline.empty":
             "There are no events to display.",
 
         /* ---------- Profile ---------- */
 
-        "profile.notFound": "Character not found.",
+        "profile.notFound":
+            "Character not found.",
+
         "profile.notFoundDescription":
             "This character does not exist.",
 
-        "profile.info": "Information",
-        "profile.race": "Race",
-        "profile.nation": "Nation",
-        "profile.faction": "Faction",
-        "profile.rank": "Rank",
-        "profile.status": "Status",
-        "profile.birth": "Date of birth",
-        "profile.parents": "Parents",
-        "profile.siblings": "Siblings",
-        "profile.home": "Residence",
-        "profile.friends": "Friends",
-        "profile.enemies": "Enemies",
-        "profile.gallery": "Gallery",
-        "profile.lifeStages": "Life stages",
-        "profile.related": "Related articles",
-        "profile.quotes": "Quotes",
+        "profile.info":
+            "Information",
+
+        "profile.race":
+            "Race",
+
+        "profile.nation":
+            "Nation",
+
+        "profile.faction":
+            "Faction",
+
+        "profile.rank":
+            "Rank",
+
+        "profile.status":
+            "Status",
+
+        "profile.birth":
+            "Date of birth",
+
+        "profile.parents":
+            "Parents",
+
+        "profile.siblings":
+            "Siblings",
+
+        "profile.home":
+            "Residence",
+
+        "profile.friends":
+            "Friends",
+
+        "profile.enemies":
+            "Enemies",
+
+        "profile.gallery":
+            "Gallery",
+
+        "profile.lifeStages":
+            "Life stages",
+
+        "profile.related":
+            "Related articles",
+
+        "profile.quotes":
+            "Quotes",
 
         /* ---------- Library ---------- */
 
-        "library.title": "Library",
+        "library.title":
+            "Library",
+
         "library.description":
             "The official library of the Angwaram universe.",
-        "library.openSeries": "Open series",
-        "library.featured": "Featured series",
+
+        "library.openSeries":
+            "Open series",
+
+        "library.featured":
+            "Featured series",
 
         /* ---------- Series ---------- */
 
-        "series.books": "Books",
-        "series.status": "Status",
-        "series.bookCount": "Books",
-        "series.openBook": "Open book",
+        "series.books":
+            "Books",
+
+        "series.status":
+            "Status",
+
+        "series.bookCount":
+            "Books",
+
+        "series.openBook":
+            "Open book",
 
         /* ---------- Book ---------- */
 
-        "book.author": "Author",
-        "book.genre": "Genre",
-        "book.year": "Year",
-        "book.status": "Status",
-        "book.summary": "Summary",
-        "book.chapters": "Chapters",
-        "book.startReading": "Read",
+        "book.author":
+            "Author",
+
+        "book.genre":
+            "Genre",
+
+        "book.year":
+            "Year",
+
+        "book.status":
+            "Status",
+
+        "book.summary":
+            "Summary",
+
+        "book.chapters":
+            "Chapters",
+
+        "book.startReading":
+            "Read",
 
         /* ---------- Reader ---------- */
 
-        "reader.contents": "Contents",
-        "reader.backToBook": "Back to book",
-        "reader.bookNotFound": "Book not found.",
-        "reader.chapterNotFound": "Chapter not found.",
-        "reader.previous": "Previous",
-        "reader.next": "Next",
-        "reader.quotes": "Quotes",
-        "reader.notes": "Notes",
+        "reader.contents":
+            "Contents",
+
+        "reader.backToBook":
+            "Back to book",
+
+        "reader.bookNotFound":
+            "Book not found.",
+
+        "reader.chapterNotFound":
+            "Chapter not found.",
+
+        "reader.previous":
+            "Previous",
+
+        "reader.next":
+            "Next",
+
+        "reader.quotes":
+            "Quotes",
+
+        "reader.notes":
+            "Notes",
 
         /* ---------- Common ---------- */
 
-        "common.open": "Open",
-        "common.home": "Home",
-        "common.none": "None",
-        "common.noData": "No data",
-        "common.loading": "Loading...",
+        "common.open":
+            "Open",
+
+        "common.home":
+            "Home",
+
+        "common.none":
+            "None",
+
+        "common.noData":
+            "No data",
+
+        "common.loading":
+            "Loading...",
 
         /* ---------- Favorites ---------- */
 
-        "favorite.add": "⭐ Add to favorites",
-        "favorite.remove": "★ Remove from favorites",
+        "favorite.add":
+            "⭐ Add to favorites",
+
+        "favorite.remove":
+            "★ Remove from favorites",
 
         /* ---------- Errors ---------- */
 
-        "error.notFoundFile": "File not found",
-        "notFound": "Page not found.",
-        "loading": "Loading..."
+        "error.notFoundFile":
+            "File not found",
+
+        "notFound":
+            "Page not found.",
+
+        "loading":
+            "Loading..."
 
     },
 
@@ -335,17 +452,31 @@ const translations = {
 
         /* ---------- Sitio ---------- */
 
-        "site.title": "Crónicas de Angwaram",
+        "site.title":
+            "Crónicas de Angwaram",
 
         /* ---------- Navegación ---------- */
 
-        "nav.home": "Inicio",
-        "nav.characters": "Personajes",
-        "nav.factions": "Facciones",
-        "nav.places": "Lugares",
-        "nav.timeline": "Historia",
-        "nav.library": "Biblioteca",
-        "nav.searchPlaceholder": "Buscar...",
+        "nav.home":
+            "Inicio",
+
+        "nav.characters":
+            "Personajes",
+
+        "nav.factions":
+            "Facciones",
+
+        "nav.places":
+            "Lugares",
+
+        "nav.timeline":
+            "Historia",
+
+        "nav.library":
+            "Biblioteca",
+
+        "nav.searchPlaceholder":
+            "Buscar...",
 
         /* ---------- Inicio ---------- */
 
@@ -357,24 +488,36 @@ const translations = {
 
         /* ---------- Personajes ---------- */
 
-        "characters.title": "Personajes",
+        "characters.title":
+            "Personajes",
 
         /* ---------- Facciones ---------- */
 
-        "factions.title": "Facciones",
-        "faction.members": "Miembros",
+        "factions.title":
+            "Facciones",
+
+        "faction.members":
+            "Miembros",
 
         /* ---------- Lugares ---------- */
 
-        "places.title": "Lugares",
-        "place.characters": "Personajes relacionados",
-        "place.factions": "Facciones relacionadas",
+        "places.title":
+            "Lugares",
+
+        "place.characters":
+            "Personajes relacionados",
+
+        "place.factions":
+            "Facciones relacionadas",
 
         /* ---------- Historia ---------- */
 
-        "timeline.title": "Historia",
+        "timeline.title":
+            "Historia",
+
         "timeline.description":
             "Cronología de los acontecimientos más importantes de la historia de Angwaram.",
+
         "timeline.empty":
             "No hay eventos para mostrar.",
 
@@ -382,85 +525,183 @@ const translations = {
 
         "profile.notFound":
             "Personaje no encontrado.",
+
         "profile.notFoundDescription":
             "Este personaje no existe.",
 
-        "profile.info": "Información",
-        "profile.race": "Raza",
-        "profile.nation": "Nación",
-        "profile.faction": "Facción",
-        "profile.rank": "Rango",
-        "profile.status": "Estado",
-        "profile.birth": "Fecha de nacimiento",
-        "profile.parents": "Padres",
-        "profile.siblings": "Hermanos",
-        "profile.home": "Residencia",
-        "profile.friends": "Amigos",
-        "profile.enemies": "Enemigos",
-        "profile.gallery": "Galería",
-        "profile.lifeStages": "Etapas de la vida",
-        "profile.related": "Artículos relacionados",
-        "profile.quotes": "Citas",
+        "profile.info":
+            "Información",
+
+        "profile.race":
+            "Raza",
+
+        "profile.nation":
+            "Nación",
+
+        "profile.faction":
+            "Facción",
+
+        "profile.rank":
+            "Rango",
+
+        "profile.status":
+            "Estado",
+
+        "profile.birth":
+            "Fecha de nacimiento",
+
+        "profile.parents":
+            "Padres",
+
+        "profile.siblings":
+            "Hermanos",
+
+        "profile.home":
+            "Residencia",
+
+        "profile.friends":
+            "Amigos",
+
+        "profile.enemies":
+            "Enemigos",
+
+        "profile.gallery":
+            "Galería",
+
+        "profile.lifeStages":
+            "Etapas de la vida",
+
+        "profile.related":
+            "Artículos relacionados",
+
+        "profile.quotes":
+            "Citas",
 
         /* ---------- Biblioteca ---------- */
 
-        "library.title": "Biblioteca",
+        "library.title":
+            "Biblioteca",
+
         "library.description":
             "La biblioteca oficial del universo de Angwaram.",
-        "library.openSeries": "Abrir serie",
-        "library.featured": "Serie destacada",
+
+        "library.openSeries":
+            "Abrir serie",
+
+        "library.featured":
+            "Serie destacada",
 
         /* ---------- Serie ---------- */
 
-        "series.books": "Libros",
-        "series.status": "Estado",
-        "series.bookCount": "Libros",
-        "series.openBook": "Abrir libro",
+        "series.books":
+            "Libros",
+
+        "series.status":
+            "Estado",
+
+        "series.bookCount":
+            "Libros",
+
+        "series.openBook":
+            "Abrir libro",
 
         /* ---------- Libro ---------- */
 
-        "book.author": "Autor",
-        "book.genre": "Género",
-        "book.year": "Año",
-        "book.status": "Estado",
-        "book.summary": "Resumen",
-        "book.chapters": "Capítulos",
-        "book.startReading": "Leer",
+        "book.author":
+            "Autor",
+
+        "book.genre":
+            "Género",
+
+        "book.year":
+            "Año",
+
+        "book.status":
+            "Estado",
+
+        "book.summary":
+            "Resumen",
+
+        "book.chapters":
+            "Capítulos",
+
+        "book.startReading":
+            "Leer",
 
         /* ---------- Lector ---------- */
 
-        "reader.contents": "Índice",
-        "reader.backToBook": "Volver al libro",
-        "reader.bookNotFound": "Libro no encontrado.",
-        "reader.chapterNotFound": "Capítulo no encontrado.",
-        "reader.previous": "Anterior",
-        "reader.next": "Siguiente",
-        "reader.quotes": "Citas",
-        "reader.notes": "Notas",
+        "reader.contents":
+            "Índice",
+
+        "reader.backToBook":
+            "Volver al libro",
+
+        "reader.bookNotFound":
+            "Libro no encontrado.",
+
+        "reader.chapterNotFound":
+            "Capítulo no encontrado.",
+
+        "reader.previous":
+            "Anterior",
+
+        "reader.next":
+            "Siguiente",
+
+        "reader.quotes":
+            "Citas",
+
+        "reader.notes":
+            "Notas",
 
         /* ---------- Común ---------- */
 
-        "common.open": "Abrir",
-        "common.home": "Inicio",
-        "common.none": "Ninguno",
-        "common.noData": "Sin datos",
-        "common.loading": "Cargando...",
+        "common.open":
+            "Abrir",
+
+        "common.home":
+            "Inicio",
+
+        "common.none":
+            "Ninguno",
+
+        "common.noData":
+            "Sin datos",
+
+        "common.loading":
+            "Cargando...",
 
         /* ---------- Favoritos ---------- */
 
-        "favorite.add": "⭐ Añadir a favoritos",
-        "favorite.remove": "★ Quitar de favoritos",
+        "favorite.add":
+            "⭐ Añadir a favoritos",
+
+        "favorite.remove":
+            "★ Quitar de favoritos",
 
         /* ---------- Errores ---------- */
 
-        "error.notFoundFile": "Archivo no encontrado",
-        "notFound": "Página no encontrada.",
-        "loading": "Cargando..."
+        "error.notFoundFile":
+            "Archivo no encontrado",
+
+        "notFound":
+            "Página no encontrada.",
+
+        "loading":
+            "Cargando..."
 
     }
 
-    let currentLanguage =
+};
+
+
+/* ==========================================================
+   AKTUALNY JĘZYK
+   ========================================================== */
+
+let currentLanguage =
     localStorage.getItem("language") || "pl";
+
 
 /**
  * Zwraca aktualny język.
@@ -471,8 +712,14 @@ export function getLanguage() {
 
 }
 
+
 /**
  * Tłumaczy klucz interfejsu.
+ *
+ * Kolejność:
+ * 1. aktualny język
+ * 2. język polski
+ * 3. sam klucz
  */
 export function t(key) {
 
@@ -488,6 +735,7 @@ export function t(key) {
 
 }
 
+
 /**
  * Lokalizuje pole obiektu.
  *
@@ -499,7 +747,7 @@ export function t(key) {
  *   es: "..."
  * }
  *
- * oraz
+ * oraz:
  *
  * translations: {
  *   pl: {
@@ -518,33 +766,32 @@ export function localize(item, field) {
 
     const language = currentLanguage;
 
+
     /*
      * translations.pl.title
      */
 
     if (
-
         item.translations?.[language]?.[field]
-
     ) {
 
         return item.translations[language][field];
 
     }
 
+
     /*
-     * fallback PL
+     * Fallback PL
      */
 
     if (
-
         item.translations?.pl?.[field]
-
     ) {
 
         return item.translations.pl[field];
 
     }
+
 
     /*
      * title.pl
@@ -553,11 +800,9 @@ export function localize(item, field) {
     const value = item[field];
 
     if (
-
         value &&
         typeof value === "object" &&
         !Array.isArray(value)
-
     ) {
 
         return (
@@ -578,15 +823,14 @@ export function localize(item, field) {
 
     }
 
+
     /*
-     * zwykły tekst
+     * Zwykły tekst
      */
 
     if (
-
         value !== undefined &&
         value !== null
-
     ) {
 
         return String(value);
@@ -596,6 +840,7 @@ export function localize(item, field) {
     return "";
 
 }
+
 
 /**
  * Lokalizuje dowolną wartość.
@@ -610,10 +855,8 @@ export function localizeValue(value) {
     }
 
     if (
-
         typeof value === "object" &&
         !Array.isArray(value)
-
     ) {
 
         return (
@@ -637,6 +880,7 @@ export function localizeValue(value) {
     return String(value);
 
 }
+
 
 /**
  * Zmienia język.
@@ -662,57 +906,65 @@ export function setLanguage(language) {
 
 }
 
+
 /**
  * Nakłada tłumaczenia na interfejs.
  */
 export function applyTranslations() {
 
-    document.documentElement.lang = currentLanguage;
+    document.documentElement.lang =
+        currentLanguage;
 
-    document.title = t("site.title");
+    document.title =
+        t("site.title");
+
 
     /*
      * data-i18n
      */
+
     document
         .querySelectorAll("[data-i18n]")
         .forEach(element => {
 
-            element.textContent = t(
-                element.dataset.i18n
-            );
+            element.textContent =
+                t(element.dataset.i18n);
 
         });
+
 
     /*
      * data-i18n-placeholder
      */
+
     document
         .querySelectorAll("[data-i18n-placeholder]")
         .forEach(element => {
 
-            element.placeholder = t(
-                element.dataset.i18nPlaceholder
-            );
+            element.placeholder =
+                t(element.dataset.i18nPlaceholder);
 
         });
+
 
     /*
      * data-i18n-title
      */
+
     document
         .querySelectorAll("[data-i18n-title]")
         .forEach(element => {
 
-            element.title = t(
-                element.dataset.i18nTitle
-            );
+            element.title =
+                t(element.dataset.i18nTitle);
 
         });
+
 
     /*
      * data-i18n-aria-label
      */
+
     document
         .querySelectorAll("[data-i18n-aria-label]")
         .forEach(element => {
@@ -724,9 +976,11 @@ export function applyTranslations() {
 
         });
 
+
     /*
      * Podświetlenie aktywnego języka
      */
+
     document
         .querySelectorAll("[data-language]")
         .forEach(button => {
@@ -734,7 +988,8 @@ export function applyTranslations() {
             button.setAttribute(
                 "aria-pressed",
                 String(
-                    button.dataset.language === currentLanguage
+                    button.dataset.language ===
+                    currentLanguage
                 )
             );
 
@@ -742,10 +997,15 @@ export function applyTranslations() {
 
 }
 
+
 /**
  * Inicjalizacja systemu tłumaczeń.
  */
 export function initI18n() {
+
+    /*
+     * Obsługa przycisków zmiany języka.
+     */
 
     document.addEventListener(
         "click",
@@ -767,9 +1027,15 @@ export function initI18n() {
         }
     );
 
+
+    /*
+     * Pierwsze nałożenie tłumaczeń.
+     */
+
     applyTranslations();
 
 }
+
 
 /**
  * Odśwież tłumaczenia po zmianie strony.
