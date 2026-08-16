@@ -255,3 +255,44 @@ function renderBook(book) {
 
             ${renderChapterList(book)}
 
+        </section>
+    `;
+}
+
+/* ==========================================================
+   VIEW
+   ========================================================== */
+
+export async function bookView(id) {
+
+    try {
+
+        const book = await getData(`books/${id}`);
+
+        if (!book) {
+            return `
+                <section class="book-page">
+                    <h1>${escapeHtml(t("book.notFound"))}</h1>
+                </section>
+            `;
+        }
+
+        return renderBook(book);
+
+    } catch (error) {
+
+        console.error("Błąd ładowania książki:", error);
+
+        return `
+            <section class="book-page">
+
+                <h1>${escapeHtml(t("book.notFound"))}</h1>
+
+                <p>${escapeHtml(t("common.noData"))}</p>
+
+            </section>
+        `;
+    }
+}
+
+console.log("book.js loaded");
