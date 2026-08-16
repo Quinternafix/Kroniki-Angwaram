@@ -1,6 +1,18 @@
 import { getData } from "../core/api.js";
-import { getLanguage, t } from "../core/i18n.js";
+import {
+    getLanguage,
+    t,
+    localize
+} from "../core/i18n.js";
 
+
+/* ==========================================================
+   POMOCNICZE
+   ========================================================== */
+
+/**
+ * Zabezpiecza tekst przed wstrzyknięciem HTML.
+ */
 function escapeHtml(value) {
 
     return String(value ?? "")
@@ -12,29 +24,27 @@ function escapeHtml(value) {
 
 }
 
+
+/**
+ * Lokalizuje pole obiektu.
+ *
+ * Korzystamy z głównego systemu i18n,
+ * aby wszystkie widoki działały według
+ * tych samych zasad.
+ */
 function localizeLibrary(item, field) {
 
-    if (!item || !item[field]) {
-        return "";
-    }
-
-    const value = item[field];
-
-    if (typeof value === "string") {
-        return value;
-    }
-
-    const language = getLanguage();
-
-    return (
-        value[language] ||
-        value.pl ||
-        value.en ||
-        ""
+    return localize(
+        item,
+        field
     );
 
 }
 
+
+/**
+ * Zwraca przetłumaczony status serii.
+ */
 function getStatusText(status) {
 
     const language = getLanguage();
@@ -73,19 +83,29 @@ function getStatusText(status) {
 
     };
 
-    const item = statuses[status];
+    const translatedStatus =
+        statuses[status];
 
-    if (!item) {
+    if (!translatedStatus) {
         return status ?? "";
     }
 
     return (
-        item[language] ||
-        item.pl
+        translatedStatus[language] ??
+        translatedStatus.pl ??
+        status ??
+        ""
     );
 
 }
 
+
+/**
+ * Sortuje serie według pola "order".
+ *
+ * Jeśli "order" nie istnieje,
+ * seria trafia na koniec.
+ */
 function sortSeries(series) {
 
     return [...series].sort((a, b) => {
@@ -110,31 +130,55 @@ function sortSeries(series) {
 
 }
 
+
+/* ==========================================================
+   KARTA SERII
+   ========================================================== */
+
 function renderSeries(series) {
 
-    const title = localizeLibrary(
-        series,
-        "title"
-    );
+    const title =
+        localizeLibrary(
+            series,
+            "title"
+        );
 
-    const description = localizeLibrary(
-        series,
-        "description"
-    );
+    const description =
+        localizeLibrary(
+            series,
+            "description"
+        );
 
     const featured =
         Boolean(series.featured);
 
     const cover =
-        series.cover ||
-        "assets/books/covers/default.jpg";
+        typeof series.cover === "string" &&
+        series.cover.trim() !== ""
+            ? series.cover.trim()
+            : "";
 
     const bookCount =
-        Number(series.bookCount ?? 0);
+        Number(
+            series.bookCount ?? 0
+        );
 
-    return `
+    const status =
+        getStatusText(
+            series.status
+        );
 
-        <article class="library-card${featured ? " featured" : ""}">
+
+    /*
+     * Okładkę tworzymy tylko wtedy,
+     * gdy faktycznie istnieje w danych.
+     *
+     * Dzięki temu nie pojawi się
+     * uszkodzony obrazek ani tekst alt.
+     */
+
+    const coverHtml = cover
+        ? `
 
             <div class="library-cover">
 
@@ -146,19 +190,34 @@ function renderSeries(series) {
 
             </div>
 
+        `
+        : "";
+
+
+    return `
+
+        <article class="library-card${featured ? " featured" : ""}">
+
+            ${coverHtml}
+
             <div class="library-content">
 
-                ${featured ? `
+                ${
+                    featured
+                        ? `
 
-                    <span class="library-featured">
+                            <span class="library-featured">
 
-                        ⭐ ${escapeHtml(
-                            t("library.featured")
-                        )}
+                                ⭐ ${escapeHtml(
+                                    t("library.featured")
+                                )}
 
-                    </span>
+                            </span>
 
-                ` : ""}
+                        `
+                        : ""
+                }
+
 
                 <h2>
 
@@ -166,11 +225,21 @@ function renderSeries(series) {
 
                 </h2>
 
-                <p class="library-description">
 
-                    ${escapeHtml(description)}
+                ${
+                    description
+                        ? `
 
-                </p>
+                            <p class="library-description">
+
+                                ${escapeHtml(description)}
+
+                            </p>
+
+                        `
+                        : ""
+                }
+
 
                 <div class="library-meta">
 
@@ -181,18 +250,24 @@ function renderSeries(series) {
 
                     </span>
 
-                    <span>
 
-                        ✍
-                        ${escapeHtml(
-                            getStatusText(
-                                series.status
-                            )
-                        )}
+                    ${
+                        status
+                            ? `
 
-                    </span>
+                                <span>
+
+                                    ✍
+                                    ${escapeHtml(status)}
+
+                                </span>
+
+                            `
+                            : ""
+                    }
 
                 </div>
+
 
                 <a
                     class="library-button"
@@ -213,7 +288,28 @@ function renderSeries(series) {
 
 }
 
+
+/* ==========================================================
+   LISTA SERII
+   ========================================================== */
+
 function renderLibrary(series) {
+
+    if (!series.length) {
+
+        return `
+
+            <div class="library-empty">
+
+                ${escapeHtml(
+                    t("common.noData")
+                )}
+
+            </div>
+
+        `;
+
+    }
 
     return `
 
@@ -229,12 +325,22 @@ function renderLibrary(series) {
 
 }
 
+
+/* ==========================================================
+   WIDOK BIBLIOTEKI
+   ========================================================== */
+
 export async function libraryView() {
 
     try {
 
         const library =
             await getData("library");
+
+
+        /*
+         * Sprawdzenie danych.
+         */
 
         if (
             !library ||
@@ -257,6 +363,7 @@ export async function libraryView() {
 
                         </h1>
 
+
                         <p>
 
                             ${escapeHtml(
@@ -273,11 +380,21 @@ export async function libraryView() {
 
         }
 
+
+        /*
+         * Tytuł biblioteki.
+         */
+
         const title =
             localizeLibrary(
                 library,
                 "title"
             );
+
+
+        /*
+         * Opis biblioteki.
+         */
 
         const description =
             localizeLibrary(
@@ -285,32 +402,55 @@ export async function libraryView() {
                 "description"
             );
 
+
+        /*
+         * Sortowanie serii.
+         */
+
         const series =
             sortSeries(
                 library.series
             );
 
+
         return `
 
             <section class="library-page">
+
 
                 <header class="library-header">
 
                     <h1>
 
-                        ${escapeHtml(title)}
+                        ${escapeHtml(
+                            title ||
+                            t("library.title")
+                        )}
 
                     </h1>
 
-                    <p>
 
-                        ${escapeHtml(description)}
+                    ${
+                        description
+                            ? `
 
-                    </p>
+                                <p>
+
+                                    ${escapeHtml(
+                                        description
+                                    )}
+
+                                </p>
+
+                            `
+                            : ""
+                    }
 
                 </header>
 
+
                 ${renderLibrary(series)}
+
 
             </section>
 
@@ -323,9 +463,11 @@ export async function libraryView() {
             error
         );
 
+
         return `
 
             <section class="library-page">
+
 
                 <header class="library-header">
 
@@ -339,6 +481,7 @@ export async function libraryView() {
 
                 </header>
 
+
                 <p>
 
                     ${escapeHtml(
@@ -346,6 +489,7 @@ export async function libraryView() {
                     )}
 
                 </p>
+
 
             </section>
 
