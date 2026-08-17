@@ -5,7 +5,8 @@ import {
     localize
 } from "../core/i18n.js";
 
-
+console.log("LIBRARY i18n TEST:", t("library.featured"));
+console.log("LIBRARY LANGUAGE:", getLanguage());
 /* ==========================================================
    POMOCNICZE
    ========================================================== */
