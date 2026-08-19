@@ -741,14 +741,17 @@ export function getLanguage() {
  */
 export function t(key) {
 
+    console.log(
+        "I18N:",
+        key,
+        "PL VALUE:",
+        translations.pl?.[key]
+    );
+
     return (
-
         translations[currentLanguage]?.[key] ??
-
         translations.pl?.[key] ??
-
         key
-
     );
 
 }
