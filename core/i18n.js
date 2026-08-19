@@ -20,6 +20,12 @@ const translations = {
         "nav.library": "Biblioteka",
         "nav.searchPlaceholder": "Szukaj...",
 
+        /* LIBRARY */
+
+        "library.title": "Biblioteka",
+        "library.openSeries": "Otwórz serię",
+        "library.featured": "Polecana seria",
+
         /* ---------- Home ---------- */
 
         "home.welcome":
@@ -229,6 +235,12 @@ const translations = {
 
         "nav.searchPlaceholder":
             "Search...",
+
+        /* LIBRARY */
+
+        "library.title": "Library",
+        "library.openSeries": "Open series",
+        "library.featured": "Featured series",
 
         /* ---------- Home ---------- */
 
@@ -477,6 +489,12 @@ const translations = {
 
         "nav.searchPlaceholder":
             "Buscar...",
+
+        /* LIBRARY */
+
+        "library.title": "Biblioteca",
+        "library.openSeries": "Abrir serie",
+        "library.featured": "Serie destacada",
 
         /* ---------- Inicio ---------- */
 
