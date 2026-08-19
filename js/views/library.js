@@ -5,8 +5,10 @@ import {
     localize
 } from "../core/i18n.js";
 
-console.log("LIBRARY i18n TEST:", t("library.featured"));
-console.log("LIBRARY LANGUAGE:", getLanguage());
+console.log("=== LIBRARY TEST ===");
+console.log("language:", getLanguage());
+console.log("featured:", t("library.featured"));
+console.log("openSeries:", t("library.openSeries"));
 /* ==========================================================
    POMOCNICZE
    ========================================================== */
