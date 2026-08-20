@@ -5,10 +5,6 @@ import {
     localize
 } from "../core/i18n.js";
 
-console.log("=== LIBRARY TEST ===");
-console.log("language:", getLanguage());
-console.log("featured:", t("library.featured"));
-console.log("openSeries:", t("library.openSeries"));
 /* ==========================================================
    POMOCNICZE
    ========================================================== */
@@ -17,107 +13,83 @@ console.log("openSeries:", t("library.openSeries"));
  * Zabezpiecza tekst przed wstrzyknięciem HTML.
  */
 function escapeHtml(value) {
-
     return String(value ?? "")
         .replace(/&/g, "&amp;")
         .replace(/</g, "&lt;")
         .replace(/>/g, "&gt;")
         .replace(/"/g, "&quot;")
         .replace(/'/g, "&#039;");
-
 }
-
 
 /**
  * Lokalizuje pole obiektu.
- *
- * Korzystamy z głównego systemu i18n,
- * aby wszystkie widoki działały według
- * tych samych zasad.
  */
 function localizeLibrary(item, field) {
-
-    return localize(
-        item,
-        field
-    );
-
+    return localize(item, field);
 }
 
-
 /**
- * Zwraca przetłumaczony status serii.
+ * Zwraca obiekt statusu: tekst + klasa CSS
  */
-function getStatusText(status) {
-
+function getStatusInfo(status) {
     const language = getLanguage();
 
     const statuses = {
-
         planned: {
             pl: "Planowana",
             en: "Planned",
-            es: "Planificada"
+            es: "Planificada",
+            className: "status-planned"
         },
-
         writing: {
             pl: "W trakcie pisania",
             en: "Writing",
-            es: "En escritura"
+            es: "En escritura",
+            className: "status-writing"
         },
-
         editing: {
             pl: "Redakcja",
             en: "Editing",
-            es: "Edición"
+            es: "Edición",
+            className: "status-editing"
         },
-
         completed: {
             pl: "Ukończona",
             en: "Completed",
-            es: "Completada"
+            es: "Completada",
+            className: "status-completed"
         },
-
         published: {
             pl: "Wydana",
             en: "Published",
-            es: "Publicada"
+            es: "Publicada",
+            className: "status-published"
         }
-
     };
 
-    const translatedStatus =
-        statuses[status];
+    const item = statuses[status];
 
-    if (!translatedStatus) {
-        return status ?? "";
+    if (!item) {
+        return {
+            text: status ?? "",
+            className: "status-unknown"
+        };
     }
 
-    return (
-        translatedStatus[language] ??
-        translatedStatus.pl ??
-        status ??
-        ""
-    );
-
+    return {
+        text: item[language] ?? item.pl ?? status,
+        className: item.className
+    };
 }
-
 
 /**
  * Sortuje serie według pola "order".
- *
- * Jeśli "order" nie istnieje,
- * seria trafia na koniec.
+ * Jeśli "order" nie istnieje, seria trafia na koniec.
  */
 function sortSeries(series) {
-
     return [...series].sort((a, b) => {
-
-        const orderA =
-            Number(a.order ?? 9999);
-
-        const orderB =
-            Number(b.order ?? 9999);
+        const orderA = Number(a.order ?? 9999);
+        const orderB = Number(b.order ?? 9999);
 
         if (orderA !== orderB) {
             return orderA - orderB;
@@ -128,77 +100,60 @@ function sortSeries(series) {
                 localizeLibrary(b, "title"),
                 getLanguage()
             );
-
     });
-
 }
 
+/**
+ * Generuje inicjały do placeholdera okładki.
+ */
+function getInitials(title) {
+    if (!title) return "?";
+
+    return title
+        .split(/\s+/)
+        .filter(Boolean)
+        .slice(0, 2)
+        .map(word => word[0].toUpperCase())
+        .join("");
+}
 
 /* ==========================================================
    KARTA SERII
    ========================================================== */
 
 function renderSeries(series) {
-
-    const title =
-        localizeLibrary(
-            series,
-            "title"
-        );
-
-    const description =
-        localizeLibrary(
-            series,
-            "description"
-        );
-
-    const featured =
-        Boolean(series.featured);
+    const title = localizeLibrary(series, "title");
+    const description = localizeLibrary(series, "description");
+    const featured = Boolean(series.featured);
 
     const cover =
-        typeof series.cover === "string" &&
-        series.cover.trim() !== ""
+        typeof series.cover === "string" && series.cover.trim() !== ""
             ? series.cover.trim()
             : "";
 
-    const bookCount =
-        Number(
-            series.bookCount ?? 0
-        );
+    const bookCount = Number(series.bookCount ?? 0);
+    const statusInfo = getStatusInfo(series.status);
 
-    const status =
-        getStatusText(
-            series.status
-        );
-
-
-    /*
-     * Okładkę tworzymy tylko wtedy,
-     * gdy faktycznie istnieje w danych.
-     *
-     * Dzięki temu nie pojawi się
-     * uszkodzony obrazek ani tekst alt.
-     */
-
+    // Okładka lub ładny placeholder
     const coverHtml = cover
         ? `
-
             <div class="library-cover">
-
                 <img
                     src="${escapeHtml(cover)}"
                     alt="${escapeHtml(title)}"
                     loading="lazy"
                 >
-
             </div>
-
         `
-        : "";
-
+        : `
+            <div class="library-cover placeholder">
+                <span class="library-cover-initials">
+                    ${escapeHtml(getInitials(title))}
+                </span>
+            </div>
+        `;
 
     return `
-
         <article class="library-card${featured ? " featured" : ""}">
 
             ${coverHtml}
@@ -208,296 +163,142 @@ function renderSeries(series) {
                 ${
                     featured
                         ? `
-
                             <span class="library-featured">
-
-                                ⭐ ${escapeHtml(
-                                    t("library.featured")
-                                )}
-
+                                ⭐ ${escapeHtml(t("library.featured"))}
                             </span>
-
                         `
                         : ""
                 }
 
-
-                <h2>
-
+                <h2 class="library-title">
                     ${escapeHtml(title)}
-
                 </h2>
-
 
                 ${
                     description
                         ? `
-
                             <p class="library-description">
-
                                 ${escapeHtml(description)}
-
                             </p>
-
                         `
                         : ""
                 }
 
-
                 <div class="library-meta">
-
-                    <span>
-
-                        📚
-                        ${bookCount}
-
+                    <span class="library-books">
+                        📚 ${bookCount}
                     </span>
 
-
                     ${
-                        status
+                        statusInfo.text
                             ? `
-
-                                <span>
-
-                                    ✍
-                                    ${escapeHtml(status)}
-
+                                <span class="library-status ${statusInfo.className}">
+                                    ${escapeHtml(statusInfo.text)}
                                 </span>
-
                             `
                             : ""
                     }
-
                 </div>
-
 
                 <a
                     class="library-button"
                     href="#/series/${encodeURIComponent(series.id)}"
                 >
-
-                    ${escapeHtml(
-                        t("library.openSeries")
-                    )}
-
+                    ${escapeHtml(t("library.openSeries"))}
                 </a>
 
             </div>
 
         </article>
-
     `;
-
 }
-
 
 /* ==========================================================
    LISTA SERII
    ========================================================== */
 
 function renderLibrary(series) {
-
     if (!series.length) {
-
         return `
-
             <div class="library-empty">
-
-                ${escapeHtml(
-                    t("common.noData")
-                )}
-
+                ${escapeHtml(t("common.noData"))}
             </div>
-
         `;
-
     }
 
     return `
-
         <div class="library-grid">
-
-            ${series
-                .map(renderSeries)
-                .join("")}
-
+            ${series.map(renderSeries).join("")}
         </div>
-
     `;
-
 }
-
 
 /* ==========================================================
    WIDOK BIBLIOTEKI
    ========================================================== */
 
 export async function libraryView() {
-
     try {
+        const library = await getData("library");
 
-        const library =
-            await getData("library");
-
-
-        /*
-         * Sprawdzenie danych.
-         */
-
-        if (
-            !library ||
-            !Array.isArray(
-                library.series
-            )
-        ) {
-
+        if (!library || !Array.isArray(library.series)) {
             return `
-
                 <section class="library-page">
-
                     <header class="library-header">
-
                         <h1>
-
-                            ${escapeHtml(
-                                t("library.title")
-                            )}
-
+                            ${escapeHtml(t("library.title"))}
                         </h1>
-
-
                         <p>
-
-                            ${escapeHtml(
-                                t("common.noData")
-                            )}
-
+                            ${escapeHtml(t("common.noData"))}
                         </p>
-
                     </header>
-
                 </section>
-
             `;
-
         }
 
-
-        /*
-         * Tytuł biblioteki.
-         */
-
-        const title =
-            localizeLibrary(
-                library,
-                "title"
-            );
-
-
-        /*
-         * Opis biblioteki.
-         */
-
-        const description =
-            localizeLibrary(
-                library,
-                "description"
-            );
-
-
-        /*
-         * Sortowanie serii.
-         */
-
-        const series =
-            sortSeries(
-                library.series
-            );
-
+        const title = localizeLibrary(library, "title");
+        const description = localizeLibrary(library, "description");
+        const series = sortSeries(library.series);
 
         return `
-
             <section class="library-page">
 
-
                 <header class="library-header">
-
                     <h1>
-
-                        ${escapeHtml(
-                            title ||
-                            t("library.title")
-                        )}
-
+                        ${escapeHtml(title || t("library.title"))}
                     </h1>
-
 
                     ${
                         description
                             ? `
-
                                 <p>
-
-                                    ${escapeHtml(
-                                        description
-                                    )}
-
+                                    ${escapeHtml(description)}
                                 </p>
-
                             `
                             : ""
                     }
-
                 </header>
-
 
                 ${renderLibrary(series)}
 
-
             </section>
-
         `;
 
     } catch (error) {
-
-        console.error(
-            "Błąd ładowania biblioteki:",
-            error
-        );
-
+        console.error("Błąd ładowania biblioteki:", error);
 
         return `
-
             <section class="library-page">
-
-
                 <header class="library-header">
-
                     <h1>
-
-                        ${escapeHtml(
-                            t("library.title")
-                        )}
-
+                        ${escapeHtml(t("library.title"))}
                     </h1>
-
                 </header>
 
-
                 <p>
-
-                    ${escapeHtml(
-                        t("common.noData")
-                    )}
-
+                    ${escapeHtml(t("common.noData"))}
                 </p>
-
-
             </section>
-
         `;
-
     }
-
 }
