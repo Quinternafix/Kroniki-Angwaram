@@ -98,4 +98,273 @@ function renderCharacterCard(character, favorites) {
                         : ""
                 }
 
-                <h2
+                <h2 class="character-name">
+                    ${escapeHtml(name)}
+                </h2>
+
+                ${
+                    title
+                        ? `
+                            <p class="character-title">
+                                ${escapeHtml(title)}
+                            </p>
+                        `
+                        : ""
+                }
+
+                <div class="character-meta">
+                    ${race ? `<span class="character-tag">${escapeHtml(race)}</span>` : ""}
+                    ${nation ? `<span class="character-tag">${escapeHtml(nation)}</span>` : ""}
+                    ${status ? `<span class="character-tag status">${escapeHtml(status)}</span>` : ""}
+                </div>
+
+                ${
+                    faction
+                        ? `
+                            <p class="character-faction">
+                                ${escapeHtml(faction)}
+                            </p>
+                        `
+                        : ""
+                }
+
+                <a
+                    href="#/characters/${encodeURIComponent(character.id)}"
+                    class="character-button"
+                >
+                    ${escapeHtml(t("common.open"))}
+                </a>
+
+            </div>
+
+        </article>
+    `;
+}
+
+/* ==========================================================
+   FILTRY
+   ========================================================== */
+
+function renderFilters(races, factions, statuses) {
+    return `
+        <div class="characters-filters">
+
+            <div class="filter-group">
+                <label for="filter-race">Rasa</label>
+                <select id="filter-race">
+                    <option value="">Wszystkie</option>
+                    ${races.map(r =>
+                        `<option value="${escapeHtml(r.toLowerCase())}">${escapeHtml(r)}</option>`
+                    ).join("")}
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="filter-faction">Frakcja</label>
+                <select id="filter-faction">
+                    <option value="">Wszystkie</option>
+                    ${factions.map(f =>
+                        `<option value="${escapeHtml(f.toLowerCase())}">${escapeHtml(f)}</option>`
+                    ).join("")}
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="filter-status">Status</label>
+                <select id="filter-status">
+                    <option value="">Wszystkie</option>
+                    ${statuses.map(s =>
+                        `<option value="${escapeHtml(s.toLowerCase())}">${escapeHtml(s)}</option>`
+                    ).join("")}
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="filter-favorite">Ulubione</label>
+                <select id="filter-favorite">
+                    <option value="">Wszystkie</option>
+                    <option value="1">Tylko ulubione</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="filter-sort">Sortuj</label>
+                <select id="filter-sort">
+                    <option value="name-asc">A–Z</option>
+                    <option value="name-desc">Z–A</option>
+                    <option value="favorite">Ulubione najpierw</option>
+                </select>
+            </div>
+
+        </div>
+    `;
+}
+
+/* ==========================================================
+   LOGIKA FILTROWANIA (po renderze)
+   ========================================================== */
+
+function initCharacterFilters() {
+    const grid = document.querySelector(".character-grid");
+    const counter = document.querySelector(".characters-count");
+
+    if (!grid) return;
+
+    const cards = [...grid.querySelectorAll(".character-card")];
+
+    const raceSelect = document.getElementById("filter-race");
+    const factionSelect = document.getElementById("filter-faction");
+    const statusSelect = document.getElementById("filter-status");
+    const favoriteSelect = document.getElementById("filter-favorite");
+    const sortSelect = document.getElementById("filter-sort");
+
+    function applyFilters() {
+        const race = raceSelect?.value || "";
+        const faction = factionSelect?.value || "";
+        const status = statusSelect?.value || "";
+        const favorite = favoriteSelect?.value || "";
+        const sort = sortSelect?.value || "name-asc";
+        const query = (state.search || "").toLowerCase().trim();
+
+        let visible = cards.filter(card => {
+            const matchQuery =
+                !query ||
+                card.dataset.name.includes(query) ||
+                card.dataset.title.includes(query);
+
+            const matchRace =
+                !race || card.dataset.race === race;
+
+            const matchFaction =
+                !faction || card.dataset.faction === faction;
+
+            const matchStatus =
+                !status || card.dataset.status === status;
+
+            const matchFavorite =
+                !favorite || card.dataset.favorite === favorite;
+
+            const show =
+                matchQuery &&
+                matchRace &&
+                matchFaction &&
+                matchStatus &&
+                matchFavorite;
+
+            card.style.display = show ? "" : "none";
+
+            return show;
+        });
+
+        // Sortowanie
+        visible.sort((a, b) => {
+            if (sort === "favorite") {
+                const favDiff =
+                    Number(b.dataset.favorite) -
+                    Number(a.dataset.favorite);
+
+                if (favDiff !== 0) return favDiff;
+            }
+
+            const nameA = a.dataset.name || "";
+            const nameB = b.dataset.name || "";
+
+            if (sort === "name-desc") {
+                return nameB.localeCompare(nameA, getLanguage());
+            }
+
+            return nameA.localeCompare(nameB, getLanguage());
+        });
+
+        visible.forEach(card => grid.appendChild(card));
+
+        if (counter) {
+            counter.textContent =
+                visible.length === cards.length
+                    ? `${visible.length} postaci`
+                    : `Znaleziono ${visible.length} z ${cards.length}`;
+        }
+    }
+
+    [
+        raceSelect,
+        factionSelect,
+        statusSelect,
+        favoriteSelect,
+        sortSelect
+    ].forEach(el => {
+        if (el) {
+            el.addEventListener("change", applyFilters);
+        }
+    });
+
+    // reaguj też na globalne wyszukiwanie
+    window.addEventListener("search-updated", applyFilters);
+
+    applyFilters();
+}
+
+/* ==========================================================
+   WIDOK
+   ========================================================== */
+
+export async function charactersView() {
+    const characters = await getData("characters");
+    const favorites = getFavorites();
+
+    const races = uniqueSorted(
+        characters.map(c => localize(c, "race"))
+    );
+
+    const factions = uniqueSorted(
+        characters.map(c => localize(c, "faction"))
+    );
+
+    const statuses = uniqueSorted(
+        characters.map(c => localize(c, "status"))
+    );
+
+    // sortowanie początkowe A-Z
+    const sorted = [...characters].sort((a, b) =>
+        String(a.name || "").localeCompare(
+            String(b.name || ""),
+            getLanguage()
+        )
+    );
+
+    // init filtrów po wstawieniu HTML
+    queueMicrotask(() => {
+        initCharacterFilters();
+    });
+
+    return `
+        <section class="page characters-page">
+
+            <header class="page-header">
+                <h1>${escapeHtml(t("characters.title"))}</h1>
+                <p class="characters-count">
+                    ${sorted.length} postaci
+                </p>
+            </header>
+
+            ${renderFilters(races, factions, statuses)}
+
+            <div class="character-grid">
+                ${
+                    sorted.length
+                        ? sorted
+                              .map(c =>
+                                  renderCharacterCard(c, favorites)
+                              )
+                              .join("")
+                        : `
+                            <div class="characters-empty">
+                                ${escapeHtml(t("common.noData"))}
+                            </div>
+                        `
+                }
+            </div>
+
+        </section>
+    `;
+}
