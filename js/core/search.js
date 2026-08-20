@@ -32,6 +32,7 @@ function attachSearch() {
         return;
     }
 
+    // jeśli to ten sam input – nie doklejaj drugiego listenera
     if (attachedInput === input) {
         return;
     }
@@ -45,9 +46,14 @@ function attachSearch() {
                 .trim()
                 .toLowerCase();
 
+        // odśwież filtry na bieżącej stronie (postacie itd.)
         window.dispatchEvent(
-            new Event("hashchange")
+            new Event("search-updated")
         );
+
+        // jeśli NIE jesteśmy na liście postaci / frakcji / miejsc,
+        // możesz ewentualnie zostawić pełne przeładowanie:
+        // window.dispatchEvent(new Event("hashchange"));
 
     });
 
