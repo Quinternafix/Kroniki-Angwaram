@@ -1,92 +1,101 @@
 import { getData } from "../core/api.js";
 import { state } from "../state.js";
-import { localize, t } from "../core/i18n.js";
+import { getFavorites } from "../core/storage.js";
+import {
+    localize,
+    t,
+    getLanguage
+} from "../core/i18n.js";
 
-export async function charactersView() {
+/* ==========================================================
+   POMOCNICZE
+   ========================================================== */
 
-    const characters = await getData("characters");
+function escapeHtml(value) {
+    return String(value ?? "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+}
 
-    const query = (state.search || "").toLowerCase();
+function getInitials(name) {
+    if (!name) return "?";
 
-    const filtered = characters.filter(character => {
+    return String(name)
+        .split(/\s+/)
+        .filter(Boolean)
+        .slice(0, 2)
+        .map(word => word[0].toUpperCase())
+        .join("");
+}
 
-        return (
-            character.name.toLowerCase().includes(query) ||
-            localize(character, "title").toLowerCase().includes(query)
+function uniqueSorted(values) {
+    return [...new Set(values.filter(Boolean))]
+        .sort((a, b) =>
+            String(a).localeCompare(String(b), getLanguage())
         );
+}
 
-    });
+/* ==========================================================
+   KARTA POSTACI
+   ========================================================== */
+
+function renderCharacterCard(character, favorites) {
+    const name = character.name || "";
+    const title = localize(character, "title");
+    const race = localize(character, "race");
+    const nation = localize(character, "nation");
+    const faction = localize(character, "faction");
+    const status = localize(character, "status");
+
+    const portrait =
+        character.portraits?.[0]?.image ||
+        character.image ||
+        "";
+
+    const isFavorite = favorites.includes(character.id);
+
+    const imageHtml = portrait
+        ? `
+            <div class="character-image-wrap">
+                <img
+                    src="${escapeHtml(portrait)}"
+                    alt="${escapeHtml(name)}"
+                    class="character-image"
+                    loading="lazy"
+                >
+            </div>
+        `
+        : `
+            <div class="character-image-wrap placeholder">
+                <span class="character-initials">
+                    ${escapeHtml(getInitials(name))}
+                </span>
+            </div>
+        `;
 
     return `
+        <article
+            class="character-card"
+            data-name="${escapeHtml(name.toLowerCase())}"
+            data-title="${escapeHtml(String(title).toLowerCase())}"
+            data-race="${escapeHtml(String(race).toLowerCase())}"
+            data-nation="${escapeHtml(String(nation).toLowerCase())}"
+            data-faction="${escapeHtml(String(faction).toLowerCase())}"
+            data-status="${escapeHtml(String(status).toLowerCase())}"
+            data-favorite="${isFavorite ? "1" : "0"}"
+        >
 
-<section class="page">
+            ${imageHtml}
 
-    <header class="page-header">
+            <div class="character-content">
 
-        <h1>${t("characters.title")}</h1>
+                ${
+                    isFavorite
+                        ? `<span class="character-fav" title="Ulubione">⭐</span>`
+                        : ""
+                }
 
-        <p>
-
-            ${filtered.length}
-            postaci
-
-        </p>
-
-    </header>
-
-    <div class="character-grid">
-
-        ${filtered.map(character => {
-
-            const portrait = character.portraits?.[0]?.image || character.image;
-
-            return `
-
-<article class="character-card">
-
-    <img
-        src="${portrait}"
-        alt="${character.name}"
-        class="character-image">
-
-    <div class="character-content">
-
-        <h2>${character.name}</h2>
-
-        <p class="character-title">
-
-            ${localize(character,"title")}
-
-        </p>
-
-        <div class="character-meta">
-
-            <span>${localize(character,"race")}</span>
-
-            <span>${localize(character,"nation")}</span>
-
-        </div>
-
-        <a
-            href="#/characters/${character.id}"
-            class="character-button">
-
-            ${t("common.open")}
-
-        </a>
-
-    </div>
-
-</article>
-
-`;
-
-        }).join("")}
-
-    </div>
-
-</section>
-
-`;
-
-}
+                <h2
