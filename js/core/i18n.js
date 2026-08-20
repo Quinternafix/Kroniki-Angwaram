@@ -84,6 +84,27 @@ const translations = {
         "common.noData":
             "Brak danych",
 
+        
+        /* LIBRARY */
+
+        "library.title":
+            "Biblioteka",
+
+        "library.featured":
+            "Wyróżnione",
+
+        "library.openSeries":
+            "Otwórz serię",
+
+        "library.openBook":
+            "Otwórz książkę",
+
+        "library.book":
+            "Tom",
+
+        "library.seriesNotFound":
+            "Nie znaleziono serii.",
+
         /* PROFILE */
 
         "profile.notFound":
@@ -274,6 +295,27 @@ const translations = {
         "common.noData":
             "No data",
 
+        
+        /* LIBRARY */
+
+        "library.title":
+            "Library",
+
+        "library.featured":
+            "Featured",
+
+        "library.openSeries":
+            "Open series",
+
+        "library.openBook":
+            "Open book",
+
+        "library.book":
+            "Book",
+
+        "library.seriesNotFound":
+            "Series not found.",
+
         /* PROFILE */
 
         "profile.notFound":
@@ -463,6 +505,27 @@ const translations = {
 
         "common.noData":
             "Sin datos",
+
+        
+        /* LIBRARY */
+
+        "library.title":
+            "Biblioteca",
+
+        "library.featured":
+            "Destacado",
+
+        "library.openSeries":
+            "Abrir serie",
+
+        "library.openBook":
+            "Abrir libro",
+
+        "library.book":
+            "Libro",
+
+        "library.seriesNotFound":
+            "Serie no encontrada.",
 
         /* PROFILE */
 
