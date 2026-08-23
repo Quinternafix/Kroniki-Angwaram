@@ -1,31 +1,26 @@
 {
   "id": "angwaramskie-dzieje",
-
   "title": {
     "pl": "Cykl Angwaramskich Dziejów",
     "en": "The Angwaram Chronicles",
     "es": "Crónicas de Angwaram"
   },
-
   "subtitle": {
     "pl": "Cykl powieści historycznych",
     "en": "Historical Fantasy Series",
     "es": "Serie de fantasía histórica"
   },
-
   "description": {
     "pl": "Cykl ukazujący najważniejsze wydarzenia z dziejów Angwaramu.",
     "en": "A series depicting the most important events in the history of Angwaram.",
     "es": "Una serie que presenta los acontecimientos más importantes de la historia de Angwaram."
   },
-
   "author": "Quint Blackwood",
   "cover": "assets/books/covers/angwaramskie-dzieje.jpg",
   "status": "writing",
   "order": 1,
   "featured": false,
   "bookCount": 3,
-
   "books": [
     {
       "id": "czarne-slonce",
@@ -58,10 +53,4 @@
       "status": "planned"
     }
   ]
-}      },
-      "cover": "assets/books/covers/popielna-marchia.jpg",
-      "status": "planned",
-      "chapters": 0
-    }
-  ]
-}
+}}
