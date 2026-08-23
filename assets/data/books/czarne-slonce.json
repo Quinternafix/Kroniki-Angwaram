@@ -1,0 +1,33 @@
+{
+  "id": "czarne-slonce",
+  "series": "angwaramskie-dzieje",
+  "order": 1,
+
+  "title": {
+    "pl": "Czarne Słońce",
+    "en": "Black Sun",
+    "es": "Sol Negro"
+  },
+
+  "subtitle": {
+    "pl": "Tom I",
+    "en": "Volume I",
+    "es": "Tomo I"
+  },
+
+  "author": "Quint Blackwood",
+  "genre": "Dark Fantasy",
+  "status": "writing",
+
+  "cover": "assets/books/covers/czarne-slonce.jpg",
+
+  "summary": {
+    "pl": "Pierwszy tom Cyklu Angwaramskich Dziejów.",
+    "en": "The first volume of the Angwaram Chronicles.",
+    "es": "El primer tomo de las Crónicas de Angwaram."
+  },
+
+  "year": null,
+
+  "chapters": []
+}
