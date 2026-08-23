@@ -30,23 +30,23 @@
       "file": "series/angwaramskie-dzieje.json"
     },
     {
-      "id": "wedrowcy-switu",
+      "id": "srebrna-melancholia",
       "order": 2,
-      "featured": true,
+      "featured": false,
       "title": {
-        "pl": "Cykl Wędrowców Świtu",
-        "en": "Dawnwalkers",
-        "es": "Caminantes del Alba"
+        "pl": "Srebrna Melancholia",
+        "en": "Silver Melancholy",
+        "es": "Melancolía Plateada"
       },
       "description": {
-        "pl": "Trylogia dark fantasy opowiadająca historię Wędrowców Świtu.",
-        "en": "A dark fantasy trilogy telling the story of the Dawnwalkers.",
-        "es": "Una trilogía de fantasía oscura que narra la historia de los Caminantes del Alba."
+        "pl": "Samodzielna powieść dark fantasy.",
+        "en": "A standalone dark fantasy novel.",
+        "es": "Una novela independiente de fantasía oscura."
       },
-      "cover": "assets/books/covers/wedrowcy-switu.jpg",
-      "status": "writing",
-      "bookCount": 3,
-      "file": "series/wedrowcy-switu.json"
+      "cover": "assets/books/covers/srebrna-melancholia.jpg",
+      "status": "planned",
+      "bookCount": 1,
+      "file": "series/srebrna-melancholia.json"
     },
     {
       "id": "synowie-burzy",
@@ -68,23 +68,23 @@
       "file": "series/synowie-burzy.json"
     },
     {
-      "id": "srebrna-melancholia",
+      "id": "wedrowcy-switu",
       "order": 4,
-      "featured": false,
+      "featured": true,
       "title": {
-        "pl": "Srebrna Melancholia",
-        "en": "Silver Melancholy",
-        "es": "Melancolía Plateada"
+        "pl": "Cykl Wędrowców Świtu",
+        "en": "Dawnwalkers",
+        "es": "Caminantes del Alba"
       },
       "description": {
-        "pl": "Samodzielna powieść dark fantasy.",
-        "en": "A standalone dark fantasy novel.",
-        "es": "Una novela independiente de fantasía oscura."
+        "pl": "Trylogia dark fantasy opowiadająca historię Wędrowców Świtu.",
+        "en": "A dark fantasy trilogy telling the story of the Dawnwalkers.",
+        "es": "Una trilogía de fantasía oscura que narra la historia de los Caminantes del Alba."
       },
-      "cover": "assets/books/covers/srebrna-melancholia.jpg",
-      "status": "planned",
-      "bookCount": 1,
-      "file": "series/srebrna-melancholia.json"
+      "cover": "assets/books/covers/wedrowcy-switu.jpg",
+      "status": "writing",
+      "bookCount": 3,
+      "file": "series/wedrowcy-switu.json"
     }
   ]
 }
