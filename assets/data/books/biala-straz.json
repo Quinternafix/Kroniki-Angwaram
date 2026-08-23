@@ -1,1 +1,33 @@
+{
+  "id": "biala-straz",
+  "series": "angwaramskie-dzieje",
+  "order": 2,
 
+  "title": {
+    "pl": "Biała Straż",
+    "en": "White Guard",
+    "es": "Guardia Blanca"
+  },
+
+  "subtitle": {
+    "pl": "Tom II",
+    "en": "Volume II",
+    "es": "Tomo II"
+  },
+
+  "author": "Quint Blackwood",
+  "genre": "Dark Fantasy",
+  "status": "planned",
+
+  "cover": "assets/books/covers/biala-straz.jpg",
+
+  "summary": {
+    "pl": "Drugi tom Cyklu Angwaramskich Dziejów.",
+    "en": "The second volume of the Angwaram Chronicles.",
+    "es": "El segundo tomo de las Crónicas de Angwaram."
+  },
+
+  "year": null,
+
+  "chapters": []
+}
