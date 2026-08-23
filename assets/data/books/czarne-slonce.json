@@ -29,5 +29,16 @@
 
   "year": null,
 
-  "chapters": []
+  "chapters": [
+    {
+      "id": "prolog",
+      "order": 0,
+      "title": {
+        "pl": "Prolog",
+        "en": "Prologue",
+        "es": "Prólogo"
+      },
+      "file": "chapters/czarne-slonce/prolog"
+    }
+  ]
 }
