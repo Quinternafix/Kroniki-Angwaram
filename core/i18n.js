@@ -189,6 +189,15 @@ const translations = {
         "favorite.remove":
             "★ Usuń z ulubionych",
 
+                /* READER */
+        "reader.contents": "Spis treści",
+        "reader.quotes": "Cytaty",
+        "reader.notes": "Przypisy",
+        "reader.backToBook": "Wróć do książki",
+        "reader.bookNotFound": "Nie znaleziono książki.",
+        "reader.chapterNotFound": "Nie znaleziono rozdziału.",
+        "reader.error": "Wystąpił błąd podczas ładowania rozdziału.",
+
         /* ERRORS */
 
         "error.notFoundFile":
@@ -399,6 +408,15 @@ const translations = {
         "favorite.remove":
             "★ Remove from favorites",
 
+                /* READER */
+        "reader.contents": "Table of Contents",
+        "reader.quotes": "Quotes",
+        "reader.notes": "Notes",
+        "reader.backToBook": "Back to book",
+        "reader.bookNotFound": "Book not found.",
+        "reader.chapterNotFound": "Chapter not found.",
+        "reader.error": "An error occurred while loading the chapter.",
+
         /* ERRORS */
 
         "error.notFoundFile":
@@ -608,6 +626,15 @@ const translations = {
 
         "favorite.remove":
             "★ Quitar de favoritos",
+
+                /* READER */
+        "reader.contents": "Índice",
+        "reader.quotes": "Citas",
+        "reader.notes": "Notas",
+        "reader.backToBook": "Volver al libro",
+        "reader.bookNotFound": "Libro no encontrado.",
+        "reader.chapterNotFound": "Capítulo no encontrado.",
+        "reader.error": "Ocurrió un error al cargar el capítulo.",
 
         /* ERRORS */
 
