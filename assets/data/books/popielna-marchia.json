@@ -1,1 +1,33 @@
+{
+  "id": "popielna-marchia",
+  "series": "angwaramskie-dzieje",
+  "order": 3,
 
+  "title": {
+    "pl": "Popielna Marchia",
+    "en": "Ashen March",
+    "es": "Marca de Ceniza"
+  },
+
+  "subtitle": {
+    "pl": "Tom III",
+    "en": "Volume III",
+    "es": "Tomo III"
+  },
+
+  "author": "Quint Blackwood",
+  "genre": "Dark Fantasy",
+  "status": "planned",
+
+  "cover": "assets/books/covers/popielna-marchia.jpg",
+
+  "summary": {
+    "pl": "Trzeci tom Cyklu Angwaramskich Dziejów.",
+    "en": "The third volume of the Angwaram Chronicles.",
+    "es": "El tercer tomo de las Crónicas de Angwaram."
+  },
+
+  "year": null,
+
+  "chapters": []
+}
