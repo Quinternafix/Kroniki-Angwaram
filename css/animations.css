@@ -1,25 +1,92 @@
-#app{
+/* =========================================================
+   PAGE-TURN 3D (czytnik)
+   ========================================================= */
 
-animation:fade .3s;
-
+.reader-wrapper {
+    perspective: 1600px;
+    perspective-origin: 50% 50%;
 }
 
-@keyframes fade{
-
-from{
-
-opacity:0;
-
-transform:translateY(8px);
-
+.reader-chapter.enter-active {
+    animation: pageTurnEnter 0.65s cubic-bezier(0.33, 1, 0.68, 1) forwards;
 }
 
-to{
-
-opacity:1;
-
-transform:none;
-
+.reader-chapter.exit-active {
+    animation: pageTurnExit 0.65s cubic-bezier(0.33, 1, 0.68, 1) forwards;
 }
 
+.reader-chapter.enter-prev {
+    animation: pageTurnEnterPrev 0.65s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+}
+
+.reader-chapter.exit-prev {
+    animation: pageTurnExitPrev 0.65s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+}
+
+@keyframes pageTurnEnter {
+    0% {
+        opacity: 0;
+        transform: rotateY(-105deg) translateX(20px);
+        filter: brightness(0.7);
+    }
+    30% {
+        opacity: 1;
+        filter: brightness(0.85);
+    }
+    100% {
+        opacity: 1;
+        transform: rotateY(0deg) translateX(0);
+        filter: brightness(1);
+    }
+}
+
+@keyframes pageTurnExit {
+    0% {
+        opacity: 1;
+        transform: rotateY(0deg) translateX(0);
+        filter: brightness(1);
+    }
+    70% {
+        opacity: 0.6;
+        filter: brightness(0.75);
+    }
+    100% {
+        opacity: 0;
+        transform: rotateY(95deg) translateX(-30px);
+        filter: brightness(0.6);
+    }
+}
+
+@keyframes pageTurnEnterPrev {
+    0% {
+        opacity: 0;
+        transform: rotateY(105deg) translateX(-20px);
+        filter: brightness(0.7);
+    }
+    30% {
+        opacity: 1;
+        filter: brightness(0.85);
+    }
+    100% {
+        opacity: 1;
+        transform: rotateY(0deg) translateX(0);
+        filter: brightness(1);
+    }
+}
+
+@keyframes pageTurnExitPrev {
+    0% {
+        opacity: 1;
+        transform: rotateY(0deg) translateX(0);
+        filter: brightness(1);
+    }
+    70% {
+        opacity: 0.6;
+        filter: brightness(0.75);
+    }
+    100% {
+        opacity: 0;
+        transform: rotateY(-95deg) translateX(30px);
+        filter: brightness(0.6);
+    }
 }
