@@ -1,4 +1,16 @@
-Szkarłatni Górale z entuzjazmem przygotowywali swą wioskę na coroczną wizytę czarnego smoka. Musiało minąć wiele pokoleń tutejszego ludu satyrów i innych kopytnopodobnych stworzeń, zanim całkowicie przekonali się, że smok odwiedzający ich ziemie tak naprawdę im nie zagraża. Nigdy jednak nie poznali jego prawdziwych pobudek.
+{
+  "id": "prolog",
+  "book": "czarne-slonce",
+  "order": 0,
+
+  "title": {
+    "pl": "Prolog",
+    "en": "Prologue",
+    "es": "Prólogo"
+  },
+
+  "content": {
+    "pl": "Szkarłatni Górale z entuzjazmem przygotowywali swą wioskę na coroczną wizytę czarnego smoka. Musiało minąć wiele pokoleń tutejszego ludu satyrów i innych kopytnopodobnych stworzeń, zanim całkowicie przekonali się, że smok odwiedzający ich ziemie tak naprawdę im nie zagraża. Nigdy jednak nie poznali jego prawdziwych pobudek.
 
 Tym bardziej dziwili się, że ten niezwykły gość polubił właśnie ich – naród unikający przemocy. Powszechna wiedza o smokach niemal nie istniała — wielu wierzyło, że to rasa wymarła, wybita w niewyjaśnionych okolicznościach. Sam smok prosił stanowczo, by nikt nie zapisywał ani nie przekazywał jakichkolwiek informacji o jego wizytach.
 
@@ -14,4 +26,59 @@ Bestia czarna jak noc zanurkowała ku ziemi, a następnie gwałtownie rozłoży�
 
 — Co masz na myśli? - spytał, lecz szybko przyuważył skórzaną torbę zawieszoną wokół łapy. - Co to?
 
-— Tajemnica, ale myślę, że Ci się spodoba. W końcu lubisz odkrywać nieznane, czyż nie?
+— Tajemnica, ale myślę, że Ci się spodoba. W końcu lubisz odkrywać nieznane, czyż nie?",
+    "en": "The Scarlet Highlanders were enthusiastically preparing their village for the black dragon’s annual visit. It must have taken many generations of the local satyrs and other hoofed creatures before they were fully convinced that the dragon visiting their lands posed no real threat to them. However, they never learned his true motives.
+
+They were all the more surprised that this extraordinary guest had taken a liking to them—a people who shunned violence. General knowledge about dragons was virtually nonexistent—many believed the species to be extinct, wiped out under unexplained circumstances. The dragon himself insisted that no one record or pass on any information about his visits.
+
+Orion, however, was the one who awaited his arrival most eagerly—an aging satyr, the village chief, whose ancestors had first welcomed the dragon. He sat on a tree stump by a field full of flowers, from where the dragon usually began his journey. Today he wanted to find out what usually brought the dragon here, for he felt that after so many years, he deserved some explanation.
+
+With every passing hour, he began to worry. The dragon always appeared quite early, but several hours had passed since the sun was at its zenith. Finally, evening fell, and Orion, disappointed, decided to return home. Just before he disappeared completely among the trees, he heard the sound of dragon wings. He stopped and looked up at the dark sky. Against its backdrop, he saw the guest he had been expecting.
+
+“Dragon! Where have you been?!” shouted the satyr.
+
+The beast, black as night, dove toward the ground, then spread its wings wide and landed firmly on its paws. The satyr approached him with a determined stride.
+
+“Forgive me, Orion, I had to prepare for today.”
+
+“What do you mean?” he asked, but quickly noticed the leather bag slung around the dragon’s leg. “What’s that?”
+
+“It’s a secret, but I think you’ll like it. After all, you like exploring the unknown, don’t you?”",
+    "es": "Los Highlanders Escarlatas preparaban con entusiasmo su pueblo para la visita anual del dragón negro. Seguramente hicieron falta muchas generaciones de sátiros locales y otras criaturas con pezuñas hasta que se convencieron por completo de que el dragón que visitaba sus tierras no suponía una amenaza real para ellos. Sin embargo, nunca llegaron a conocer sus verdaderos motivos.
+
+Les sorprendió aún más que a este extraordinario invitado le hubieran caído bien —un pueblo que rechazaba la violencia—. El conocimiento general sobre los dragones era prácticamente inexistente; muchos creían que eran una raza extinta, aniquilada en circunstancias inexplicables. El propio dragón insistía en que nadie registrara ni transmitiera ninguna información sobre sus visitas.
+
+Orión, sin embargo, era quien esperaba con más impaciencia la llegada del dragón: un sátiro entrado en años, el jefe de la aldea, cuyos antepasados habían sido los primeros en dar la bienvenida al dragón. Se sentó en un tocón junto a un campo lleno de flores, desde donde el dragón solía comenzar su viaje. Hoy quería averiguar qué era lo que solía traer al dragón hasta allí, pues consideraba que, después de tantos años, se merecía alguna explicación. Con cada hora que pasaba, empezaba a preocuparse. El dragón siempre aparecía bastante temprano, pero ya habían pasado unas horas desde que el sol estaba en su punto más alto. Por fin llegó la noche y Orión, decepcionado, decidió volver a casa. Antes de desaparecer por completo entre los árboles, le llegó el sonido de las alas del dragón. Se detuvo y miró hacia el cielo oscuro. Contra ese fondo, vio al invitado que esperaba.
+
+—¡Dragón! ¿Dónde te habías metido?! —gritó el sátiro.
+
+La bestia, negra como la noche, se lanzó en picado hacia la tierra y, a continuación, extendió bruscamente las alas y aterrizó con fuerza sobre sus patas. El sátiro se acercó a él con paso firme.
+
+—Perdóname, Orión, tenía que prepararme para hoy.
+
+—¿A qué te refieres? —preguntó, pero enseguida se fijó en la bolsa de cuero que llevaba colgada de una pata—. ¿Qué es eso?
+
+—Es un secreto, pero creo que te gustará. Al fin y al cabo, te gusta descubrir lo desconocido, ¿no?"
+  },
+
+  "quotes": [
+    {
+      "text": {
+        "pl": "Przykładowy cytat.",
+        "en": "",
+        "es": ""
+      },
+      "author": "Narrator"
+    }
+  ],
+
+  "notes": [
+    {
+      "text": {
+        "pl": "Przykładowy przypis.",
+        "en": "",
+        "es": ""
+      }
+    }
+  ]
+}
