@@ -24,10 +24,6 @@
   "status": "writing",
   "order": 1,
   "featured": false,
-  "progress": 18,
-  "started": "2026-08-02",
-  "updated": "2026-08-23",
-  "genres": ["dark-fantasy", "epic-fantasy"],
   "bookCount": 3,
 
   "books": [
@@ -39,9 +35,7 @@
         "en": "Black Sun",
         "es": "Sol Negro"
       },
-      "cover": "assets/books/covers/czarne-slonce.jpg",
-      "status": "writing",
-      "chapters": 0
+      "status": "writing"
     },
     {
       "id": "biala-straz",
@@ -51,9 +45,7 @@
         "en": "White Guard",
         "es": "Guardia Blanca"
       },
-      "cover": "assets/books/covers/biala-straz.jpg",
-      "status": "planned",
-      "chapters": 0
+      "status": "planned"
     },
     {
       "id": "popielna-marchia",
@@ -63,6 +55,10 @@
         "en": "Ashen March",
         "es": "Marca de Ceniza"
       },
+      "status": "planned"
+    }
+  ]
+}      },
       "cover": "assets/books/covers/popielna-marchia.jpg",
       "status": "planned",
       "chapters": 0
