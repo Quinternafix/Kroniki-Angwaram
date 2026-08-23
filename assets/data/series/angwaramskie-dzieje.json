@@ -20,28 +20,52 @@
   },
 
   "author": "Quint Blackwood",
-
   "cover": "assets/books/covers/angwaramskie-dzieje.jpg",
-
   "status": "writing",
-
-   "order": 1,
-  "featured": true,
+  "order": 1,
+  "featured": false,
   "progress": 18,
-
   "started": "2026-08-02",
-  "updated": "2026-08-02",
-
-  "genres": [
-    "dark-fantasy",
-    "epic-fantasy"
-  ],
-
+  "updated": "2026-08-23",
+  "genres": ["dark-fantasy", "epic-fantasy"],
   "bookCount": 3,
 
   "books": [
-    "antologia-czarnego-slonca",
-    "biala-straz",
-    "popielna-marchia"
+    {
+      "id": "czarne-slonce",
+      "order": 1,
+      "title": {
+        "pl": "Czarne Słońce",
+        "en": "Black Sun",
+        "es": "Sol Negro"
+      },
+      "cover": "assets/books/covers/czarne-slonce.jpg",
+      "status": "writing",
+      "chapters": 0
+    },
+    {
+      "id": "biala-straz",
+      "order": 2,
+      "title": {
+        "pl": "Biała Straż",
+        "en": "White Guard",
+        "es": "Guardia Blanca"
+      },
+      "cover": "assets/books/covers/biala-straz.jpg",
+      "status": "planned",
+      "chapters": 0
+    },
+    {
+      "id": "popielna-marchia",
+      "order": 3,
+      "title": {
+        "pl": "Popielna Marchia",
+        "en": "Ashen March",
+        "es": "Marca de Ceniza"
+      },
+      "cover": "assets/books/covers/popielna-marchia.jpg",
+      "status": "planned",
+      "chapters": 0
+    }
   ]
 }
