@@ -1609,7 +1609,7 @@
         "image": "assets/characters/quint_synowie-burzy.png"
       }
     ],
-    "description": "Quint jest czarnym smokiem, najbardziej rozpoznawalnym pośród ocalałych. Jest ojcem Kiotha i Liliany oraz mężem Miriteny.",
+    "description": "Quint jest czarnym smokiem, najbardziej rozpoznawalnym pośród ocalałych. Jest ojcem Kiotha i Liliany oraz partnerem Miriteny. Cechuje się otwartością i spokojem, lecz również nieustępliwością i uporem, które już raz doprowadziły do jego zgonu.",
     "faction": "Ocalałe Smoki",
     "factionId": "ocalale-smoki",
     "home": "Brak",
@@ -1639,7 +1639,7 @@
         "rank": "None",
         "status": "Alive",
         "birth": "Year 333",
-        "description": "Quint is a black dragon, the most recognizable among the survivors.",
+        "description": "Quint is a black dragon, the most recognizable among the survivors. He is the father of Kioth and Liliana and Miritena’s partner. He is known for his openness and calmness, but also for his tenacity and stubbornness, which have already led to his death once.",
         "faction": "Surviving Dragons",
         "home": "None",
         "quotes": [
@@ -1653,7 +1653,7 @@
         "rank": "Ninguno",
         "status": "Vivo",
         "birth": "Año 333",
-        "description": "Quint es un dragón negro, el más reconocido entre los supervivientes.",
+        "description": "Quint es un dragón negro, el más reconocible de entre los supervivientes. Es el padre de Kioth y Liliana, y la pareja de Miritena. Destaca por su franqueza y serenidad, pero también por su tenacidad y terquedad, cualidades que ya le han costado la vida en una ocasión.",
         "faction": "Dragones Supervivientes",
         "home": "Ninguna",
         "quotes": [
