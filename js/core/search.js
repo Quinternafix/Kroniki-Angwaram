@@ -32,6 +32,11 @@ function attachSearch() {
         return;
     }
 
+    // Przywróć frazę ze state (np. po re-renderze navbara / zmianie języka)
+    if (state.search && input.value !== state.search) {
+        input.value = state.search;
+    }
+
     // jeśli to ten sam input – nie doklejaj drugiego listenera
     if (attachedInput === input) {
         return;
@@ -50,10 +55,6 @@ function attachSearch() {
         window.dispatchEvent(
             new Event("search-updated")
         );
-
-        // jeśli NIE jesteśmy na liście postaci / frakcji / miejsc,
-        // możesz ewentualnie zostawić pełne przeładowanie:
-        // window.dispatchEvent(new Event("hashchange"));
 
     });
 
