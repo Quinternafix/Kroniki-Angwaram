@@ -355,10 +355,12 @@ export async function charactersView() {
         )
     );
 
-    // init filtrów po wstawieniu HTML
-    queueMicrotask(() => {
+    // WAŻNE: nie używać queueMicrotask – odpala się PRZED
+    // app.innerHTML = ... w routerze, więc .character-grid jeszcze nie istnieje.
+    // setTimeout(0) wchodzi w kolejkę makrozadań i działa dopiero po wstawieniu HTML.
+    setTimeout(() => {
         initCharacterFilters();
-    });
+    }, 0);
 
     return `
         <section class="page characters-page">
