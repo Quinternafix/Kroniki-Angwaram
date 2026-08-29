@@ -204,6 +204,9 @@ function renderFilters(races, factions, statuses) {
    LOGIKA FILTROWANIA (po renderze)
    ========================================================== */
 
+/** Handler wyszukiwania – trzymany globalnie, żeby dało się go odpiąć */
+let charactersSearchHandler = null;
+
 function initCharacterFilters() {
     const grid = document.querySelector(".character-grid");
     const counter = document.querySelector(".characters-count");
@@ -219,6 +222,11 @@ function initCharacterFilters() {
     const sortSelect = document.getElementById("filter-sort");
 
     function applyFilters() {
+        // Po wyjściu ze strony siatka jest już poza DOM – nic nie rób
+        if (!document.body.contains(grid)) {
+            return;
+        }
+
         const race = raceSelect?.value || "";
         const faction = factionSelect?.value || "";
         const status = statusSelect?.value || "";
@@ -227,22 +235,33 @@ function initCharacterFilters() {
         const query = (state.search || "").toLowerCase().trim();
 
         let visible = cards.filter(card => {
+            const name = card.dataset.name || "";
+            const title = card.dataset.title || "";
+            const cardRace = card.dataset.race || "";
+            const cardNation = card.dataset.nation || "";
+            const cardFaction = card.dataset.faction || "";
+            const cardStatus = card.dataset.status || "";
+
             const matchQuery =
                 !query ||
-                card.dataset.name.includes(query) ||
-                card.dataset.title.includes(query);
+                name.includes(query) ||
+                title.includes(query) ||
+                cardRace.includes(query) ||
+                cardNation.includes(query) ||
+                cardFaction.includes(query) ||
+                cardStatus.includes(query);
 
             const matchRace =
-                !race || card.dataset.race === race;
+                !race || cardRace === race;
 
             const matchFaction =
-                !faction || card.dataset.faction === faction;
+                !faction || cardFaction === faction;
 
             const matchStatus =
-                !status || card.dataset.status === status;
+                !status || cardStatus === status;
 
             const matchFavorite =
-                !favorite || card.dataset.favorite === favorite;
+                !favorite || (card.dataset.favorite || "") === favorite;
 
             const show =
                 matchQuery &&
@@ -260,8 +279,8 @@ function initCharacterFilters() {
         visible.sort((a, b) => {
             if (sort === "favorite") {
                 const favDiff =
-                    Number(b.dataset.favorite) -
-                    Number(a.dataset.favorite);
+                    Number(b.dataset.favorite || 0) -
+                    Number(a.dataset.favorite || 0);
 
                 if (favDiff !== 0) return favDiff;
             }
@@ -298,8 +317,12 @@ function initCharacterFilters() {
         }
     });
 
-    // reaguj też na globalne wyszukiwanie
-    window.addEventListener("search-updated", applyFilters);
+    // Odpięcie poprzedniego handlera – bez wycieków przy wielokrotnym wejściu na stronę
+    if (charactersSearchHandler) {
+        window.removeEventListener("search-updated", charactersSearchHandler);
+    }
+    charactersSearchHandler = applyFilters;
+    window.addEventListener("search-updated", charactersSearchHandler);
 
     applyFilters();
 }
