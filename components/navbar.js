@@ -1,18 +1,15 @@
 import { t } from "../core/i18n.js";
-
-console.log("navbar.js załadowany");
+import { state } from "../state.js";
 
 export function renderNavbar() {
 
-    console.log("renderNavbar wywołany");
-
-    const navbar = document.getElementById("navbar");
+    const navbar =
+        document.getElementById("navbar");
 
     if (!navbar) {
-        console.log("#navbar nie znaleziony");
         return;
     }
-}
+
     navbar.innerHTML = `
 
         <nav class="navbar">
@@ -20,7 +17,13 @@ export function renderNavbar() {
             <div class="navbar-logo">
 
                 <a href="#/">
-                    🔥 <span data-i18n="site.title">${t("site.title")}</span>
+
+                    🔥
+
+                    <span data-i18n="site.title">
+                        ${t("site.title")}
+                    </span>
+
                 </a>
 
             </div>
@@ -28,37 +31,55 @@ export function renderNavbar() {
             <ul class="navbar-menu">
 
                 <li>
-                    <a href="#/" data-i18n="nav.home">
+                    <a
+                        href="#/"
+                        data-i18n="nav.home"
+                    >
                         ${t("nav.home")}
                     </a>
                 </li>
 
                 <li>
-                    <a href="#/characters" data-i18n="nav.characters">
+                    <a
+                        href="#/characters"
+                        data-i18n="nav.characters"
+                    >
                         ${t("nav.characters")}
                     </a>
                 </li>
 
                 <li>
-                    <a href="#/factions" data-i18n="nav.factions">
+                    <a
+                        href="#/factions"
+                        data-i18n="nav.factions"
+                    >
                         ${t("nav.factions")}
                     </a>
                 </li>
 
                 <li>
-                    <a href="#/places" data-i18n="nav.places">
+                    <a
+                        href="#/places"
+                        data-i18n="nav.places"
+                    >
                         ${t("nav.places")}
                     </a>
                 </li>
 
                 <li>
-                    <a href="#/timeline" data-i18n="nav.timeline">
+                    <a
+                        href="#/timeline"
+                        data-i18n="nav.timeline"
+                    >
                         ${t("nav.timeline")}
                     </a>
                 </li>
 
                 <li>
-                    <a href="#/library" data-i18n="nav.library">
+                    <a
+                        href="#/library"
+                        data-i18n="nav.library"
+                    >
                         ${t("nav.library")}
                     </a>
                 </li>
@@ -73,15 +94,20 @@ export function renderNavbar() {
                     data-i18n-placeholder="nav.searchPlaceholder"
                     placeholder="${t("nav.searchPlaceholder")}"
                     autocomplete="off"
+                    value="${escapeAttr(state.search || "")}"
                 >
 
-                <div class="language-switcher">
+                <div
+                    class="language-switcher"
+                    aria-label="Language selector"
+                >
 
                     <button
                         type="button"
                         data-language="pl"
                         title="Polski"
-                        aria-label="Polski">
+                        aria-label="Polski"
+                    >
                         🇵🇱
                     </button>
 
@@ -89,7 +115,8 @@ export function renderNavbar() {
                         type="button"
                         data-language="en"
                         title="English"
-                        aria-label="English">
+                        aria-label="English"
+                    >
                         🇬🇧
                     </button>
 
@@ -97,7 +124,8 @@ export function renderNavbar() {
                         type="button"
                         data-language="es"
                         title="Español"
-                        aria-label="Español">
+                        aria-label="Español"
+                    >
                         🇪🇸
                     </button>
 
@@ -112,9 +140,20 @@ export function renderNavbar() {
     highlightCurrentPage();
 }
 
+
+function escapeAttr(value) {
+    return String(value ?? "")
+        .replace(/&/g, "&amp;")
+        .replace(/"/g, "&quot;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;");
+}
+
+
 export function highlightCurrentPage() {
 
-    const current = location.hash || "#/";
+    const current =
+        location.hash || "#/";
 
     document
         .querySelectorAll(".navbar-menu a")
@@ -122,15 +161,11 @@ export function highlightCurrentPage() {
 
             link.classList.remove("active");
 
-            if (link.getAttribute("href") === current) {
+            if (
+                link.getAttribute("href") === current
+            ) {
                 link.classList.add("active");
             }
 
         });
-
 }
-
-window.addEventListener(
-    "hashchange",
-    highlightCurrentPage
-);
