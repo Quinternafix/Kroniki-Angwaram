@@ -2312,3 +2312,195 @@ button,
         padding-top: 2px;
     }
 }
+
+/* =========================================================
+   KARTY POSTACI — kompaktowa siatka
+   ========================================================= */
+
+.character-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 18px;
+    margin-top: 24px;
+}
+
+.character-card {
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    overflow: hidden;
+}
+
+.character-image-wrap {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    max-height: 200px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid rgba(166, 116, 196, 0.35);
+    background: rgba(0, 0, 0, 0.25);
+}
+
+.character-image-wrap.placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.character-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+}
+
+.character-initials {
+    font-size: 2rem;
+    font-weight: 700;
+    color: rgba(232, 201, 138, 0.55);
+    letter-spacing: 0.05em;
+}
+
+.character-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+    position: relative;
+}
+
+.character-fav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 0.9rem;
+}
+
+.character-name {
+    margin: 0 0 4px;
+    font-size: 1.05rem;
+    line-height: 1.25;
+    overflow-wrap: anywhere;
+}
+
+.character-title {
+    margin: 0 0 8px !important;
+    font-size: 0.85rem;
+    color: #b8a8c4 !important;
+    line-height: 1.35;
+}
+
+.character-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 8px;
+}
+
+.character-tag {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    line-height: 1.4;
+    color: #d4c4e0;
+    background: rgba(120, 80, 150, 0.25);
+    border: 1px solid rgba(166, 116, 196, 0.3);
+}
+
+.character-tag.status {
+    color: #c8e0b8;
+    background: rgba(80, 120, 70, 0.25);
+    border-color: rgba(120, 160, 100, 0.35);
+}
+
+.character-faction {
+    margin: 0 0 10px !important;
+    font-size: 0.8rem !important;
+    color: #a898b8 !important;
+    line-height: 1.35;
+}
+
+.character-button {
+    margin-top: auto;
+    font-size: 0.85rem;
+}
+
+.characters-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 16px;
+    margin: 16px 0 8px;
+    align-items: flex-end;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 120px;
+}
+
+.filter-group label {
+    font-size: 0.78rem;
+    color: #a898b8;
+}
+
+.filter-group select {
+    padding: 6px 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(166, 116, 196, 0.4);
+    background: rgba(14, 12, 20, 0.9);
+    color: #e8e0f0;
+    font-size: 0.88rem;
+}
+
+.characters-count {
+    color: #a898b8;
+    font-size: 0.95rem;
+}
+
+.characters-empty {
+    grid-column: 1 / -1;
+    padding: 40px 20px;
+    text-align: center;
+    color: #a898b8;
+}
+
+/* Responsywność */
+@media (max-width: 700px) {
+    .character-grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 14px;
+    }
+
+    .character-image-wrap {
+        max-height: 160px;
+    }
+
+    .character-name {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .character-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .character-card {
+        padding: 10px;
+    }
+
+    .characters-filters {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filter-group {
+        min-width: 0;
+    }
+}
