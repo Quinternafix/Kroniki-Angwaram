@@ -3,10 +3,10 @@
     "id": "araya-stormbringer",
     "name": "Araya Stormbringer",
     "title": "",
-    "race": "",
-    "nation": "",
+    "race": "Człowiek",
+    "nation": "Selidor",
     "rank": "",
-    "status": "",
+    "status": "Żyje",
     "birth": "",
     "image": "assets/characters/araya-stormbringer.png",
     "portraits": [
@@ -32,7 +32,7 @@
     "translations": {
       "en": {
         "title": "",
-        "race": "",
+        "race": "Human",
         "nation": "",
         "rank": "",
         "status": "",
@@ -58,7 +58,7 @@
     "id": "aurora-stormbringer",
     "name": "Aurora Stormbringer",
     "title": "",
-    "race": "",
+    "race": "Człowiek",
     "nation": "",
     "rank": "",
     "status": "",
@@ -87,7 +87,7 @@
     "translations": {
       "en": {
         "title": "",
-        "race": "",
+        "race": "Human",
         "nation": "",
         "rank": "",
         "status": "",
