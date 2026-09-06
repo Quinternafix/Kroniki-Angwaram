@@ -1,117 +1,225 @@
 [
   {
     "id": "draco-flamma",
-    "name": "Draco Flamma",
+    "name": {
+      "pl": "Draco Flamma",
+      "en": "Draco Flamma",
+      "es": "Draco Flamma"
+    },
     "image": "",
-    "description": "Zbiór indywidualnych osób uzdolnionych magicznie, nie działających bezpośrednio pod rozkazami jednej władzy.",
+    "description": {
+      "pl": "Zbiór indywidualnych osób uzdolnionych magicznie, nie działających bezpośrednio pod rozkazami jednej władzy.",
+      "en": "A gathering of magically gifted individuals who do not act directly under the command of a single authority.",
+      "es": "Un conjunto de personas con dones mágicos que no actúan directamente bajo las órdenes de una sola autoridad."
+    },
     "members": [],
     "leaders": []
   },
   {
     "id": "dzieci-okamiego",
-    "name": "Dzieci Okamiego",
+    "name": {
+      "pl": "Dzieci Okamiego",
+      "en": "Children of Okami",
+      "es": "Hijos de Okami"
+    },
     "image": "",
-    "description": "",
+    "description": {
+      "pl": "",
+      "en": "",
+      "es": ""
+    },
     "members": [],
     "leaders": []
   },
   {
     "id": "ferrinski-gaj",
-    "name": "Ferriński Gaj",
+    "name": {
+      "pl": "Ferriński Gaj",
+      "en": "Ferrin Grove",
+      "es": "Arboleda de Ferrin"
+    },
     "image": "",
-    "description": "",
+    "description": {
+      "pl": "",
+      "en": "",
+      "es": ""
+    },
     "members": [],
     "leaders": []
   },
   {
     "id": "gwardia-bialej-krolowej",
-    "name": "Gwardia Białej Królowej",
+    "name": {
+      "pl": "Gwardia Białej Królowej",
+      "en": "Guard of the White Queen",
+      "es": "Guardia de la Reina Blanca"
+    },
     "image": "",
-    "description": "",
+    "description": {
+      "pl": "",
+      "en": "",
+      "es": ""
+    },
     "members": [],
     "leaders": []
   },
   {
     "id": "konsylium-selidoru",
-    "name": "Konsylium Selidoru",
+    "name": {
+      "pl": "Konsylium Selidoru",
+      "en": "Consilium of Selidor",
+      "es": "Concilio de Selidor"
+    },
     "image": "assets/factions/konsylium.png",
-    "description": "Siatka arcymagów działająca na całym świecie Angwaramu.",
-    "members": [
-      "morgath"
-    ],
-    "leaders": [
-      "morgath"
-    ]
+    "description": {
+      "pl": "Siatka arcymagów działająca na całym świecie Angwaramu.",
+      "en": "A network of archmages operating across the entire world of Angwaram.",
+      "es": "Una red de archimagos que opera en todo el mundo de Angwaram."
+    },
+    "members": ["morgath"],
+    "leaders": ["morgath"]
   },
   {
     "id": "kosciani-lordowie",
-    "name": "Kościani Lordowie",
+    "name": {
+      "pl": "Kościani Lordowie",
+      "en": "Bone Lords",
+      "es": "Señores de los Huesos"
+    },
     "image": "",
-    "description": "",
+    "description": {
+      "pl": "",
+      "en": "",
+      "es": ""
+    },
     "members": [],
     "leaders": []
   },
   {
     "id": "kosciol-pustki",
-    "name": "Kościół Pustki",
+    "name": {
+      "pl": "Kościół Pustki",
+      "en": "Church of the Void",
+      "es": "Iglesia del Vacío"
+    },
     "image": "",
-    "description": "",
+    "description": {
+      "pl": "",
+      "en": "",
+      "es": ""
+    },
     "members": [],
     "leaders": []
   },
   {
     "id": "kult-odrodzonego",
-    "name": "Kult Odrodzonego",
+    "name": {
+      "pl": "Kult Odrodzonego",
+      "en": "Cult of the Reborn",
+      "es": "Culto del Renacido"
+    },
     "image": "",
-    "description": "",
+    "description": {
+      "pl": "",
+      "en": "",
+      "es": ""
+    },
     "members": [],
     "leaders": []
   },
   {
     "id": "protektorzy-angwaram",
-    "name": "Protektorzy Angwaram",
+    "name": {
+      "pl": "Protektorzy Angwaram",
+      "en": "Protectors of Angwaram",
+      "es": "Protectores de Angwaram"
+    },
     "image": "",
-    "description": "",
+    "description": {
+      "pl": "",
+      "en": "",
+      "es": ""
+    },
     "members": [],
     "leaders": []
   },
   {
     "id": "skrystalizowani",
-    "name": "Skrystalizowani",
+    "name": {
+      "pl": "Skrystalizowani",
+      "en": "The Crystallized",
+      "es": "Los Cristalizados"
+    },
     "image": "",
-    "description": "",
+    "description": {
+      "pl": "",
+      "en": "",
+      "es": ""
+    },
     "members": [],
     "leaders": []
   },
   {
     "id": "udreczona-inkwizycja",
-    "name": "Udręczona Inkwizycja",
+    "name": {
+      "pl": "Udręczona Inkwizycja",
+      "en": "Tormented Inquisition",
+      "es": "Inquisición Atormentada"
+    },
     "image": "",
-    "description": "Socjopaci, mordercy i inni przestępcy, którzy popełnili poważne przestępstwa, zostali zebrani i zmuszeni do służby.",
+    "description": {
+      "pl": "Socjopaci, mordercy i inni przestępcy, którzy popełnili poważne przestępstwa, zostali zebrani i zmuszeni do służby.",
+      "en": "Sociopaths, murderers, and other criminals who committed serious crimes were gathered and forced into service.",
+      "es": "Sociópatas, asesinos y otros criminales que cometieron delitos graves fueron reunidos y obligados a servir."
+    },
     "members": [],
     "leaders": []
   },
   {
     "id": "upiory-nocy",
-    "name": "Upiory Nocy",
+    "name": {
+      "pl": "Upiory Nocy",
+      "en": "Night Wraiths",
+      "es": "Espectros de la Noche"
+    },
     "image": "",
-    "description": "",
+    "description": {
+      "pl": "",
+      "en": "",
+      "es": ""
+    },
     "members": [],
     "leaders": []
   },
   {
     "id": "wedrowcy-switu",
-    "name": "Wędrowcy Świtu",
+    "name": {
+      "pl": "Wędrowcy Świtu",
+      "en": "Dawnwalkers",
+      "es": "Caminantes del Alba"
+    },
     "image": "",
-    "description": "Stworzona specjalnie grupa, której celem jest zatrzymać zagrożenie powstałe w świecie Angwaramu.",
+    "description": {
+      "pl": "Stworzona specjalnie grupa, której celem jest zatrzymać zagrożenie powstałe w świecie Angwaramu.",
+      "en": "A specially formed group whose purpose is to stop a threat that has arisen in the world of Angwaram.",
+      "es": "Un grupo creado especialmente con el objetivo de detener una amenaza surgida en el mundo de Angwaram."
+    },
     "members": [],
     "leaders": []
   },
   {
     "id": "zakon-kronikarzy-swiata",
-    "name": "Zakon Kronikarzy Świata",
+    "name": {
+      "pl": "Zakon Kronikarzy Świata",
+      "en": "Order of the World Chroniclers",
+      "es": "Orden de los Cronistas del Mundo"
+    },
     "image": "",
-    "description": "",
+    "description": {
+      "pl": "",
+      "en": "",
+      "es": ""
+    },
     "members": [],
     "leaders": []
   }
