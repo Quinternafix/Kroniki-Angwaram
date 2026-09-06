@@ -1,19 +1,118 @@
 [
   {
-    "id":"konsylium-selidoru",
-
-    "name":"Konsylium Selidoru",
-
-    "image":"assets/factions/konsylium.png",
-
-    "description":"Siatka arcymagów działająca na całym świecie Angwaramu.",
-
-    "members":[
+    "id": "draco-flamma",
+    "name": "Draco Flamma",
+    "image": "",
+    "description": "Zbiór indywidualnych osób uzdolnionych magicznie, nie działających bezpośrednio pod rozkazami jednej władzy.",
+    "members": [],
+    "leaders": []
+  },
+  {
+    "id": "dzieci-okamiego",
+    "name": "Dzieci Okamiego",
+    "image": "",
+    "description": "",
+    "members": [],
+    "leaders": []
+  },
+  {
+    "id": "ferrinski-gaj",
+    "name": "Ferriński Gaj",
+    "image": "",
+    "description": "",
+    "members": [],
+    "leaders": []
+  },
+  {
+    "id": "gwardia-bialej-krolowej",
+    "name": "Gwardia Białej Królowej",
+    "image": "",
+    "description": "",
+    "members": [],
+    "leaders": []
+  },
+  {
+    "id": "konsylium-selidoru",
+    "name": "Konsylium Selidoru",
+    "image": "assets/factions/konsylium.png",
+    "description": "Siatka arcymagów działająca na całym świecie Angwaramu.",
+    "members": [
       "morgath"
     ],
-
-    "leaders":[
+    "leaders": [
       "morgath"
     ]
+  },
+  {
+    "id": "kosciani-lordowie",
+    "name": "Kościani Lordowie",
+    "image": "",
+    "description": "",
+    "members": [],
+    "leaders": []
+  },
+  {
+    "id": "kosciol-pustki",
+    "name": "Kościół Pustki",
+    "image": "",
+    "description": "",
+    "members": [],
+    "leaders": []
+  },
+  {
+    "id": "kult-odrodzonego",
+    "name": "Kult Odrodzonego",
+    "image": "",
+    "description": "",
+    "members": [],
+    "leaders": []
+  },
+  {
+    "id": "protektorzy-angwaram",
+    "name": "Protektorzy Angwaram",
+    "image": "",
+    "description": "",
+    "members": [],
+    "leaders": []
+  },
+  {
+    "id": "skrystalizowani",
+    "name": "Skrystalizowani",
+    "image": "",
+    "description": "",
+    "members": [],
+    "leaders": []
+  },
+  {
+    "id": "udreczona-inkwizycja",
+    "name": "Udręczona Inkwizycja",
+    "image": "",
+    "description": "Socjopaci, mordercy i inni przestępcy, którzy popełnili poważne przestępstwa, zostali zebrani i zmuszeni do służby.",
+    "members": [],
+    "leaders": []
+  },
+  {
+    "id": "upiory-nocy",
+    "name": "Upiory Nocy",
+    "image": "",
+    "description": "",
+    "members": [],
+    "leaders": []
+  },
+  {
+    "id": "wedrowcy-switu",
+    "name": "Wędrowcy Świtu",
+    "image": "",
+    "description": "Stworzona specjalnie grupa, której celem jest zatrzymać zagrożenie powstałe w świecie Angwaramu.",
+    "members": [],
+    "leaders": []
+  },
+  {
+    "id": "zakon-kronikarzy-swiata",
+    "name": "Zakon Kronikarzy Świata",
+    "image": "",
+    "description": "",
+    "members": [],
+    "leaders": []
   }
 ]
