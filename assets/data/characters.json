@@ -1315,7 +1315,7 @@
     "rank": "",
     "status": "",
     "birth": "",
-    "image": "assets/characters/neorath-stormbringer.png",
+    "image": "assets/characters/Neorath.png",
     "portraits": [
       {
         "title": {
@@ -1323,7 +1323,7 @@
           "en": "Present",
           "es": "Actualidad"
         },
-        "image": "assets/characters/neorath-stormbringer.png"
+        "image": "assets/characters/Neorath.png"
       }
     ],
     "description": "",
