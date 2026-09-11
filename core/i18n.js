@@ -117,6 +117,48 @@ const translations = {
         "library.statusPlanned":
             "planowane",
 
+        "library.status.planned":
+            "Planowany",
+
+        "library.status.writing":
+            "W trakcie pisania",
+
+        "library.status.editing":
+            "Redakcja",
+
+        "library.status.completed":
+            "Ukończony",
+
+        "library.status.published":
+            "Wydany",
+
+        "book.author":
+            "Autor",
+
+        "book.genre":
+            "Gatunek",
+
+        "book.status":
+            "Status",
+
+        "book.summary":
+            "Streszczenie",
+
+        "book.chapters":
+            "Rozdziały",
+
+        "book.startReading":
+            "Zacznij czytać",
+
+        "book.continueReading":
+            "Kontynuuj czytanie",
+
+        "book.backToSeries":
+            "Powrót do serii",
+
+        "book.notFound":
+            "Nie znaleziono książki.",
+
         /* PROFILE */
 
         "profile.notFound":
@@ -340,6 +382,48 @@ const translations = {
         "library.statusPlanned":
             "planned",
 
+        "library.status.planned":
+            "Planned",
+
+        "library.status.writing":
+            "Writing",
+
+        "library.status.editing":
+            "Editing",
+
+        "library.status.completed":
+            "Completed",
+
+        "library.status.published":
+            "Published",
+
+        "book.author":
+            "Author",
+
+        "book.genre":
+            "Genre",
+
+        "book.status":
+            "Status",
+
+        "book.summary":
+            "Summary",
+
+        "book.chapters":
+            "Chapters",
+
+        "book.startReading":
+            "Start reading",
+
+        "book.continueReading":
+            "Continue reading",
+
+        "book.backToSeries":
+            "Back to series",
+
+        "book.notFound":
+            "Book not found.",
+
         /* PROFILE */
 
         "profile.notFound":
@@ -562,6 +646,48 @@ const translations = {
 
         "library.statusPlanned":
             "planificados",
+
+        "library.status.planned":
+            "Planificado",
+
+        "library.status.writing":
+            "En escritura",
+
+        "library.status.editing":
+            "Edición",
+
+        "library.status.completed":
+            "Completado",
+
+        "library.status.published":
+            "Publicado",
+
+        "book.author":
+            "Autor",
+
+        "book.genre":
+            "Género",
+
+        "book.status":
+            "Estado",
+
+        "book.summary":
+            "Resumen",
+
+        "book.chapters":
+            "Capítulos",
+
+        "book.startReading":
+            "Empezar a leer",
+
+        "book.continueReading":
+            "Continuar leyendo",
+
+        "book.backToSeries":
+            "Volver a la serie",
+
+        "book.notFound":
+            "Libro no encontrado.",
 
         /* PROFILE */
 
