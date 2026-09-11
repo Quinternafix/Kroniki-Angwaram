@@ -604,6 +604,18 @@ export async function profileView(id) {
 
 
                     ${renderRelations(
+                        "profile.parents",
+                        character.parents || []
+                    )}
+
+
+                    ${renderRelations(
+                        "profile.siblings",
+                        character.siblings || []
+                    )}
+
+
+                    ${renderRelations(
                         "profile.friends",
                         character.friends || []
                     )}
@@ -613,6 +625,49 @@ export async function profileView(id) {
                         "profile.enemies",
                         character.enemies || []
                     )}
+
+
+                    ${
+                        Array.isArray(character.quotes) &&
+                        character.quotes.length
+                            ? `
+                                <section class="related">
+                                    <h2>
+                                        ${escapeHtml(
+                                            t("profile.quotes")
+                                        )}
+                                    </h2>
+                                    <ul>
+                                        ${character.quotes
+                                            .map(
+                                                (quote, index) => {
+                                                    const translated =
+                                                        character
+                                                            .translations?.[
+                                                            getLanguage()
+                                                        ]?.quotes?.[
+                                                            index
+                                                        ];
+
+                                                    const text =
+                                                        translated ||
+                                                        quote;
+
+                                                    return `
+                                                        <li>
+                                                            <em>„${escapeHtml(
+                                                                text
+                                                            )}”</em>
+                                                        </li>
+                                                    `;
+                                                }
+                                            )
+                                            .join("")}
+                                    </ul>
+                                </section>
+                            `
+                            : ""
+                    }
 
 
                     <section class="related">
