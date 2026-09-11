@@ -70,22 +70,28 @@ function sortChapters(chapters) {
    ========================================================== */
 
 function renderMeta(book) {
+    const statusClass = book.status
+        ? `status-${String(book.status)}`
+        : "status-unknown";
+
     return `
         <div class="book-meta">
 
             <div>
                 <strong>${escapeHtml(t("book.author"))}</strong>
-                ${escapeHtml(book.author || "-")}
+                <span>${escapeHtml(book.author || "-")}</span>
             </div>
 
             <div>
                 <strong>${escapeHtml(t("book.genre"))}</strong>
-                ${escapeHtml(book.genre || "-")}
+                <span>${escapeHtml(book.genre || "-")}</span>
             </div>
 
             <div>
                 <strong>${escapeHtml(t("book.status"))}</strong>
-                ${escapeHtml(getStatusText(book.status))}
+                <span class="book-status-badge ${statusClass}">
+                    ${escapeHtml(getStatusText(book.status))}
+                </span>
             </div>
 
         </div>
