@@ -30,9 +30,9 @@ function getStatusInfo(status) {
 
     const statuses = {
         planned: {
-            pl: "Planowana",
+            pl: "Planowany",
             en: "Planned",
-            es: "Planificada",
+            es: "Planificado",
             className: "status-planned"
         },
         writing: {
@@ -48,15 +48,15 @@ function getStatusInfo(status) {
             className: "status-editing"
         },
         completed: {
-            pl: "Ukończona",
+            pl: "Ukończony",
             en: "Completed",
-            es: "Completada",
+            es: "Completado",
             className: "status-completed"
         },
         published: {
-            pl: "Wydana",
+            pl: "Wydany",
             en: "Published",
-            es: "Publicada",
+            es: "Publicado",
             className: "status-published"
         }
     };
@@ -100,6 +100,17 @@ function getInitials(title) {
         .join("");
 }
 
+/**
+ * Preferuje summary, potem description (kompatybilność wsteczna).
+ */
+function getBookBlurb(book) {
+    return (
+        localizeSeries(book, "summary") ||
+        localizeSeries(book, "description") ||
+        ""
+    );
+}
+
 /* ==========================================================
    NAGŁÓWEK SERII
    ========================================================== */
@@ -126,6 +137,7 @@ function renderSeriesHeader(series) {
                     src="${escapeHtml(cover)}"
                     alt="${escapeHtml(title)}"
                     loading="lazy"
+                    onerror="this.style.display='none';this.parentElement.classList.add('placeholder');this.parentElement.innerHTML='<span class=\\'series-cover-initials\\'>${escapeHtml(getInitials(title))}</span>';"
                 >
             </div>
         `
@@ -145,7 +157,7 @@ function renderSeriesHeader(series) {
             <div class="series-info">
 
                 <a class="series-back" href="#/library">
-                    ← ${escapeHtml(t("nav.library"))}
+                    ← ${escapeHtml(t("nav.library") || t("library.title"))}
                 </a>
 
                 <h1 class="series-title">
@@ -163,8 +175,13 @@ function renderSeriesHeader(series) {
                 }
 
                 <div class="series-meta">
-                    <span class="series-books">
+                    <span class="series-books-count">
                         📚 ${bookCount}
+                        ${escapeHtml(
+                            bookCount === 1
+                                ? t("library.book")
+                                : t("library.books")
+                        )}
                     </span>
 
                     ${
@@ -190,7 +207,8 @@ function renderSeriesHeader(series) {
 
 function renderBook(book) {
     const title = localizeSeries(book, "title");
-    const description = localizeSeries(book, "description");
+    const subtitle = localizeSeries(book, "subtitle");
+    const blurb = getBookBlurb(book);
 
     const cover =
         typeof book.cover === "string" && book.cover.trim() !== ""
@@ -199,6 +217,7 @@ function renderBook(book) {
 
     const order = Number(book.order ?? 0);
     const statusInfo = getStatusInfo(book.status);
+    const isPlanned = book.status === "planned";
 
     const coverHtml = cover
         ? `
@@ -207,6 +226,7 @@ function renderBook(book) {
                     src="${escapeHtml(cover)}"
                     alt="${escapeHtml(title)}"
                     loading="lazy"
+                    onerror="this.style.display='none';this.parentElement.classList.add('placeholder');this.parentElement.innerHTML='<span class=\\'series-book-initials\\'>${escapeHtml(getInitials(title))}</span>';"
                 >
             </div>
         `
@@ -219,14 +239,19 @@ function renderBook(book) {
         `;
 
     return `
-        <article class="series-book">
+        <article class="series-book${isPlanned ? " is-planned" : ""}">
 
             ${coverHtml}
 
             <div class="series-book-content">
 
                 <div class="series-book-order">
-                    ${escapeHtml(t("library.book"))} ${order}
+                    ${escapeHtml(t("library.book"))} ${order || "—"}
+                    ${
+                        subtitle
+                            ? ` · ${escapeHtml(subtitle)}`
+                            : ""
+                    }
                 </div>
 
                 <h2 class="series-book-title">
@@ -234,10 +259,10 @@ function renderBook(book) {
                 </h2>
 
                 ${
-                    description
+                    blurb
                         ? `
                             <p class="series-book-description">
-                                ${escapeHtml(description)}
+                                ${escapeHtml(blurb)}
                             </p>
                         `
                         : ""
@@ -256,10 +281,15 @@ function renderBook(book) {
                 </div>
 
                 <a
-                    class="series-book-button"
+                    class="series-book-button${isPlanned ? " is-disabled" : ""}"
                     href="#/books/${encodeURIComponent(book.id)}"
+                    ${isPlanned ? `title="${escapeHtml(t("library.comingSoon") || "Wkrótce")}"` : ""}
                 >
-                    ${escapeHtml(t("library.openBook"))}
+                    ${escapeHtml(
+                        isPlanned
+                            ? (t("library.comingSoon") || "Wkrótce")
+                            : t("library.openBook")
+                    )}
                 </a>
 
             </div>
@@ -304,7 +334,7 @@ export async function seriesView(id) {
                     </h1>
                     <p>
                         <a href="#/library">
-                            ← ${escapeHtml(t("nav.library"))}
+                            ← ${escapeHtml(t("nav.library") || t("library.title"))}
                         </a>
                     </p>
                 </section>
@@ -329,9 +359,21 @@ export async function seriesView(id) {
                         item.id,
                         error
                     );
+
+                    // Fallback – pokaż przynajmniej wpis z serii
+                    books.push({
+                        id: item.id,
+                        order: item.order,
+                        title: item.title || { pl: item.id, en: item.id },
+                        status: item.status || "planned",
+                        cover: item.cover || ""
+                    });
                 }
             }
         }
+
+        const writingCount = books.filter(b => b.status === "writing").length;
+        const plannedCount = books.filter(b => b.status === "planned").length;
 
         return `
             <section class="series-page">
@@ -339,9 +381,23 @@ export async function seriesView(id) {
                 ${renderSeriesHeader(series)}
 
                 <section class="series-books-section">
-                    <h2 class="series-books-heading">
-                        ${escapeHtml(t("library.book"))}y
-                    </h2>
+                    <div class="series-books-heading-row">
+                        <h2 class="series-books-heading">
+                            ${escapeHtml(t("library.books") || "Tomy")}
+                        </h2>
+                        <div class="series-books-stats">
+                            ${
+                                writingCount
+                                    ? `<span class="stat-writing">${writingCount} ${escapeHtml(t("library.statusWriting") || "w trakcie")}</span>`
+                                    : ""
+                            }
+                            ${
+                                plannedCount
+                                    ? `<span class="stat-planned">${plannedCount} ${escapeHtml(t("library.statusPlanned") || "planowane")}</span>`
+                                    : ""
+                            }
+                        </div>
+                    </div>
 
                     ${renderBooks(books)}
                 </section>
@@ -362,7 +418,7 @@ export async function seriesView(id) {
                 </p>
                 <p>
                     <a href="#/library">
-                        ← ${escapeHtml(t("nav.library"))}
+                        ← ${escapeHtml(t("nav.library") || t("library.title"))}
                     </a>
                 </p>
             </section>
