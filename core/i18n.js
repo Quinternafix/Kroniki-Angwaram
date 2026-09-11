@@ -84,6 +84,7 @@ const translations = {
         "common.noData":
             "Brak danych",
 
+        
         /* LIBRARY */
 
         "library.title":
@@ -103,6 +104,18 @@ const translations = {
 
         "library.seriesNotFound":
             "Nie znaleziono serii.",
+
+        "library.books":
+            "Tomy",
+
+        "library.comingSoon":
+            "Wkrótce",
+
+        "library.statusWriting":
+            "w trakcie",
+
+        "library.statusPlanned":
+            "planowane",
 
         /* PROFILE */
 
@@ -188,15 +201,6 @@ const translations = {
 
         "favorite.remove":
             "★ Usuń z ulubionych",
-
-                /* READER */
-        "reader.contents": "Spis treści",
-        "reader.quotes": "Cytaty",
-        "reader.notes": "Przypisy",
-        "reader.backToBook": "Wróć do książki",
-        "reader.bookNotFound": "Nie znaleziono książki.",
-        "reader.chapterNotFound": "Nie znaleziono rozdziału.",
-        "reader.error": "Wystąpił błąd podczas ładowania rozdziału.",
 
         /* ERRORS */
 
@@ -303,6 +307,7 @@ const translations = {
         "common.noData":
             "No data",
 
+        
         /* LIBRARY */
 
         "library.title":
@@ -322,6 +327,18 @@ const translations = {
 
         "library.seriesNotFound":
             "Series not found.",
+
+        "library.books":
+            "Volumes",
+
+        "library.comingSoon":
+            "Coming soon",
+
+        "library.statusWriting":
+            "in progress",
+
+        "library.statusPlanned":
+            "planned",
 
         /* PROFILE */
 
@@ -407,15 +424,6 @@ const translations = {
 
         "favorite.remove":
             "★ Remove from favorites",
-
-                /* READER */
-        "reader.contents": "Table of Contents",
-        "reader.quotes": "Quotes",
-        "reader.notes": "Notes",
-        "reader.backToBook": "Back to book",
-        "reader.bookNotFound": "Book not found.",
-        "reader.chapterNotFound": "Chapter not found.",
-        "reader.error": "An error occurred while loading the chapter.",
 
         /* ERRORS */
 
@@ -522,6 +530,7 @@ const translations = {
         "common.noData":
             "Sin datos",
 
+        
         /* LIBRARY */
 
         "library.title":
@@ -541,6 +550,18 @@ const translations = {
 
         "library.seriesNotFound":
             "Serie no encontrada.",
+
+        "library.books":
+            "Tomos",
+
+        "library.comingSoon":
+            "Próximamente",
+
+        "library.statusWriting":
+            "en curso",
+
+        "library.statusPlanned":
+            "planificados",
 
         /* PROFILE */
 
@@ -627,15 +648,6 @@ const translations = {
         "favorite.remove":
             "★ Quitar de favoritos",
 
-                /* READER */
-        "reader.contents": "Índice",
-        "reader.quotes": "Citas",
-        "reader.notes": "Notas",
-        "reader.backToBook": "Volver al libro",
-        "reader.bookNotFound": "Libro no encontrado.",
-        "reader.chapterNotFound": "Capítulo no encontrado.",
-        "reader.error": "Ocurrió un error al cargar el capítulo.",
-
         /* ERRORS */
 
         "error.notFoundFile":
@@ -701,28 +713,172 @@ export function localize(item, field) {
         "pl";
 
 
+    /* -----------------------------------------
+       1. Format:
+       translations: {
+           en: {
+               race: "Half-dragon"
+           }
+       }
+    ----------------------------------------- */
+
+    const translated =
+        item.translations
+            ?.[language]
+            ?.[field];
+
+
+    if (
+        translated !== undefined &&
+        translated !== null &&
+        translated !== ""
+    ) {
+
+        return translated;
+    }
+
+
+    /* -----------------------------------------
+       2. Polski fallback
+    ----------------------------------------- */
+
+    const translatedPl =
+        item.translations
+            ?.[fallbackLanguage]
+            ?.[field];
+
+
+    if (
+        translatedPl !== undefined &&
+        translatedPl !== null &&
+        translatedPl !== ""
+    ) {
+
+        return translatedPl;
+    }
+
+
+    /* -----------------------------------------
+       3. Pole jako obiekt językowy
+    ----------------------------------------- */
+
     const value =
         item[field];
 
-    if (value == null) {
+
+    if (
+        value &&
+        typeof value === "object" &&
+        !Array.isArray(value)
+    ) {
+
+        const localizedValue =
+            value[language];
+
+
+        if (
+            localizedValue !== undefined &&
+            localizedValue !== null &&
+            localizedValue !== ""
+        ) {
+
+            return localizedValue;
+        }
+
+
+        const polishValue =
+            value[fallbackLanguage];
+
+
+        if (
+            polishValue !== undefined &&
+            polishValue !== null &&
+            polishValue !== ""
+        ) {
+
+            return polishValue;
+        }
+
+
+        const englishValue =
+            value.en;
+
+
+        if (
+            englishValue !== undefined &&
+            englishValue !== null &&
+            englishValue !== ""
+        ) {
+
+            return englishValue;
+        }
+
+
+        const spanishValue =
+            value.es;
+
+
+        if (
+            spanishValue !== undefined &&
+            spanishValue !== null &&
+            spanishValue !== ""
+        ) {
+
+            return spanishValue;
+        }
+
+    }
+
+
+    /* -----------------------------------------
+       4. Zwykła wartość
+    ----------------------------------------- */
+
+    if (
+        value !== undefined &&
+        value !== null &&
+        value !== ""
+    ) {
+
+        return String(value);
+    }
+
+
+    return "";
+
+}
+
+
+/* =========================================================
+   LOCALIZE VALUE
+========================================================= */
+
+export function localizeValue(value) {
+
+    if (
+        value === undefined ||
+        value === null
+    ) {
+
         return "";
     }
 
-    if (typeof value === "string") {
-        return value;
-    }
 
-    if (typeof value === "object") {
+    if (
+        typeof value === "object" &&
+        !Array.isArray(value)
+    ) {
 
         return (
-            value[language] ??
-            value[fallbackLanguage] ??
+            value[currentLanguage] ??
+            value.pl ??
             value.en ??
-            Object.values(value)[0] ??
+            value.es ??
             ""
         );
 
     }
+
 
     return String(value);
 
@@ -730,7 +886,61 @@ export function localize(item, field) {
 
 
 /* =========================================================
-   USTAWIENIE JĘZYKA
+   APPLY TRANSLATIONS
+========================================================= */
+
+export function applyTranslations() {
+
+    document.documentElement.lang =
+        currentLanguage;
+
+
+    document.title =
+        t("site.title");
+
+
+    document
+        .querySelectorAll("[data-i18n]")
+        .forEach(element => {
+
+            element.textContent =
+                t(element.dataset.i18n);
+
+        });
+
+
+    document
+        .querySelectorAll("[data-i18n-placeholder]")
+        .forEach(element => {
+
+            element.placeholder =
+                t(
+                    element.dataset
+                        .i18nPlaceholder
+                );
+
+        });
+
+
+    document
+        .querySelectorAll("[data-language]")
+        .forEach(button => {
+
+            button.setAttribute(
+                "aria-pressed",
+                String(
+                    button.dataset.language ===
+                    currentLanguage
+                )
+            );
+
+        });
+
+}
+
+
+/* =========================================================
+   SET LANGUAGE
 ========================================================= */
 
 export function setLanguage(language) {
@@ -738,16 +948,31 @@ export function setLanguage(language) {
     if (
         !translations[language]
     ) {
+
         return;
     }
 
+
+    if (
+        language === currentLanguage
+    ) {
+
+        return;
+    }
+
+
     currentLanguage =
         language;
+
 
     localStorage.setItem(
         "language",
         language
     );
+
+
+    applyTranslations();
+
 
     window.dispatchEvent(
         new Event("languagechange")
@@ -757,22 +982,49 @@ export function setLanguage(language) {
 
 
 /* =========================================================
-   INICJALIZACJA
+   INIT I18N
 ========================================================= */
+
+let initialized = false;
+
 
 export function initI18n() {
 
-    const saved =
-        localStorage.getItem("language");
+    if (initialized) {
 
-    if (
-        saved &&
-        translations[saved]
-    ) {
+        applyTranslations();
 
-        currentLanguage =
-            saved;
-
+        return;
     }
+
+
+    initialized = true;
+
+
+    document.addEventListener(
+        "click",
+        event => {
+
+            const button =
+                event.target.closest(
+                    "[data-language]"
+                );
+
+
+            if (!button) {
+
+                return;
+            }
+
+
+            setLanguage(
+                button.dataset.language
+            );
+
+        }
+    );
+
+
+    applyTranslations();
 
 }
