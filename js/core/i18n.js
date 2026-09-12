@@ -159,6 +159,39 @@ const translations = {
         "book.notFound":
             "Nie znaleziono książki.",
 
+        "reader.contents":
+            "Spis treści",
+
+        "reader.quotes":
+            "Cytaty",
+
+        "reader.notes":
+            "Przypisy",
+
+        "reader.backToBook":
+            "Powrót do książki",
+
+        "reader.previous":
+            "Poprzedni",
+
+        "reader.next":
+            "Następny",
+
+        "reader.bookNotFound":
+            "Nie znaleziono książki.",
+
+        "reader.chapterNotFound":
+            "Nie znaleziono rozdziału.",
+
+        "reader.error":
+            "Wystąpił błąd",
+
+        "reader.theme":
+            "Motyw",
+
+        "reader.width":
+            "Szerokość kolumny",
+
         /* PROFILE */
 
         "profile.notFound":
@@ -424,6 +457,39 @@ const translations = {
         "book.notFound":
             "Book not found.",
 
+        "reader.contents":
+            "Contents",
+
+        "reader.quotes":
+            "Quotes",
+
+        "reader.notes":
+            "Notes",
+
+        "reader.backToBook":
+            "Back to book",
+
+        "reader.previous":
+            "Previous",
+
+        "reader.next":
+            "Next",
+
+        "reader.bookNotFound":
+            "Book not found.",
+
+        "reader.chapterNotFound":
+            "Chapter not found.",
+
+        "reader.error":
+            "An error occurred",
+
+        "reader.theme":
+            "Theme",
+
+        "reader.width":
+            "Column width",
+
         /* PROFILE */
 
         "profile.notFound":
@@ -688,6 +754,39 @@ const translations = {
 
         "book.notFound":
             "Libro no encontrado.",
+
+        "reader.contents":
+            "Índice",
+
+        "reader.quotes":
+            "Citas",
+
+        "reader.notes":
+            "Notas",
+
+        "reader.backToBook":
+            "Volver al libro",
+
+        "reader.previous":
+            "Anterior",
+
+        "reader.next":
+            "Siguiente",
+
+        "reader.bookNotFound":
+            "Libro no encontrado.",
+
+        "reader.chapterNotFound":
+            "Capítulo no encontrado.",
+
+        "reader.error":
+            "Se produjo un error",
+
+        "reader.theme":
+            "Tema",
+
+        "reader.width":
+            "Ancho de columna",
 
         /* PROFILE */
 
