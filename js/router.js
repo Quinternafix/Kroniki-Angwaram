@@ -17,7 +17,10 @@ import { timelineView } from "./views/timeline.js";
 import { libraryView } from "./views/library.js";
 import { seriesView } from "./views/series.js";
 import { bookView } from "./views/book.js";
-import { readerView } from "./views/reader.js";
+import {
+    readerView,
+    initReaderPage
+} from "./views/reader.js";
 
 import { notFoundView } from "./views/notfound.js";
 
@@ -185,6 +188,8 @@ export async function router() {
                     book,
                     chapter
                 );
+
+            initReaderPage();
 
             window.scrollTo({
                 top: 0,
