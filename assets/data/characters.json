@@ -24,32 +24,56 @@
   "factionId": "",
   "home": "",
   "homeId": "",
-  "family": [
-    {
-      "name": "Morgath Stormbringer",
-      "relation": "ojciec -"
-    },
-    {
-      "name": "Aurora Stormbringer",
-      "relation": "matka -"
-    },
-    {
-      "name": "Wüld'Dai Stormbringer",
-      "relation": "wujek -"
-    },
-    {
-      "name": "Neorath Stormbringer",
-      "relation": "brat -"
-    },
-    {
-      "name": "Lazarius Stormbringer",
-      "relation": "dziadek -"
-    },
-    {
-      "name": "Shy'Ran Starsage",
-      "relation": "szwagier -"
+"family": [
+  {
+    "name": "Morgath Stormbringer",
+    "relation": {
+      "pl": "ojciec",
+      "en": "father",
+      "es": "padre"
     }
-  ],
+  },
+  {
+    "name": "Aurora Stormbringer",
+    "relation": {
+      "pl": "matka",
+      "en": "mother",
+      "es": "madre"
+    }
+  },
+  {
+    "name": "Wüld'Dai Stormbringer",
+    "relation": {
+      "pl": "wujek",
+      "en": "uncle",
+      "es": "tío"
+    }
+  },
+  {
+    "name": "Neorath Stormbringer",
+    "relation": {
+      "pl": "brat",
+      "en": "brother",
+      "es": "hermano"
+    }
+  },
+  {
+    "name": "Lazarius Stormbringer",
+    "relation": {
+      "pl": "dziadek",
+      "en": "grandfather",
+      "es": "abuelo"
+    }
+  },
+  {
+    "name": "Shy'Ran Starsage",
+    "relation": {
+      "pl": " szwagier",
+      "en": "brother-in-law",
+      "es": "cuñado"
+    }
+  }
+],
   "friends": [],
   "enemies": [],
   "quotes": [],
