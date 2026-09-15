@@ -27,24 +27,27 @@
 "family": [
   {
     "name": "Morgath Stormbringer",
-    "relation": "ojciec"
+    "relation": "ojciec -"
   },
   {
     "name": "Aurora Stormbringer",
-    "relation": "matka"
+    "relation": "matka -"
   },
   {
     "name": "Wüld'Dai Stormbringer",
-    "relation": "wujek"
+    "relation": "wujek -"
   },
   {
     "name": "Neorath Stormbringer",
-    "relation": "brat"
+    "relation": "brat -"
   },
   {
     "name": "Lazarius Stormbringer",
-    "relation": "dziadek"
-  }
+    "relation": "dziadek -"
+  },
+  {
+    "name": "Shy'Ran Starsage",
+    "relation": "szwagier -"
 ],
     "friends": [],
     "enemies": [],
@@ -55,7 +58,7 @@
         "race": "Human",
         "nation": "",
         "rank": "",
-        "status": "",
+        "status": "Alive",
         "birth": "",
         "description": "",
         "faction": "",
@@ -65,7 +68,7 @@
         "title": "",
         "race": "",
         "nation": "",
-        "rank": "",
+        "rank": "Vivo",
         "status": "",
         "birth": "",
         "description": "",
