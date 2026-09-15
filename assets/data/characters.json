@@ -1119,7 +1119,7 @@
     }
   },
   {
-    "id": "morgath",
+    "id": "morgath-stormbringer",
     "name": "Morgath Stormbringer",
     "title": "Nawałnica Selidoru",
     "race": "Półsmok",
@@ -2087,7 +2087,7 @@
     }
   },
   {
-    "id": "wulddai-stormbringer",
+    "id": "wüld'dai-stormbringer",
     "name": "Wüld'Dai Stormbringer",
     "title": "",
     "race": "",
