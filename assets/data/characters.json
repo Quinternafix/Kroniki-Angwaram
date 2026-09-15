@@ -24,12 +24,27 @@
     "factionId": "",
     "home": "",
     "homeId": "",
-    "family": [
-      "Morgath Stormbringer",
-      "Aurora Stormbringer",
-      "Wüld'Dai Stormbringer",
-      "Neorath Stormbringer"
-    ],
+"family": [
+  {
+    "name": "Morgath Stormbringer",
+    "relation": "ojciec"
+  },
+  {
+    "name": "Aurora Stormbringer",
+    "relation": "matka"
+  },
+  {
+    "name": "Wüld'Dai Stormbringer",
+    "relation": "wujek"
+  },
+  {
+    "name": "Neorath Stormbringer",
+    "relation": "brat"
+  },
+  {
+    "name": "Lazarius Stormbringer",
+    "relation": "dziadek"
+]
     "friends": [],
     "enemies": [],
     "quotes": [],
