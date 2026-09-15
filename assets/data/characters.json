@@ -27,7 +27,7 @@
     "family": [
       "Morgath Stormbringer",
       "Aurora Stormbringer",
-      "wülddai-stormbringer",
+      "Wüld'Dai Stormbringer",
       "Neorath Stormbringer"
     ],
     "friends": [],
@@ -2087,7 +2087,7 @@
     }
   },
   {
-    "id": "wülddai-stormbringer",
+    "id": "wuld-dai-stormbringer",
     "name": "Wüld'Dai Stormbringer",
     "title": "",
     "race": "",
