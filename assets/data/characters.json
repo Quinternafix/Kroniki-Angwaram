@@ -1,83 +1,82 @@
-[
-  {
-    "id": "araya-stormbringer",
-    "name": "Araya Stormbringer",
-    "title": "",
-    "race": "Człowiek",
-    "nation": "Selidor",
-    "rank": "",
-    "status": "Żyje",
-    "birth": "",
-    "image": "assets/characters/araya-stormbringer.png",
-    "portraits": [
-      {
-        "title": {
-          "pl": "Obecnie",
-          "en": "Present",
-          "es": "Actualidad"
-        },
-        "image": "assets/characters/araya-stormbringer.png"
-      }
-    ],
-    "description": "",
-    "faction": "",
-    "factionId": "",
-    "home": "",
-    "homeId": "",
-"family": [
-  {
-    "name": "Morgath Stormbringer",
-    "relation": "ojciec -"
-  },
-  {
-    "name": "Aurora Stormbringer",
-    "relation": "matka -"
-  },
-  {
-    "name": "Wüld'Dai Stormbringer",
-    "relation": "wujek -"
-  },
-  {
-    "name": "Neorath Stormbringer",
-    "relation": "brat -"
-  },
-  {
-    "name": "Lazarius Stormbringer",
-    "relation": "dziadek -"
-  },
-  {
-    "name": "Shy'Ran Starsage",
-    "relation": "szwagier -"
-],
-  }
-    "friends": [],
-    "enemies": [],
-    "quotes": [],
-    "translations": {
-      "en": {
-        "title": "",
-        "race": "Human",
-        "nation": "",
-        "rank": "",
-        "status": "Alive",
-        "birth": "",
-        "description": "",
-        "faction": "",
-        "home": ""
+{
+  "id": "araya-stormbringer",
+  "name": "Araya Stormbringer",
+  "title": "",
+  "race": "Człowiek",
+  "nation": "Selidor",
+  "rank": "",
+  "status": "Żyje",
+  "birth": "",
+  "image": "assets/characters/araya-stormbringer.png",
+  "portraits": [
+    {
+      "title": {
+        "pl": "Obecnie",
+        "en": "Present",
+        "es": "Actualidad"
       },
-      "es": {
-        "title": "",
-        "race": "",
-        "nation": "",
-        "rank": "Vivo",
-        "status": "",
-        "birth": "",
-        "description": "",
-        "faction": "",
-        "home": ""
-      }
+      "image": "assets/characters/araya-stormbringer.png"
     }
-  },
+  ],
+  "description": "",
+  "faction": "",
+  "factionId": "",
+  "home": "",
+  "homeId": "",
+  "family": [
+    {
+      "name": "Morgath Stormbringer",
+      "relation": "ojciec -"
+    },
+    {
+      "name": "Aurora Stormbringer",
+      "relation": "matka -"
+    },
+    {
+      "name": "Wüld'Dai Stormbringer",
+      "relation": "wujek -"
+    },
+    {
+      "name": "Neorath Stormbringer",
+      "relation": "brat -"
+    },
+    {
+      "name": "Lazarius Stormbringer",
+      "relation": "dziadek -"
+    },
+    {
+      "name": "Shy'Ran Starsage",
+      "relation": "szwagier -"
+    }
+  ],
+  "friends": [],
+  "enemies": [],
+  "quotes": [],
+  "translations": {
+    "en": {
+      "title": "",
+      "race": "Human",
+      "nation": "",
+      "rank": "",
+      "status": "Alive",
+      "birth": "",
+      "description": "",
+      "faction": "",
+      "home": ""
+    },
+    "es": {
+      "title": "",
+      "race": "",
+      "nation": "",
+      "rank": "",
+      "status": "Vivo",
+      "birth": "",
+      "description": "",
+      "faction": "",
+      "home": ""
+    }
+  }
+}
   {
     "id": "aurora-stormbringer",
     "name": "Aurora Stormbringer",
