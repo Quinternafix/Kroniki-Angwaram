@@ -233,11 +233,8 @@ const translations = {
         "profile.home":
             "Miejsce zamieszkania",
 
-        "profile.parents":
-            "Rodzice",
-
-        "profile.siblings":
-            "Rodzeństwo",
+        "profile.family":
+            "Rodzina",
 
         "profile.gallery":
             "Galeria",
@@ -531,11 +528,8 @@ const translations = {
         "profile.home":
             "Residence",
 
-        "profile.parents":
-            "Parents",
-
-        "profile.siblings":
-            "Siblings",
+        "profile.family":
+            "Family",
 
         "profile.gallery":
             "Gallery",
@@ -829,11 +823,8 @@ const translations = {
         "profile.home":
             "Residencia",
 
-        "profile.parents":
-            "Padres",
-
-        "profile.siblings":
-            "Hermanos",
+        "profile.family":
+            "Familia",
 
         "profile.gallery":
             "Galería",
