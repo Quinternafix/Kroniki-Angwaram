@@ -604,14 +604,16 @@ export async function profileView(id) {
 
 
                     ${renderRelations(
-                        "profile.parents",
-                        character.parents || []
-                    )}
-
-
-                    ${renderRelations(
-                        "profile.siblings",
-                        character.siblings || []
+                        "profile.family",
+                        character.family ||
+                        [
+                            ...(Array.isArray(character.parents)
+                                ? character.parents
+                                : []),
+                            ...(Array.isArray(character.siblings)
+                                ? character.siblings
+                                : [])
+                        ]
                     )}
 
 
