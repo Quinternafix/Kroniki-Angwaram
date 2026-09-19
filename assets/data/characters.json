@@ -24,7 +24,7 @@
   "factionId": "",
   "home": "Selidor",
   "homeId": "",
-"family": [
+  "family": [
   {
     "name": "Morgath Stormbringer",
     "relation": {
@@ -74,7 +74,10 @@
     }
   }
 ],
-  "friends": [],
+  "friends": [
+    "Rykan",
+    "Kioth",
+  ],
   "enemies": [],
   "quotes": [],
   "translations": {
@@ -85,7 +88,7 @@
       "rank": "",
       "status": "Alive",
       "birth": "",
-      "description": "",
+      "description": "Araya is the firstborn daughter of Morgath and Aurora, the sister of Neorath, and the potential future Archmage of Selidor. Unlike her father, she tries to keep up with the modern times in many regards.",
       "faction": "",
       "home": ""
     },
@@ -96,7 +99,7 @@
       "rank": "",
       "status": "Vivo",
       "birth": "",
-      "description": "",
+      "description": "Araya es la hija mayor de Morgath y Aurora, hermana de Neorath y la posible futura archimaga de Selidor. A diferencia de su padre, intenta adaptarse a los nuevos tiempos en muchos aspectos.",
       "faction": "",
       "home": ""
     }
