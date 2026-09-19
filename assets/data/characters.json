@@ -192,7 +192,7 @@
         "image": "assets/characters/avon-young.png"
       }
     ],
-    "description": "Avon jest jedynym półsmokiem w państwie rządzonym przez kotowatych. Jego dołączenie do sił Popielnej Marchii stało się ostatnim czynnikiem, który doprowadził do wybuchu wojny domowej w mieście, również stał się znaczącym graczem w rozwiązaniu wspomnianego konfliktu.",
+    "description": "Syn niewolników, urodzony w kopalniach księżycowego srebra. Jako nastolatek brał udział w powstaniu przeciwko elfom, które zajmowały potrzebną kopalnię, lecz jako jedyny przeżył krwawą rewolucję i wydostał się z niewoli. Avon jest jedynym półsmokiem w państwie rządzonym przez kotowatych. Jego dołączenie do sił Popielnej Marchii stało się ostatnim czynnikiem, który doprowadził do wybuchu wojny domowej w mieście, również stał się znaczącym graczem w rozwiązaniu wspomnianego konfliktu.",
     "faction": "Gwardia Popielnej Marchii",
     "factionId": "gwardia-popielnej-marchii",
     "home": "Popielna Marchia",
@@ -213,7 +213,7 @@
         "rank": "Guard of the Ashen March",
         "status": "Alive",
         "birth": "November 11",
-        "description": "Avon is the only half-dragon in a country ruled by felines. His joining the forces of the Ash March was the final factor that led to the outbreak of civil war in the city, and he also became a key player in resolving that conflict.",
+        "description": "The son of slaves, born in the lunar silver mines. As a teenager, he took part in an uprising against the elves who had occupied the mine they needed, but he was the only one to survive the bloody revolution and escape captivity. Avon is the only half-dragon in a country ruled by felines. His joining the forces of the Ash March was the final factor that led to the outbreak of civil war in the city, and he also became a key player in resolving that conflict.",
         "faction": "Guard of the Ashen March",
         "home": "Ashen March",
         "quotes": [
@@ -227,7 +227,7 @@
         "rank": "Guardia de la Marca Cenicienta",
         "status": "Vivo",
         "birth": "11 de noviembre",
-        "description": "Avon es el único semidragón de un país gobernado por felinos. Su incorporación a las fuerzas de la Marcha de las Cenizas fue el factor decisivo que provocó el estallido de la guerra civil en la ciudad, y también se convirtió en una figura clave para resolver ese conflicto.",
+        "description": "Hijo de esclavos, nació en las minas de plata lunar. De adolescente, participó en un levantamiento contra los elfos que habían ocupado la mina que ellos necesitaban, pero fue el único que sobrevivió a la sangrienta revolución y logró escapar del cautiverio. Avon es el único semidragón de un país gobernado por felinos. Su incorporación a las fuerzas de la Marcha de las Cenizas fue el factor decisivo que provocó el estallido de la guerra civil en la ciudad, y también se convirtió en una figura clave para resolver ese conflicto.",
         "faction": "Guardia de la Marca Cenicienta",
         "home": "Marca Cenicienta",
         "quotes": [
