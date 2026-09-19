@@ -200,15 +200,16 @@
     "factionId": "gwardia-popielnej-marchii",
     "home": "Popielna Marchia",
     "homeId": "popielna-marchia",
-    "family": [
-    {
-      "Name": "Viirtuz",
-      "relation": {
-        "pl": "Mąż",
-        "en": "husband",
-        "es": "marido"
-      
-    ],
+   "family": [
+  {
+    "name": "Viirtuz",
+    "relation": {
+      "pl": "Mąż",
+      "en": "husband",
+      "es": "marido"
+    }
+  }
+],
     "friends": [
       "Neorath Stormbringer",
       "Ralakosh Witvuur",
