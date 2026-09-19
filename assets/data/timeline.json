@@ -49,16 +49,32 @@
     ],
     "factions": []
   },
-  {
+{
     "type": "story",
     "id": "angwaramskie-dzieje-tom-1",
     "year": "14XX",
     "date": "Wiek XV",
     "title": {
-      "pl": 
-      "en":
-      "es":
-    
+      "pl": "Requiem Czarnego Słońca",
+      "en": "Requiem of the Black Sun",
+      "es": "Réquiem del Sol Negro"
+    },
+    "author": "",
+    "cover": "",
+    "summary": {
+      "pl": "",
+      "en": "",
+      "es": ""
+    },
+    "content": {
+      "pl": "",
+      "en": "",
+      "es": ""
+    },
+    "characters": [],
+    "locations": [],
+    "factions": []
+  }, 
   {
     "type": "story",
     "id": "synowie-burzy",
