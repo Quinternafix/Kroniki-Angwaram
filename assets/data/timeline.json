@@ -59,12 +59,12 @@
       "en": "Requiem of the Black Sun",
       "es": "Réquiem del Sol Negro"
     },
-    "author": "",
-    "cover": "",
+    "author": "Quint Blackwood",
+    "cover": "assets/books/covers/czarne-slonce.jpg",
     "summary": {
-      "pl": "",
-      "en": "",
-      "es": ""
+      "pl": "Pierwszy tom Cyklu Angwaramskich Dziejów.",
+      "en": "The first volume of the Angwaram Chronicles.",
+      "es": "El primer tomo de las Crónicas de Angwaram."
     },
     "content": {
       "pl": "",
@@ -140,81 +140,4 @@
     "locations": [],
     "factions": []
   }
-]      "en": "",
-      "es": ""
-    },
-    "content": {
-      "pl": "",
-      "en": "",
-      "es": ""
-    },
-    "characters": [],
-    "locations": [],
-    "factions": []
-  }, 
-  {
-    "type": "story",
-    "id": "synowie-burzy",
-    "year": 1723,
-    "date": "9 Wrzesień 1723",
-    "title": {
-      "pl": "Synowie burzy",
-      "en": "Sons of the Storm",
-      "es": "Hijos de la Tormenta"
-    },
-    "author": "Quint Blackwood",
-    "cover": "assets/stories/synowie-burzy.png",
-    "summary": {
-      "pl": "Wygnany mag Morgath Stormbringer, pozbawiony mocy i naznaczony piętnem zdrady, wyrusza na polowanie na elfiego królobójcę Vesha Goldcrowna — jedynego, który zna prawdę o jego upadku — lecz im bliżej prawdy Morgath się znajduje, tym bardziej jego własna przeszłość zaczyna go pożerać, grożąc, że odbierze mu nie tylko magię, ale i duszę.",
-      "en": "The exiled mage Morgath Stormbringer, stripped of his powers and branded a traitor, sets out to hunt down the elven regicide Vesh Goldcrown—the only one who knows the truth about his downfall — but the closer Morgath gets to the truth, the more his own past begins to consume him, threatening to rob him not only of his magic but also of his soul.",
-      "es": "El mago exiliado Morgath Stormbringer, despojado de sus poderes y tachado de traidor, se lanza a la caza del regicida élfico Vesh Goldcrown —el único que conoce la verdad sobre su caída—, pero cuanto más se acerca Morgath a la verdad, más le va consumiendo su propio pasado, amenazando con arrebatarle no solo su magia, sino también su alma."
-    },
-    "content": {
-      "pl": "Pierwszy akapit opowiadania...\n\nDrugi akapit opowiadania...",
-      "en": "The first paragraph of the story...\n\nThe second paragraph of the story...",
-      "es": "El primer párrafo del relato...\n\nEl segundo párrafo del relato..."
-    },
-    "characters": [
-      "Morgath Stormbringer",
-      "Aurora Stormbringer",
-      "Wuld'Dai Stormbringer",
-      "Kharot",
-      "Quint",
-      "Kioth",
-      "Vesz Goldcrown"
-    ],
-    "locations": [
-      "Selidor",
-      "Isinglano"
-    ],
-    "factions": []
-  },
-{
-  "type": "story",
-  "id": "wędrowcy-świtu-biała-dusza",
-  "year": 1753,
-  "date": "Zima 1753",
-  "title": {
-    "pl": "Wędrowcy Świtu: Biała Dusza",
-    "en": "Dawnwalkers: White Soul",
-    "es": "Dawnwalkers: Alma Blanca"
-  },
-  "author": "Quint Blackwood",
-  "cover": "assets/stories/Wędrowcy-Świtu.png",
-  "summary": {
-    "pl": "Krótki opis opowiadania.",
-    "en": "A short story summary.",
-    "es": "Un breve resumen del relato."
-  },
-  "content": {
-    "pl": "Pierwszy akapit opowiadania...\n\nDrugi akapit opowiadania...",
-    "en": "The first paragraph of the story...\n\nThe second paragraph of the story...",
-    "es": "El primer párrafo del relato...\n\nEl segundo párrafo del relato..."
-  },
-  "characters": [
-    "Morgath Stormbringer"
-  ],
-  "locations": [],
-  "factions": []
-}
 ]
