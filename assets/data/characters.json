@@ -1650,22 +1650,40 @@
     "factionId": "ocalale-smoki",
     "home": "Brak",
     "homeId": "brak",
-   "family": [
+"family": [
   {
     "name": "Thyrvon",
     "relation": {
       "pl": "Ojciec",
       "en": "Father",
-      "es":
+      "es": "Padre"
     }
   },
-     {
-       "name": "Kioth",
-       "relation": {
-         "pl": "Syn",
-         "en": "Son",
-         "es": "Hijo"
-    ],
+  {
+    "name": "Kioth",
+    "relation": {
+      "pl": "Syn",
+      "en": "Son",
+      "es": "Hijo"
+    }
+  },
+  {
+    "name": "Liliana",
+    "relation": {
+      "pl": "Córka",
+      "en": "Daughter",
+      "es": "Hija"
+    }
+  },
+  {
+    "name": "Miritena",
+    "relation": {
+      "pl": "Partnerka",
+      "en": "Partner",
+      "es": "Pareja"
+    }
+  }
+],
     "friends": [
       "Kharot"
     ],
