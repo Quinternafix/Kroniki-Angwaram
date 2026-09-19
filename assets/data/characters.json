@@ -19,10 +19,10 @@
       "image": "assets/characters/araya-stormbringer.png"
     }
   ],
-  "description": "Araya jest pierworodną Morgatha i Aurory, siostrą Neoratha oraz potencjalnym przyszłym Arcymagiem Selidoru.",
+  "description": "Araya jest pierworodną Morgatha i Aurory, siostrą Neoratha oraz potencjalnym przyszłym Arcymagiem Selidoru. W odróżnieniu od swojego ojca, stara się podążać współczesnymi czasami w wielu kwestiach.",
   "faction": "",
   "factionId": "",
-  "home": "",
+  "home": "Selidor",
   "homeId": "",
 "family": [
   {
