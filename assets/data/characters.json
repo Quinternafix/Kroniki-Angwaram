@@ -68,7 +68,7 @@
   {
     "name": "Shy'Ran Starsage",
     "relation": {
-      "pl": " szwagier",
+      "pl": "szwagier",
       "en": "brother-in-law",
       "es": "cuñado"
     }
@@ -200,9 +200,20 @@
     "factionId": "gwardia-popielnej-marchii",
     "home": "Popielna Marchia",
     "homeId": "popielna-marchia",
-    "family": [],
+    "family": [
+    {
+      "Name": "Viirtuz",
+      "relation": {
+        "pl": "Mąż",
+        "en": "husband",
+        "es": "marido"
+      
+    ],
     "friends": [
-      "Neorath Stormbringer"
+      "Neorath Stormbringer",
+      "Ralakosh Witvuur",
+      "Kioth",
+      "Morgath"
     ],
     "enemies": [],
     "quotes": [
