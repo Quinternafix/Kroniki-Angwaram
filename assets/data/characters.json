@@ -1907,14 +1907,15 @@
         "image": "assets/characters/rykan.png"
       }
     ],
-    "description": "Rykan podlega Ferrińskiemu Kręgowi Druidów, działając jako pojedyncza jednostka.",
+    "description": "Rykan podlega Ferrińskiemu Kręgowi Druidów, działając jako pojedyncza jednostka. Chce zaciągnąć Kiotha do łóżka.",
     "faction": "Ferriński Krąg Druidów",
     "factionId": "ferrinski-krag-druidow",
     "home": "Ferrins",
     "homeId": "ferrins",
     "family": [],
     "friends": [
-      "Neorath Stormbringer"
+      "Neorath Stormbringer",
+      "Kioth",
     ],
     "enemies": [],
     "quotes": [
@@ -1928,7 +1929,7 @@
         "rank": "Messenger of Ferrins",
         "status": "Alive",
         "birth": "April 3, 1687",
-        "description": "Rykan serves the Ferrins Druid Circle while operating as an independent envoy.",
+        "description": "Rykan is under the authority of the Ferrin Circle of Druids, operating as an independent entity. He wants to get Kioth into bed.",
         "faction": "Ferrins Druid Circle",
         "home": "Ferrins",
         "quotes": [
@@ -1942,7 +1943,7 @@
         "rank": "Mensajero de Ferrins",
         "status": "Vivo",
         "birth": "3 de abril de 1687",
-        "description": "Rykan sirve al Círculo de Druidas de Ferrins mientras actúa como emisario independiente.",
+        "description": "Rykan está bajo la autoridad del Círculo de Druidas de Ferrin, aunque actúa como una entidad independiente. Quiere llevarse a Kioth a la cama...",
         "faction": "Círculo de Druidas de Ferrins",
         "home": "Ferrins",
         "quotes": [
