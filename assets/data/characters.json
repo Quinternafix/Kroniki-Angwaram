@@ -1650,9 +1650,21 @@
     "factionId": "ocalale-smoki",
     "home": "Brak",
     "homeId": "brak",
-    "family": [
-      "Thyrvon",
-      "Nieznana Matka"
+   "family": [
+  {
+    "name": "Thyrvon",
+    "relation": {
+      "pl": "Ojciec",
+      "en": "Father",
+      "es":
+    }
+  },
+     {
+       "name": "Kioth",
+       "relation": {
+         "pl": "Syn",
+         "en": "Son",
+         "es": "Hijo"
     ],
     "friends": [
       "Kharot"
