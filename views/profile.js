@@ -171,20 +171,16 @@ function resolveCharacterId(item, characters) {
 
     const list = Array.isArray(characters) ? characters : [];
 
-    // 1. Exact id
     let match = list.find(c => c.id === raw);
     if (match) return match.id;
 
-    // 2. Exact name
     match = list.find(c => c.name === raw);
     if (match) return match.id;
 
-    // 3. Case-insensitive name
     const rawLower = raw.toLowerCase();
     match = list.find(c => String(c.name || "").toLowerCase() === rawLower);
     if (match) return match.id;
 
-    // 4. Slug match
     const itemSlug = slugify(raw);
     match = list.find(c => slugify(c.id) === itemSlug || slugify(c.name) === itemSlug);
     if (match) return match.id;
@@ -193,9 +189,6 @@ function resolveCharacterId(item, characters) {
 }
 
 
-/**
- * Tłumaczenia relacji rodzinnych
- */
 const RELATION_TRANSLATIONS = {
     "ojciec":               { pl: "ojciec",               en: "father",          es: "padre" },
     "matka":                { pl: "matka",                en: "mother",          es: "madre" },
@@ -227,13 +220,11 @@ const RELATION_TRANSLATIONS = {
 function getRelationLabel(relation) {
     if (!relation) return "";
 
-    // Jeśli relation jest obiektem z tłumaczeniami
     if (typeof relation === "object" && !Array.isArray(relation)) {
         const lang = getLanguage();
         return relation[lang] || relation.pl || relation.en || Object.values(relation)[0] || "";
     }
 
-    // Jeśli to string – szukamy w mapie tłumaczeń
     const key = String(relation).toLowerCase().trim();
     const translations = RELATION_TRANSLATIONS[key];
 
@@ -242,7 +233,6 @@ function getRelationLabel(relation) {
         return translations[lang] || translations.pl || relation;
     }
 
-    // Fallback – zwracamy oryginalny tekst
     return String(relation);
 }
 
@@ -302,7 +292,6 @@ export async function profileView(id) {
         `;
     }
 
-    // Zlokalizowana nazwa – używana wszędzie
     const displayName = localize(character, "name") || character.name || "";
 
     const favorites = getFavorites();
@@ -347,11 +336,94 @@ export async function profileView(id) {
 
                     ${renderInfoBox(character, displayName)}
 
-                    ${renderRelations("profile.family", character.family, characters)}
+                    ${renderRelations(
+                        "profile.family",
+                        character.family || [
+                            ...(Array.isArray(character.parents) ? character.parents : []),
+                            ...(Array.isArray(character.siblings) ? character.siblings : [])
+                        ],
+                        characters
+                    )}
+
                     ${renderRelations("profile.friends", character.friends, characters)}
                     ${renderRelations("profile.enemies", character.enemies, characters)}
+
+                    ${
+                        Array.isArray(character.quotes) && character.quotes.length
+                            ? `
+                                <section class="related">
+                                    <h2>${escapeHtml(t("profile.quotes"))}</h2>
+                                    <ul>
+                                        ${character.quotes.map((quote, index) => {
+                                            const translated = character.translations?.[getLanguage()]?.quotes?.[index];
+                                            const text = translated || quote;
+                                            return `<li><em>„${escapeHtml(text)}”</em></li>`;
+                                        }).join("")}
+                                    </ul>
+                                </section>
+                            `
+                            : ""
+                    }
+
+                    <section class="related">
+                        <h2>${escapeHtml(t("profile.related"))}</h2>
+                        <ul>
+                            ${homeName ? `
+                                <li>
+                                    <a href="#/places/${escapeHtml(homeId)}">${escapeHtml(homeName)}</a>
+                                </li>
+                            ` : ""}
+                            ${factionName ? `
+                                <li>
+                                    <a href="#/factions/${escapeHtml(factionId)}">${escapeHtml(factionName)}</a>
+                                </li>
+                            ` : ""}
+                        </ul>
+                    </section>
                 </main>
             </div>
         </section>
     `;
+}
+
+
+export function initProfilePage() {
+    const image = document.getElementById("portraitImage");
+    const title = document.getElementById("portraitTitle");
+
+    document.querySelectorAll(".portrait-thumb").forEach(button => {
+        button.onclick = () => {
+            if (image) {
+                image.src = button.dataset.image || "";
+            }
+            if (title) {
+                title.textContent = button.dataset.title || "";
+            }
+
+            document.querySelectorAll(".portrait-thumb").forEach(thumbnail => {
+                thumbnail.classList.remove("active");
+            });
+
+            button.classList.add("active");
+        };
+    });
+
+    const favoriteButton = document.getElementById("favoriteButton");
+
+    if (favoriteButton) {
+        favoriteButton.onclick = () => {
+            const id = favoriteButton.dataset.id;
+            let favorites = getFavorites();
+
+            if (favorites.includes(id)) {
+                favorites = favorites.filter(fav => fav !== id);
+                favoriteButton.textContent = t("favorite.add");
+            } else {
+                favorites.push(id);
+                favoriteButton.textContent = t("favorite.remove");
+            }
+
+            saveFavorites(favorites);
+        };
+    }
 }
