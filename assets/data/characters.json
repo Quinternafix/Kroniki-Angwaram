@@ -280,30 +280,32 @@
     "friends": [],
     "enemies": [],
     "quotes": [],
-    "translations": {
-      "en": {
-        "title": "",
-        "race": "dwarf",
-        "nation": "",
-        "rank": "",
-        "status": "",
-        "birth": "",
-        "description": "",
-        "faction": "",
-        "home": ""
-      },
-      "es": {
-        "title": "",
-        "race": "enano",
-        "nation": "",
-        "rank": "",
-        "status": "",
-        "birth": "",
-        "description": "",
-        "faction": "",
-        "home": ""
-      }
-    }
+"translations": {
+  "en": {
+    "name": "Balgrad Copperbeard",
+    "title": "",
+    "race": "Dwarf",
+    "nation": "",
+    "rank": "Captain",
+    "status": "Alive",
+    "birth": "",
+    "description": "",
+    "faction": "",
+    "home": ""
+  },
+  "es": {
+    "name": "Balgrad Barbacobre",
+    "title": "",
+    "race": "Enano",
+    "nation": "",
+    "rank": "Capitán",
+    "status": "Vivo",
+    "birth": "",
+    "description": "",
+    "faction": "",
+    "home": ""
+  }
+}
   },
   {
     "id": "barangar",
@@ -442,30 +444,33 @@
     "friends": [],
     "enemies": [],
     "quotes": [],
-    "translations": {
-      "en": {
-        "title": "",
-        "race": "",
-        "nation": "",
-        "rank": "",
-        "status": "",
-        "birth": "",
-        "description": "",
-        "faction": "",
-        "home": ""
-      },
-      "es": {
-        "title": "",
-        "race": "",
-        "nation": "",
-        "rank": "",
-        "status": "",
-        "birth": "",
-        "description": "",
-        "faction": "",
-        "home": ""
-      }
-    }
+// === czerwony-pielgrzym ===
+"translations": {
+  "en": {
+    "name": "The Red Pilgrim",
+    "title": "",
+    "race": "",
+    "nation": "",
+    "rank": "",
+    "status": "",
+    "birth": "",
+    "description": "",
+    "faction": "",
+    "home": ""
+  },
+  "es": {
+    "name": "El Peregrino Rojo",
+    "title": "",
+    "race": "",
+    "nation": "",
+    "rank": "",
+    "status": "",
+    "birth": "",
+    "description": "",
+    "faction": "",
+    "home": ""
+  }
+}
   },
   {
     "id": "elias-hantosh",
@@ -1484,30 +1489,32 @@
     "friends": [],
     "enemies": [],
     "quotes": [],
-    "translations": {
-      "en": {
-        "title": "",
-        "race": "",
-        "nation": "",
-        "rank": "",
-        "status": "",
-        "birth": "",
-        "description": "",
-        "faction": "",
-        "home": ""
-      },
-      "es": {
-        "title": "",
-        "race": "",
-        "nation": "",
-        "rank": "",
-        "status": "",
-        "birth": "",
-        "description": "",
-        "faction": "",
-        "home": ""
-      }
-    }
+ "translations": {
+  "en": {
+    "name": "The Blue Pilgrim",
+    "title": "",
+    "race": "",
+    "nation": "",
+    "rank": "",
+    "status": "",
+    "birth": "",
+    "description": "",
+    "faction": "",
+    "home": ""
+  },
+  "es": {
+    "name": "El Peregrino Azul",
+    "title": "",
+    "race": "",
+    "nation": "",
+    "rank": "",
+    "status": "",
+    "birth": "",
+    "description": "",
+    "faction": "",
+    "home": ""
+  }
+}
   },
   {
     "id": "okami",
