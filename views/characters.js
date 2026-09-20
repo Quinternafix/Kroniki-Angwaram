@@ -222,7 +222,6 @@ function initCharacterFilters() {
     const sortSelect = document.getElementById("filter-sort");
 
     function applyFilters() {
-        // Po wyjściu ze strony siatka jest już poza DOM – nic nie rób
         if (!document.body.contains(grid)) {
             return;
         }
@@ -275,7 +274,6 @@ function initCharacterFilters() {
             return show;
         });
 
-        // Sortowanie
         visible.sort((a, b) => {
             if (sort === "favorite") {
                 const favDiff =
@@ -317,7 +315,6 @@ function initCharacterFilters() {
         }
     });
 
-    // Odpięcie poprzedniego handlera – bez wycieków przy wielokrotnym wejściu na stronę
     if (charactersSearchHandler) {
         window.removeEventListener("search-updated", charactersSearchHandler);
     }
@@ -347,16 +344,12 @@ export async function charactersView() {
         characters.map(c => localize(c, "status"))
     );
 
-    // sortowanie początkowe A-Z (po zlokalizowanej nazwie)
     const sorted = [...characters].sort((a, b) => {
         const nameA = localize(a, "name") || a.name || "";
         const nameB = localize(b, "name") || b.name || "";
         return String(nameA).localeCompare(String(nameB), getLanguage());
     });
 
-    // WAŻNE: nie używać queueMicrotask – odpala się PRZED
-    // app.innerHTML = ... w routerze, więc .character-grid jeszcze nie istnieje.
-    // setTimeout(0) wchodzi w kolejkę makrozadań i działa dopiero po wstawieniu HTML.
     setTimeout(() => {
         initCharacterFilters();
     }, 0);
