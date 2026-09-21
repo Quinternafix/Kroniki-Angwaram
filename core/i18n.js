@@ -30,6 +30,32 @@ const translations = {
 
         "characters.title":
             "Postacie",
+        "characters.count":
+            "{n} postaci",
+        "characters.found":
+            "Znaleziono {n} z {total}",
+        "characters.filter.race":
+            "Rasa",
+        "characters.filter.faction":
+            "Frakcja",
+        "characters.filter.status":
+            "Status",
+        "characters.filter.favorite":
+            "Ulubione",
+        "characters.filter.sort":
+            "Sortuj",
+        "characters.filter.all":
+            "Wszystkie",
+        "characters.filter.favoritesOnly":
+            "Tylko ulubione",
+        "characters.filter.sortAZ":
+            "A–Z",
+        "characters.filter.sortZA":
+            "Z–A",
+        "characters.filter.sortFavorite":
+            "Ulubione najpierw",
+        "characters.favoriteTitle":
+            "Ulubione",
 
         /* FACTIONS */
 
@@ -325,6 +351,32 @@ const translations = {
 
         "characters.title":
             "Characters",
+        "characters.count":
+            "{n} characters",
+        "characters.found":
+            "Found {n} of {total}",
+        "characters.filter.race":
+            "Race",
+        "characters.filter.faction":
+            "Faction",
+        "characters.filter.status":
+            "Status",
+        "characters.filter.favorite":
+            "Favorites",
+        "characters.filter.sort":
+            "Sort",
+        "characters.filter.all":
+            "All",
+        "characters.filter.favoritesOnly":
+            "Favorites only",
+        "characters.filter.sortAZ":
+            "A–Z",
+        "characters.filter.sortZA":
+            "Z–A",
+        "characters.filter.sortFavorite":
+            "Favorites first",
+        "characters.favoriteTitle":
+            "Favorite",
 
         /* FACTIONS */
 
@@ -620,6 +672,32 @@ const translations = {
 
         "characters.title":
             "Personajes",
+        "characters.count":
+            "{n} personajes",
+        "characters.found":
+            "Se encontraron {n} de {total}",
+        "characters.filter.race":
+            "Raza",
+        "characters.filter.faction":
+            "Facción",
+        "characters.filter.status":
+            "Estado",
+        "characters.filter.favorite":
+            "Favoritos",
+        "characters.filter.sort":
+            "Ordenar",
+        "characters.filter.all":
+            "Todos",
+        "characters.filter.favoritesOnly":
+            "Solo favoritos",
+        "characters.filter.sortAZ":
+            "A–Z",
+        "characters.filter.sortZA":
+            "Z–A",
+        "characters.filter.sortFavorite":
+            "Favoritos primero",
+        "characters.favoriteTitle":
+            "Favorito",
 
         /* FACTIONS */
 
@@ -637,7 +715,7 @@ const translations = {
             "Historia",
 
         "timeline.description":
-            "Una cronología de los acontecimientos más importantes de la historia de Angwaram.",
+            "Una cronología de los eventos más importantes en la historia de Angwaram.",
 
         "timeline.empty":
             "No hay eventos para mostrar.",
@@ -646,10 +724,10 @@ const translations = {
             "Evento",
 
         "timeline.story":
-            "Relato",
+            "Historia",
 
         "timeline.readStory":
-            "Leer relato",
+            "Leer historia",
 
         "timeline.characters":
             "Personajes",
@@ -681,7 +759,7 @@ const translations = {
             "Biblioteca",
 
         "library.featured":
-            "Destacado",
+            "Destacados",
 
         "library.openSeries":
             "Abrir serie",
@@ -690,7 +768,7 @@ const translations = {
             "Abrir libro",
 
         "library.book":
-            "Libro",
+            "Tomo",
 
         "library.seriesNotFound":
             "Serie no encontrada.",
@@ -702,16 +780,16 @@ const translations = {
             "Próximamente",
 
         "library.statusWriting":
-            "en curso",
+            "en progreso",
 
         "library.statusPlanned":
-            "planificados",
+            "planificado",
 
         "library.status.planned":
             "Planificado",
 
         "library.status.writing":
-            "En escritura",
+            "Escribiendo",
 
         "library.status.editing":
             "Edición",
@@ -750,7 +828,7 @@ const translations = {
             "Libro no encontrado.",
 
         "reader.contents":
-            "Índice",
+            "Contenido",
 
         "reader.quotes":
             "Citas",
@@ -774,7 +852,7 @@ const translations = {
             "Capítulo no encontrado.",
 
         "reader.error":
-            "Se produjo un error",
+            "Ocurrió un error",
 
         "reader.theme":
             "Tema",
@@ -869,12 +947,11 @@ const translations = {
         "error.notFoundFile":
             "Archivo no encontrado"
     }
-
 };
 
 
 /* =========================================================
-   AKTUALNY JĘZYK
+   CURRENT LANGUAGE
 ========================================================= */
 
 let currentLanguage =
@@ -893,7 +970,7 @@ export function getLanguage() {
 
 
 /* =========================================================
-   TŁUMACZENIE KLUCZA
+   T
 ========================================================= */
 
 export function t(key) {
