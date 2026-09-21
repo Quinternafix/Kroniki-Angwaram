@@ -158,3 +158,5 @@ export function highlightCurrentPage() {
 
         });
 }
+window.addEventListener("hashchange", highlightCurrentPage);
+window.addEventListener("DOMContentLoaded", highlightCurrentPage);
