@@ -1,110 +1,110 @@
 [
-{
-  "id": "araya-stormbringer",
-  "name": "Araya Stormbringer",
-  "title": "",
-  "race": "Człowiek",
-  "nation": "Selidor",
-  "rank": "",
-  "status": "Żyje",
-  "birth": "",
-  "image": "assets/characters/araya-stormbringer.png",
-  "portraits": [
-    {
-      "title": {
-        "pl": "Obecnie",
-        "en": "Present",
-        "es": "Actualidad"
+  {
+    "id": "araya-stormbringer",
+    "name": "Araya Stormbringer",
+    "title": "",
+    "race": "Człowiek",
+    "nation": "Selidor",
+    "rank": "",
+    "status": "Żyje",
+    "birth": "",
+    "image": "assets/characters/araya-stormbringer.png",
+    "portraits": [
+      {
+        "title": {
+          "pl": "Obecnie",
+          "en": "Present",
+          "es": "Actualidad"
+        },
+        "image": "assets/characters/araya-stormbringer.png"
+      }
+    ],
+    "description": "Araya jest pierworodną Morgatha i Aurory, siostrą Neoratha oraz potencjalnym przyszłym Arcymagiem Selidoru. W odróżnieniu od swojego ojca, stara się podążać współczesnymi czasami w wielu kwestiach.",
+    "faction": "",
+    "factionId": "",
+    "home": "Selidor",
+    "homeId": "",
+    "family": [
+      {
+        "name": "Morgath Stormbringer",
+        "relation": {
+          "pl": "ojciec",
+          "en": "father",
+          "es": "padre"
+        }
       },
-      "image": "assets/characters/araya-stormbringer.png"
-    }
-  ],
-  "description": "Araya jest pierworodną Morgatha i Aurory, siostrą Neoratha oraz potencjalnym przyszłym Arcymagiem Selidoru. W odróżnieniu od swojego ojca, stara się podążać współczesnymi czasami w wielu kwestiach.",
-  "faction": "",
-  "factionId": "",
-  "home": "Selidor",
-  "homeId": "",
-  "family": [
-  {
-    "name": "Morgath Stormbringer",
-    "relation": {
-      "pl": "ojciec",
-      "en": "father",
-      "es": "padre"
+      {
+        "name": "Aurora Stormbringer",
+        "relation": {
+          "pl": "matka",
+          "en": "mother",
+          "es": "madre"
+        }
+      },
+      {
+        "name": "Wüld'Dai Stormbringer",
+        "relation": {
+          "pl": "wujek",
+          "en": "uncle",
+          "es": "tío"
+        }
+      },
+      {
+        "name": "Neorath Stormbringer",
+        "relation": {
+          "pl": "brat",
+          "en": "brother",
+          "es": "hermano"
+        }
+      },
+      {
+        "name": "Lazarius Stormbringer",
+        "relation": {
+          "pl": "dziadek",
+          "en": "grandfather",
+          "es": "abuelo"
+        }
+      },
+      {
+        "name": "Shy'Ran Starsage",
+        "relation": {
+          "pl": "szwagier",
+          "en": "brother-in-law",
+          "es": "cuñado"
+        }
+      }
+    ],
+    "friends": [
+      "Rykan",
+      "Kioth"
+    ],
+    "enemies": [],
+    "quotes": [],
+    "translations": {
+      "en": {
+        "title": "",
+        "race": "Human",
+        "nation": "Selidor",
+        "rank": "",
+        "status": "Alive",
+        "birth": "",
+        "description": "Araya is the firstborn daughter of Morgath and Aurora, the sister of Neorath, and the potential future Archmage of Selidor. Unlike her father, she tries to keep up with the modern times in many regards.",
+        "faction": "",
+        "home": "Selidor"
+      },
+      "es": {
+        "title": "",
+        "race": "Humano",
+        "nation": "Selidor",
+        "rank": "",
+        "status": "Vivo",
+        "birth": "",
+        "description": "Araya es la hija mayor de Morgath y Aurora, hermana de Neorath y la posible futura archimaga de Selidor. A diferencia de su padre, intenta adaptarse a los nuevos tiempos en muchos aspectos.",
+        "faction": "",
+        "home": "Selidor"
+      }
     }
   },
-  {
-    "name": "Aurora Stormbringer",
-    "relation": {
-      "pl": "matka",
-      "en": "mother",
-      "es": "madre"
-    }
-  },
-  {
-    "name": "Wüld'Dai Stormbringer",
-    "relation": {
-      "pl": "wujek",
-      "en": "uncle",
-      "es": "tío"
-    }
-  },
-  {
-    "name": "Neorath Stormbringer",
-    "relation": {
-      "pl": "brat",
-      "en": "brother",
-      "es": "hermano"
-    }
-  },
-  {
-    "name": "Lazarius Stormbringer",
-    "relation": {
-      "pl": "dziadek",
-      "en": "grandfather",
-      "es": "abuelo"
-    }
-  },
-  {
-    "name": "Shy'Ran Starsage",
-    "relation": {
-      "pl": "szwagier",
-      "en": "brother-in-law",
-      "es": "cuñado"
-    }
-  }
-],
-  "friends": [
-    "Rykan",
-    "Kioth"
-  ],
-  "enemies": [],
-  "quotes": [],
-  "translations": {
-    "en": {
-      "title": "",
-      "race": "Human",
-      "nation": "",
-      "rank": "",
-      "status": "Alive",
-      "birth": "",
-      "description": "Araya is the firstborn daughter of Morgath and Aurora, the sister of Neorath, and the potential future Archmage of Selidor. Unlike her father, she tries to keep up with the modern times in many regards.",
-      "faction": "",
-      "home": ""
-    },
-    "es": {
-      "title": "",
-      "race": "",
-      "nation": "",
-      "rank": "",
-      "status": "Vivo",
-      "birth": "",
-      "description": "Araya es la hija mayor de Morgath y Aurora, hermana de Neorath y la posible futura archimaga de Selidor. A diferencia de su padre, intenta adaptarse a los nuevos tiempos en muchos aspectos.",
-      "faction": "",
-      "home": ""
-    }
-  }
-},
   {
     "id": "aurora-stormbringer",
     "name": "Aurora Stormbringer",
@@ -148,7 +148,7 @@
       },
       "es": {
         "title": "",
-        "race": "",
+        "race": "Humano",
         "nation": "",
         "rank": "",
         "status": "",
@@ -200,16 +200,16 @@
     "factionId": "gwardia-popielnej-marchii",
     "home": "Popielna Marchia",
     "homeId": "popielna-marchia",
-   "family": [
-  {
-    "name": "Viirtuz",
-    "relation": {
-      "pl": "Mąż",
-      "en": "husband",
-      "es": "marido"
-    }
-  }
-],
+    "family": [
+      {
+        "name": "Viirtuz",
+        "relation": {
+          "pl": "Mąż",
+          "en": "husband",
+          "es": "marido"
+        }
+      }
+    ],
     "friends": [
       "Neorath Stormbringer",
       "Ralakosh Witvuur",
@@ -280,32 +280,32 @@
     "friends": [],
     "enemies": [],
     "quotes": [],
-"translations": {
-  "en": {
-    "name": "Balgrad Copperbeard",
-    "title": "",
-    "race": "Dwarf",
-    "nation": "",
-    "rank": "Captain",
-    "status": "Alive",
-    "birth": "",
-    "description": "",
-    "faction": "",
-    "home": ""
-  },
-  "es": {
-    "name": "Balgrad Barbacobre",
-    "title": "",
-    "race": "Enano",
-    "nation": "",
-    "rank": "Capitán",
-    "status": "Vivo",
-    "birth": "",
-    "description": "",
-    "faction": "",
-    "home": ""
-  }
-}
+    "translations": {
+      "en": {
+        "name": "Balgrad Copperbeard",
+        "title": "",
+        "race": "Dwarf",
+        "nation": "",
+        "rank": "Captain",
+        "status": "Alive",
+        "birth": "",
+        "description": "",
+        "faction": "",
+        "home": ""
+      },
+      "es": {
+        "name": "Balgrad Barbacobre",
+        "title": "",
+        "race": "Enano",
+        "nation": "",
+        "rank": "Capitán",
+        "status": "Vivo",
+        "birth": "",
+        "description": "",
+        "faction": "",
+        "home": ""
+      }
+    }
   },
   {
     "id": "barangar",
@@ -338,22 +338,22 @@
     "quotes": [],
     "translations": {
       "en": {
-        "title": "",
-        "race": "",
+        "title": "Knight of the Depths",
+        "race": "Naga",
         "nation": "",
         "rank": "",
-        "status": "",
+        "status": "Alive",
         "birth": "",
         "description": "",
         "faction": "",
         "home": ""
       },
       "es": {
-        "title": "",
-        "race": "",
+        "title": "Caballero de las Profundidades",
+        "race": "Naga",
         "nation": "",
         "rank": "",
-        "status": "",
+        "status": "Vivo",
         "birth": "",
         "description": "",
         "faction": "",
@@ -444,32 +444,32 @@
     "friends": [],
     "enemies": [],
     "quotes": [],
-"translations": {
-  "en": {
-    "name": "The Red Pilgrim",
-    "title": "",
-    "race": "",
-    "nation": "",
-    "rank": "",
-    "status": "",
-    "birth": "",
-    "description": "",
-    "faction": "",
-    "home": ""
-  },
-  "es": {
-    "name": "El Peregrino Rojo",
-    "title": "",
-    "race": "",
-    "nation": "",
-    "rank": "",
-    "status": "",
-    "birth": "",
-    "description": "",
-    "faction": "",
-    "home": ""
-  }
-}
+    "translations": {
+      "en": {
+        "name": "The Red Pilgrim",
+        "title": "",
+        "race": "",
+        "nation": "",
+        "rank": "",
+        "status": "",
+        "birth": "",
+        "description": "",
+        "faction": "",
+        "home": ""
+      },
+      "es": {
+        "name": "El Peregrino Rojo",
+        "title": "",
+        "race": "",
+        "nation": "",
+        "rank": "",
+        "status": "",
+        "birth": "",
+        "description": "",
+        "faction": "",
+        "home": ""
+      }
+    }
   },
   {
     "id": "elias-hantosh",
@@ -928,7 +928,7 @@
           "en": "Touched by void",
           "es": "Afectado por el vacío"
         },
-          "image": "assets/characters/kioth-pustka.png"
+        "image": "assets/characters/kioth-pustka.png"
       }
     ],
     "description": "",
@@ -942,22 +942,22 @@
     "quotes": [],
     "translations": {
       "en": {
-        "title": "",
-        "race": "",
-        "nation": "",
+        "title": "Runed Dragon",
+        "race": "Dragon",
+        "nation": "None",
         "rank": "",
-        "status": "",
+        "status": "Alive",
         "birth": "",
         "description": "",
         "faction": "",
         "home": ""
       },
       "es": {
-        "title": "",
-        "race": "",
-        "nation": "",
+        "title": "Dragón Rúnico",
+        "race": "Dragón",
+        "nation": "Ninguna",
         "rank": "",
-        "status": "",
+        "status": "Vivo",
         "birth": "",
         "description": "",
         "faction": "",
@@ -1488,32 +1488,32 @@
     "friends": [],
     "enemies": [],
     "quotes": [],
- "translations": {
-  "en": {
-    "name": "The Blue Pilgrim",
-    "title": "",
-    "race": "",
-    "nation": "",
-    "rank": "",
-    "status": "",
-    "birth": "",
-    "description": "",
-    "faction": "",
-    "home": ""
-  },
-  "es": {
-    "name": "El Peregrino Azul",
-    "title": "",
-    "race": "",
-    "nation": "",
-    "rank": "",
-    "status": "",
-    "birth": "",
-    "description": "",
-    "faction": "",
-    "home": ""
-  }
-}
+    "translations": {
+      "en": {
+        "name": "The Blue Pilgrim",
+        "title": "",
+        "race": "",
+        "nation": "",
+        "rank": "",
+        "status": "",
+        "birth": "",
+        "description": "",
+        "faction": "",
+        "home": ""
+      },
+      "es": {
+        "name": "El Peregrino Azul",
+        "title": "",
+        "race": "",
+        "nation": "",
+        "rank": "",
+        "status": "",
+        "birth": "",
+        "description": "",
+        "faction": "",
+        "home": ""
+      }
+    }
   },
   {
     "id": "okami",
@@ -1656,40 +1656,40 @@
     "factionId": "ocalale-smoki",
     "home": "Brak",
     "homeId": "brak",
-"family": [
-  {
-    "name": "Thyrvon",
-    "relation": {
-      "pl": "Ojciec",
-      "en": "Father",
-      "es": "Padre"
-    }
-  },
-  {
-    "name": "Kioth",
-    "relation": {
-      "pl": "Syn",
-      "en": "Son",
-      "es": "Hijo"
-    }
-  },
-  {
-    "name": "Liliana",
-    "relation": {
-      "pl": "Córka",
-      "en": "Daughter",
-      "es": "Hija"
-    }
-  },
-  {
-    "name": "Miritena",
-    "relation": {
-      "pl": "Partnerka",
-      "en": "Partner",
-      "es": "Pareja"
-    }
-  }
-],
+    "family": [
+      {
+        "name": "Thyrvon",
+        "relation": {
+          "pl": "Ojciec",
+          "en": "Father",
+          "es": "Padre"
+        }
+      },
+      {
+        "name": "Kioth",
+        "relation": {
+          "pl": "Syn",
+          "en": "Son",
+          "es": "Hijo"
+        }
+      },
+      {
+        "name": "Liliana",
+        "relation": {
+          "pl": "Córka",
+          "en": "Daughter",
+          "es": "Hija"
+        }
+      },
+      {
+        "name": "Miritena",
+        "relation": {
+          "pl": "Partnerka",
+          "en": "Partner",
+          "es": "Pareja"
+        }
+      }
+    ],
     "friends": [
       "Kharot"
     ],
