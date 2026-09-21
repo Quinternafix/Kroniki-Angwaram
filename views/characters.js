@@ -94,7 +94,7 @@ function renderCharacterCard(character, favorites) {
 
                 ${
                     isFavorite
-                        ? `<span class="character-fav" title="Ulubione">⭐</span>`
+                        ? `<span class="character-fav" title="${escapeHtml(t("characters.favoriteTitle"))}">⭐</span>`
                         : ""
                 }
 
@@ -150,9 +150,9 @@ function renderFilters(races, factions, statuses) {
         <div class="characters-filters">
 
             <div class="filter-group">
-                <label for="filter-race">Rasa</label>
+                <label for="filter-race">${escapeHtml(t("characters.filter.race"))}</label>
                 <select id="filter-race">
-                    <option value="">Wszystkie</option>
+                    <option value="">${escapeHtml(t("characters.filter.all"))}</option>
                     ${races.map(r =>
                         `<option value="${escapeHtml(r.toLowerCase())}">${escapeHtml(r)}</option>`
                     ).join("")}
@@ -160,9 +160,9 @@ function renderFilters(races, factions, statuses) {
             </div>
 
             <div class="filter-group">
-                <label for="filter-faction">Frakcja</label>
+                <label for="filter-faction">${escapeHtml(t("characters.filter.faction"))}</label>
                 <select id="filter-faction">
-                    <option value="">Wszystkie</option>
+                    <option value="">${escapeHtml(t("characters.filter.all"))}</option>
                     ${factions.map(f =>
                         `<option value="${escapeHtml(f.toLowerCase())}">${escapeHtml(f)}</option>`
                     ).join("")}
@@ -170,9 +170,9 @@ function renderFilters(races, factions, statuses) {
             </div>
 
             <div class="filter-group">
-                <label for="filter-status">Status</label>
+                <label for="filter-status">${escapeHtml(t("characters.filter.status"))}</label>
                 <select id="filter-status">
-                    <option value="">Wszystkie</option>
+                    <option value="">${escapeHtml(t("characters.filter.all"))}</option>
                     ${statuses.map(s =>
                         `<option value="${escapeHtml(s.toLowerCase())}">${escapeHtml(s)}</option>`
                     ).join("")}
@@ -180,19 +180,19 @@ function renderFilters(races, factions, statuses) {
             </div>
 
             <div class="filter-group">
-                <label for="filter-favorite">Ulubione</label>
+                <label for="filter-favorite">${escapeHtml(t("characters.filter.favorite"))}</label>
                 <select id="filter-favorite">
-                    <option value="">Wszystkie</option>
-                    <option value="1">Tylko ulubione</option>
+                    <option value="">${escapeHtml(t("characters.filter.all"))}</option>
+                    <option value="1">${escapeHtml(t("characters.filter.favoritesOnly"))}</option>
                 </select>
             </div>
 
             <div class="filter-group">
-                <label for="filter-sort">Sortuj</label>
+                <label for="filter-sort">${escapeHtml(t("characters.filter.sort"))}</label>
                 <select id="filter-sort">
-                    <option value="name-asc">A–Z</option>
-                    <option value="name-desc">Z–A</option>
-                    <option value="favorite">Ulubione najpierw</option>
+                    <option value="name-asc">${escapeHtml(t("characters.filter.sortAZ"))}</option>
+                    <option value="name-desc">${escapeHtml(t("characters.filter.sortZA"))}</option>
+                    <option value="favorite">${escapeHtml(t("characters.filter.sortFavorite"))}</option>
                 </select>
             </div>
 
@@ -298,8 +298,10 @@ function initCharacterFilters() {
         if (counter) {
             counter.textContent =
                 visible.length === cards.length
-                    ? `${visible.length} postaci`
-                    : `Znaleziono ${visible.length} z ${cards.length}`;
+                    ? t("characters.count").replace("{n}", String(visible.length))
+                    : t("characters.found")
+                        .replace("{n}", String(visible.length))
+                        .replace("{total}", String(cards.length));
         }
     }
 
@@ -360,7 +362,7 @@ export async function charactersView() {
             <header class="page-header">
                 <h1>${escapeHtml(t("characters.title"))}</h1>
                 <p class="characters-count">
-                    ${sorted.length} postaci
+                    ${escapeHtml(t("characters.count").replace("{n}", String(sorted.length)))}
                 </p>
             </header>
 
