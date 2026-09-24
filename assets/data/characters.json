@@ -1023,7 +1023,7 @@
     "id": "lazarius-stormbringer",
     "name": "Lazarius Stormbringer",
     "title": "",
-    "race": "",
+    "race": "Półsmok",
     "nation": "",
     "rank": "",
     "status": "",
@@ -1039,7 +1039,7 @@
         "image": "assets/characters/lazarius-stormbringer.png"
       }
     ],
-    "description": "",
+    "description": "Lazarius to dawny członek Zakonu Archiwistów, za jego ucieczkę z ważnymi dokumentami wystawiono za nim list poszukiwańczy. Przyjaciel Vekhora i ojciec Morgatha.",
     "faction": "",
     "factionId": "",
     "home": "",
