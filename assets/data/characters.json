@@ -1354,11 +1354,11 @@
   {
     "id": "neorath-stormbringer",
     "name": "Neorath Stormbringer",
-    "title": "",
-    "race": "",
-    "nation": "",
+    "title": "Magnolia Selidoru",
+    "race": "Półsmok",
+    "nation": "Selidor/Ferrins",
     "rank": "",
-    "status": "",
+    "status": "Żyje",
     "birth": "",
     "image": "assets/characters/Neorath.png",
     "portraits": [
@@ -1371,7 +1371,7 @@
         "image": "assets/characters/Neorath.png"
       }
     ],
-    "description": "",
+    "description": "Neorath to mężczyzna prezentujący dwie całkowicie odmienne kultury, druidzkie pochodzenie ze strony matki i Selidor ze strony jego ojca. Głęboko zakochany w Shy'Ranie w wzajemnością. Wbrew swojej matce i jej ludowi nie jest on przeciwnikiem okultyzmu.",
     "faction": "",
     "factionId": "",
     "home": "",
