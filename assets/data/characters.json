@@ -1651,11 +1651,11 @@
         "image": "assets/characters/quint_synowie-burzy.png"
       }
     ],
-    "description": "Quint jest czarnym smokiem, najbardziej rozpoznawalnym pośród ocalałych. Jest ojcem Kiotha i Liliany oraz partnerem Miriteny. Cechuje się otwartością i spokojem, lecz również nieustępliwością i uporem, które już raz doprowadziły do jego zgonu.",
+    "description": "Quint jest czarnym smokiem, najbardziej rozpoznawalnym pośród ocalałych. Jest ojcem Kiotha i Liliany oraz partnerem Miriteny. Cechuje się otwartością i spokojem, lecz również nieustępliwością i uporem, które już raz doprowadziły do jego zgonu. Choć faktem jest, że to smok założył Draco Flamma, żaden z dawnych i obecnych członków ma pojęcie o prawdziwej postaci Quinta.",
     "faction": "Ocalałe Smoki",
     "factionId": "ocalale-smoki",
-    "home": "Brak",
-    "homeId": "brak",
+    "home": "",
+    "homeId": "",
     "family": [
       {
         "name": "Thyrvon",
